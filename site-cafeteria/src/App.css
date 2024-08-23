@@ -1,12 +1,12 @@
-:root {
-
-  --copper: #a8763e;
-  --brownSugar: #c57b57;
-  --darkGreen: #132a13;
-  --hunterGreen: #31572c;
-  --cream: #f5fdc6;
-  --flax: #f9ea9a;
-  
-
-
+h1 {
+  font-family: 'Lobster';
 }
+
+h2 {
+  font-family: 'Pacifico';
+}
+
+h3 {
+  font-family: 'Roboto';
+}
+
