@@ -14,3 +14,14 @@ body {
   background-color: whitesmoke;
 }
 
+div.box_txtimg {
+  display: flex;
+  width: 30vw;
+  margin: auto;
+}
+
+
+img {
+  width: 30vw;
+}
+
