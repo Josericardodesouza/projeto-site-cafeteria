@@ -11,15 +11,14 @@ function App() {
   return (
     <>
     <nav>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-
+      <a href="">Quem somos</a>
+      <a href="">Cardápio</a>
+      <a href="">Avaliações</a>
+      <a href="">Contato</a>
     </nav>
 
     <header>
-
+      
 
     </header>
 
