@@ -8,6 +8,12 @@ import {EffectCoverflow, Navigation, Pagination, Scrollbar, A11y} from 'swiper/m
 
 import image1 from './assets/images/pexels-ekrulila-2307221.jpg'
 
+import testeImg1 from './assets/images/testeSlide/pexels-8moments-3264706.jpg'
+import testeImg2 from './assets/images/testeSlide/pexels-graeme-travers-637657729-26820674.jpg'
+import testeImg3 from './assets/images/testeSlide/pexels-jimmy-1233438433-26851738.jpg'
+import testeImg4 from './assets/images/testeSlide/pexels-neujus-26795366.jpg'
+import testeImg5 from './assets/images/testeSlide/pexels-peter-mansson-1522474240-27143629.jpg'
+
 function App() {
 
   
@@ -142,12 +148,30 @@ function App() {
 
 
           } }
-
-          
-
-
-        
         >
+
+          <SwiperSlide>
+
+            <img src={testeImg1}></img>
+
+
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src = {testeImg2}></img>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src = {testeImg3}></img>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src = {testeImg4}/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src = {testeImg5}/>
+          </SwiperSlide>
 
 
 
