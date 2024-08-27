@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import './styles/colorsAndFonts-module.css'
 import {Link} from 'react-router-dom'
+import {SwiperSlide, Swiper} from 'swiper/react'
+import 'swiper/swiper-bundle.css'
+import {EffectCoverflow, Navigation, Pagination, Scrollbar, A11y} from 'swiper/modules'
 
 import image1 from './assets/images/pexels-ekrulila-2307221.jpg'
 
@@ -118,6 +121,39 @@ function App() {
         <h3>Avaliações dos nossos clientes</h3>
 
         {/* Swiper area */}
+
+        <Swiper
+
+          modules={ [Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
+
+          spaceBetween={20}
+          slidesPerView={3}
+          navigation
+          Pagination = {{clickable: true}}
+          scrollbar = {{draggable: true}}
+          effect= {'coverflow'}
+          coverflowEffect= { {
+
+            rotate: 10,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false
+
+
+          } }
+
+          
+
+
+        
+        >
+
+
+
+
+
+        </Swiper>
 
         
 
