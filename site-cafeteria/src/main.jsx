@@ -5,6 +5,7 @@ import './index.css'
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import DeliveryPage from './components/DeliveyPage.jsx'
+import About from './components/About.jsx'
 
 const router = createBrowserRouter ([
 
@@ -14,6 +15,10 @@ const router = createBrowserRouter ([
 
   {path: '/deliverypage',
     element: <DeliveryPage />
+  },
+
+  {path: '/about',
+    element: <About />
 
   }
 

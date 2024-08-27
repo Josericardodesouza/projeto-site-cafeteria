@@ -24,7 +24,9 @@ function App() {
       <a href="">Quem somos</a>
       <a href="">Cardápio</a>
       <a href="">Avaliações</a>
+      <Link to = '/about'>
       <a href="">Contato</a>
+      </Link>
     </nav>
 
     <header>
@@ -192,6 +194,10 @@ function App() {
     </main>
 
     <footer>
+
+      <p>Projeto desenvolvido por &copy; José R. de Souza</p>
+      <a>GitHub</a>
+      <a>Instagram</a>
 
     </footer>
     
