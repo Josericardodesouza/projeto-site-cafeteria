@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import './styles/colorsAndFonts-module.css'
+import {Link} from 'react-router-dom'
 
 import image1 from './assets/images/pexels-ekrulila-2307221.jpg'
 
@@ -103,7 +104,9 @@ function App() {
           </ol>
 
           <div id='box'>
-            <button>Seguir pedido</button>
+            <Link to = '/deliverypage'>
+            <button>Fazer pedido</button>
+            </Link>
 
           </div>
 
