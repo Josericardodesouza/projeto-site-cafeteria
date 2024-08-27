@@ -13,6 +13,7 @@ import testeImg2 from './assets/images/testeSlide/pexels-graeme-travers-63765772
 import testeImg3 from './assets/images/testeSlide/pexels-jimmy-1233438433-26851738.jpg'
 import testeImg4 from './assets/images/testeSlide/pexels-neujus-26795366.jpg'
 import testeImg5 from './assets/images/testeSlide/pexels-peter-mansson-1522474240-27143629.jpg'
+import NavBar from './components/NavBar'
 
 function App() {
 
@@ -20,14 +21,7 @@ function App() {
   
   return (
     <>
-    <nav>
-      <a href="">Quem somos</a>
-      <a href="">Cardápio</a>
-      <a href="">Avaliações</a>
-      <Link to = '/about'>
-      <a href="">Contato</a>
-      </Link>
-    </nav>
+    <NavBar />
 
     <header>
       
