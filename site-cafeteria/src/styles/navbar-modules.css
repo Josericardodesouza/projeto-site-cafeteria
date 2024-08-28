@@ -1,3 +1,60 @@
+@media (max-width: 440px) {
+    div#box_links {
+        display: none;
+    }
+
+    button {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        border: none;
+    }
+
+    div#menu_lateral {
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        background-color: yellow;
+        color: black;
+        position: fixed;
+        z-index: 5;
+        right: 0;
+        margin: 0;
+        padding: 0;
+       
+    }
+
+    div#menu_lateral h1 {
+        position: absolute;
+        z-index: 6;
+    }
+
+
+
+
+
+
+    
+}
+
+
 nav {
+    width: 100vw;
+    height: 6vh;
     background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+
+
+div#box_links > a {
+    padding: 5px;
+
+    
+
 }
