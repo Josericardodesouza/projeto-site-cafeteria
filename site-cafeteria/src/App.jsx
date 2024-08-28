@@ -17,6 +17,31 @@ import NavBar from './components/NavBar'
 
 function App() {
 
+
+
+  // const menuLateral = () => {
+  //   var menu = document.getElementById('menu_lateral')
+  //   var btn = document.getElementById('btn_menu')
+  
+  //   console.log('passou')
+  
+  //   btn.addEventListener('click', function() {
+  
+  //     if (menu.style.display === 'none') {
+  //       menu.style.display = 'block'
+  //     } else {
+  //       menu.style.display = 'none'
+  //     }
+  
+  //   })
+  
+  
+  
+  
+  
+  
+  // }
+
   
   
   return (

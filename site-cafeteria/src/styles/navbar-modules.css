@@ -1,9 +1,16 @@
 @media (max-width: 440px) {
+
+    nav {
+        /* flex-direction: column; */
+    }
+  
+
+
     div#box_links {
         display: none;
     }
 
-    button {
+    /* button {
         width: auto;
         height: auto;
         background-color: transparent;
@@ -11,26 +18,15 @@
     }
 
     div#menu_lateral {
-        width: 50vw;
-        height: 100vh;
-        display: flex;
-        background-color: yellow;
-        color: black;
-        position: fixed;
-        z-index: 5;
+        background-color: red;
+        height: 500px;
+        width: auto;
+        display: none;
+        z-index: 10;
+        position: relative;
         right: 0;
-        margin: 0;
-        padding: 0;
        
-    }
-
-    div#menu_lateral h1 {
-        position: absolute;
-        z-index: 6;
-    }
-
-
-
+    } */
 
 
 
@@ -57,4 +53,8 @@ div#box_links > a {
 
     
 
+}
+
+div#menu_lateral {
+    display: none;
 }
