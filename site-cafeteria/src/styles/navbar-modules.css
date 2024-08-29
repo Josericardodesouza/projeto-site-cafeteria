@@ -1,16 +1,16 @@
 @media (max-width: 440px) {
 
     nav {
-        /* flex-direction: column; */
+         flex-direction: column; 
     }
   
 
 
     div#box_links {
-        display: none;
+        display: block;
     }
 
-    /* button {
+     /* button {
         width: auto;
         height: auto;
         background-color: transparent;
@@ -26,7 +26,7 @@
         position: relative;
         right: 0;
        
-    } */
+    }  */
 
 
 
@@ -41,7 +41,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    /* padding: 5px; */
     margin: 0;
     font-size: 1.1em;
 }
@@ -55,6 +55,6 @@ div#box_links > a {
 
 }
 
-div#menu_lateral {
+div#menu_lateral, button {
     display: none;
 }

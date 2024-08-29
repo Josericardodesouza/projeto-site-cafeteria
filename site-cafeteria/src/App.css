@@ -3,6 +3,20 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  width: 100vw;
+  height: 50vh;
+  background-image: url(./assets/images/nathan-dumlao-zUNs99PGDg0-unsplash.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
