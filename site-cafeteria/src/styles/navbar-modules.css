@@ -55,6 +55,6 @@ div#box_links > a {
 
 }
 
-div#menu_lateral, button {
+div#menu_lateral, button#nav {
     display: none;
 }

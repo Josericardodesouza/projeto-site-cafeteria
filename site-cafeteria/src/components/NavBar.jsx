@@ -24,7 +24,7 @@ function NavBar() {
       </div>
 
 
-      <button onClick={SideMenu}>
+      <button id='nav' onClick={SideMenu}>
 
       <IoIosMenu size={40} />
        

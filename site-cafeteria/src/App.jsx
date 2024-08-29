@@ -14,6 +14,7 @@ import testeImg3 from './assets/images/testeSlide/pexels-jimmy-1233438433-268517
 import testeImg4 from './assets/images/testeSlide/pexels-neujus-26795366.jpg'
 import testeImg5 from './assets/images/testeSlide/pexels-peter-mansson-1522474240-27143629.jpg'
 import NavBar from './components/NavBar'
+import Menu from './components/Menu'
 
 function App() {
 
@@ -77,6 +78,8 @@ function App() {
         </div>
 
       </section>
+
+      <Menu />
      
 
       <section id='evaluations'>
