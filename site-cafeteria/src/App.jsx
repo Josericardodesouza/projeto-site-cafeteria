@@ -83,11 +83,15 @@ function App() {
 
       </section>
 
+
+      <Link to = 'menucoffee'>Cafés</Link>
+      <Link to = 'menucandy'>Doces</Link>
+
       
      
 
       <section id='evaluations'>
-        <h3>Avaliações dos nossos clientes</h3>
+        <h3>Melhores avaliações de clientes</h3>
 
         {/* Swiper area */}
 

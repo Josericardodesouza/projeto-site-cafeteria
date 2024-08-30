@@ -3,20 +3,22 @@ import { useState } from 'react'
 
 function DeliveryPage() {
 
+    var preco = 5
+
     
-    const [optionChecked, setOptionChecked] = useState([])
+    // const [optionChecked, setOptionChecked] = useState([])
 
-    const checkboxChange = (event) => { // o checkboxChange monitora as alterações de estado das checkbox
+    // const checkboxChange = (event) => { // o checkboxChange monitora as alterações de estado das checkbox
 
-        const {value, checked} = event.target; // o 'value' é o value do input; o checked diz qual está marcado
-        setOptionChecked ((prev) => { 
-            if (checked) {
-                return [...prev, value]; // os três pontos são chamados de operador "spread"
-            } else {
-                return prev.filter((item) => item !== value);
-            }
-            })
-        }
+    //     const {value, checked} = event.target; // o 'value' é o value do input; o checked diz qual está marcado
+    //     setOptionChecked ((prev) => { 
+    //         if (checked) {
+    //             return [...prev, value]; // os três pontos são chamados de operador "spread"
+    //         } else {
+    //             return prev.filter((item) => item !== value);
+    //         }
+    //         })
+    //     }
 
     return (
 
@@ -27,6 +29,29 @@ function DeliveryPage() {
         <Link to = '/'>
             <button>Voltar</button>
         </Link>
+
+
+        <table>
+            <thead>
+                <th>Café</th>
+                <th>Preço</th>
+                <th>Checkbox</th>
+            </thead>
+
+            <body>
+                <tr>
+                    <td>Cappucino</td>
+                    <td>Valor</td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+            </body>
+
+
+        </table>
+
+
+        <p>Ok, então o senhor(a) irá desejar :</p>
+        <p>No valor de: {preco} </p>
 
 
         {/* <section id='options'>

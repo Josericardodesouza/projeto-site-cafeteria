@@ -6,6 +6,8 @@ import './index.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import DeliveryPage from './components/DeliveyPage.jsx'
 import About from './components/About.jsx'
+import MenuCofee from './components/MenuCoffee.jsx'
+import MenuCandy from './components/MenuCandy.jsx'
 
 const router = createBrowserRouter ([
 
@@ -19,7 +21,14 @@ const router = createBrowserRouter ([
 
   {path: '/about',
     element: <About />
+  },
 
+  {path: '/menucoffee',
+    element: <MenuCofee />
+  },
+
+  {path: '/menucandy',
+    element: <MenuCandy />
   }
 
 ])
