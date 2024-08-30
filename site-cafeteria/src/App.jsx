@@ -57,6 +57,10 @@ function App() {
 
     </header>
 
+
+<Menu />
+
+
     <main>
       <section id='about'>
 
@@ -79,7 +83,7 @@ function App() {
 
       </section>
 
-      <Menu />
+      
      
 
       <section id='evaluations'>
