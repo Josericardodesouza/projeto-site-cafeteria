@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 import '../styles/navbar-modules.css'
+import '../styles/colorsAndFonts-module.css'
 import { IoIosMenu } from 'react-icons/io'
 import SideMenu from './SideMenu'
 

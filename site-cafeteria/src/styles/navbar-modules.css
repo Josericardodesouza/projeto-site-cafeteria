@@ -1,7 +1,11 @@
+
+
+
 @media (max-width: 440px) {
 
     nav {
          flex-direction: column; 
+
     }
   
 
@@ -36,20 +40,29 @@
 
 nav {
     width: 100vw;
-    height: 6vh;
-    background-color: aquamarine;
+    height: 10vh;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* padding: 5px; */
     margin: 0;
+    padding: 0;
     font-size: 1.1em;
+    color: var(--brownSugar);
+    font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+}
+
+div#box_links {
+    margin: 0;
+    padding: 0;
 }
 
 
 
 div#box_links > a {
-    padding: 5px;
+    padding: 0px;
 
     
 
