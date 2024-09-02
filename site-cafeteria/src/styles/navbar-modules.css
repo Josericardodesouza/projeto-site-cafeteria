@@ -52,7 +52,27 @@ nav {
     color: var(--brownSugar);
     font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.1em;
+    box-sizing: border-box;
 }
+
+nav > div#nav_img {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav > div#nav_img > svg {
+    font-size: 5em;
+    height: auto;
+    margin: 2px;
+
+}
+
+
 
 div#box_links {
     display: flex;
