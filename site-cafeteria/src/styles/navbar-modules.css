@@ -55,6 +55,8 @@ nav {
 }
 
 div#box_links {
+    display: flex;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
 }
@@ -62,7 +64,14 @@ div#box_links {
 
 
 div#box_links > a {
-    padding: 0px;
+    font-size: 1.5em;
+    display: block;
+    color: var(--cream);
+    padding: 5px;
+    background-color: var(--cor7);
+    text-decoration: none;
+    margin: 2px;
+    border-radius: 2px;
 
     
 
