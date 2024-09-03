@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
 import './styles/colorsAndFonts-module.css'
 import {Link} from 'react-router-dom'
@@ -6,7 +6,11 @@ import {SwiperSlide, Swiper} from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import {EffectCoverflow, Navigation, Pagination, Scrollbar, A11y} from 'swiper/modules'
 
-import image1 from './assets/images/pexels-ekrulila-2307221.jpg'
+
+import image2 from './assets/images/pexels-og-mpango-1582361-4090603.jpg'
+import image3 from './assets/images/pexels-michael-burrows-7125434.jpg'
+import image4 from './assets/images/pexels-ekrulila-2307221.jpg'
+import image5 from './assets/images/coffee-7561288_1920.jpg'
 
 import testeImg1 from './assets/images/testeSlide/pexels-8moments-3264706.jpg'
 import testeImg2 from './assets/images/testeSlide/pexels-graeme-travers-637657729-26820674.jpg'
@@ -43,14 +47,28 @@ function App() {
   
   // }
 
+
+  
+  const refSectionAboutUs = useRef(null)
+
+  const scrollAboutUs = () => {
+    const contentAboutUs =  document.getElementById('aboutUs')
+
+    if (refSectionAboutUs.current) {
+      console.log('chamou a função')
+      refSectionAboutUs.current.scrollIntoView({behavior: 'smooth'})
+    }
+  }
+
   
   
   return (
+
     <>
    
 
     <header>
-      <NavBar />
+      <NavBar scrollAboutUs = {scrollAboutUs} />
 
       <div id='box_header'>
         <h1 id='title_header'>LOREM IPSUM COFFEE</h1>
@@ -66,22 +84,27 @@ function App() {
 
 
     <main>
-      <section id='about'>
+      <section id='aboutUs' ref={refSectionAboutUs}>
 
         <div id='box1' className='box_txtimg'>
-          <p className='p-box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sint expedita dolorum debitis ipsum, unde provident fugit corrupti odit numquam quidem rem ratione fugiat nostrum dolorem, necessitatibus, amet minima ipsam.</p>
-
-          <img src={image1}></img>
-          
-         
-
+          <p className='p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sint expedita dolorum debitis ipsum, unde provident fugit corrupti odit numquam quidem rem ratione fugiat nostrum dolorem, necessitatibus, amet minima ipsam.</p>
+          <img src = {image2}/>
         </div>
 
         <div id='box2' className='box_txtimg'>
+          <p className = 'p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae et tempore ut nemo perspiciatis facilis quos fugiat exercitationem consequuntur expedita officiis, eaque qui quae molestiae optio rerum odit dolore quisquam!</p>
+          <img src = {image3}/>
 
         </div>
 
         <div id='box3' className='box_txtimg'>
+          <p className = 'p_box'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quisquam at autem? Recusandae quia, vitae voluptates ducimus tenetur iure cumque fugit similique dicta!</p>
+          <img src = {image4} />
+        </div>
+
+        <div id='box4' className = 'box_txtimg'>
+          <p className = 'p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, veritatis ratione vel, nostrum fugit ad consequatur sit reprehenderit doloribus assumenda necessitatibus? Praesentium corporis, possimus unde eius obcaecati placeat tenetur. Tempore.</p>
+          <img src = {image5}/>
 
         </div>
 

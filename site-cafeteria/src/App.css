@@ -62,15 +62,58 @@ body {
   background-color: whitesmoke;
 }
 
+section#aboutUs {
+  width: 100vw;
+  height: auto;
+  background-color: transparent;
+  /* background-color: red; */
+
+}
+
 div.box_txtimg {
   display: flex;
-  width: 30vw;
+  width: 95%;
+  height: 20%;
   margin: auto;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+div#box2, div#box4 {
+  flex-direction: row-reverse;
+
+}
+
+
+.p_box {
+  font-size: 1.3em;
+  font-family: 'Nunito';
+  font-weight: 600;
+  width: 50%;
+  color: black;
+  
+
 }
 
 
 img {
-  width: 30vw;
+  width: 40%;
+  height: 40%;
+
+
 }
+
+
+
+@media (max-width: 600px) {
+
+
+
+  
+
+
+  
+}
+
 
 
