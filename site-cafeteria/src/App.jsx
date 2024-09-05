@@ -19,6 +19,9 @@ import testeImg4 from './assets/images/testeSlide/pexels-neujus-26795366.jpg'
 import testeImg5 from './assets/images/testeSlide/pexels-peter-mansson-1522474240-27143629.jpg'
 import NavBar from './components/NavBar'
 import Menu from './components/Menu'
+import MenuCoffee from './components/MenuCoffee'
+import MenuCandy from './components/MenuCandy'
+
 
 function App() {
 
@@ -52,13 +55,57 @@ function App() {
   const refSectionAboutUs = useRef(null)
 
   const scrollAboutUs = () => {
-    const contentAboutUs =  document.getElementById('aboutUs')
+
 
     if (refSectionAboutUs.current) {
       console.log('chamou a função')
       refSectionAboutUs.current.scrollIntoView({behavior: 'smooth'})
     }
   }
+
+
+
+  const refDivButtonsMenus = useRef(null)
+
+  const scrollMenus = () => {
+
+    console.log('teste2')
+   
+
+    if (refDivButtonsMenus.current) {
+      console.log('chamou 2a funcao')
+      refDivButtonsMenus.current.scrollIntoView({behavior: 'smooth'})
+    } else {
+      console.log('este elemento não está passando')
+    }
+
+  }
+
+  
+
+  
+
+
+
+  const [activeComponent, setActiveComponent] = useState(null)
+
+  const renderComponent = () => {
+    
+    switch (activeComponent) {
+
+      case 'MenuCoffee':
+        return <MenuCoffee />
+       
+       
+      case 'MenuCandy':
+        return <MenuCandy />
+
+      
+
+    }
+  }
+
+
 
   
   
@@ -68,7 +115,9 @@ function App() {
    
 
     <header>
-      <NavBar scrollAboutUs = {scrollAboutUs} />
+      <NavBar scrollAboutUs = {scrollAboutUs} scrollMenus = {scrollMenus} />
+
+     
 
       <div id='box_header'>
         <h1 id='title_header'>LOREM IPSUM COFFEE</h1>
@@ -111,10 +160,16 @@ function App() {
       </section>
 
 
-      <Link to = 'menucoffee'>Cafés</Link>
-      <Link to = 'menucandy'>Doces</Link>
+      <div id='box_links_menu' ref = {refDivButtonsMenus}>
+        <button onClick={() => setActiveComponent('MenuCoffee')}>Cafés</button>
+        <button onClick={() => setActiveComponent('MenuCandy')}>Doces</button>
+      </div>
 
-      
+      {renderComponent()}
+
+      <button>Delivery!</button>
+
+   
      
 
       <section id='evaluations'>

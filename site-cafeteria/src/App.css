@@ -73,7 +73,7 @@ section#aboutUs {
 div.box_txtimg {
   display: flex;
   width: 95%;
-  height: 20%;
+  height: 10%;
   margin: auto;
   justify-content: space-between;
   margin-bottom: 90px;
@@ -101,6 +101,26 @@ img {
   height: 40%;
 
 
+}
+
+
+div#box_links_menu {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: var(--cor7);
+  font-family: 'Nunito';
+  
+  
+}
+
+div#box_links_menu > a {
+  font-size: 1.5em;
+  color: black;
+  margin: 20px;
+  
 }
 
 
