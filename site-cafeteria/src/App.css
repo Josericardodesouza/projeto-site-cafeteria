@@ -123,6 +123,21 @@ div#box_links_menu > a {
   
 }
 
+section#evaluations {
+  height: 500px;
+}
+
+
+
+.ev_img_box {
+  width: 500px;
+  height: auto;
+}
+
+
+
+
+
 
 
 @media (max-width: 600px) {

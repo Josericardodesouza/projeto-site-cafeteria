@@ -10,7 +10,7 @@ import { DiCoffeescript } from 'react-icons/di'
 
 
 
-function NavBar({scrollAboutUs, scrollMenus}) {
+function NavBar({scrollAboutUs, scrollMenus, scrollEvaluations}) {
 
 
     return (
@@ -26,7 +26,7 @@ function NavBar({scrollAboutUs, scrollMenus}) {
       <div id='box_links'>
         <a id='btn_aboutUs' onClick= {scrollAboutUs}>Quem somos</a>
         <a id='btn_menus' onClick={scrollMenus}>Cardápio</a>
-        <a>Avaliações</a>
+        <a id='btn_ev' onClick={scrollEvaluations}>Avaliações</a>
         <Link to = '/about'>Contato</Link>
       </div>
 

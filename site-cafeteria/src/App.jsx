@@ -12,6 +12,8 @@ import image3 from './assets/images/pexels-michael-burrows-7125434.jpg'
 import image4 from './assets/images/pexels-ekrulila-2307221.jpg'
 import image5 from './assets/images/coffee-7561288_1920.jpg'
 
+import coffee from './assets/images/cards-images/pexels-andrew-peterson-113438-350478.jpg'
+
 import testeImg1 from './assets/images/testeSlide/pexels-8moments-3264706.jpg'
 import testeImg2 from './assets/images/testeSlide/pexels-graeme-travers-637657729-26820674.jpg'
 import testeImg3 from './assets/images/testeSlide/pexels-jimmy-1233438433-26851738.jpg'
@@ -21,6 +23,8 @@ import NavBar from './components/NavBar'
 import Menu from './components/Menu'
 import MenuCoffee from './components/MenuCoffee'
 import MenuCandy from './components/MenuCandy'
+import { MdOutlineStar, MdOutlineStarBorder, MdOutlineStarHalf } from 'react-icons/md'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -81,6 +85,23 @@ function App() {
 
   }
 
+  const refSectionEv = useRef(null)
+
+  const scrollEvaluations = () => {
+
+    if (refSectionEv.current) {
+
+      console.log('teste3')
+      refSectionEv.current.scrollIntoView({behavior: 'smooth'})
+    } else {
+      console.log('erro')
+    }
+
+  }
+   
+   
+
+ 
   
 
   
@@ -100,6 +121,9 @@ function App() {
       case 'MenuCandy':
         return <MenuCandy />
 
+      default:
+        return <MenuCoffee />
+
       
 
     }
@@ -115,7 +139,7 @@ function App() {
    
 
     <header>
-      <NavBar scrollAboutUs = {scrollAboutUs} scrollMenus = {scrollMenus} />
+      <NavBar scrollAboutUs = {scrollAboutUs} scrollMenus = {scrollMenus} scrollEvaluations = {scrollEvaluations} />
 
      
 
@@ -136,7 +160,10 @@ function App() {
       <section id='aboutUs' ref={refSectionAboutUs}>
 
         <div id='box1' className='box_txtimg'>
-          <p className='p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sint expedita dolorum debitis ipsum, unde provident fugit corrupti odit numquam quidem rem ratione fugiat nostrum dolorem, necessitatibus, amet minima ipsam.</p>
+          <div>
+            <h3>Nossa História</h3>
+            <p className='p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sint expedita dolorum debitis ipsum, unde provident fugit corrupti odit numquam quidem rem ratione fugiat nostrum dolorem, necessitatibus, amet minima ipsam.</p>
+          </div>
           <img src = {image2}/>
         </div>
 
@@ -165,15 +192,16 @@ function App() {
         <button onClick={() => setActiveComponent('MenuCandy')}>Doces</button>
       </div>
 
-      {renderComponent()}
+      <section id='render_menu'>
+        {renderComponent()}
+        </section>
 
-      <button>Delivery!</button>
+      <Link to = '/deliveryPage'>Delivery!</Link>
 
    
-     
 
-      <section id='evaluations'>
-        <h3>Melhores avaliações de clientes</h3>
+      <section id='evaluations' ref = {refSectionEv}>
+        <h3>Avaliações dos nossos clientes</h3>
 
         {/* Swiper area */}
 
@@ -201,30 +229,106 @@ function App() {
 
           <SwiperSlide>
 
-            <img src={testeImg1}></img>
+            <div className='conteiner_ev'>
 
+              <div className='ev_img_box'> <img src = {coffee} /></div>
+
+              <div className='ev_box'>
+                <p>Cappuccino</p>
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStarHalf />
+                <MdOutlineStarBorder />
+              </div>
+
+            </div>
 
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src = {testeImg2}></img>
+
+            <div className = 'conteiner_ev'>
+
+              <div className = 'ev_img_box'>
+                <img src = {testeImg2}></img>
+              </div>
+
+              <div className='ev_box'>
+                <p>Cappuccino</p>
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStarHalf />
+                <MdOutlineStarBorder />
+              </div>
+
+            </div>
+
           </SwiperSlide>
 
           <SwiperSlide>
+
+        <div className = 'conteiner_ev'>
+
+          <div className = 'ev_img_box'>
             <img src = {testeImg3}></img>
+          </div>
+
+          <div className='ev_box'>
+                <p>Café</p>
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStarHalf />
+                <MdOutlineStarBorder />
+              </div>
+
+        </div>
+
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src = {testeImg4}/>
+
+            <div className = 'conteiner_ev'>
+
+              <div className = 'ev_img_box'>
+                <img src = {testeImg4}/>
+                </div>
+
+                <div className='ev_box'>
+                <p>Bolo</p>
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStarHalf />
+                <MdOutlineStarBorder />
+              </div>
+
+            </div>
+
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src = {testeImg5}/>
+
+            <div className = 'conteiner_ev'>
+
+              <div className = 'ev_img_box'>
+                <img src = {testeImg5}/>
+              </div>
+
+              <div className='ev_box'>
+                <p>Cupcake</p>
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStar />
+                <MdOutlineStarHalf />
+                <MdOutlineStarBorder />
+              </div>
+
+            </div>
+
           </SwiperSlide>
-
-
-
-
 
         </Swiper>
 
@@ -237,13 +341,8 @@ function App() {
 
     </main>
 
-    <footer>
 
-      <p>Projeto desenvolvido por &copy; José R. de Souza</p>
-      <a>GitHub</a>
-      <a>Instagram</a>
-
-    </footer>
+<Footer />
     
    
     </>

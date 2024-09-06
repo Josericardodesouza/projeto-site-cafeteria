@@ -1,0 +1,24 @@
+footer {
+    width: 100vw;
+    height: auto;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+div#icons_footer_box {
+    width: auto;
+    display: flex;
+  
+    flex-wrap: wrap;
+   
+}
+
+
+footer > div#icons_footer_box > .icon_footer {
+    font-size: 3em;
+    margin: 10px;
+}

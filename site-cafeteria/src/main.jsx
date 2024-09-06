@@ -4,10 +4,11 @@ import App from './App.jsx'
 import './index.css'
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import DeliveryPage from './components/DeliveyPage.jsx'
+import DeliveryPage from './components/DeliveryPage.jsx'
 import About from './components/About.jsx'
 import MenuCofee from './components/MenuCoffee.jsx'
 import MenuCandy from './components/MenuCandy.jsx'
+
 
 const router = createBrowserRouter ([
 
@@ -15,7 +16,7 @@ const router = createBrowserRouter ([
     element: <App />
   },
 
-  {path: '/deliverypage',
+  {path: '/deliveryPage',
     element: <DeliveryPage />
   },
 
