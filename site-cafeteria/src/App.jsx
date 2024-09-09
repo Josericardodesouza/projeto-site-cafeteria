@@ -147,39 +147,46 @@ function App() {
         <h1 id='title_header'>LOREM IPSUM COFFEE</h1>
         {/* span */}
         <p id='text_header'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        
       </div>
-
     </header>
 
 
-<Menu />
+
 
 
     <main>
       <section id='aboutUs' ref={refSectionAboutUs}>
 
-        <div id='box1' className='box_txtimg'>
-          <div>
-            <h3>Nossa História</h3>
+        <div id='conteiner_1' className='conteiner_txtimg'>
+          <div className='box_text'>
+            <h3 className='title_box'>Nossa História</h3>
             <p className='p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sint expedita dolorum debitis ipsum, unde provident fugit corrupti odit numquam quidem rem ratione fugiat nostrum dolorem, necessitatibus, amet minima ipsam.</p>
           </div>
           <img src = {image2}/>
         </div>
 
-        <div id='box2' className='box_txtimg'>
-          <p className = 'p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae et tempore ut nemo perspiciatis facilis quos fugiat exercitationem consequuntur expedita officiis, eaque qui quae molestiae optio rerum odit dolore quisquam!</p>
+        <div id='conteiner_2' className='conteiner_txtimg'>
+          <div className = 'box_text'>
+            <p className = 'p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae et tempore ut nemo perspiciatis facilis quos fugiat exercitationem consequuntur expedita officiis, eaque qui quae molestiae optio rerum odit dolore quisquam!</p>
+          </div>
           <img src = {image3}/>
 
         </div>
 
-        <div id='box3' className='box_txtimg'>
-          <p className = 'p_box'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quisquam at autem? Recusandae quia, vitae voluptates ducimus tenetur iure cumque fugit similique dicta!</p>
+   
+
+        <div id='conteiner_3' className='conteiner_txtimg'>
+        <div className='box_text'>
+          <h3 className='title_box'>Uma Arte de Café</h3>
+            <p className = 'p_box'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quisquam at autem? Recusandae quia, vitae voluptates ducimus tenetur iure cumque fugit similique dicta!</p>
+        </div>
           <img src = {image4} />
         </div>
 
-        <div id='box4' className = 'box_txtimg'>
-          <p className = 'p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, veritatis ratione vel, nostrum fugit ad consequatur sit reprehenderit doloribus assumenda necessitatibus? Praesentium corporis, possimus unde eius obcaecati placeat tenetur. Tempore.</p>
+        <div id='conteiner_4' className = 'conteiner_txtimg'>
+          <div className = 'box_text'>
+            <p className = 'p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, veritatis ratione vel, nostrum fugit ad consequatur sit reprehenderit doloribus assumenda necessitatibus? Praesentium corporis, possimus unde eius obcaecati placeat tenetur. Tempore.</p>
+          </div>
           <img src = {image5}/>
 
         </div>
@@ -188,15 +195,15 @@ function App() {
 
 
       <div id='box_links_menu' ref = {refDivButtonsMenus}>
-        <button onClick={() => setActiveComponent('MenuCoffee')}>Cafés</button>
-        <button onClick={() => setActiveComponent('MenuCandy')}>Doces</button>
+        <button id='btn_cf' onClick={() => setActiveComponent('MenuCoffee')}>Cafés</button>
+        <button id='btn_mc' onClick={() => setActiveComponent('MenuCandy')}>Doces</button>
       </div>
 
       <section id='render_menu'>
         {renderComponent()}
         </section>
 
-      <Link to = '/deliveryPage'>Delivery!</Link>
+      <Link to = '/deliveryPage'>Fazer um pedido</Link>
 
    
 

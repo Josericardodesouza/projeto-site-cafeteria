@@ -1,6 +1,9 @@
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
 
+
+
+
 function DeliveryPage() {
 
     var preco = 5
@@ -22,35 +25,40 @@ function DeliveryPage() {
 
     return (
 
+      
+
         <>
 
         <h1>Tela pedido</h1>
+
+        <table>
+          <tr>
+           <td>
+            <div>Café</div>
+           </td>
+
+           <td>
+            <div>
+              <input type="Number"/>
+            </div>
+           </td>
+          </tr>
+
+        </table>
+
 
         <Link to = '/'>
             <button>Voltar</button>
         </Link>
 
 
-        <table>
-            <thead>
-                <th>Café</th>
-                <th>Preço</th>
-                <th>Checkbox</th>
-            </thead>
-
-            <body>
-                <tr>
-                    <td>Cappucino</td>
-                    <td>Valor</td>
-                    <td><input type="checkbox"/></td>
-                </tr>
-            </body>
+        
 
 
-        </table>
 
 
-        <p>Ok, então o senhor(a) irá desejar :</p>
+
+        <p>Ok, então o senhor(a) irá desejar: </p>
         <p>No valor de: {preco} </p>
 
 

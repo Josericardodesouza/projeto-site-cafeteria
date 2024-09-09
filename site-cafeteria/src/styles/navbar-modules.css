@@ -39,7 +39,7 @@
 
 
 nav {
-    width: 100vw;
+    width: 90vw;
     height: 10vh;
     background-color: transparent;
     display: flex;
@@ -52,7 +52,8 @@ nav {
     color: var(--brownSugar);
     font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.1em;
-    box-sizing: border-box;
+  
+   
 }
 
 nav > div#nav_img {
@@ -75,10 +76,12 @@ nav > div#nav_img > svg {
 
 
 div#box_links {
+    width: auto;
     display: flex;
     justify-content: space-around;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -93,10 +96,38 @@ div#box_links > a {
     margin: 2px;
     border-radius: 2px;
 
-    
-
 }
+
+div#box_links > a:hover {
+    background-color: var(--cream);
+    color: var(--cor7);
+    animation: buttonAnimation 1s ease;
+}
+
+
+
 
 div#menu_lateral, button#nav {
     display: none;
+}
+
+
+
+
+
+
+
+@keyframes buttonAnimation {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+    
 }

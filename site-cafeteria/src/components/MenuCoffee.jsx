@@ -1,6 +1,15 @@
 import '../styles/menus-module.css'
 
 function MenuCoffee() {
+
+    const prices = [
+
+        
+
+
+
+    ]
+
     return (
         <>
         <h1>Cafés</h1>

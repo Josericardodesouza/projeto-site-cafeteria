@@ -3,7 +3,7 @@ html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 
@@ -65,44 +65,65 @@ body {
 section#aboutUs {
   width: 100vw;
   height: auto;
-  background-color: transparent;
+  /* background-color: var(--copper); */
+  /* background-color: var(--cream2); */
   /* background-color: red; */
+  padding-bottom: 10px;
 
 }
 
-div.box_txtimg {
+div.conteiner_txtimg {
   display: flex;
+  flex-direction: column;
   width: 95%;
   height: 10%;
   margin: auto;
   justify-content: space-between;
-  margin-bottom: 90px;
+  align-items: center;
+  margin-bottom: 20px;
+  /* margin-bottom: 90px; */
 }
 
-div#box2, div#box4 {
-  flex-direction: row-reverse;
 
+div#conteiner_1 {
+  margin-top: 20px;
 }
+
+.box_text {
+  margin: 0px 10px 0px 10px;
+  padding: 0px;
+  display: block;
+}
+
+.title_box {
+  color: var(--brownSugar);
+  font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 25px 0px 25px 0px;
+  padding: 0;
+}
+
 
 
 .p_box {
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-family: 'Nunito';
-  font-weight: 600;
-  width: 50%;
+  font-weight: 300;
+  width: 100%;
   color: black;
+  margin: 25px 0px 25px 0px;
   
 
 }
 
 
 img {
-  width: 40%;
-  height: 40%;
+  width: 80%;
+  height: auto;
 
 
 }
-
 
 div#box_links_menu {
   width: 100%;
@@ -110,7 +131,7 @@ div#box_links_menu {
   margin: auto;
   display: flex;
   justify-content: center;
-  background-color: var(--cor7);
+
   font-family: 'Nunito';
   
   
@@ -122,6 +143,23 @@ div#box_links_menu > a {
   margin: 20px;
   
 }
+
+div#box_links_menu > button {
+  width: 100px;
+  margin: 20px;
+  background-color: transparent;
+  height: auto;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 5px solid var(--cor7);
+  border-left: 0;
+  /* border-radius: 4px; */
+  font-size: 1.5em;
+  font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+  
+}
+
+
 
 section#evaluations {
   height: 500px;
@@ -140,15 +178,31 @@ section#evaluations {
 
 
 
-@media (max-width: 600px) {
+@media (min-width: 500px) {
 
 
+  div.conteiner_txtimg {
+    flex-direction: row;
+    padding: 5px;
+  }
 
+
+   div#conteiner_2, div#conteiner_4 {
+    flex-direction: row-reverse;
   
+  } 
 
 
+  img {
+    width: 40%;
+    height: auto;
   
+  
+  }
+
 }
 
 
+@media (min-width: 1000px) {
 
+}
