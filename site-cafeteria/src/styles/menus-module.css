@@ -1,7 +1,8 @@
 .section_menu {
     width: 100vw;
     /* background-color: green; */
-    background-color: var(--cooper2);
+    /* background-color: var(--cooper2); */
+    background-color: var(--hunterGreen);
     display: flex;
     flex-direction: column;
     justify-content: center;
