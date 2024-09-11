@@ -50,7 +50,7 @@ function MenuCoffee() {
                 </tr>
 
                 <tr>
-                    <td className = 'item'>Frapuccino</td>
+                    <td className = 'item'>Frappuccino</td>
                     <td className = 'value'>R$ 19,00</td>
                 </tr>
 

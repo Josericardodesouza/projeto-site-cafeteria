@@ -12,7 +12,6 @@ import image3 from './assets/images/pexels-michael-burrows-7125434.jpg'
 import image4 from './assets/images/pexels-ekrulila-2307221.jpg'
 import image5 from './assets/images/coffee-7561288_1920.jpg'
 
-import coffee from './assets/images/cards-images/pexels-andrew-peterson-113438-350478.jpg'
 
 import testeImg1 from './assets/images/testeSlide/pexels-8moments-3264706.jpg'
 import testeImg2 from './assets/images/testeSlide/pexels-graeme-travers-637657729-26820674.jpg'
@@ -27,7 +26,26 @@ import { MdOutlineStar, MdOutlineStarBorder, MdOutlineStarHalf } from 'react-ico
 import Footer from './components/Footer'
 
 
+import cafeCoadoImg from './assets/images/cards-images/cafe-coado.jpeg'
+import cafeGeladoImg from './assets/images/cards-images/cafe-gelado.jpeg'
+import cappucinoImg from './assets/images/cards-images/pexels-andrew-peterson-113438-350478.jpg'
+import coldBrewImg from './assets/images/cards-images/cold-brew.jpg'
+import espressoImg from './assets/images/cards-images/pexels-raymond-petrik-1448389535-28320963-espresso.jpg'
+import espressoTonicoImg from './assets/images/cards-images/coffee-4862622_1280-espressotonico.jpg'
+import frappuccinoImg from './assets/images/cards-images/cafe-frappuccino.jpeg'
+import latteImg from './assets/images/cards-images/latte-art-2431160_1280-latte.jpg'
+import mochaImg from './assets/images/cards-images/cafe-mocha.jpeg'
+import pingadoImg from './assets/images/cards-images/pingado.jpg'
+
+
+
+
+
+
+
 function App() {
+
+  const coffesImg = [cafeCoadoImg, cafeGeladoImg, cappucinoImg, coldBrewImg, espressoImg, espressoTonicoImg, frappuccinoImg, latteImg, mochaImg, pingadoImg]
 
 
 
@@ -162,14 +180,14 @@ function App() {
             <h3 className='title_box'>Nossa História</h3>
             <p className='p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sint expedita dolorum debitis ipsum, unde provident fugit corrupti odit numquam quidem rem ratione fugiat nostrum dolorem, necessitatibus, amet minima ipsam.</p>
           </div>
-          <img src = {image2}/>
+          <img className='img_aboutUs' src = {image2}/>
         </div>
 
         <div id='conteiner_2' className='conteiner_txtimg'>
           <div className = 'box_text'>
             <p className = 'p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae et tempore ut nemo perspiciatis facilis quos fugiat exercitationem consequuntur expedita officiis, eaque qui quae molestiae optio rerum odit dolore quisquam!</p>
           </div>
-          <img src = {image3}/>
+          <img className = 'img_aboutUs' src = {image3}/>
 
         </div>
 
@@ -180,14 +198,14 @@ function App() {
           <h3 className='title_box'>Uma Arte de Café</h3>
             <p className = 'p_box'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quisquam at autem? Recusandae quia, vitae voluptates ducimus tenetur iure cumque fugit similique dicta!</p>
         </div>
-          <img src = {image4} />
+          <img className='img_aboutUs' src = {image4} />
         </div>
 
         <div id='conteiner_4' className = 'conteiner_txtimg'>
           <div className = 'box_text'>
             <p className = 'p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, veritatis ratione vel, nostrum fugit ad consequatur sit reprehenderit doloribus assumenda necessitatibus? Praesentium corporis, possimus unde eius obcaecati placeat tenetur. Tempore.</p>
           </div>
-          <img src = {image5}/>
+          <img className = 'img_aboutUs' src = {image5}/>
 
         </div>
 
@@ -206,9 +224,10 @@ function App() {
       <Link to = '/deliveryPage'>Fazer um pedido</Link>
 
    
+      <h3>Avaliados recentemente</h3>
 
       <section id='evaluations' ref = {refSectionEv}>
-        <h3>Avaliações dos nossos clientes</h3>
+       
 
         {/* Swiper area */}
 
@@ -216,8 +235,8 @@ function App() {
 
           modules={ [Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
 
-          spaceBetween={20}
-          slidesPerView={3}
+          spaceBetween={0}
+          slidesPerView={1}
           navigation
           Pagination = {{clickable: true}}
           scrollbar = {{draggable: true}}
@@ -238,7 +257,7 @@ function App() {
 
             <div className='conteiner_ev'>
 
-              <div className='ev_img_box'> <img src = {coffee} /></div>
+              <div className='ev_img_box'> <img src = {cappucino} /></div>
 
               <div className='ev_box'>
                 <p>Cappuccino</p>
@@ -258,7 +277,7 @@ function App() {
             <div className = 'conteiner_ev'>
 
               <div className = 'ev_img_box'>
-                <img src = {testeImg2}></img>
+                <img src = {cafeCoado}></img>
               </div>
 
               <div className='ev_box'>
@@ -283,7 +302,7 @@ function App() {
           </div>
 
           <div className='ev_box'>
-                <p>Café</p>
+                <p>Frapuccino</p>
                 <MdOutlineStar />
                 <MdOutlineStar />
                 <MdOutlineStar />
