@@ -12,60 +12,63 @@ function MenuCoffee() {
 
     return (
         <>
-        <h1>Cafés</h1>
+        
 
        <section className='section_menu'>
 
         <div className = 'box_menu'>
+        <h1 className = 'title_table'>Quentes</h1> 
             <table>
                 <tr>
                     <td className = 'item'>Café Coado</td>
-                    <td className = 'value'>R$ 45,90</td>
+                    <td className = 'value'>R$ 1,50</td>
                 </tr>
 
                 <tr>
                 <td className = 'item'>Café Gelado</td>
-                <td className = 'value'>R$ 45,90</td>
+                <td className = 'value'>R$ 2,20</td>
                 </tr>
 
                 <tr>
                 <td className = 'item'>Cappuccino</td>
-                <td className = 'value'>R$ 45,90</td>
+                <td className = 'value'>R$ 6,00</td>
                 </tr>
 
                 <tr>
                     <td className = 'item'>Cold Brew</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 11,00</td>
                 </tr>
 
                 <tr>
                     <td className = 'item'>Espresso</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 6,00</td>
                 </tr>
 
                 <tr>
                     <td className = 'item'>Expresso Tônico</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 5,00</td>
                 </tr>
 
                 <tr>
                     <td className = 'item'>Frapuccino</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 19,00</td>
                 </tr>
 
                 <tr>
                     <td className = 'item'>Latte</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 20,00</td>
                 </tr>
+
+               
 
                 <tr>
                     <td className = 'item'>Mocha</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 8,00</td>
                 </tr>
 
                 <tr>
                     <td className = 'item'>Pingado</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 5,00</td>
                 </tr>
             </table>
         </div>

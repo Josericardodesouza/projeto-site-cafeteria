@@ -4,34 +4,33 @@ function MenuCandy() {
     return (
         <>
 
-        <h1>Doces</h1>
-
         <section className='section_menu'>
             <div className = 'box_menu'>
+            <h1 className = 'title_table'>Doces</h1>
                 <table>
                     <tr>
                        <td className = 'item'>Brigadeiros</td>
-                       <td className = 'value'>R$00,00</td>
+                       <td className = 'value'>R$ 0,20</td>
                     </tr>
                     <tr>
                     <td className = 'item'>Brownies</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 3,00</td>
                     </tr>
                     <tr>
                     <td className = 'item'>Cookies</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 0,30</td>
                     </tr>
                     <tr>
                     <td className = 'item'>Cupcakes</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 7,00</td>
                     </tr>
                     <tr>
                     <td className = 'item'>Pão de Mel</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 1,50</td>
                     </tr>
                     <tr>
                     <td className = 'item'>Tortas</td>
-                    <td className = 'value'>R$00,00</td>
+                    <td className = 'value'>R$ 16,00</td>
                     </tr>
            
 

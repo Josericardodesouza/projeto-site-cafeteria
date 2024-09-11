@@ -1,24 +1,34 @@
 .section_menu {
     width: 100vw;
+    height: auto;
     /* background-color: green; */
     /* background-color: var(--cooper2); */
-    background-color: var(--hunterGreen);
+     background-image: url(../assets/images/pexels-vlada-karpovich-4451742.jpg); 
+    background-color: var(--cream);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    vertical-align: center;
     align-items: center;
+  
 
 }
 
 .box_menu {
-    width: 95%;
+    width: 100%;
+    height: 100%;
     /* background-color: aqua; */
     display: flex;
-   
-
+    flex-direction: column;
     font-family: 'Roboto';
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 200;
+    
+    vertical-align: center;
+    align-items: center;
+ 
   
 }
 
@@ -28,14 +38,51 @@
 }
 
 table {
-    width: 100%;
+    width: 80%;
     border-collapse: separate;
-    border-spacing: 5px;
+    border-spacing: 0px;
+    color: white;
+    font-family: 'Pacifico';
+    font-size: 0.9em;
+    /* background-image: linear-gradient(to bottom, var(--copper) 45%, var(--copper2)); */
+     background-image: url(../assets/images/festa-de-halloween.jpg);  
+    /* background-color: var(--copper2); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    padding: 5px;
+    
 }
 
-table, th, td {
-    border: 2px solid black
+table {
+    border: 0;
 }
+
+.title_table {
+    font-family: 'Lobster';
+    color: var(--cream2);
+    font-weight: 800;
+    font-size: 2.0em;
+}
+
+.value {
+    width: 30%;
+}
+  
+td {
+    width: auto;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    
+}
+
+th {
+    border: 0;
+}
+
 
 
 
