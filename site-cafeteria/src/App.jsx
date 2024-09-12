@@ -42,6 +42,7 @@ import brownieImg from './assets/images/cards-images/pexels-ella-olsson-572949-3
 import cookieImg from './assets/images/cards-images/pexels-sara-santos-381576-1020585-cookies.jpg'
 import cupcake from './assets/images/cards-images/pexels-aqtai-635409-cupcake.jpg'
 import tortaImg from './assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplash-torta-maca.jpg'
+import { CiCoffeeCup } from 'react-icons/ci'
 
 
 
@@ -229,7 +230,12 @@ function App() {
         {renderComponent()}
         </section>
 
-      <Link to = '/deliveryPage'>Fazer um pedido</Link>
+      <Link to = '/deliveryPage'>
+        <div id='goDeliveryPage'>
+          <CiCoffeeCup />
+          <p>Fazer um pedido</p>
+        </div>
+      </Link>
 
    
       <h3>Avaliados recentemente</h3>
@@ -243,22 +249,22 @@ function App() {
 
           modules={ [Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
 
-          spaceBetween={0}
-          slidesPerView={1}
+          spaceBetween={11}
+          slidesPerView={1.5}
           navigation
           Pagination = {{clickable: true}}
           scrollbar = {{draggable: true}}
-          effect= {'coverflow'}
-          coverflowEffect= { {
+          // effect= {'coverflow'}
+          // coverflowEffect= { {
 
-            rotate: 10,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false
+          //   rotate: 10,
+          //   stretch: 0,
+          //   depth: 100,
+          //   modifier: 1,
+          //   slideShadows: false
 
 
-          } }
+          // } }
         >
 
           <SwiperSlide>
@@ -275,6 +281,12 @@ function App() {
                 <MdOutlineStarHalf />
                 <MdOutlineStarBorder />
               </div>
+
+              <div className = 'box_opinion'>
+                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
+                <p className='clientName'>Angélica Silva</p>
+              </div>
+
 
             </div>
 
@@ -297,6 +309,11 @@ function App() {
                 <MdOutlineStarBorder />
               </div>
 
+              <div className = 'box_opinion'>
+                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
+                <p className='clientName'>Silvana Almeida</p>
+              </div>
+
             </div>
 
           </SwiperSlide>
@@ -316,6 +333,11 @@ function App() {
                 <MdOutlineStar />
                 <MdOutlineStarHalf />
                 <MdOutlineStarBorder />
+              </div>
+
+              <div className = 'box_opinion'>
+                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
+                <p className='clientName'>Juvenal Silva</p>
               </div>
 
         </div>
@@ -340,7 +362,13 @@ function App() {
               </div>
               <div className='box_opinion'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nesciunt nisi omnis eveniet tenetur velit fugit voluptates, expedita numquam veniam excepturi quidem sunt? Laudantium maxime ratione ipsum dignissimos cum ipsa.
+                <p className='clientName'>Felipe Damasco</p>
 
+              </div>
+
+              <div className = 'box_opinion'>
+                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
+                <p className='clientName'>Marco Túlio</p>
               </div>
 
             </div>
@@ -362,6 +390,11 @@ function App() {
                 <MdOutlineStar />
                 <MdOutlineStarHalf />
                 <MdOutlineStarBorder />
+              </div>
+
+              <div className = 'box_opinion'>
+                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
+                <p className='clientName'>Cláudia Faria</p>
               </div>
 
             </div>

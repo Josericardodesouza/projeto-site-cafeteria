@@ -160,6 +160,38 @@ div#box_links_menu > button {
   
 }
 
+div#goDeliveryPage {
+  width: 25%;
+  height: auto;
+  padding: 10px;
+  margin:  50px auto 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--flax);
+  border-radius: 20px;
+}
+
+div#goDeliveryPage:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+div#goDeliveryPage > p {
+  font-size: 1.3em;
+  text-decoration: none;
+  color: var(--copper2);
+  margin: 2px;
+  text-align: center;
+}
+
+div#goDeliveryPage > svg {
+  font-size: 2.5em;
+  color: var(--copper2);
+}
 
 
 section#evaluations {
@@ -181,11 +213,12 @@ section#evaluations {
 
 .conteiner_ev {
   display: block;
-  width: 70%;
+  width: 100%;
   margin-bottom: 15px;
   box-sizing: border-box;
   background-color: red;
   margin: auto;
+  padding: 5px;
 }
 
 .ev_img_box {
@@ -198,6 +231,16 @@ section#evaluations {
 .ev_img_box  img {
   width: 100%;
   height: auto;
+}
+
+
+.box_opinion {
+  display: flex;
+  flex-direction: column;
+}
+
+.box_opinion > .clientName {
+  text-align: right;
 }
 
 
