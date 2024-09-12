@@ -164,11 +164,19 @@ div#box_links_menu > button {
 
 section#evaluations {
   width: 90vw;
-  height: 500px;
+  height: auto;
   display: flex;
   justify-content: center;
   margin: auto;
+  margin-bottom: 120px;
 }
+
+.swiper-slide {
+  background-color: green;
+  padding-bottom: 60px;
+
+}
+
 
 
 .conteiner_ev {

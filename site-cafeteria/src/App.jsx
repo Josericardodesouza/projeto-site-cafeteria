@@ -37,6 +37,13 @@ import latteImg from './assets/images/cards-images/latte-art-2431160_1280-latte.
 import mochaImg from './assets/images/cards-images/cafe-mocha.jpeg'
 import pingadoImg from './assets/images/cards-images/pingado.jpg'
 
+import brigadeiroImg from './assets/images/cards-images/pexels-livilla-latini-1678510737-27850066-brigadeiro.jpg'
+import brownieImg from './assets/images/cards-images/pexels-ella-olsson-572949-3026804-brownie.jpg'
+import cookieImg from './assets/images/cards-images/pexels-sara-santos-381576-1020585-cookies.jpg'
+import cupcake from './assets/images/cards-images/pexels-aqtai-635409-cupcake.jpg'
+import tortaImg from './assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplash-torta-maca.jpg'
+
+
 
 
 
@@ -45,7 +52,8 @@ import pingadoImg from './assets/images/cards-images/pingado.jpg'
 
 function App() {
 
-  const coffesImg = [cafeCoadoImg, cafeGeladoImg, cappucinoImg, coldBrewImg, espressoImg, espressoTonicoImg, frappuccinoImg, latteImg, mochaImg, pingadoImg]
+  const coffesImg = [cafeCoadoImg, cafeGeladoImg, cappucinoImg, coldBrewImg, espressoImg, espressoTonicoImg, frappuccinoImg, latteImg, mochaImg, pingadoImg
+    ]
 
 
 
@@ -257,7 +265,7 @@ function App() {
 
             <div className='conteiner_ev'>
 
-              <div className='ev_img_box'> <img src = {cappucino} /></div>
+              <div className='ev_img_box'> <img src = {cappucinoImg} /></div>
 
               <div className='ev_box'>
                 <p>Cappuccino</p>
@@ -277,7 +285,7 @@ function App() {
             <div className = 'conteiner_ev'>
 
               <div className = 'ev_img_box'>
-                <img src = {cafeCoado}></img>
+                <img src = {cafeCoadoImg}></img>
               </div>
 
               <div className='ev_box'>
@@ -329,6 +337,10 @@ function App() {
                 <MdOutlineStar />
                 <MdOutlineStarHalf />
                 <MdOutlineStarBorder />
+              </div>
+              <div className='box_opinion'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nesciunt nisi omnis eveniet tenetur velit fugit voluptates, expedita numquam veniam excepturi quidem sunt? Laudantium maxime ratione ipsum dignissimos cum ipsa.
+
               </div>
 
             </div>
