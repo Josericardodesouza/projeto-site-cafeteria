@@ -63,7 +63,7 @@ function MenuCandy() {
                    {candyList.map(doces => (
                     <tr key={doces.id}>
                         <td className='item'>{doces.name}</td>
-                        <td className='price'>'R$' {doces.price}</td>
+                        <td className='value'>R$ {doces.price}</td>
 
                     </tr>
 
