@@ -41,6 +41,7 @@ import brigadeiroImg from './assets/images/cards-images/pexels-livilla-latini-16
 import brownieImg from './assets/images/cards-images/pexels-ella-olsson-572949-3026804-brownie.jpg'
 import cookieImg from './assets/images/cards-images/pexels-sara-santos-381576-1020585-cookies.jpg'
 import cupcake from './assets/images/cards-images/pexels-aqtai-635409-cupcake.jpg'
+import paoDeMelImg from './assets/images/cards-images/pão-de-mel-caldeirao-bruxa-solar.jpeg'
 import tortaImg from './assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplash-torta-maca.jpg'
 import { CiCoffeeCup } from 'react-icons/ci'
 
