@@ -1,6 +1,7 @@
+import '../styles/deliveryPage-modules.css'
+import '../styles/colorsAndFonts-module.css'
 
-
-import { coffeeList } from "./MenuCoffee"
+import { hotDrinks, coldDrinks } from './ConstantsItens'
 
 function DeliveryPage() {
   return (
@@ -9,14 +10,25 @@ function DeliveryPage() {
 
        
         <table>
-        {coffeeList.map(cafes => (
+        {hotDrinks.map(cafes => (
           <tr key={cafes.id}>
-            <td><img src= {cafes.img} /></td>
-            <td>{cafes.name}</td>
-            <td>{cafes.price}</td>
+            <td className = 'dp_img'><img src= {cafes.img} /></td>
+            <td className = 'dp_item'>{cafes.name}</td>
+            <td className = 'dp_price'>{cafes.price}</td>
           </tr>
           ))}
 
+        </table>
+
+        <table>
+          {candyList.map(doces => (
+            <tr key={doces.id}>
+              <td className='dp_img'><img src={doces.img}/></td>
+              <td className='dp_item'>{doces.name}</td>
+              <td className='dp_price'>{doces.price}</td>
+
+            </tr>
+          ))}
         </table>
          
       
