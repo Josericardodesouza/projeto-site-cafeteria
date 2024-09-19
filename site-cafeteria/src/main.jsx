@@ -8,6 +8,7 @@ import DeliveryPage from './components/DeliveryPage.jsx'
 import About from './components/About.jsx'
 import MenuCofee from './components/MenuCoffee.jsx'
 import MenuCandy from './components/MenuCandy.jsx'
+import SendPage from './components/SendPage.jsx'
 
 
 const router = createBrowserRouter ([
@@ -30,6 +31,10 @@ const router = createBrowserRouter ([
 
   {path: '/menucandy',
     element: <MenuCandy />
+  },
+
+  {path: '/sendPage',
+    element: < SendPage/>
   }
 
 ])
