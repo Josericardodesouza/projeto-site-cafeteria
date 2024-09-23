@@ -5,13 +5,19 @@
 
     nav {
          flex-direction: column; 
+         height: auto;
 
     }
   
-
-
     div#box_links {
         display: block;
+
+    }
+
+    div#box_links > a { 
+        font-size: 0.8em;
+
+
     }
 
      /* button {
@@ -40,7 +46,7 @@
 
 nav {
     width: 90vw;
-    height: 10vh;
+    height: auto;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
@@ -48,11 +54,9 @@ nav {
     /* padding: 5px; */
     margin: 0;
     padding: 0;
-    font-size: 1.1em;
+    font-size: 0.8em;
     color: var(--brownSugar);
     font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.1em;
-  
    
 }
 
@@ -87,7 +91,7 @@ div#box_links {
 
 
 div#box_links > a {
-    font-size: 1.5em;
+    font-size: 1.2em;
     display: block;
     color: var(--cream);
     padding: 5px;

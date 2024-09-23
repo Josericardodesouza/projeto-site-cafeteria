@@ -24,10 +24,10 @@ function NavBar({scrollAboutUs, scrollMenus, scrollEvaluations}) {
       </div>
 
       <div id='box_links'>
-        <a id='btn_aboutUs' onClick= {scrollAboutUs}>Quem somos</a>
-        <a id='btn_menus' onClick={scrollMenus}>Cardápio</a>
-        <a id='btn_ev' onClick={scrollEvaluations}>Avaliações</a>
-        <Link to = '/about'>Contato</Link>
+        <a id='btn_aboutUs' className='btns_nav' onClick= {scrollAboutUs}>Quem somos</a>
+        <a id='btn_menus' className='btns_nav' onClick={scrollMenus}>Cardápio</a>
+        <a id='btn_ev' className = 'btns_nav' onClick={scrollEvaluations}>Avaliações</a>
+        <Link to = '/about' className = 'btns_nav'>Contato</Link>
       </div>
 
 

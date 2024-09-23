@@ -3,21 +3,26 @@ import '../styles/colorsAndFonts-module.css'
 
 import { hotDrinks, coldDrinks } from './ConstantsItens'
 import { candyList } from './ConstantsItens'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
-
+import { useState } from 'react'
+import SendPage from './SendPage'
 
 
 
 function DeliveryPage() {
 
   var input = document.getElementById('ent-adressUser')
-  var pState = document.getElementById('output_uf')
-  var pCity = document.getElementById('output_city')
-  var pNeigh = document.getElementById('output_neighborhood')
-  var pStreet = document.getElementById('output_street')
-  
 
+  const [adressUser, setAdressUser] = useState ({
+    state: '',
+    city: '',
+    neighborhood: '',
+    street: ''
+
+
+  })
+ 
 
   const localSearch = (e) => { 
     const cep = e.target.value.replace(/\D/g, '')
@@ -27,40 +32,41 @@ function DeliveryPage() {
      
       console.log(data)
 
+      setAdressUser ({
+
+        state: data.estado,
+        city: data.localidade,
+        neighborhood: data.bairro,
+        street: data.logradouro
+
+      })
+
+
+      Navigate('/sendPage')
+
+
       const state = data.estado 
       const city = data.localidade 
       const neighborhood = data.bairro 
       const street = data.logradouro
 
-      pState.innerText = `Estado: ${state}`
-      pCity.innerText = `Cidade: ${city}`
-      pNeigh.innerText = `Bairro: ${neighborhood}`
-      pStreet.innerText = `Rua: ${street}`
-  
-  
-      
- 
+
+      document.getElementById('output_uf').innerHTML = `Estado: ${state}`
+      document.getElementById('output_city').innerHTML = `Cidade: ${city}`
+      document.getElementById('output_neighborhood').innerHTML = `Bairro: ${neighborhood}`
+      document.getElementById('output_street').innerHTML = `Rua: ${street}`
+
+
+
+     
+
+
+   
         
-
-        
-        
-  })}
-      
-      
-
- 
-  
+  })
 
 
-
-    
-    
-
-
-
-
-  
-
+}
   
 
 
@@ -96,9 +102,10 @@ function DeliveryPage() {
 
         <label htmlFor="ent_adressUser"> Insira seu CEP</label>
           <input type='text' id='ent_adressUser' name='ent_adressUser' onBlur={localSearch}></input>
+          <SendPage adressUser={adressUser} />
          
 
-          <p id='output_uf'></p>
+          <p id='output_uf'>{adressUser.state}</p>
           <p id='output_city'></p>
           <p id='output_neighborhood'></p>
           <p id='output_street'></p>
@@ -135,3 +142,4 @@ function DeliveryPage() {
 }
 
 export default DeliveryPage
+ 
