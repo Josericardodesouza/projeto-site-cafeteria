@@ -12,14 +12,16 @@ function MenuCandy() {
             <div className = 'box_menu'>
             <h1 className = 'title_table'>Doces</h1>
                 <table className='cardapio'>
-                   {candyList.map(doces => (
-                    <tr key={doces.id}>
-                        <td className='item'>{doces.name}</td>
-                        <td className='value'>R$ {doces.price}</td>
+                   <tbody>
+                       {candyList.map(doces => (
+                        <tr key={doces.id}>
+                            <td className='item'>{doces.name}</td>
+                            <td className='value'>R$ {doces.price}</td>
+                        </tr>
+                  
+                        ))}
 
-                    </tr>
-
-                   ))}
+                    </tbody>
 
 {/* 
                 <td>Bolo de Cenoura</td>

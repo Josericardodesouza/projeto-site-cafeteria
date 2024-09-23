@@ -253,7 +253,7 @@ function App() {
           spaceBetween={11}
           slidesPerView={1.5}
           navigation
-          Pagination = {{clickable: true}}
+          pagination = {{clickable: true}}
           scrollbar = {{draggable: true}}
           // effect= {'coverflow'}
           // coverflowEffect= { {

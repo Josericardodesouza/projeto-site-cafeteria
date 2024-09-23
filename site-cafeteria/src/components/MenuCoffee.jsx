@@ -19,28 +19,29 @@ function MenuCoffee() {
         <div className = 'box_menu'>
         <h1 className = 'title_table'>Quentes</h1> 
             <table className='cardapio'>
-                {hotDrinks.map(cafes => (
-                    <tr key={cafes.id}>
-                        <td className='item'>{cafes.name}</td>
-                        <td className='value'>R$ {cafes.price}</td>
-                    </tr>
-                ))}
+                <tbody>
+                    {hotDrinks.map(cafes => (
+                        <tr key={cafes.id}>
+                            <td className='item'>{cafes.name}</td>
+                            <td className='value'>R$ {cafes.price}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+            </table>
 
-                <h1 className='title_table'>Geladas</h1>
+            <h1 className='title_table'>Geladas</h1>
 
-                    {coldDrinks.map(gelados => (
-                    <tr key={gelados.id}>
-                        <td className='item'>{gelados.name}</td>
-                        <td className='value'>RR$ {gelados.price}</td>
-
-
-                    </tr>
-                ))}
+            <table>
+                <tbody>
+                        {coldDrinks.map(gelados => (
+                        <tr key={gelados.id}>
+                            <td className='item'>{gelados.name}</td>
+                            <td className='value'>RR$ {gelados.price}</td>
+                        </tr>
+                    ))}
+                </tbody>
            
 
-
-            
-        
 
             </table>
         </div>
