@@ -1,27 +1,5 @@
 
 
-
-@media (max-width: 600px) {
-
-    nav {
-         flex-direction: column; 
-         height: auto;
-        
-       
-
-    }
-  
-    div#box_links {
-        display: block;
-
-    }
-
-    div#box_links > a { 
-        font-size: 1.2em;
-
-
-    }
-
      /* button {
         width: auto;
         height: auto;
@@ -39,11 +17,6 @@
         right: 0;
        
     }  */
-
-
-
-    
-}
 
 
 nav {
@@ -80,14 +53,14 @@ nav > div#nav_img > svg {
 
 
 
-div#box_links {
+div#box_links_nav {
     width: auto;
     display: flex;
     justify-content: space-around;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1.0em;
+    font-size: 1.9em;
     white-space: nowrap;
     
 }
@@ -98,7 +71,7 @@ div#box_links {
 }
 
 
-div#box_links > a {
+div#box_links_nav > a {
     display: block;
     color: var(--cream);
     padding: 5px;
@@ -110,7 +83,7 @@ div#box_links > a {
 
 }
 
-div#box_links > a:hover {
+div#box_links_nav > a:hover {
     background-color: var(--cream);
     color: var(--cor7);
     animation: buttonAnimation 1s ease;
@@ -119,27 +92,40 @@ div#box_links > a:hover {
 
 
 
-div#menu_lateral, button#nav {
-    display: none;
-}
 
 
+@media (max-width: 800px) {
 
+    nav {
 
+         height: auto;
+         display: block;
+       
 
-
-
-@keyframes buttonAnimation {
-    0% {
-        scale: 1;
+    }
+  
+    div#box_links_nav {
+        display: block;
+        font-size: 1.5em;
+        
+       
     }
 
-    50% {
-        scale: 1.1;
+    div#box_links_nav > a {
+        margin: auto;
+        width: 50%;
+        background-color: transparent;
+        border: 0px;
+        border-bottom: 5px solid var(--brownSugar);
+        border-radius: 6px;
+
     }
 
-    100% {
-        scale: 1;
-    }
+
+
     
+
+
+
+
 }

@@ -13,6 +13,8 @@ import { DiCoffeescript } from 'react-icons/di'
 function NavBar({scrollAboutUs, scrollMenus, scrollEvaluations}) {
 
 
+
+
     return (
        
     <nav>
@@ -23,7 +25,7 @@ function NavBar({scrollAboutUs, scrollMenus, scrollEvaluations}) {
         {/* <a href="#">Cafeteria</a> */}
       </div>
 
-      <div id='box_links'>
+      <div id='box_links_nav'>
         <a id='btn_aboutUs' className='btns_nav' onClick= {scrollAboutUs}>Quem somos</a>
         <a id='btn_menus' className='btns_nav' onClick={scrollMenus}>Cardápio</a>
         <a id='btn_ev' className = 'btns_nav' onClick={scrollEvaluations}>Avaliações</a>
@@ -31,11 +33,11 @@ function NavBar({scrollAboutUs, scrollMenus, scrollEvaluations}) {
       </div>
 
 
-      <button id='nav' onClick={SideMenu}>
+      {/* <button id='nav' onClick={SideMenu}>
 
       <IoIosMenu size={40} />
        
-      </button>
+      </button> */}
 
     </nav>
 
