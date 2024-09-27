@@ -44,6 +44,7 @@ import cupcake from './assets/images/cards-images/pexels-aqtai-635409-cupcake.jp
 import paoDeMelImg from './assets/images/cards-images/pão-de-mel-caldeirao-bruxa-solar.jpeg'
 import tortaImg from './assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplash-torta-maca.jpg'
 import { CiCoffeeCup } from 'react-icons/ci'
+import { useEffect } from 'react'
 
 
 
@@ -53,6 +54,11 @@ import { CiCoffeeCup } from 'react-icons/ci'
 
 
 function App() {
+
+
+
+
+
 
   const coffesImg = [cafeCoadoImg, cafeGeladoImg, cappucinoImg, coldBrewImg, espressoImg, espressoTonicoImg, frappuccinoImg, latteImg, mochaImg, pingadoImg
     ]
@@ -160,13 +166,12 @@ function App() {
 
 
   
-  
   return (
 
     <>
    
 
-    <header>
+    <header id='header'>
       <NavBar scrollAboutUs = {scrollAboutUs} scrollMenus = {scrollMenus} scrollEvaluations = {scrollEvaluations} />
 
      
@@ -183,6 +188,11 @@ function App() {
 
 
     <main>
+
+      <button id='btn_scroll_to_header'>GO UP</button>
+
+
+
       <section id='aboutUs' ref={refSectionAboutUs}>
 
         <div id='conteiner_1' className='conteiner_txtimg'>

@@ -63,6 +63,15 @@ body {
   background-color: whitesmoke;
 }
 
+
+button#btn_scroll_to_header {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 30%;
+  position: fixed;
+}
+
 section#aboutUs {
   width: 100vw;
   height: auto;
@@ -250,6 +259,17 @@ section#evaluations {
 
 
 @media (min-width: 500px) {
+
+
+  #div_box_links_nav {
+    position: absolute;
+
+
+  }
+  
+button#btn_scroll_to_header {
+ display: none;
+}
 
 
   div.conteiner_txtimg {
