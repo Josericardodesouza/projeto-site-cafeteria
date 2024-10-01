@@ -26,7 +26,7 @@ function NavBar({scrollAboutUs, scrollMenus, scrollEvaluations}) {
         
           <DiCoffeescript />
         
-        {/* <a href="#">Cafeteria</a> */}
+         <a href="#" id='title_nav'>Cafeteria Bom Grão</a>
       </div>
 
       <div id='conteiner_links_nav'>

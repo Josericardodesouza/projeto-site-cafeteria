@@ -33,6 +33,7 @@ div#box_header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 70px;
 
 }
 div#box_header > h1 {
