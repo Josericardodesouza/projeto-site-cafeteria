@@ -3,8 +3,8 @@
     height: auto;
     /* background-color: green; */
     /* background-color: var(--cooper2); */
-     background-image: url(../assets/images/pexels-vlada-karpovich-4451742.jpg); 
-    background-color: var(--cream);
+     /* background-image: url(../assets/images/pexels-vlada-karpovich-4451742.jpg);  */
+    /* background-color: var(--cream); */
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@
 }
 
 .cardapio {
-    width: 80%;
+    width: 90%;
     border-collapse: separate;
     border-spacing: 0px;
     color: white;
@@ -50,8 +50,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-  
     padding: 5px;
+
+    border: 10px solid #826546;
+
+ 
     
 }
 

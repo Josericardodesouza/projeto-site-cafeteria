@@ -9,6 +9,7 @@ import About from './components/About.jsx'
 import MenuCofee from './components/MenuCoffee.jsx'
 import MenuCandy from './components/MenuCandy.jsx'
 import SendPage from './components/SendPage.jsx'
+import MenuColdDrinks from './components/MenuColdDrinks.jsx'
 
 
 const router = createBrowserRouter ([
@@ -27,6 +28,10 @@ const router = createBrowserRouter ([
 
   {path: '/menucoffee',
     element: <MenuCofee />
+  },
+
+  {path: '/menucolddrinks',
+    element: <MenuColdDrinks />
   },
 
   {path: '/menucandy',

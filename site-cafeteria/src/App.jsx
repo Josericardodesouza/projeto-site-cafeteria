@@ -45,6 +45,7 @@ import paoDeMelImg from './assets/images/cards-images/pão-de-mel-caldeirao-brux
 import tortaImg from './assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplash-torta-maca.jpg'
 import { CiCoffeeCup } from 'react-icons/ci'
 import { useEffect } from 'react'
+import MenuColdDrinks from './components/MenuColdDrinks'
 
 
 
@@ -155,6 +156,10 @@ function App() {
       case 'MenuCandy':
         return <MenuCandy />
 
+        case 'MenuColdDrinks':
+
+        return <MenuColdDrinks />
+
       default:
         return <MenuCoffee />
 
@@ -189,7 +194,7 @@ function App() {
 
     <main>
 
-      <button id='btn_scroll_to_header'>GO UP</button>
+      {/* <button id='btn_scroll_to_header'>GO UP</button> */}
 
 
 
@@ -232,8 +237,25 @@ function App() {
       </section>
 
 
+      <section>
+
+        <div id='txt_div_pre_menu'>
+          <p id='title_pre_menu'>Confira nossas delícias com os melhores preços do mercado</p>
+          <p id='p_pre_menu'>Escolha uma categoria e depois clique no item para ver suas informações</p>
+
+
+        </div>
+
+
+      </section>
+
+
+      {/* <h3 className='title_box'>Confira nossos produtos com os melhores preços</h3> */}
+
+
       <div id='box_links_menu' ref = {refDivButtonsMenus}>
-        <button id='btn_cf' onClick={() => setActiveComponent('MenuCoffee')}>Cafés</button>
+        <button id='btn_cf' onClick={() => setActiveComponent('MenuCoffee')}>Bebidas quentes</button>
+        <button id='btn_cg' onClick={() => setActiveComponent('MenuColdDrinks')}>Bebidas Geladas</button>
         <button id='btn_mc' onClick={() => setActiveComponent('MenuCandy')}>Doces</button>
       </div>
 

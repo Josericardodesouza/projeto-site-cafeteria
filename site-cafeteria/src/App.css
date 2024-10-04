@@ -64,14 +64,18 @@ body {
   background-color: whitesmoke;
 }
 
-
+/* 
 button#btn_scroll_to_header {
   display: block;
   position: absolute;
   right: 0;
   bottom: 30%;
   position: fixed;
-}
+} */
+
+
+
+
 
 section#aboutUs {
   width: 100vw;
@@ -82,6 +86,7 @@ section#aboutUs {
   padding-bottom: 10px;
 
 }
+
 
 div.conteiner_txtimg {
   display: flex;
@@ -124,9 +129,48 @@ div#conteiner_1 {
   width: 100%;
   color: black;
   margin: 25px 0px 25px 0px;
+  text-indent: 10px;
+  text-align: center;
   
 
 }
+
+
+div#txt_div_pre_menu {
+  width: 100vw;
+  height: auto;
+  background-image: url(assets/images/pexels-vlada-karpovich-4451742.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  margin: 0;
+  padding: 5px;
+}
+
+p#title_pre_menu {
+  text-align: center;
+  width: 70%;
+  font-family: 'Lobster';
+  font-size: 1.9em;
+  color: var(--brownSugar);
+  text-shadow: 2px 2px 2px black;
+  margin: auto;
+  padding: 0;
+}
+
+p#p_pre_menu {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  text-shadow: 2px 2px 2px black;
+  color: var(--cream);
+  font-family: 'Pacifico';
+  font-size: 1.2em;
+
+}
+
 
 
 .img_aboutUs {
@@ -137,10 +181,11 @@ div#conteiner_1 {
 }
 
 div#box_links_menu {
-  width: 100%;
+  width: 100vw;
   height: auto;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   font-family: 'Nunito';
@@ -156,14 +201,18 @@ div#box_links_menu > a {
 }
 
 div#box_links_menu > button {
-  width: 100px;
-  margin: 20px;
-  background-color: transparent;
+  width: 25%;
+
+  /* margin: 20px; */
+  margin: 10px;
+  background-color: var(--cor7);
   height: auto;
   border-top: 0;
   border-right: 0;
-  border-bottom: 5px solid var(--cor7);
+  border-bottom: 0;
+  /* border-bottom: 5px solid var(--cor7); */
   border-left: 0;
+  border-radius: 10px;
   /* border-radius: 4px; */
   font-size: 1.5em;
   font-family: 'Pacifico', Arial, Helvetica, sans-serif;
@@ -261,21 +310,28 @@ section#evaluations {
 
 @media (min-width: 500px) {
 
-
+/* 
   #div_box_links_nav {
     position: absolute;
 
 
-  }
+  } */
   
-button#btn_scroll_to_header {
+/* button#btn_scroll_to_header {
  display: none;
-}
+} */
+
+
+  .box_text {
+    width: 60%;
+  }
 
 
   div.conteiner_txtimg {
     flex-direction: row;
     padding: 5px;
+
+    font-size: 0.9em;
   }
 
 
@@ -286,15 +342,43 @@ button#btn_scroll_to_header {
 
 
   .conteiner_txtimg > img {
-    width: 40%;
+    width: 30%;
     height: auto;
+    border: 1px solid black;
+    padding: 5px;
   
   
   }
 
+  
+
 }
+
 
 
 @media (min-width: 1000px) {
 
+
+  
+section#aboutUs {
+  width: 95vw;
+  margin: auto;
 }
+
+.title_box {
+  font-size: 2.5em;
+}
+
+.p_box {
+  font-size: 1.4em;
+}
+
+
+
+
+
+
+
+}
+
+

@@ -2,11 +2,12 @@ import '../styles/menus-module.css'
 
 
 
-import { coldDrinks, hotDrinks } from './ConstantsItens'
+import { hotDrinks } from './ConstantsItens'
 
 
 
 function MenuCoffee() {
+
 
 
 
@@ -29,21 +30,6 @@ function MenuCoffee() {
                     </tbody>
             </table>
 
-            <h1 className='title_table'>Geladas</h1>
-
-            <table>
-                <tbody>
-                        {coldDrinks.map(gelados => (
-                        <tr key={gelados.id}>
-                            <td className='item'>{gelados.name}</td>
-                            <td className='value'>RR$ {gelados.price}</td>
-                        </tr>
-                    ))}
-                </tbody>
-           
-
-
-            </table>
         </div>
 
         <div className='aboutItem'>
