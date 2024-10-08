@@ -37,7 +37,7 @@ function MenuCoffee() {
     var texto = ''
   
 
-    const rodar = (event) => {
+    const displayTextImg = (event) => {
 
         const nameItem = event.target.textContent
 
@@ -75,7 +75,17 @@ function MenuCoffee() {
 
             case 'Mocha':
                 console.log('teste Mocha')
-                document.getElementById('item_text')
+                document.getElementById('item_text').innerHTML = `${mocha.text}`
+                imageCoffee.src = mocha.img
+                
+                break;
+
+            case 'Pingado':
+                console.log('teste pingado')
+                document.getElementById('item_text').innerHTML = `${pingado.text}`
+                imageCoffee.src = pingado.img
+
+                break;
             
             default:
                 console.log('não passou')
@@ -114,32 +124,32 @@ function MenuCoffee() {
                 <tbody>
                     
                         <tr>
-                            <td className='item'><a onClick= {rodar}>{coado.name}</a></td>
+                            <td className='item'><a onClick= {displayTextImg}>{coado.name}</a></td>
                             <td className='value'><a onClick="">{coado.price}</a></td>
                         </tr>
 
                         <tr>
-                            <td className='item'><a onClick= {rodar}>{cappuccino.name}</a></td>
+                            <td className='item'><a onClick= {displayTextImg}>{cappuccino.name}</a></td>
                             <td className='value'><a onClick="">{cappuccino.price}</a></td>
                         </tr>
 
                         <tr>
-                            <td className='item'><a onClick="">{espresso.name}</a></td>
+                            <td className='item'><a onClick= {displayTextImg}>{espresso.name}</a></td>
                             <td className='value'><a onClick="">{espresso.price}</a></td>
                         </tr>
 
                         <tr>
-                            <td className='item'><a onClick="">{latte.name}</a></td>
+                            <td className='item'><a onClick= {displayTextImg}>{latte.name}</a></td>
                             <td className='value'><a onClick="">{latte.price}</a></td>
                         </tr>
 
                         <tr>
-                            <td className='item'><a onClick="">{mocha.name}</a></td>
+                            <td className='item'><a onClick= {displayTextImg}>{mocha.name}</a></td>
                             <td className='value'><a onClick="">{latte.price}</a></td>
                         </tr>
 
                         <tr>
-                            <td className='item'><a onClick="">{pingado.name}</a></td>
+                            <td className='item'><a onClick= {displayTextImg}>{pingado.name}</a></td>
                             <td className='value'><a onClick="">{pingado.price}</a></td>
                         </tr>
 

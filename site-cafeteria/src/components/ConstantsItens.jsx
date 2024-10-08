@@ -50,7 +50,7 @@ const hotDrinks = [
             name: 'Espresso',
             price: '6,00',
             img: espressoImg,
-            text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Espresso'
         },
 
 
@@ -59,7 +59,7 @@ const hotDrinks = [
             name: 'Latte',
             price: '20,00',
             img: latteImg,
-            text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Latte'
         },
 
         {
@@ -67,7 +67,7 @@ const hotDrinks = [
             name: 'Mocha',
             price: '8,00',
             img: mochaImg,
-            text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Mocha'
         },
 
         
@@ -76,7 +76,7 @@ const hotDrinks = [
         name: 'Pingado',
         price: '5,00',
         img: pingadoImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Pingado'
     }
 
 
@@ -92,7 +92,7 @@ const coldDrinks = [
         name: 'café gelado',
         price: '2,20',
         img: cafeGeladoImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Gelado'
     },
 
 
@@ -102,7 +102,7 @@ const coldDrinks = [
         name: 'Cold Brew',
         price: '11,00',
         img: coldBrewImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Cold Brew'
 
     },
 
@@ -113,7 +113,7 @@ const coldDrinks = [
         name: 'Expresso Tônico',
         price: '5,00',
         img: espressoTonicoImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Espresso Tonico'
     },
 
     {
@@ -121,7 +121,7 @@ const coldDrinks = [
         name: 'Frappuccino',
         price: '19,00',
         img: frappuccinoImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Frappuccino'
     }
 
 
