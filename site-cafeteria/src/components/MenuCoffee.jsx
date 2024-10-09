@@ -35,6 +35,8 @@ function MenuCoffee() {
     const imageCoffee = document.getElementById('item_img')
     var description = document.getElementById('item_text')
     var texto = ''
+
+
   
 
     const displayTextImg = (event) => {
@@ -43,47 +45,56 @@ function MenuCoffee() {
 
         switch (nameItem) {
             case 'café coado':
+
+
                 console.log('teste coado')
+
+                document.getElementById('item_img').src = coado.img
                 
                 document.getElementById('item_text').innerHTML = `${coado.text}`
-                imageCoffee.src =  coado.img
+               
                 
                 console.log(coado.text)
                 break;
 
             case 'Cappuccino':
                 console.log('teste cappuccino')
+                document.getElementById('item_img').src = cappuccino.img
                 document.getElementById('item_text').innerHTML = `${cappuccino.text}`
-                imageCoffee.src = cappuccino.img
+                
 
                 console.log(cappuccino.text)
                 break;
 
             case 'Espresso':
                 console.log('teste espresso')
+                document.getElementById('item_img').src = espresso.img
                 document.getElementById('item_text').innerHTML = `${espresso.text}`
-                imageCoffee.src = espresso.img
+                
 
                 break;
             
             case 'Latte':
                 console.log('teste latte')
+                document.getElementById('item_img').src = latte.img
                 document.getElementById('item_text').innerHTML = `${latte.text}`
-                imageCoffee.src = latte.img
+                
 
                 break;
 
             case 'Mocha':
                 console.log('teste Mocha')
+                document.getElementById('item_img').src = mocha.img
                 document.getElementById('item_text').innerHTML = `${mocha.text}`
-                imageCoffee.src = mocha.img
+               
                 
                 break;
 
             case 'Pingado':
                 console.log('teste pingado')
+                document.getElementById('item_img').src =  pingado.img
                 document.getElementById('item_text').innerHTML = `${pingado.text}`
-                imageCoffee.src = pingado.img
+                
 
                 break;
             
