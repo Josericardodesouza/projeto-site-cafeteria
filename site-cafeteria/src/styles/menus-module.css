@@ -17,18 +17,56 @@
 }
 
 .box_menu {
-    width: 100%;
+    width: 85vw;
     height: 100%;
     /* background-color: aqua; */
+    background-image: url(../assets/images/festa-de-halloween.jpg);  
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto';
     font-size: 1.5em;
     font-weight: 200;
-    
     vertical-align: center;
     align-items: center;
+    border: 10px solid #826546;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
  
+  
+}
+
+
+.conteiner_img_text {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.item_title_menu {
+    color: white;
+    font-size: 1.3em;
+    font-family: 'Lobster';
+}
+
+
+.item_img_menu {
+    display: block;
+    width: 40%;
+    border: 2px solid white;
+}
+
+.item_text_menu {
+    width: 70%;
+    color: white;
+    font-family: 'Pacifico';
+    font-size: 0.8em;
+    font-weight: 100;
   
 }
 
@@ -37,22 +75,21 @@
     font-size: 0.9em;
 }
 
-.cardapio {
-    width: 90%;
+#cardapio {
+    width: 80%;
     border-collapse: separate;
     border-spacing: 0px;
     color: white;
     font-family: 'Pacifico';
-    font-size: 0.9em;
+    font-size: 1.2em;
+    margin: auto;
     /* background-image: linear-gradient(to bottom, var(--copper) 45%, var(--copper2)); */
-     background-image: url(../assets/images/festa-de-halloween.jpg);  
+   
     /* background-color: var(--copper2); */
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  
     padding: 5px;
 
-    border: 10px solid #826546;
+    
 
  
     
@@ -60,6 +97,7 @@
 
 table {
     border: 0;
+   
 }
 
 .title_table {

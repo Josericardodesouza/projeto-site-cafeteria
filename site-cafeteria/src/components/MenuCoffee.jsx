@@ -12,6 +12,7 @@ import pingadoImg from '../assets/images/cards-images/pingado.jpg'
 
 import { hotDrinks } from './ConstantsItens'
 import { useRef } from 'react'
+import { GiCoffeeCup } from 'react-icons/gi'
 
 const coado = hotDrinks[0]
 const cappuccino = hotDrinks[1]
@@ -29,6 +30,8 @@ function MenuCoffee() {
 
 
     const nameRef = useRef(null)
+
+   
     
 
 
@@ -39,9 +42,22 @@ function MenuCoffee() {
 
   
 
+
+  
+
     const displayTextImg = (event) => {
 
         const nameItem = event.target.textContent
+
+        document.getElementById('icon_coffee_menu').style.display = 'none'
+
+        var divItemDescription = document.getElementById('box_links_menu')
+        divItemDescription.scrollIntoView({behavior: 'smooth'})
+
+       
+
+       
+
 
         switch (nameItem) {
             case 'café coado':
@@ -49,9 +65,17 @@ function MenuCoffee() {
 
                 console.log('teste coado')
 
+                document.getElementById('title_item').innerHTML = coado.name
+
+
+
                 document.getElementById('item_img').src = coado.img
                 
                 document.getElementById('item_text').innerHTML = `${coado.text}`
+
+                
+
+                
                
                 
                 console.log(coado.text)
@@ -59,6 +83,8 @@ function MenuCoffee() {
 
             case 'Cappuccino':
                 console.log('teste cappuccino')
+
+                document.getElementById('title_item').innerHTML = cappuccino.name
                 document.getElementById('item_img').src = cappuccino.img
                 document.getElementById('item_text').innerHTML = `${cappuccino.text}`
                 
@@ -68,14 +94,18 @@ function MenuCoffee() {
 
             case 'Espresso':
                 console.log('teste espresso')
+                document.getElementById('title_item').innerHTML = espresso.name
                 document.getElementById('item_img').src = espresso.img
                 document.getElementById('item_text').innerHTML = `${espresso.text}`
+
+             
                 
 
                 break;
             
             case 'Latte':
                 console.log('teste latte')
+                document.getElementById('title_item').innerHTML = latte.name
                 document.getElementById('item_img').src = latte.img
                 document.getElementById('item_text').innerHTML = `${latte.text}`
                 
@@ -84,6 +114,7 @@ function MenuCoffee() {
 
             case 'Mocha':
                 console.log('teste Mocha')
+                document.getElementById('title_item').innerHTML = mocha.name
                 document.getElementById('item_img').src = mocha.img
                 document.getElementById('item_text').innerHTML = `${mocha.text}`
                
@@ -92,6 +123,7 @@ function MenuCoffee() {
 
             case 'Pingado':
                 console.log('teste pingado')
+                document.getElementById('title_item').innerHTML = pingado.name
                 document.getElementById('item_img').src =  pingado.img
                 document.getElementById('item_text').innerHTML = `${pingado.text}`
                 
@@ -101,6 +133,11 @@ function MenuCoffee() {
             default:
                 console.log('não passou')
         }
+
+
+      
+
+
 
 
         
@@ -122,16 +159,13 @@ function MenuCoffee() {
         <div className = 'box_menu'>
    
 
-        <div>
-            <img src= "" alt="" id='item_img' />
-            <p id='item_text'></p>
+        <div className='conteiner_img_text' id='conteiner_img_text_hotDrinks'>
+            <p id='title_item' className='item_title_menu'></p>
+            <img src= "" alt="" id='item_img' className = 'item_img_menu'/>
+            <svg id='icon_coffee_menu'><GiCoffeeCup /></svg>
+            <p id='item_text' className='item_text_menu'>Clique em um dos itens do cardápio abaixo para <strong>saber sobre</strong></p>
         </div>
-
-
-
-
-        <div id='imgCoffee'></div>
-            <table className='cardapio'>
+            <table id='cardapio'>
                 <tbody>
                     
                         <tr>
