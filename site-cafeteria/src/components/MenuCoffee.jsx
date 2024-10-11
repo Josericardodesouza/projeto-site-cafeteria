@@ -54,10 +54,6 @@ function MenuCoffee() {
         var divItemDescription = document.getElementById('box_links_menu')
         divItemDescription.scrollIntoView({behavior: 'smooth'})
 
-       
-
-       
-
 
         switch (nameItem) {
             case 'café coado':
@@ -162,10 +158,10 @@ function MenuCoffee() {
         <div className='conteiner_img_text' id='conteiner_img_text_hotDrinks'>
             <p id='title_item' className='item_title_menu'></p>
             <img src= "" alt="" id='item_img' className = 'item_img_menu'/>
-            <svg id='icon_coffee_menu'><GiCoffeeCup /></svg>
+            <svg className='icon_item_menu' id = 'icon_coffee_menu'><GiCoffeeCup /></svg>
             <p id='item_text' className='item_text_menu'>Clique em um dos itens do cardápio abaixo para <strong>saber sobre</strong></p>
         </div>
-            <table id='cardapio'>
+            <table className='cardapio'>
                 <tbody>
                     
                         <tr>
