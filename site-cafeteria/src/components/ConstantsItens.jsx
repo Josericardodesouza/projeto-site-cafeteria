@@ -140,10 +140,10 @@ const coldDrinks = [
 const candyList = [
     {
         id: 1,
-        name: 'brigadeiros',
+        name: 'Brigadeiros',
         price: '0,20',
         img: brigadeiroImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Brigadeiros'
     },
 
     {
@@ -151,7 +151,7 @@ const candyList = [
         name: 'Brownies',
         price: '3,00',
         img: brownieImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Brownies'
     },
 
     {
@@ -159,7 +159,7 @@ const candyList = [
         name: 'Cookies',
         price: '0,30',
         img: cookieImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Cookies'
     },
 
     {
@@ -167,15 +167,15 @@ const candyList = [
         name: 'Cupcakes',
         price: '7,00',
         img: cupcakeImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Cupcakes'
     },
 
     {
         id: 5,
-        name: 'Pâo de Mel',
+        name: 'Pão de mel',
         price: '1,50',
         img: paoDeMelImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Pão de Mel'
     },
 
     {
@@ -183,7 +183,7 @@ const candyList = [
         name: 'Tortas',
         price: '16,00',
         img: tortaImg,
-        text: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi.</p>
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Tortas'
     }
 ]
 

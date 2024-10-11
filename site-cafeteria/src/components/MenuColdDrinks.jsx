@@ -30,7 +30,7 @@ function MenuColdDrinks() {
 
                 break; 
 
-            case 'ColdBrew':
+            case 'Cold Brew':
                 document.getElementById('title_item_cd').innerHTML = coldBrew.name
 
                 document.getElementById('item_img_cd').src = coldBrew.img
@@ -97,17 +97,22 @@ function MenuColdDrinks() {
 
                         <tr>
                             <td className='item'><a onClick={displayTextImg}>{cafeGelado.name}</a></td>
-                            <td className='value'><a>{coldBrew.price}</a></td>
+                            <td className='value'><a>{cafeGelado.price}</a></td>
                         </tr>
 
                         <tr>
-                            <td className='item'><a>{expressoTonico.name}</a></td>
-                            <td className='value'>{expressoTonico.price}</td>
+                            <td className='item'><a onClick={displayTextImg}>{coldBrew.name}</a></td>
+                            <td className='value'><a onClick={displayTextImg}>{coldBrew.price}</a></td>
                         </tr>
 
                         <tr>
-                            <td className='item'><a>{frappuccino.name}</a></td>
-                            <td className='value'>{frappuccino.price}</td>
+                            <td className='item' onClick={displayTextImg}><a>{expressoTonico.name}</a></td>
+                            <td className='value'><a onClick={displayTextImg}>{expressoTonico.price}</a></td>
+                        </tr>
+
+                        <tr>
+                            <td className='item'><a onClick={displayTextImg}>{frappuccino.name}</a></td>
+                            <td className='value'><a onClick={displayTextImg}>{frappuccino.price}</a></td>
                         </tr>
 
 
