@@ -46,6 +46,7 @@ import tortaImg from './assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplas
 import { CiCoffeeCup } from 'react-icons/ci'
 import { useEffect } from 'react'
 import MenuColdDrinks from './components/MenuColdDrinks'
+import { BsPerson } from 'react-icons/bs'
 
 
 
@@ -270,6 +271,8 @@ function App() {
         </div>
       </Link>
 
+
+
    
       <h3>Avaliados recentemente</h3>
 
@@ -282,7 +285,7 @@ function App() {
 
           modules={ [Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
 
-          spaceBetween={11}
+          spaceBetween={20}
           slidesPerView={1.5}
           navigation
           pagination = {{clickable: true}}
@@ -317,7 +320,7 @@ function App() {
 
               <div className = 'box_opinion'>
                 <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                <p className='clientName'>Angélica Silva</p>
+                <p className='clientName'><BsPerson />Angélica Silva</p>
               </div>
 
 

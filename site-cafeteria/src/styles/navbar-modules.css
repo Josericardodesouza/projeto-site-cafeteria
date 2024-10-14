@@ -32,7 +32,7 @@ nav {
     color: var(--cream);
     font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     box-shadow: 1px 1px 20px solid black;
    
 }
