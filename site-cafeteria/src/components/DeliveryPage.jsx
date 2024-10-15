@@ -7,12 +7,44 @@ import { Link, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import SendPage from './SendPage'
+import NavBar from './NavBar'
+import SimpleNavBar from './SimpleNavBar'
+import MenuCoffee from './MenuCoffee'
+
+const coado = hotDrinks.find(coffee => coffee.name = coado)
+const cappuccino = hotDrinks[1]
+const espresso = hotDrinks[2]
+const latte = hotDrinks[3]
+const mocha = hotDrinks[4]
+const pingado = hotDrinks[5]
+
+import Footer from '../components/Footer'
 
 
 
 function DeliveryPage() {
 
   var input = document.getElementById('ent-adressUser')
+
+
+
+  const displayHotDrinks = () => {
+    var btn = document.getElementById('buttonExibir')
+    var div = document.getElementById('exibir')
+
+  
+      
+
+      if (div.style.display == 'block') {
+        div.style.display = 'none'
+      } else {
+        div.style.display = 'block'
+      }
+
+      
+
+    
+  }
 
   const [adressUser, setAdressUser] = useState ({
     state: '',
@@ -71,31 +103,44 @@ function DeliveryPage() {
 
 
   return (
+
+    <>
+   
+
+
+    
+
+    <header id='header_deliveryPage'>
+    <SimpleNavBar />
+
+    </header>
+
+
     <main>
+
+      <section id='deliveryItens'>
+        <button id='buttonExibir'>Bebidas Quentes</button>
+        <div id='exibir'>Oi</div>
+
+        <div className='deliveryItem'>
+
+          <img src= {coado.img} />
+          <p>{coado.name}</p>
+          <p>{coado.price}</p>
+
+        </div>
+
+        
+
+
+
+      </section>
+
+     
 
 
        
-        <table>
-        {hotDrinks.map(cafes => (
-          <tr key={cafes.id}>
-            <td className = 'dp_img'><img src= {cafes.img} /></td>
-            <td className = 'dp_item'>{cafes.name}</td>
-            <td className = 'dp_price'>{cafes.price}</td>
-          </tr>
-          ))}
-
-        </table>
-
-        <table>
-          {candyList.map(doces => (
-            <tr key={doces.id}>
-              <td className='dp_img'><img src={doces.img}/></td>
-              <td className='dp_item'>{doces.name}</td>
-              <td className='dp_price'>{doces.price}</td>
-
-            </tr>
-          ))}
-        </table>
+       
 
           <label htmlFor="user_name">Digite seu nome</label>
         <input id='user_name' name='user_name'></input>
@@ -136,6 +181,13 @@ function DeliveryPage() {
     
     
     </main>
+
+    <Footer />
+
+    
+
+
+    </>
   )
 
 
