@@ -12,11 +12,11 @@ import SimpleNavBar from './SimpleNavBar'
 import MenuCoffee from './MenuCoffee'
 
 const coado = hotDrinks.find(coffee => coffee.name = coado)
-const cappuccino = hotDrinks[1]
-const espresso = hotDrinks[2]
-const latte = hotDrinks[3]
-const mocha = hotDrinks[4]
-const pingado = hotDrinks[5]
+const cappuccino = hotDrinks.find(coffee => coffee.name = cappuccino)
+const espresso = hotDrinks.find(coffee => coffee.name = espresso)
+const latte = hotDrinks.find(coffee => coffee.name = latte)
+const mocha = hotDrinks.find(coffee => coffee.name = mocha)
+const pingado = hotDrinks.find(coffee => coffee.name = pingado)
 
 import Footer from '../components/Footer'
 
