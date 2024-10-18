@@ -53,6 +53,11 @@ function DeliveryPage() {
 
   const [quantity, setQuantity] = useState ({
     inputCoado: 0,
+    inputCappuccino: 0,
+    inputEspresso: 0,
+    inputLatte: 0,
+    inputMocha: 0,
+    inputPingado: 0
 
 
   })
@@ -63,6 +68,12 @@ function DeliveryPage() {
     }))
   }
 
+const subQuantity = (key) => {
+  setQuantity((prevQuantity) => ({
+    ...prevQuantity, [key]: prevQuantity[key] > 0 ? prevQuantity[key] - 1 : 0
+
+  }))
+}
 
 
 
@@ -149,11 +160,12 @@ function DeliveryPage() {
           <p>{coado.name}</p>
           <p>{coado.price}</p>
           <div className='quantity_input'>
+
             <button onClick={() => addQuantity('inputCoado')}>+</button>
             <input type='number' id='input_add_coado' value={quantity.inputCoado}/>
-            <button>-</button>
+            <button onClick={() => subQuantity('inputCoado')}>-</button>
             <button>confirmar</button>
-           
+
           </div>
 
         </div>
@@ -163,6 +175,13 @@ function DeliveryPage() {
           <img src= {cappuccino.img} alt='imagem café cappuccino' />
           <p>{cappuccino.name}</p>
           <p>{cappuccino.price}</p>
+          <div className='quantity_input'>
+
+            <button onClick={() => addQuantity('inputCappuccino')}>+</button>
+            <input type="number" value={quantity.inputCappuccino} />
+            <button onClick={() => subQuantity('inputCappuccino')}>-</button>
+
+          </div>
 
         </div>
 
@@ -172,6 +191,14 @@ function DeliveryPage() {
           <p>{espresso.name}</p>
           <p>{espresso.price}</p>
 
+          <div className='quantity_input'>
+
+            <button onClick={() => addQuantity('inputEspresso')}>+</button>
+            <input type="number" value={quantity.inputEspresso} />
+            <button onClick={() => subQuantity('inputEspresso')}>-</button>
+
+          </div>
+
         </div>
 
         <div className='deliveryItem'>
@@ -180,18 +207,41 @@ function DeliveryPage() {
           <p>{latte.name}</p>
           <p>{latte.price}</p>
 
+          <div className='quantity_input'>
+
+            <button onClick={() => addQuantity('inputLatte')}>+</button>
+            <input type="number" value={quantity.inputLatte} />
+            <button onClick={() => subQuantity('inputLatte')}>-</button>
+
+          </div>
+
         </div>
 
         <div className='deliveryItem'>
           <img src={mocha.img} alt='imagem café mocha' />
           <p>{mocha.name}</p>
           <p>{mocha.price}</p>
+          
+          <div className='quantity_input'>
+            <button onClick={() => addQuantity('inputMocha')}>+</button>
+            <input type="number" value={quantity.inputMocha} />
+            <button onClick={() => subQuantity('inputMocha')}>-</button>
+
+          </div>
+
         </div>
 
-        <div className='deliveryitem'>
+        <div className='deliveryItem'>
           <img src={pingado.img} alt="imagem café pingado" />
           <p>{pingado.name}</p>
           <p>{pingado.price}</p>
+
+          <div className='quantity_input'>
+            <button onClick={() => addQuantity('inputPingado')}>+</button>
+            <input type="number" value={quantity.inputPingado} />
+            <button onClick={() => subQuantity('inputPingado')}>-</button>
+
+          </div>
         </div>
 
 
