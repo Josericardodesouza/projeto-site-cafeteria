@@ -9,7 +9,17 @@ header#header_deliveryPage {
 
 img {
     width: 20%;
+    height: 90%;
     height: auto;
+}
+
+.deliveryItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 5px;
+
 }
 
 /* table {

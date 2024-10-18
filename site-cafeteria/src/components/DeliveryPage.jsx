@@ -11,12 +11,17 @@ import NavBar from './NavBar'
 import SimpleNavBar from './SimpleNavBar'
 import MenuCoffee from './MenuCoffee'
 
-const coado = hotDrinks.find(coffee => coffee.name = coado)
-const cappuccino = hotDrinks.find(coffee => coffee.name = cappuccino)
-const espresso = hotDrinks.find(coffee => coffee.name = espresso)
-const latte = hotDrinks.find(coffee => coffee.name = latte)
-const mocha = hotDrinks.find(coffee => coffee.name = mocha)
-const pingado = hotDrinks.find(coffee => coffee.name = pingado)
+const coado = hotDrinks.find(coffee => coffee.name === 'coado')
+
+const cappuccino = hotDrinks.find(coffee => coffee.name === 'Cappuccino')
+
+const espresso = hotDrinks.find(coffee => coffee.name === 'Espresso')
+
+const latte = hotDrinks.find(coffee => coffee.name === 'Latte')
+
+const mocha = hotDrinks.find(coffee => coffee.name === 'Mocha')
+
+const pingado = hotDrinks.find(coffee => coffee.name === 'Pingado')
 
 import Footer from '../components/Footer'
 
@@ -45,6 +50,16 @@ function DeliveryPage() {
 
     
   }
+
+
+
+
+
+
+
+
+
+
 
   const [adressUser, setAdressUser] = useState ({
     state: '',
@@ -124,11 +139,54 @@ function DeliveryPage() {
 
         <div className='deliveryItem'>
 
-          <img src= {coado.img} />
+          <img src= {coado.img} alt= 'imagem café coado' />
           <p>{coado.name}</p>
           <p>{coado.price}</p>
+          <div className='quantity_input'>
+            <button>+</button>
+            <input type='number' id='input_add_coado' />
+            <button>-</button>
+            <button>confirmar</button>
+          </div>
 
         </div>
+
+        <div className='deliveryItem'>
+
+          <img src= {cappuccino.img} alt='imagem café cappuccino' />
+          <p>{cappuccino.name}</p>
+          <p>{cappuccino.price}</p>
+
+        </div>
+
+        <div className='deliveryItem'>
+
+          <img src= {espresso.img} alt='imagem café espresso' />
+          <p>{espresso.name}</p>
+          <p>{espresso.price}</p>
+
+        </div>
+
+        <div className='deliveryItem'>
+
+          <img src= {latte.img} alt='imagem café latte' />
+          <p>{latte.name}</p>
+          <p>{latte.price}</p>
+
+        </div>
+
+        <div className='deliveryItem'>
+          <img src={mocha.img} alt='imagem café mocha' />
+          <p>{mocha.name}</p>
+          <p>{mocha.price}</p>
+        </div>
+
+        <div className='deliveryitem'>
+          <img src={pingado.img} alt="imagem café pingado" />
+          <p>{pingado.name}</p>
+          <p>{pingado.price}</p>
+        </div>
+
 
         
 

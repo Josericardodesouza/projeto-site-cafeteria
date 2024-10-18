@@ -29,7 +29,7 @@ const hotDrinks = [
     
         {
             id: 1,
-            name: 'café coado',
+            name: 'coado',
             price: '1,50',
             img: cafeCoadoImg,
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, praesentium! Numquam minima aperiam libero dignissimos quam qui. Totam delectus vel ipsa illum exercitationem aperiam! Fuga officiis magnam voluptate nostrum deleniti!'
