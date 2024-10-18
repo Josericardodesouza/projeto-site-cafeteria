@@ -51,11 +51,17 @@ function DeliveryPage() {
     
   }
 
+  const [quantity, setQuantity] = useState ({
+    inputCoado: 0,
 
 
+  })
 
-
-
+  const addQuantity = (key) => {
+    setQuantity((prevQuantity) => ({
+      ...prevQuantity, [key]: prevQuantity[key] + 1
+    }))
+  }
 
 
 
@@ -143,10 +149,11 @@ function DeliveryPage() {
           <p>{coado.name}</p>
           <p>{coado.price}</p>
           <div className='quantity_input'>
-            <button>+</button>
-            <input type='number' id='input_add_coado' />
+            <button onClick={() => addQuantity('inputCoado')}>+</button>
+            <input type='number' id='input_add_coado' value={quantity.inputCoado}/>
             <button>-</button>
             <button>confirmar</button>
+           
           </div>
 
         </div>
