@@ -12,16 +12,16 @@ import SimpleNavBar from './SimpleNavBar'
 import MenuCoffee from './MenuCoffee'
 
 const coado = hotDrinks.find(coffee => coffee.name === 'coado')
-
 const cappuccino = hotDrinks.find(coffee => coffee.name === 'Cappuccino')
-
 const espresso = hotDrinks.find(coffee => coffee.name === 'Espresso')
-
 const latte = hotDrinks.find(coffee => coffee.name === 'Latte')
-
 const mocha = hotDrinks.find(coffee => coffee.name === 'Mocha')
-
 const pingado = hotDrinks.find(coffee => coffee.name === 'Pingado')
+
+const cafeGelado = coldDrinks.find(coldDrink => coldDrink.name === 'café gelado')
+const coldBrew = coldDrinks.find(coldDrink => coldDrink.name === 'Cold Brew')
+const expTônico = coldDrinks.find(coldDrink => coldDrink.name === 'Expresso Tônico')
+const frappuccino = coldDrinks.find(coldDrink => coldDrink.name === 'Frappuccino')
 
 import Footer from '../components/Footer'
 
@@ -57,8 +57,12 @@ function DeliveryPage() {
     inputEspresso: 0,
     inputLatte: 0,
     inputMocha: 0,
-    inputPingado: 0
+    inputPingado: 0,
 
+    inputCafeGelado: 0,
+    inputColdBrew: 0,
+    inputExpTonico: 0,
+    inputFrappuccino: 0
 
   })
 
@@ -150,7 +154,7 @@ const subQuantity = (key) => {
 
     <main>
 
-      <section id='deliveryItens'>
+      <section className='deliveryItens'>
         <button id='buttonExibir'>Bebidas Quentes</button>
         <div id='exibir'>Oi</div>
 
@@ -245,9 +249,73 @@ const subQuantity = (key) => {
         </div>
 
 
+      </section>
+
+      <section className='deliveryItens'>
+
+        <div className='deliveryItem'>
+          <img src={cafeGelado.img} alt="imagem café gelado"/>
+          <p>{cafeGelado.name}</p>
+          <p>{cafeGelado.price}</p>
+
+          <div className='quantity_input'>
+
+            <button onClick={() => addQuantity('inputCafeGelado')}>+</button>
+            <input type="number" value={quantity.inputCafeGelado} />
+            <button onClick={() => subQuantity('inputCafeGelado')}>-</button>
+
+          </div>
+        </div>
+
+          <div className='deliveryItem'>
+            <img src={coldBrew.img} alt="imagem de um café Cold Brew" />
+            <p>{coldBrew.name}</p>
+            <p>{coldBrew.price}</p>
+
+            <div className='quantity_input'>
+
+              <button onClick={() => addQuantity('inputColdBrew')}>+</button>
+              <input type="number" value={quantity.inputColdBrew} />
+              <button onClick={() => subQuantity('inputColdBrew')}>-</button>
+
+            </div>
+          </div>
+
+          <div className='deliveryItem'>
+            <img src={expTônico.img} alt="imagem de um expresso tônico"/>
+            <p>{expTônico.name}</p>
+            <p>{expTônico.price}</p>
+
+            <div>
+              <button onClick={() => addQuantity('inputExpTonico')}>+</button>
+              <input type="number" value={quantity.inputExpTonico} />
+              <button onClick={() => subQuantity('inputExpTonico')}>-</button>
+
+            </div>
+          </div>
+
+          <div className='deliveryItem'>
+            <img src={frappuccino.img} alt="imagem de um frappuccino" />
+            <p>{frappuccino.name}</p>
+            <p>{frappuccino.price}</p>
+
+            <div>
+              <button onClick={() => addQuantity('inputFrappuccino')}>+</button>
+              <input type="number" value={quantity.inputFrappuccino} />
+              <button onClick={() => subQuantity('inputFrappuccino')}>-</button>
+
+            </div>
+          </div>
+
+          
+      </section>
+
+      <section className='deliveryItens'>
+
+        <div id='conteiner_'>
+
+        </div>
         
-
-
 
       </section>
 

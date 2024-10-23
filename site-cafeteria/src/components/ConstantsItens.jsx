@@ -139,7 +139,7 @@ const coldDrinks = [
 
 const candyList = [
     {
-        id: 1,
+        
         name: 'Brigadeiros',
         price: '0,20',
         img: brigadeiroImg,
@@ -147,7 +147,7 @@ const candyList = [
     },
 
     {
-        id: 2,
+       
         name: 'Brownies',
         price: '3,00',
         img: brownieImg,
@@ -155,7 +155,7 @@ const candyList = [
     },
 
     {
-        id: 3,
+        
         name: 'Cookies',
         price: '0,30',
         img: cookieImg,
@@ -163,7 +163,7 @@ const candyList = [
     },
 
     {
-        id: 4,
+        
         name: 'Cupcakes',
         price: '7,00',
         img: cupcakeImg,
@@ -171,7 +171,7 @@ const candyList = [
     },
 
     {
-        id: 5,
+    
         name: 'Pão de mel',
         price: '1,50',
         img: paoDeMelImg,
@@ -179,11 +179,184 @@ const candyList = [
     },
 
     {
-        id: 6,
+       
         name: 'Tortas',
         price: '16,00',
         img: tortaImg,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Tortas'
+    }
+]
+
+const typesBrigadeiro = [
+
+    {
+        name: 'chocolate',
+        price: '0,00'
+    },
+
+    {
+        name: 'Coco',
+        price: '0,00'
+    },
+
+
+    {
+        name: 'Morango',
+        price: '0,00'
+    },
+
+    {
+        name: 'Light',
+        price: '0,00'
+    }
+
+]
+
+const typesBrownies = [
+
+    // brócolis
+    //flavors
+
+    {
+        name: 'Café',
+        price: '0,00'
+    },
+
+    {
+        name: 'Caramelo Salgado',
+        price: '0,00'
+    },
+
+    {
+        name: 'Chocolate Branco',
+        name: '0,00'
+    },
+
+    {
+        name: 'Coco',
+        price: '0,00'
+    },
+
+    {
+        name: 'Framboesa',
+        price: '0,00'
+    },
+
+    {
+        name: 'Light',
+        price: '0,00'
+    },
+
+    {
+        name: 'Tradicional',
+        price: '0,00'
+    }
+]
+
+const typesCookies = [
+
+    {
+        name: 'Aveia e Mel',
+        price: '0,00'
+    },
+
+    {
+        name: 'Aveia Light',
+        price: '0,00'
+    },
+
+    {
+        name: 'Baunilha',
+        price: '0,00'
+    },
+
+    {
+        name: 'Chocolate',
+        price: '0,00'
+    },
+
+    {
+        name: 'Coco',
+        price: '0,00'
+    },
+
+    {
+        name: 'Integral',
+        price: '0,00'
+    },
+
+    {
+        name: 'Morango',
+        price: '0,00'
+    }
+]
+
+const typesCupcakes = [
+
+    {
+        name: 'Chocolate',
+        price: '0,00'
+    },
+
+    {
+        name: 'Chocolate branco',
+        price: '0,00'
+    },
+
+    {
+        name: 'Morango',
+        price: '0,00'
+    },
+
+    {
+        name: 'Nozes',
+        price: '0,00'
+    },
+
+    {
+        name: 'Tradicional',
+        price: '0,00'
+    }
+]
+
+typesGingerBreads = [
+
+    {
+        name: 'Gengibre',
+        price: '0,00'
+    },
+
+    {
+        name: 'Morango',
+        price: '0,00'
+    },
+
+    {
+        name: 'Tradicional',
+        price: '0,00'
+    }
+]
+
+const typesPie = [
+
+    {
+        name: 'Amendoim',
+        price: '0,00'
+    },
+
+    {
+        name: 'Maçã',
+        price: '0,00'
+    },
+
+    {
+        name: 'Maracujá',
+        price: '0,00'
+    },
+
+    {
+        name: 'Pêssego',
+        price: '0,00'
     }
 ]
 
