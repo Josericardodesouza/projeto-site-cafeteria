@@ -319,23 +319,23 @@ const typesCupcakes = [
     }
 ]
 
-typesGingerBreads = [
+// const typesGingerBreads = [
 
-    {
-        name: 'Gengibre',
-        price: '0,00'
-    },
+//     {
+//         name: 'Gengibre',
+//         price: '0,00'
+//     },
 
-    {
-        name: 'Morango',
-        price: '0,00'
-    },
+//     {
+//         name: 'Morango',
+//         price: '0,00'
+//     },
 
-    {
-        name: 'Tradicional',
-        price: '0,00'
-    }
-]
+//     {
+//         name: 'Tradicional',
+//         price: '0,00'
+//     }
+// ]
 
 const typesPie = [
 
@@ -374,3 +374,9 @@ export default ConstantsItens
 export {hotDrinks}
 export {coldDrinks}
 export {candyList}
+export {typesBrigadeiro}
+export {typesBrownies}
+export {typesCookies}
+export {typesCupcakes}
+// export {typesGingerBreads}
+export {typesPie}
