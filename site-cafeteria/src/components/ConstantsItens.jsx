@@ -227,63 +227,63 @@ const typesBrownies = [
         price: '0,00'
     },
 
-    {
-        name: 'Chocolate Branco',
-        name: '0,00'
-    },
+    // {
+    //     name: 'Chocolate Branco',
+    //     name: '0,00'
+    // },
 
-    {
-        name: 'Coco',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Coco',
+    //     price: '0,00'
+    // },
 
-    {
-        name: 'Framboesa',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Framboesa',
+    //     price: '0,00'
+    // },
 
-    {
-        name: 'Light',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Light',
+    //     price: '0,00'
+    // },
 
-    {
-        name: 'Tradicional',
-        price: '0,00'
-    }
+    // {
+    //     name: 'Tradicional',
+    //     price: '0,00'
+    // }
 ]
 
 const typesCookies = [
 
-    {
-        name: 'Aveia e Mel',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Aveia e Mel',
+    //     price: '0,00'
+    // },
 
-    {
-        name: 'Aveia Light',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Aveia Light',
+    //     price: '0,00'
+    // },
 
-    {
-        name: 'Baunilha',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Baunilha',
+    //     price: '0,00'
+    // },
 
     {
         name: 'Chocolate',
         price: '0,00'
     },
 
-    {
-        name: 'Coco',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Coco',
+    //     price: '0,00'
+    // },
 
-    {
-        name: 'Integral',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Integral',
+    //     price: '0,00'
+    // },
 
     {
         name: 'Morango',
@@ -298,10 +298,10 @@ const typesCupcakes = [
         price: '0,00'
     },
 
-    {
-        name: 'Chocolate branco',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Chocolate branco',
+    //     price: '0,00'
+    // },
 
     {
         name: 'Morango',
@@ -313,10 +313,10 @@ const typesCupcakes = [
         price: '0,00'
     },
 
-    {
-        name: 'Tradicional',
-        price: '0,00'
-    }
+    // {
+    //     name: 'Tradicional',
+    //     price: '0,00'
+    // }
 ]
 
 // const typesGingerBreads = [
