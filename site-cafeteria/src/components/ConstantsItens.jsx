@@ -141,7 +141,7 @@ const candyList = [
     {
         
         name: 'Brigadeiros',
-        price: '0,20',
+        price: 'entre 0,20 e 10,99',
         img: brigadeiroImg,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Brigadeiros'
     },

@@ -1,7 +1,8 @@
 import '../styles/deliveryPage-modules.css'
 import '../styles/colorsAndFonts-module.css'
 
-import { hotDrinks, coldDrinks } from './ConstantsItens'
+import { hotDrinks, coldDrinks} from './ConstantsItens'
+import { typesBrigadeiro, typesBrownies,typesCookies,typesCupcakes,typesPie} from './ConstantsItens'
 import { candyList } from './ConstantsItens'
 import { Link, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -23,33 +24,63 @@ const coldBrew = coldDrinks.find(coldDrink => coldDrink.name === 'Cold Brew')
 const expTônico = coldDrinks.find(coldDrink => coldDrink.name === 'Expresso Tônico')
 const frappuccino = coldDrinks.find(coldDrink => coldDrink.name === 'Frappuccino')
 
+const chocolateBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes === 'Chocolate')
+const cocoBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes === 'Coco')
+const morangoBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes === 'Morango')
+const lightBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes === 'Light')
+
+const cafeBrownie = typesBrownies.find(candyTypes => candyTypes === 'Café')
+const caSalgBrownie = typesBrownies.find(candyTypes => candyTypes === 'Caramelo Salgado')
+
+const chocolateCookie = typesCookies.find(candyTypes => candyTypes === 'Chocolate')
+const morangoCookie = typesCookies.find(candyTypes => candyTypes === 'Morango')
+
+const chocolateCupcake = typesCupcakes.find(candyTypes => candyTypes === 'Chocolate')
+const morangoCupcake = typesCupcakes.find(candyTypes => candyTypes === 'Morango')
+const nozesCupcake = typesCupcakes.find(candyTypes => candyTypes === 'Nozes')
+
+const amendoimPie = typesPie.find(candyTypes => candyTypes === 'Amendoim')
+const macaPie = typesPie.find(candyTypes => candyTypes === 'Maçã')
+const maracujaPie = typesPie.find(candyTypes => candyTypes === 'Maracujá')
+const pessegoPie = typesPie.find(candyTypes => candyTypes === 'Pêssego')
+
+
 import Footer from '../components/Footer'
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
+import { FaArrowUp, FaCartArrowDown } from 'react-icons/fa'
 
 
 
 function DeliveryPage() {
 
-  var input = document.getElementById('ent-adressUser')
+
+  const [showDivItens, setShowDivItens] = useState ({
+    divsHotDrinks: false,
+    divsColdDrinks: false,
+    divsCandies: false
+    
+
+  })
+
+  const displayDivsItens = (key) => {{
+    setShowDivItens((prevDivsItens) => ({
+      ...prevDivsItens, [key] : !prevDivsItens [key]
+
+    }))
 
 
-
-  const displayHotDrinks = () => {
-    var btn = document.getElementById('buttonExibir')
-    var div = document.getElementById('exibir')
+  }}
 
   
-      
 
-      if (div.style.display == 'block') {
-        div.style.display = 'none'
-      } else {
-        div.style.display = 'block'
-      }
 
-      
 
-    
-  }
+  var input = document.getElementById('ent-adressUser')
+  
+
+
+
+
 
   const [quantity, setQuantity] = useState ({
     inputCoado: 0,
@@ -151,12 +182,22 @@ const subQuantity = (key) => {
 
     </header>
 
+    <button id='exibir'>Aqui</button>
+
 
     <main>
+     
+   
 
-      <section className='deliveryItens'>
-        <button id='buttonExibir'>Bebidas Quentes</button>
-        <div id='exibir'>Oi</div>
+
+    <div onClick={() => displayDivsItens('divsHotDrinks')}>
+          <h2>Bebidas Quentes</h2>
+          {showDivItens.divsHotDrinks ? <IoIosArrowUp /> : <IoIosArrowDown /> }
+      </div>
+
+    {showDivItens.divsHotDrinks && ( 
+
+      <section className='deliveryItens' id='hotDrinks_section'>
 
         <div className='deliveryItem'>
 
@@ -251,7 +292,21 @@ const subQuantity = (key) => {
 
       </section>
 
-      <section className='deliveryItens'>
+    )}
+
+
+       <div onClick={() => displayDivsItens('divsColdDrinks')}>
+          <h2>Cafés Gelados</h2>
+          {showDivItens.divsColdDrinks ? <IoIosArrowUp/> : <IoIosArrowDown />}
+        </div>
+
+    
+
+   
+
+        {showDivItens.divsColdDrinks && (
+
+      <section className='deliveryItens' id='coldDrinks_section'>
 
         <div className='deliveryItem'>
           <img src={cafeGelado.img} alt="imagem café gelado"/>
@@ -309,15 +364,28 @@ const subQuantity = (key) => {
 
           
       </section>
+        )}
 
-      <section className='deliveryItens'>
+    
 
-        <div id='conteiner_'>
-
+        <h1>Doces</h1>
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+          <h2>Brigadeiros</h2>
+          {showDivItens.divsCandies ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
+
+        {showDivItens.divsCandies && (
+ 
+          <section className='deliveryItens'>
+
+           
+
+          </section>
+
+        )}
         
 
-      </section>
+    
 
      
 
@@ -330,7 +398,7 @@ const subQuantity = (key) => {
 
         <label htmlFor="ent_adressUser"> Insira seu CEP</label>
           <input type='text' id='ent_adressUser' name='ent_adressUser' onBlur={localSearch}></input>
-          <SendPage adressUser={adressUser} />
+         
          
 
           <p id='output_uf'>{adressUser.state}</p>

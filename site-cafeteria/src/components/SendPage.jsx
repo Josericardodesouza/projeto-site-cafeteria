@@ -3,14 +3,14 @@ import { Link } from "react-router-dom"
 
 
 
-function SendPage({ adressUser }) {
+function SendPage() {
 
     return (
         <>
         <p id="output_end"></p>
         <div>
             <h3>Deixe sua opinião</h3>
-            <p>cidade: {adressUser.city}</p>
+            <p>cidade: </p>
             <textarea name="evaluation_user" id="evaluation_user_id"></textarea>
         
 
