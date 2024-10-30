@@ -24,6 +24,30 @@ import cupcakeImg from '../assets/images/cards-images/pexels-aqtai-635409-cupcak
 import paoDeMelImg from '../assets/images/cards-images/pão-de-mel-caldeirao-bruxa-solar.jpeg'
 import tortaImg from '../assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplash-torta-maca.jpg'
 
+import brigCocoimg from '../assets/images/cards-images/types-candy/pexels-palomaclaricefotografia-28728774.jpg'
+import brigChMorangoImg from '../assets/images/cards-images/types-candy/rhubarb-2424469_1280.jpg'
+import brigLightImg from '../assets/images/cards-images/types-candy/pexels-pelageia-zelenina-58865108-10390468.jpg'
+
+import brownieCafeImg from '../assets/images/cards-images/types-candy/brownie-548591_1280.jpg'
+import brownieCarameloImg from '../assets/images/cards-images/types-candy/pexels-gustavoraton-9501691.jpg'
+import brownieMgImg from '../assets/images/cards-images/types-candy/pexels-gustavoraton-6441084.jpg'
+
+import chCookieImg from '../assets/images/cards-images/types-candy/pexels-brigitte-tohm-36757-189536.jpg'
+
+import chCupcakeImg from '../assets/images/cards-images/types-candy/jr-r-90HdOlGbjck-unsplash.jpg'
+import mrgCupcakeImg from '../assets/images/cards-images/types-candy/deva-williamson-S2jw81lfrG0-unsplash.jpg'
+import nozesCupcakeImg from '../assets/images/cards-images/types-candy/pexels-roman-odintsov-5846200.jpg'
+
+import amendoaMaracujaPieImg from '../assets/images/cards-images/types-candy/pie-8139063_1280.jpg'
+import amendoimPieImg from '../assets/images/cards-images/types-candy/pexels-elli-559179-1854651.jpg'
+import macaPieimg from '../assets/images/cards-images/types-candy/apple-pie-1071747_1280.jpg'
+import nozesPieImg from '../assets/images/cards-images/types-candy/pexels-polina-tankilevitch-5848134.jpg'
+import pessegoPieImg from '../assets/images/cards-images/types-candy/pexels-chiaroscuro-154214185-10601212.jpg'
+
+
+
+
+
 
 const hotDrinks = [
     
@@ -189,25 +213,31 @@ const candyList = [
 
 const typesBrigadeiro = [
 
-    {
-        name: 'chocolate',
-        price: '0,00'
-    },
+    // {
+    //     name: 'Chocolate com morango',
+    //     price: '0,00',
+       
+
+        
+    // },
 
     {
         name: 'Coco',
-        price: '0,00'
+        price: '0,00',
+        img: brigCocoimg
     },
 
 
     {
         name: 'Morango',
-        price: '0,00'
+        price: '0,00',
+        img: brigChMorangoImg
     },
 
     {
         name: 'Light',
-        price: '0,00'
+        price: '0,00',
+        img: brigLightImg
     }
 
 ]
@@ -219,13 +249,23 @@ const typesBrownies = [
 
     {
         name: 'Café',
-        price: '0,00'
+        price: '0,00',
+        img: brownieCafeImg
     },
 
     {
         name: 'Caramelo Salgado',
-        price: '0,00'
+        price: '0,00',
+        img: brownieCarameloImg
+         
     },
+
+    {
+        name: 'Morango',
+        price: '0,00',
+        img: brownieMgImg
+        
+    }
 
     // {
     //     name: 'Chocolate Branco',
@@ -272,7 +312,8 @@ const typesCookies = [
 
     {
         name: 'Chocolate',
-        price: '0,00'
+        price: '0,00',
+        img: chCookieImg
     },
 
     // {
@@ -285,17 +326,18 @@ const typesCookies = [
     //     price: '0,00'
     // },
 
-    {
-        name: 'Morango',
-        price: '0,00'
-    }
+    // {
+    //     name: 'Morango',
+    //     price: '0,00'
+    // }
 ]
 
 const typesCupcakes = [
 
     {
         name: 'Chocolate',
-        price: '0,00'
+        price: '0,00',
+        img: chCupcakeImg
     },
 
     // {
@@ -305,12 +347,14 @@ const typesCupcakes = [
 
     {
         name: 'Morango',
-        price: '0,00'
+        price: '0,00',
+        img: mrgCupcakeImg
     },
 
     {
         name: 'Nozes',
-        price: '0,00'
+        price: '0,00',
+        img: nozesCupcakeImg
     },
 
     // {
@@ -340,23 +384,33 @@ const typesCupcakes = [
 const typesPie = [
 
     {
+        name: 'Amêndoa com maracujá',
+        price: '0,00',
+        img: amendoaMaracujaPieImg
+    },
+
+    {
         name: 'Amendoim',
-        price: '0,00'
+        price: '0,00',
+        img: amendoimPieImg
     },
 
     {
         name: 'Maçã',
-        price: '0,00'
+        price: '0,00',
+        img: macaPieimg
     },
 
     {
-        name: 'Maracujá',
-        price: '0,00'
+        name: 'Nozes',
+        price: '0,00',
+        img: nozesPieImg
     },
 
     {
         name: 'Pêssego',
-        price: '0,00'
+        price: '0,00',
+        img: pessegoPieImg
     }
 ]
 

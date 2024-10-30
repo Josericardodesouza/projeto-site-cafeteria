@@ -24,25 +24,24 @@ const coldBrew = coldDrinks.find(coldDrink => coldDrink.name === 'Cold Brew')
 const expTônico = coldDrinks.find(coldDrink => coldDrink.name === 'Expresso Tônico')
 const frappuccino = coldDrinks.find(coldDrink => coldDrink.name === 'Frappuccino')
 
-const chocolateBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes === 'Chocolate')
-const cocoBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes === 'Coco')
-const morangoBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes === 'Morango')
-const lightBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes === 'Light')
+// const chocolateBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes.name === 'Chocolate')
+const cocoBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes.name === 'Coco')
+const morangoBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes.name === 'Morango')
+const lightBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes.name === 'Light')
 
-const cafeBrownie = typesBrownies.find(candyTypes => candyTypes === 'Café')
-const caSalgBrownie = typesBrownies.find(candyTypes => candyTypes === 'Caramelo Salgado')
+const cafeBrownie = typesBrownies.find(candyTypes => candyTypes.name === 'Café')
 
-const chocolateCookie = typesCookies.find(candyTypes => candyTypes === 'Chocolate')
-const morangoCookie = typesCookies.find(candyTypes => candyTypes === 'Morango')
 
-const chocolateCupcake = typesCupcakes.find(candyTypes => candyTypes === 'Chocolate')
-const morangoCupcake = typesCupcakes.find(candyTypes => candyTypes === 'Morango')
-const nozesCupcake = typesCupcakes.find(candyTypes => candyTypes === 'Nozes')
+const chocolateCookie = typesCookies.find(candyTypes => candyTypes.name === 'Chocolate')
 
-const amendoimPie = typesPie.find(candyTypes => candyTypes === 'Amendoim')
-const macaPie = typesPie.find(candyTypes => candyTypes === 'Maçã')
-const maracujaPie = typesPie.find(candyTypes => candyTypes === 'Maracujá')
-const pessegoPie = typesPie.find(candyTypes => candyTypes === 'Pêssego')
+const chocolateCupcake = typesCupcakes.find(candyTypes => candyTypes.name === 'Chocolate')
+const morangoCupcake = typesCupcakes.find(candyTypes => candyTypes.name === 'Morango')
+const nozesCupcake = typesCupcakes.find(candyTypes => candyTypes.name === 'Nozes')
+
+const amendoaMaracujaPie = typesPie.find(candyTypes => candyTypes.name === 'Amêndoa com maracujá')
+const amendoimPie = typesPie.find(candyTypes => candyTypes.name === 'Amendoim')
+const macaPie = typesPie.find(candyTypes => candyTypes.name === 'Maçã')
+const pessegoPie = typesPie.find(candyTypes => candyTypes.name === 'Pêssego')
 
 
 import Footer from '../components/Footer'
@@ -70,6 +69,11 @@ function DeliveryPage() {
 
 
   }}
+
+
+  const [showDivsCandyTypes, setShowDivsCandyTypes] = useState ({
+
+  })
 
   
 
@@ -371,18 +375,139 @@ const subQuantity = (key) => {
         <h1>Doces</h1>
         <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
           <h2>Brigadeiros</h2>
-          {showDivItens.divsCandies ? <IoIosArrowUp /> : <IoIosArrowDown />}
+
         </div>
 
-        {showDivItens.divsCandies && (
- 
           <section className='deliveryItens'>
 
-           
+            <div className='deliveryItem'>
+
+              <img src= {cocoBrigadeiro.img} alt='imagem de brigadeiro de coco' />
+              <p>{cocoBrigadeiro.name}</p>
+              <p>{cocoBrigadeiro.price}</p>
+
+            </div>
+
+            <div className='deliveryItem'>
+
+              <img src= {morangoBrigadeiro.img} alt="imagem de brigadeiro de morango"/>
+              <p>{morangoBrigadeiro.name}</p>
+              <p>{morangoBrigadeiro.price}</p>
+
+            </div>
+
+            <div className='deliveryItem'>
+
+              <img src={lightBrigadeiro.img} alt="imagem de brigadeiro light"/>
+              <p>{lightBrigadeiro.name}</p>
+              <p>{lightBrigadeiro.price}</p>
+
+            </div>
 
           </section>
 
-        )}
+          
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+          <h2>Brownies</h2>
+        </div>
+
+        <section className='deliveryitens'>
+          
+          <div className='deliveryItem'>
+
+            <img src={cafeBrownie.img} alt="imagem de um brownie de café"/>
+            <p>{cafeBrownie.name}</p>
+            <p>{cafeBrownie.price}</p>
+
+          </div>
+
+        </section>
+
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+          <h2>Cookies</h2>
+        </div>
+
+        <section className='deliveryItens'>
+
+          <div className='deliveryItem'>
+            <img src={chocolateCookie.img} alt="imagem de um cookie de chocolate"/>
+            <p>{chocolateCookie.name}</p>
+            <p>{chocolateCookie.price}</p>
+
+          </div>
+
+        </section>
+
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+          <h2>Cupcakes</h2>
+        </div>
+
+        <section className='deliveryItens'>
+
+          <div className='deliveryItem'>
+            <img src={chocolateCupcake.img} alt="imagem de cupcake de chocolate"/>
+            <p>{chocolateCupcake.name}</p>
+            <p>{chocolateCupcake.price}</p>
+
+          </div>
+
+          <div className='deliveryItem'>
+
+            <img src={morangoCupcake.img} alt="imagem de um cupcake de morango"/>
+            <p>{morangoCupcake.name}</p>
+            <p>{morangoCupcake.price}</p>
+
+          </div>
+
+          <div className='deliveryItem'>
+
+            <img src={nozesCupcake.img} alt="imagem de um cupcake de nozes" />
+            <p>{nozesCupcake.name}</p>
+            <p>{nozesCupcake.price}</p>
+
+          </div>
+
+        </section>
+
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+          <h2>Tortas</h2>
+        </div>
+
+        <section className='deliveryItens'>
+
+        <div className='deliveryItem'>
+
+          <img src={amendoaMaracujaPie.img} alt="imagem de uma torta de maçã"/>
+          <p>{amendoaMaracujaPie.name}</p>
+          <p>{amendoaMaracujaPie.price}</p>
+
+          </div>
+
+          <div className='deliveryItem'>
+            <img src={amendoimPie.img} alt="imagem de uma torta de amendoim"/>
+            <p>{amendoimPie.name}</p>
+            <p>{amendoimPie.price}</p>
+
+          </div>
+
+          <div className='deliveryItem'>
+
+          <img src={macaPie.img} alt="imagme de uma torta de amêndoa com maracujá" />
+          <p>{macaPie.name}</p>
+          <p>{macaPie.price}</p>
+
+          </div>
+
+          <div className='deliveryItem'>
+
+            <img src={pessegoPie.img} alt="imagem de uma torta de pêssego"/>
+            <p>{pessegoPie.name}</p>
+            <p>{pessegoPie.price}</p>
+          </div>
+
+        </section>
+
+       
         
 
     
