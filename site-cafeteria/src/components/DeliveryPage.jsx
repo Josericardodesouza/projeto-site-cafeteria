@@ -112,7 +112,16 @@ function DeliveryPage() {
     input_macaPie: 0,
     input_pessegoPie: 0
 
+
+    
+
+
   })
+
+
+  if (quantity.inputCoado > 1) {
+    console.log('É maior que 1')
+  }
 
   const addQuantity = (key) => {
     setQuantity((prevQuantity) => ({
@@ -129,7 +138,6 @@ const subQuantity = (key) => {
 
 
 
-
   const [adressUser, setAdressUser] = useState ({
     state: '',
     city: '',
@@ -139,6 +147,7 @@ const subQuantity = (key) => {
 
   })
  
+
 
   const localSearch = (e) => { 
     const cep = e.target.value.replace(/\D/g, '')
@@ -598,6 +607,13 @@ const subQuantity = (key) => {
        
 
         <Link to = '/sendpage'>Concluir pedido</Link>
+
+        <div>
+          Teste
+          <br />
+          {quantity.inputCafeBrownie}
+
+        </div>
          
       
         
