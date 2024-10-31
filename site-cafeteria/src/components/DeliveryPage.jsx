@@ -97,7 +97,20 @@ function DeliveryPage() {
     inputCafeGelado: 0,
     inputColdBrew: 0,
     inputExpTonico: 0,
-    inputFrappuccino: 0
+    inputFrappuccino: 0,
+
+    inputCocoBrig: 0,
+    inputMrgBrig: 0,
+    inputLightBrig: 0,
+    inputCafeBrownie: 0,
+    inputChCookie: 0,
+    inputChCupcake: 0,
+    inputMrgCupcake: 0,
+    inputNozesCupcake: 0,
+    input_amendoaMaracujaPie: 0,
+    input_amendoimPie: 0,
+    input_macaPie: 0,
+    input_pessegoPie: 0
 
   })
 
@@ -386,6 +399,10 @@ const subQuantity = (key) => {
               <p>{cocoBrigadeiro.name}</p>
               <p>{cocoBrigadeiro.price}</p>
 
+              <button onClick={() => addQuantity('inputCocoBrig')}>+</button>
+              <input type="number" id='inputBrig' value ={quantity.inputCocoBrig} readOnly />
+              <button onClick={() => subQuantity('inputCocoBrig')}>-</button>
+
             </div>
 
             <div className='deliveryItem'>
@@ -394,6 +411,10 @@ const subQuantity = (key) => {
               <p>{morangoBrigadeiro.name}</p>
               <p>{morangoBrigadeiro.price}</p>
 
+              <button onClick={() => addQuantity('inputMrgBrig')}>+</button>
+              <input type="number" id='inputMrBrig' value={quantity.inputMrgBrig} />
+              <button onClick={() => subQuantity('inputMrgBrig')}>-</button>
+
             </div>
 
             <div className='deliveryItem'>
@@ -401,6 +422,10 @@ const subQuantity = (key) => {
               <img src={lightBrigadeiro.img} alt="imagem de brigadeiro light"/>
               <p>{lightBrigadeiro.name}</p>
               <p>{lightBrigadeiro.price}</p>
+
+              <button onClick={() => addQuantity('inputLightBrig')}>+</button>
+              <input type="number" id='inputLightBrig' value={quantity.inputLightBrig}/>
+              <button onClick={() => subQuantity('inputLightBrig')}>-</button>
 
             </div>
 
@@ -419,6 +444,10 @@ const subQuantity = (key) => {
             <p>{cafeBrownie.name}</p>
             <p>{cafeBrownie.price}</p>
 
+            <button onClick={() => addQuantity('inputCafeBrownie')}>+</button>
+            <input type="number" id='inputCafeBrownie' value={quantity.inputCafeBrownie} />
+            <button onClick={() => subQuantity('inputCafeBrownie')}>-</button>
+
           </div>
 
         </section>
@@ -433,6 +462,10 @@ const subQuantity = (key) => {
             <img src={chocolateCookie.img} alt="imagem de um cookie de chocolate"/>
             <p>{chocolateCookie.name}</p>
             <p>{chocolateCookie.price}</p>
+
+            <button onClick={() => addQuantity('inputChCookie')}>+</button>
+            <input type="number" id='inputChCookie' value={quantity.inputChCookie} />
+            <button onClick={() => subQuantity('inputChCookie')}>-</button>
 
           </div>
 
@@ -449,6 +482,10 @@ const subQuantity = (key) => {
             <p>{chocolateCupcake.name}</p>
             <p>{chocolateCupcake.price}</p>
 
+            <button onClick={() => addQuantity('inputChCupcake')}>+</button>
+            <input type="number" id='inputChCupcake' value={quantity.inputChCupcake} />
+            <button onClick={() => subQuantity('inputChCupcake')}>-</button>
+
           </div>
 
           <div className='deliveryItem'>
@@ -457,6 +494,10 @@ const subQuantity = (key) => {
             <p>{morangoCupcake.name}</p>
             <p>{morangoCupcake.price}</p>
 
+            <button onClick={() => addQuantity('inputMrgCupcake')}>+</button>
+            <input type="number" value={quantity.inputMrgCupcake} />
+            <button onClick={() => subQuantity('inputMrgCupcake')}>-</button>
+
           </div>
 
           <div className='deliveryItem'>
@@ -464,6 +505,10 @@ const subQuantity = (key) => {
             <img src={nozesCupcake.img} alt="imagem de um cupcake de nozes" />
             <p>{nozesCupcake.name}</p>
             <p>{nozesCupcake.price}</p>
+
+            <button onClick={() => addQuantity('inputNozesCupcake')}>+</button>
+            <input type="number" value={quantity.inputNozesCupcake} />
+            <button onClick={() => subQuantity('inputNozesCupcake')}>-</button>
 
           </div>
 
@@ -481,12 +526,22 @@ const subQuantity = (key) => {
           <p>{amendoaMaracujaPie.name}</p>
           <p>{amendoaMaracujaPie.price}</p>
 
+          <button onClick={() => addQuantity('input_amendoaMaracujaPie')}>+</button>
+          <input type="number" value={quantity.input_amendoaMaracujaPie} />
+          <button onClick={() => subQuantity('input_amendoaMaracujaPie')}>-</button>
+
+
+
           </div>
 
           <div className='deliveryItem'>
             <img src={amendoimPie.img} alt="imagem de uma torta de amendoim"/>
             <p>{amendoimPie.name}</p>
             <p>{amendoimPie.price}</p>
+
+            <button onClick={() => addQuantity('input_amendoimPie')}>+</button>
+            <input type="number" value={quantity.input_amendoimPie} />
+            <button onClick={() => subQuantity('input_amendoimPie')}>-</button>
 
           </div>
 
@@ -496,6 +551,10 @@ const subQuantity = (key) => {
           <p>{macaPie.name}</p>
           <p>{macaPie.price}</p>
 
+          <button onClick={() => addQuantity('input_macaPie')}>+</button>
+          <input type="number" value={quantity.input_macaPie} />
+          <button onClick={() => subQuantity('input_macaPie')}>-</button>
+
           </div>
 
           <div className='deliveryItem'>
@@ -503,6 +562,12 @@ const subQuantity = (key) => {
             <img src={pessegoPie.img} alt="imagem de uma torta de pêssego"/>
             <p>{pessegoPie.name}</p>
             <p>{pessegoPie.price}</p>
+
+            <button onClick={() => addQuantity('input_pessegoPie')}>+</button>
+            <input type="number" value={quantity.input_pessegoPie} />
+            <button onClick={() => subQuantity('input_pessegoPie')}>-</button>
+
+
           </div>
 
         </section>
