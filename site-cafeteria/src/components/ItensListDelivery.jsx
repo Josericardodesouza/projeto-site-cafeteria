@@ -1,5 +1,14 @@
-function ItensListDelivery(quantity) {
+function ItensListDelivery({quantity}) {
+
+    
+
+
+
     return (
+
+
+        
+
         <>
            {quantity.inputCoado > 1 && (
 
@@ -7,12 +16,19 @@ function ItensListDelivery(quantity) {
 
 <p>Quantidade de café {quantity.inputCoado} X</p>
 
-</div>
+</div>)} 
 
 
-)} 
+<p>Teste</p>
+
+
+
         </>
+
+
     )
 }
+
+
 
 export default ItensListDelivery

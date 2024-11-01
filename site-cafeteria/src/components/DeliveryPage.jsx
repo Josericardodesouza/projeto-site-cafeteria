@@ -630,7 +630,6 @@ const generateQuantityPhrase = (e) => {
 
 
   <ItensListDelivery quantity={quantity} />
-  <ItensListDelivery />
 
 
 
