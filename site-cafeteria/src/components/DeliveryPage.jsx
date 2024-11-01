@@ -7,7 +7,7 @@ import { candyList } from './ConstantsItens'
 import { Link, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import SendPage from './SendPage'
+import ItensListDelivery from './ItensListDelivery'
 import NavBar from './NavBar'
 import SimpleNavBar from './SimpleNavBar'
 import MenuCoffee from './MenuCoffee'
@@ -87,6 +87,9 @@ function DeliveryPage() {
 
 
   const [quantity, setQuantity] = useState ({
+    
+
+
     inputCoado: 0,
     inputCappuccino: 0,
     inputEspresso: 0,
@@ -119,9 +122,7 @@ function DeliveryPage() {
   })
 
 
-  if (quantity.inputCoado > 1) {
-    console.log('É maior que 1')
-  }
+
 
   const addQuantity = (key) => {
     setQuantity((prevQuantity) => ({
@@ -136,6 +137,13 @@ const subQuantity = (key) => {
   }))
 }
 
+
+const generateQuantityPhrase = (e) => {
+  const {name, quantityItens} = e.target
+  setQuantity((prevQuantity) => ({
+    ...prevQuantity, [name]: Number (quantityItens)
+  }))
+}
 
 
   const [adressUser, setAdressUser] = useState ({
@@ -233,7 +241,7 @@ const subQuantity = (key) => {
           <div className='quantity_input'>
 
             <button onClick={() => addQuantity('inputCoado')}>+</button>
-            <input type='number' id='input_add_coado' value={quantity.inputCoado}/>
+            <input type='number' id='input_add_coado' value={quantity.inputCoado} onChange={generateQuantityPhrase} />
             <button onClick={() => subQuantity('inputCoado')}>-</button>
             <button>confirmar</button>
 
@@ -614,7 +622,19 @@ const subQuantity = (key) => {
           {quantity.inputCafeBrownie}
 
         </div>
-         
+
+        {quantity.inputCoado > 1 && (
+
+          <p>Quantidade de café {quantity.inputCoado} X</p>
+        )} 
+
+
+  <ItensListDelivery quantity={quantity} />
+  <ItensListDelivery />
+
+
+
+      
       
         
        
@@ -642,13 +662,19 @@ const subQuantity = (key) => {
     <Footer />
 
     
+    
 
 
     </>
+
+
   )
+
 
 
 }
 
 export default DeliveryPage
+
+
  

@@ -1,12 +1,27 @@
 import { Link } from "react-router-dom"
+import ItensListDelivery from "./ItensListDelivery"
 
 
 
 
-function SendPage() {
+
+
+function SendPage(quantity) {
 
     return (
         <>
+
+        <div>
+            <ItensListDelivery quantity = {quantity}/>
+        </div>
+
+
+
+     
+
+
+
+
         <p id="output_end"></p>
         <div>
             <h3>Deixe sua opinião</h3>
