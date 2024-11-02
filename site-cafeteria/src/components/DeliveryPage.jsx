@@ -21,7 +21,7 @@ const pingado = hotDrinks.find(coffee => coffee.name === 'Pingado')
 
 const cafeGelado = coldDrinks.find(coldDrink => coldDrink.name === 'café gelado')
 const coldBrew = coldDrinks.find(coldDrink => coldDrink.name === 'Cold Brew')
-const expTônico = coldDrinks.find(coldDrink => coldDrink.name === 'Expresso Tônico')
+const expTonico = coldDrinks.find(coldDrink => coldDrink.name === 'Expresso Tônico')
 const frappuccino = coldDrinks.find(coldDrink => coldDrink.name === 'Frappuccino')
 
 // const chocolateBrigadeiro = typesBrigadeiro.find(candyTypes => candyTypes.name === 'Chocolate')
@@ -82,18 +82,70 @@ function DeliveryPage() {
   var input = document.getElementById('ent-adressUser')
   
 
-  const coadoName = coado.name
-  const coadoPrice = coado.price
+  const coado_name = coado.name
+  const coado_price = coado.price
 
-  const cappuccinoName = cappuccino.name
-  const cappuccinoPrice = cappuccino.price
+  const cappuccino_name = cappuccino.name
+  const cappuccino_price = cappuccino.price
 
-  const espressoName = espresso.name
-  const espressoPrice = espresso.price
+  const espresso_name = espresso.name
+  const espresso_price = espresso.price
 
-  const latteName = latte.name
-  const lattePrice = latte.price
+  const latte_name = latte.name
+  const latte_price = latte.price
 
+  const mocha_name = mocha.name
+  const mocha_price = mocha.price
+  
+  const pingado_name = pingado.name
+  const pingado_price = pingado.price
+
+  const cfGelado_name = cafeGelado.name
+  const cfGelado_price = cafeGelado.price
+
+  const coldBrew_name = coldBrew.name
+  const coldBrew_price = coldBrew.price
+
+  const expTonico_name = expTonico.name
+  const expTonico_price = expTonico.price
+
+  const frappuccino_name = frappuccino.name
+  const frappuccino_price = frappuccino.price
+
+  const cocoBrig_name = cocoBrigadeiro.name
+  const cocoBrig_price = cocoBrigadeiro.price
+
+  const mrgBrig_name = morangoBrigadeiro.name
+  const mrgBrig_price = morangoBrigadeiro.price
+
+  const lightBrig_name = lightBrigadeiro.name
+  const lightBrig_price = lightBrigadeiro.price
+
+  const cfBrownie_name = cafeBrownie.name
+  const cfBrownie_price = cafeBrownie.price
+
+  const chCookie_name = chocolateCookie.name
+  const chCookie_price = chocolateCookie.price
+
+  const chCupcake_name = chocolateCupcake.name
+  const chCupcake_price = chocolateCookie.price
+
+  const mrgCupcake_name = morangoCupcake.name
+  const mrgCupcake_price = morangoCupcake.price
+
+  const nozesCupcake_name = nozesCupcake.name
+  const nozesCupcake_price = nozesCupcake.price
+
+  const amdMaracujaPie_name = amendoaMaracujaPie.name
+  const amdMaracujaPie_price = amendoaMaracujaPie.price
+
+
+
+
+
+
+
+  
 
 
 
@@ -102,7 +154,7 @@ function DeliveryPage() {
    
   
 
-  console.log(`é o ${coadoName} e o ${cappuccinoName}`)
+  console.log(`é o ${coado_name} e o ${cappuccino_name}`)
 
 
 
@@ -110,13 +162,12 @@ function DeliveryPage() {
     
 
 
-    inputCoado: {quant: 0, name: coadoName, price: coadoPrice},
-    inputCappuccino: 0,
-    inputEspresso: 0,
-    inputLatte: 0,
-    inputMocha: 0,
-    inputPingado: 0,
-
+    inputCoado: {quant: 0, name: coado_name, price: coado_price},
+    inputCappuccino: {quant: 0, name: cappuccino_name, price: cappuccino_price},
+    inputEspresso: {quant: 0, name: espresso_name, price: espresso_price},
+    inputLatte: {quant: 0, name: latte_name, price: latte_price},
+    inputMocha: {quant: 0, name: mocha_name, price: mocha_price},
+    inputPingado: {quant: 0, name: pingado_name, price: pingado_price},
     inputCafeGelado: 0,
     inputColdBrew: 0,
     inputExpTonico: 0,
@@ -133,7 +184,7 @@ function DeliveryPage() {
     input_amendoaMaracujaPie: 0,
     input_amendoimPie: 0,
     input_macaPie: 0,
-    input_pessegoPie: 0
+    input_pessegoPie: {quant: 0}
 
 
     
@@ -167,14 +218,16 @@ const subQuantity = (key) => {
 const generateQuantityPhrase = (e) => {
   const {name, quantityItens} = e.target
   setItensProperties.quant((prevQuantity) => ({
-    ...prevQuantity, [name]: Number(quantityItens)
-  }))
+    ...prevQuantity, [name]: {
+    ...prevQuantity[name],
+    quant: Number(quantityItens)
+}}))
 }
 
 const renderListItemsSelected = () => {
   return Object.keys(itensProperties).map((key) => {
-    if (itensProperties[key] > 1) {
-      return <p key={key}>Você selecionou {itensProperties[key]} unidades de {key.replace('input', '')}</p>
+    if (itensProperties[key].quant > 1) {
+      return <p key={key}>Você selecionou {itensProperties[key].quant} unidades de {itensProperties[key].name}</p>
     }
     return null 
   } )
@@ -405,9 +458,9 @@ const renderListItemsSelected = () => {
           </div>
 
           <div className='deliveryItem'>
-            <img src={expTônico.img} alt="imagem de um expresso tônico"/>
-            <p>{expTônico.name}</p>
-            <p>{expTônico.price}</p>
+            <img src={expTonico.img} alt="imagem de um expresso tônico"/>
+            <p>{expTonico.name}</p>
+            <p>{expTonico.price}</p>
 
             <div>
               <button onClick={() => addQuantity('inputExpTonico')}>+</button>
@@ -615,7 +668,7 @@ const renderListItemsSelected = () => {
             <p>{pessegoPie.price}</p>
 
             <button onClick={() => addQuantity('input_pessegoPie')}>+</button>
-            <input type="number" value={itensProperties.input_pessegoPie} />
+            <input type="number" value={itensProperties.input_pessegoPie.quant} />
             <button onClick={() => subQuantity('input_pessegoPie')}>-</button>
 
 
@@ -658,6 +711,8 @@ const renderListItemsSelected = () => {
         </div>
 
       <div id='box_phrases_quantity'>
+
+       
 
         {renderListItemsSelected()}
         
