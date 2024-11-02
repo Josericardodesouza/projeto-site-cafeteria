@@ -145,16 +145,22 @@ function DeliveryPage() {
 
 
   const addQuantity = (key) => {
-    setItensProperties.quant((prevQuantity) => ({
-      ...prevQuantity, [key]: prevQuantity[key] + 1
-    }))
+    setItensProperties((prevQuantity) => ({
+      ...prevQuantity, [key]: {
+        ...prevQuantity[key],
+      quant: prevQuantity[key].quant + 1
+
+  }}))
   }
 
 const subQuantity = (key) => {
-  setItensProperties.quant((prevQuantity) => ({
-    ...prevQuantity, [key]: prevQuantity[key] > 0 ? prevQuantity[key] - 1 : 0
+  setItensProperties((prevQuantity) => ({
+    ...prevQuantity, [key]: {
+      ...prevQuantity[key],
+      quant: prevQuantity[key].quant > 0 ? prevQuantity[key].quant - 1 : 0
 
-  }))
+}
+}))
 }
 
 
