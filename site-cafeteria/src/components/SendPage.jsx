@@ -6,19 +6,14 @@ import ItensListDelivery from "./ItensListDelivery"
 
 
 
-
-function SendPage(quantity) {
-
-    console.log(quantity)
+function SendPage() {
 
     return (
         <>
-
+{/* 
         <div>
-        <ItensListDelivery quantity={quantity} />
-        </div>
-
-       
+            <ItensListDelivery quantity = {quantity}/>
+        </div> */}
 
 
 

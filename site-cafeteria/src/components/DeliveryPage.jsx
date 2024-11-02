@@ -141,10 +141,18 @@ const subQuantity = (key) => {
 const generateQuantityPhrase = (e) => {
   const {name, quantityItens} = e.target
   setQuantity((prevQuantity) => ({
-    ...prevQuantity, [name]: Number (quantityItens)
+    ...prevQuantity, [name]: Number(quantityItens)
   }))
 }
 
+const renderListItemsSelected = () => {
+  return Object.keys(quantity).map((key) => {
+    if (quantity[key] > 1) {
+      return <p key={key}>Você selecionou {quantity[key]} unidades de {key.replace('input', '')}</p>
+    }
+    return null 
+  } )
+}
 
   const [adressUser, setAdressUser] = useState ({
     state: '',
@@ -623,13 +631,17 @@ const generateQuantityPhrase = (e) => {
 
         </div>
 
-        {quantity.inputCoado > 1 && (
+      <div id='box_phrases_quantity'>
 
-          <p>Quantidade de café {quantity.inputCoado} X</p>
-        )} 
+        {renderListItemsSelected()}
+        
 
+
+
+      </div>
 
   <ItensListDelivery quantity={quantity} />
+  <ItensListDelivery />
 
 
 
