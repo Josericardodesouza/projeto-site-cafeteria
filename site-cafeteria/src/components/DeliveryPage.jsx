@@ -83,6 +83,11 @@ function DeliveryPage() {
   
 
 
+  var coadoName = coado.name
+  var cappuccinoName = cappuccino.name
+  
+
+  console.log(`é o ${coadoName} e o ${cappuccinoName}`)
 
 
 
