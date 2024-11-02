@@ -139,6 +139,15 @@ function DeliveryPage() {
   const amdMaracujaPie_name = amendoaMaracujaPie.name
   const amdMaracujaPie_price = amendoaMaracujaPie.price
 
+  const amendoimPie_name = amendoimPie.name
+  const amendoimPie_price = amendoimPie.price
+
+  const macaPie_name = macaPie.name
+  const macaPie_price = macaPie.price
+
+  const pssgPie_name = pessegoPie.name
+  const pssgPie_price = pessegoPie.price
+
 
 
 
@@ -164,27 +173,46 @@ function DeliveryPage() {
 
     inputCoado: {quant: 0, name: coado_name, price: coado_price},
     inputCappuccino: {quant: 0, name: cappuccino_name, price: cappuccino_price},
-    inputEspresso: {quant: 0, name: espresso_name, price: espresso_price},
-    inputLatte: {quant: 0, name: latte_name, price: latte_price},
-    inputMocha: {quant: 0, name: mocha_name, price: mocha_price},
-    inputPingado: {quant: 0, name: pingado_name, price: pingado_price},
-    inputCafeGelado: 0,
-    inputColdBrew: 0,
-    inputExpTonico: 0,
-    inputFrappuccino: 0,
 
-    inputCocoBrig: 0,
-    inputMrgBrig: 0,
-    inputLightBrig: 0,
-    inputCafeBrownie: 0,
-    inputChCookie: 0,
-    inputChCupcake: 0,
-    inputMrgCupcake: 0,
-    inputNozesCupcake: 0,
-    input_amendoaMaracujaPie: 0,
-    input_amendoimPie: 0,
-    input_macaPie: 0,
-    input_pessegoPie: {quant: 0}
+    inputEspresso: {quant: 0, name: espresso_name, price: espresso_price},
+
+    inputLatte: {quant: 0, name: latte_name, price: latte_price},
+
+    inputMocha: {quant: 0, name: mocha_name, price: mocha_price},
+
+    inputPingado: {quant: 0, name: pingado_name, price: pingado_price},
+
+    inputCafeGelado: {quant: 0, name: cfGelado_name, price: cfGelado_price},
+
+    inputColdBrew: {quant: 0, name: coldBrew_name, price: coldBrew_price},
+
+    inputExpTonico: {quant: 0, name: expTonico_name, price: expTonico_price},
+
+    inputFrappuccino: {quant: 0, name: frappuccino_name, price: frappuccino_price},
+
+    inputCocoBrig: {quant: 0, name: cocoBrig_name, price: cocoBrig_price},
+
+    inputMrgBrig: {quant: 0, name: mrgBrig_name, price: mrgBrig_price},
+
+    inputLightBrig: {quant: 0, name: lightBrig_name, price: lightBrig_price},
+
+    inputCafeBrownie: {quant: 0, name: cfBrownie_name, price: cfBrownie_price},
+
+    inputChCookie: {quant: 0, name: chCookie_name, price: chCookie_price},
+
+    inputChCupcake: {quant: 0, name: chCupcake_name, price: chCookie_price},
+
+    inputMrgCupcake: {quant: 0, name: mrgCupcake_name, price: mrgBrig_price},
+
+    inputNozesCupcake: {quant: 0, name: nozesCupcake_name, price: nozesCupcake_price},
+
+    input_amendoaMaracujaPie: {quant: 0, name: amdMaracujaPie_name, price: amdMaracujaPie_price},
+
+    input_amendoimPie: {quant: 0, name: amendoimPie_name, price: amendoimPie_price},
+
+    input_macaPie: {quant: 0, name: macaPie_name, price: macaPie_price},
+
+    input_pessegoPie: {quant: 0, name: pssgPie_name, price: pssgPie_price}
 
 
     
@@ -344,7 +372,7 @@ const renderListItemsSelected = () => {
           <div className='quantity_input'>
 
             <button onClick={() => addQuantity('inputCappuccino')}>+</button>
-            <input type="number" value={itensProperties.inputCappuccino} />
+            <input type="number" value={itensProperties.inputCappuccino.quant} />
             <button onClick={() => subQuantity('inputCappuccino')}>-</button>
 
           </div>
