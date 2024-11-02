@@ -82,9 +82,24 @@ function DeliveryPage() {
   var input = document.getElementById('ent-adressUser')
   
 
+  const coadoName = coado.name
+  const coadoPrice = coado.price
 
-  var coadoName = coado.name
-  var cappuccinoName = cappuccino.name
+  const cappuccinoName = cappuccino.name
+  const cappuccinoPrice = cappuccino.price
+
+  const espressoName = espresso.name
+  const espressoPrice = espresso.price
+
+  const latteName = latte.name
+  const lattePrice = latte.price
+
+
+
+
+   // const 
+
+   
   
 
   console.log(`é o ${coadoName} e o ${cappuccinoName}`)
@@ -95,7 +110,7 @@ function DeliveryPage() {
     
 
 
-    inputCoado: 0,
+    inputCoado: {quant: 0, name: coadoName, price: coadoPrice},
     inputCappuccino: 0,
     inputEspresso: 0,
     inputLatte: 0,
@@ -130,13 +145,13 @@ function DeliveryPage() {
 
 
   const addQuantity = (key) => {
-    setItensProperties((prevQuantity) => ({
+    setItensProperties.quant((prevQuantity) => ({
       ...prevQuantity, [key]: prevQuantity[key] + 1
     }))
   }
 
 const subQuantity = (key) => {
-  setItensProperties((prevQuantity) => ({
+  setItensProperties.quant((prevQuantity) => ({
     ...prevQuantity, [key]: prevQuantity[key] > 0 ? prevQuantity[key] - 1 : 0
 
   }))
@@ -145,7 +160,7 @@ const subQuantity = (key) => {
 
 const generateQuantityPhrase = (e) => {
   const {name, quantityItens} = e.target
-  setItensProperties((prevQuantity) => ({
+  setItensProperties.quant((prevQuantity) => ({
     ...prevQuantity, [name]: Number(quantityItens)
   }))
 }
@@ -254,7 +269,7 @@ const renderListItemsSelected = () => {
           <div className='quantity_input'>
 
             <button onClick={() => addQuantity('inputCoado')}>+</button>
-            <input type='number' id='input_add_coado' value={quantity.inputCoado} onChange ={generateQuantityPhrase} />
+            <input type='number' id='input_add_coado' value={itensProperties.inputCoado.quant} onChange ={generateQuantityPhrase} />
             <button onClick={() => subQuantity('inputCoado')}>-</button>
             <button>confirmar</button>
 
