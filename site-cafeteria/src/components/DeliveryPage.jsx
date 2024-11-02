@@ -86,7 +86,7 @@ function DeliveryPage() {
 
 
 
-  const [quantity, setQuantity] = useState ({
+  const [itensProperties, setItensProperties] = useState ({
     
 
 
@@ -125,13 +125,13 @@ function DeliveryPage() {
 
 
   const addQuantity = (key) => {
-    setQuantity((prevQuantity) => ({
+    setItensProperties((prevQuantity) => ({
       ...prevQuantity, [key]: prevQuantity[key] + 1
     }))
   }
 
 const subQuantity = (key) => {
-  setQuantity((prevQuantity) => ({
+  setItensProperties((prevQuantity) => ({
     ...prevQuantity, [key]: prevQuantity[key] > 0 ? prevQuantity[key] - 1 : 0
 
   }))
@@ -140,15 +140,15 @@ const subQuantity = (key) => {
 
 const generateQuantityPhrase = (e) => {
   const {name, quantityItens} = e.target
-  setQuantity((prevQuantity) => ({
+  setItensProperties((prevQuantity) => ({
     ...prevQuantity, [name]: Number(quantityItens)
   }))
 }
 
 const renderListItemsSelected = () => {
-  return Object.keys(quantity).map((key) => {
-    if (quantity[key] > 1) {
-      return <p key={key}>Você selecionou {quantity[key]} unidades de {key.replace('input', '')}</p>
+  return Object.keys(itensProperties).map((key) => {
+    if (itensProperties[key] > 1) {
+      return <p key={key}>Você selecionou {itensProperties[key]} unidades de {key.replace('input', '')}</p>
     }
     return null 
   } )
@@ -249,7 +249,7 @@ const renderListItemsSelected = () => {
           <div className='quantity_input'>
 
             <button onClick={() => addQuantity('inputCoado')}>+</button>
-            <input type='number' id='input_add_coado' value={quantity.inputCoado} onChange={generateQuantityPhrase} />
+            <input type='number' id='input_add_coado' value={quantity.inputCoado} onChange ={generateQuantityPhrase} />
             <button onClick={() => subQuantity('inputCoado')}>-</button>
             <button>confirmar</button>
 
@@ -265,7 +265,7 @@ const renderListItemsSelected = () => {
           <div className='quantity_input'>
 
             <button onClick={() => addQuantity('inputCappuccino')}>+</button>
-            <input type="number" value={quantity.inputCappuccino} />
+            <input type="number" value={itensProperties.inputCappuccino} />
             <button onClick={() => subQuantity('inputCappuccino')}>-</button>
 
           </div>
@@ -281,7 +281,7 @@ const renderListItemsSelected = () => {
           <div className='quantity_input'>
 
             <button onClick={() => addQuantity('inputEspresso')}>+</button>
-            <input type="number" value={quantity.inputEspresso} />
+            <input type="number" value={itensProperties.inputEspresso} />
             <button onClick={() => subQuantity('inputEspresso')}>-</button>
 
           </div>
@@ -297,7 +297,7 @@ const renderListItemsSelected = () => {
           <div className='quantity_input'>
 
             <button onClick={() => addQuantity('inputLatte')}>+</button>
-            <input type="number" value={quantity.inputLatte} />
+            <input type="number" value={itensProperties.inputLatte} />
             <button onClick={() => subQuantity('inputLatte')}>-</button>
 
           </div>
@@ -311,7 +311,7 @@ const renderListItemsSelected = () => {
           
           <div className='quantity_input'>
             <button onClick={() => addQuantity('inputMocha')}>+</button>
-            <input type="number" value={quantity.inputMocha} />
+            <input type="number" value={itensProperties.inputMocha} />
             <button onClick={() => subQuantity('inputMocha')}>-</button>
 
           </div>
@@ -325,7 +325,7 @@ const renderListItemsSelected = () => {
 
           <div className='quantity_input'>
             <button onClick={() => addQuantity('inputPingado')}>+</button>
-            <input type="number" value={quantity.inputPingado} />
+            <input type="number" value={itensProperties.inputPingado} />
             <button onClick={() => subQuantity('inputPingado')}>-</button>
 
           </div>
@@ -358,7 +358,7 @@ const renderListItemsSelected = () => {
           <div className='quantity_input'>
 
             <button onClick={() => addQuantity('inputCafeGelado')}>+</button>
-            <input type="number" value={quantity.inputCafeGelado} />
+            <input type="number" value={itensProperties.inputCafeGelado} />
             <button onClick={() => subQuantity('inputCafeGelado')}>-</button>
 
           </div>
@@ -372,7 +372,7 @@ const renderListItemsSelected = () => {
             <div className='quantity_input'>
 
               <button onClick={() => addQuantity('inputColdBrew')}>+</button>
-              <input type="number" value={quantity.inputColdBrew} />
+              <input type="number" value={itensProperties.inputColdBrew} />
               <button onClick={() => subQuantity('inputColdBrew')}>-</button>
 
             </div>
@@ -385,7 +385,7 @@ const renderListItemsSelected = () => {
 
             <div>
               <button onClick={() => addQuantity('inputExpTonico')}>+</button>
-              <input type="number" value={quantity.inputExpTonico} />
+              <input type="number" value={itensProperties.inputExpTonico} />
               <button onClick={() => subQuantity('inputExpTonico')}>-</button>
 
             </div>
@@ -398,7 +398,7 @@ const renderListItemsSelected = () => {
 
             <div>
               <button onClick={() => addQuantity('inputFrappuccino')}>+</button>
-              <input type="number" value={quantity.inputFrappuccino} />
+              <input type="number" value={itensProperties.inputFrappuccino} />
               <button onClick={() => subQuantity('inputFrappuccino')}>-</button>
 
             </div>
@@ -425,7 +425,7 @@ const renderListItemsSelected = () => {
               <p>{cocoBrigadeiro.price}</p>
 
               <button onClick={() => addQuantity('inputCocoBrig')}>+</button>
-              <input type="number" id='inputBrig' value ={quantity.inputCocoBrig} readOnly />
+              <input type="number" id='inputBrig' value ={itensProperties.inputCocoBrig} readOnly />
               <button onClick={() => subQuantity('inputCocoBrig')}>-</button>
 
             </div>
@@ -437,7 +437,7 @@ const renderListItemsSelected = () => {
               <p>{morangoBrigadeiro.price}</p>
 
               <button onClick={() => addQuantity('inputMrgBrig')}>+</button>
-              <input type="number" id='inputMrBrig' value={quantity.inputMrgBrig} />
+              <input type="number" id='inputMrBrig' value={itensProperties.inputMrgBrig} />
               <button onClick={() => subQuantity('inputMrgBrig')}>-</button>
 
             </div>
@@ -449,7 +449,7 @@ const renderListItemsSelected = () => {
               <p>{lightBrigadeiro.price}</p>
 
               <button onClick={() => addQuantity('inputLightBrig')}>+</button>
-              <input type="number" id='inputLightBrig' value={quantity.inputLightBrig}/>
+              <input type="number" id='inputLightBrig' value={itensProperties.inputLightBrig}/>
               <button onClick={() => subQuantity('inputLightBrig')}>-</button>
 
             </div>
@@ -470,7 +470,7 @@ const renderListItemsSelected = () => {
             <p>{cafeBrownie.price}</p>
 
             <button onClick={() => addQuantity('inputCafeBrownie')}>+</button>
-            <input type="number" id='inputCafeBrownie' value={quantity.inputCafeBrownie} />
+            <input type="number" id='inputCafeBrownie' value={itensProperties.inputCafeBrownie} />
             <button onClick={() => subQuantity('inputCafeBrownie')}>-</button>
 
           </div>
@@ -489,7 +489,7 @@ const renderListItemsSelected = () => {
             <p>{chocolateCookie.price}</p>
 
             <button onClick={() => addQuantity('inputChCookie')}>+</button>
-            <input type="number" id='inputChCookie' value={quantity.inputChCookie} />
+            <input type="number" id='inputChCookie' value={itensProperties.inputChCookie} />
             <button onClick={() => subQuantity('inputChCookie')}>-</button>
 
           </div>
@@ -508,7 +508,7 @@ const renderListItemsSelected = () => {
             <p>{chocolateCupcake.price}</p>
 
             <button onClick={() => addQuantity('inputChCupcake')}>+</button>
-            <input type="number" id='inputChCupcake' value={quantity.inputChCupcake} />
+            <input type="number" id='inputChCupcake' value={itensProperties.inputChCupcake} />
             <button onClick={() => subQuantity('inputChCupcake')}>-</button>
 
           </div>
@@ -520,7 +520,7 @@ const renderListItemsSelected = () => {
             <p>{morangoCupcake.price}</p>
 
             <button onClick={() => addQuantity('inputMrgCupcake')}>+</button>
-            <input type="number" value={quantity.inputMrgCupcake} />
+            <input type="number" value={itensProperties.inputMrgCupcake} />
             <button onClick={() => subQuantity('inputMrgCupcake')}>-</button>
 
           </div>
@@ -532,7 +532,7 @@ const renderListItemsSelected = () => {
             <p>{nozesCupcake.price}</p>
 
             <button onClick={() => addQuantity('inputNozesCupcake')}>+</button>
-            <input type="number" value={quantity.inputNozesCupcake} />
+            <input type="number" value={itensProperties.inputNozesCupcake} />
             <button onClick={() => subQuantity('inputNozesCupcake')}>-</button>
 
           </div>
@@ -552,7 +552,7 @@ const renderListItemsSelected = () => {
           <p>{amendoaMaracujaPie.price}</p>
 
           <button onClick={() => addQuantity('input_amendoaMaracujaPie')}>+</button>
-          <input type="number" value={quantity.input_amendoaMaracujaPie} />
+          <input type="number" value={itensProperties.input_amendoaMaracujaPie} />
           <button onClick={() => subQuantity('input_amendoaMaracujaPie')}>-</button>
 
 
@@ -565,7 +565,7 @@ const renderListItemsSelected = () => {
             <p>{amendoimPie.price}</p>
 
             <button onClick={() => addQuantity('input_amendoimPie')}>+</button>
-            <input type="number" value={quantity.input_amendoimPie} />
+            <input type="number" value={itensProperties.input_amendoimPie} />
             <button onClick={() => subQuantity('input_amendoimPie')}>-</button>
 
           </div>
@@ -577,7 +577,7 @@ const renderListItemsSelected = () => {
           <p>{macaPie.price}</p>
 
           <button onClick={() => addQuantity('input_macaPie')}>+</button>
-          <input type="number" value={quantity.input_macaPie} />
+          <input type="number" value={itensProperties.input_macaPie} />
           <button onClick={() => subQuantity('input_macaPie')}>-</button>
 
           </div>
@@ -589,7 +589,7 @@ const renderListItemsSelected = () => {
             <p>{pessegoPie.price}</p>
 
             <button onClick={() => addQuantity('input_pessegoPie')}>+</button>
-            <input type="number" value={quantity.input_pessegoPie} />
+            <input type="number" value={itensProperties.input_pessegoPie} />
             <button onClick={() => subQuantity('input_pessegoPie')}>-</button>
 
 
@@ -627,7 +627,7 @@ const renderListItemsSelected = () => {
         <div>
           Teste
           <br />
-          {quantity.inputCafeBrownie}
+          {/* {quantity.inputCafeBrownie} */}
 
         </div>
 
@@ -639,9 +639,9 @@ const renderListItemsSelected = () => {
 
 
       </div>
-
+{/* 
   <ItensListDelivery quantity={quantity} />
-  <ItensListDelivery />
+  <ItensListDelivery /> */}
 
 
 
