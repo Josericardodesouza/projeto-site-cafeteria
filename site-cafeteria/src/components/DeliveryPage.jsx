@@ -151,7 +151,7 @@ function DeliveryPage() {
 
 
 
-
+const valorTotal = 0
 
 
   
@@ -220,14 +220,17 @@ function DeliveryPage() {
 
   })
 
+ var total = itensProperties.input_pessegoPie.price
 
+ console.log(`O preço é ${total}`)
 
 
   const addQuantity = (key) => {
     setItensProperties((prevQuantity) => ({
       ...prevQuantity, [key]: {
         ...prevQuantity[key],
-      quant: prevQuantity[key].quant + 1
+      quant: prevQuantity[key].quant + 1,
+     
       
 
   }}))
@@ -257,7 +260,7 @@ const subQuantity = (key) => {
 
 const renderListItemsSelected = () => {
   return Object.keys(itensProperties).map((key) => {
-    if (itensProperties[key].quant > 1) {
+    if (itensProperties[key].quant > 0) {
       return <p key={key}>Você selecionou {itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
     }
     return null 
@@ -746,6 +749,8 @@ const renderListItemsSelected = () => {
        
 
         {renderListItemsSelected()}
+
+        {valorTotal}
         
 
 
