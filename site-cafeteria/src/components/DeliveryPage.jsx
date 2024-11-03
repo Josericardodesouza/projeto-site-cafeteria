@@ -163,7 +163,7 @@ function DeliveryPage() {
    
   
 
-  console.log(`é o ${coado_name} e o ${cappuccino_name}`)
+  // console.log(`é o ${coado_name} e o ${cappuccino_name}`)
 
 
 
@@ -228,6 +228,7 @@ function DeliveryPage() {
       ...prevQuantity, [key]: {
         ...prevQuantity[key],
       quant: prevQuantity[key].quant + 1
+      
 
   }}))
   }
@@ -243,14 +244,16 @@ const subQuantity = (key) => {
 }
 
 
-const generateQuantityPhrase = (e) => {
-  const {name, quantityItens} = e.target
-  setItensProperties.quant((prevQuantity) => ({
-    ...prevQuantity, [name]: {
-    ...prevQuantity[name],
-    quant: Number(quantityItens)
-}}))
-}
+
+
+// const updateQuantity = (e) => {
+//   const {name, quantityItens} = e.target
+//   setItensProperties.quant((prevQuantity) => ({
+//     ...prevQuantity, [name]: {
+//     ...prevQuantity[name],
+//     quant: Number(quantityItens)
+// }}))
+// }
 
 const renderListItemsSelected = () => {
   return Object.keys(itensProperties).map((key) => {
@@ -356,7 +359,7 @@ const renderListItemsSelected = () => {
           <div className='quantity_input'>
 
             <button onClick={() => addQuantity('inputCoado')}>+</button>
-            <input type='number' id='input_add_coado' value={itensProperties.inputCoado.quant} onChange ={generateQuantityPhrase} />
+            <input type='number' id='input_add_coado' value={itensProperties.inputCoado.quant} />
             <button onClick={() => subQuantity('inputCoado')}>-</button>
             <button>confirmar</button>
 
