@@ -86,7 +86,7 @@ function DeliveryPage() {
   const coado_price = parseFloat(coado.price.replace(',', '.'))
 
   const cappuccino_name = cappuccino.name
-  const cappuccino_price = arseFloat(cappuccino.price.replace(',', '.'))
+  const cappuccino_price = parseFloat(cappuccino.price.replace(',', '.'))
 
   const espresso_name = espresso.name
   const espresso_price = parseFloat(espresso.price.replace(',', '.'))
@@ -101,52 +101,52 @@ function DeliveryPage() {
   const pingado_price = parseFloat(pingado.price.replace(',', '.'))
 
   const cfGelado_name = cafeGelado.name
-  const cfGelado_price = parseFloat(cfGelado.price.replace(',', '.'))
+  const cfGelado_price = parseFloat(cafeGelado.price.replace(',', '.'))
 
   const coldBrew_name = coldBrew.name
   const coldBrew_price = parseFloat(coldBrew.price.replace(',', '.'))
 
   const expTonico_name = expTonico.name
-  const expTonico_price = expTonico.price
+  const expTonico_price = parseFloat(expTonico.price.replace(',', '.'))
 
   const frappuccino_name = frappuccino.name
-  const frappuccino_price = frappuccino.price
+  const frappuccino_price = parseFloat(frappuccino.price.replace(',', '.'))
 
   const cocoBrig_name = cocoBrigadeiro.name
-  const cocoBrig_price = cocoBrigadeiro.price
+  const cocoBrig_price = parseFloat(cocoBrigadeiro.price.replace(',', '.'))
 
   const mrgBrig_name = morangoBrigadeiro.name
-  const mrgBrig_price = morangoBrigadeiro.price
+  const mrgBrig_price = parseFloat(morangoBrigadeiro.price.replace(',', '.'))
 
   const lightBrig_name = lightBrigadeiro.name
-  const lightBrig_price = lightBrigadeiro.price
+  const lightBrig_price = parseFloat(lightBrigadeiro.price.replace(',', '.'))
 
   const cfBrownie_name = cafeBrownie.name
-  const cfBrownie_price = cafeBrownie.price
+  const cfBrownie_price = parseFloat(cafeBrownie.price.replace(',', '.'))
 
   const chCookie_name = chocolateCookie.name
-  const chCookie_price = chocolateCookie.price
+  const chCookie_price = parseFloat(chocolateCookie.price.replace(',', '.'))
 
   const chCupcake_name = chocolateCupcake.name
-  const chCupcake_price = chocolateCookie.price
+  const chCupcake_price = parseFloat(chocolateCupcake.price.replace(',', '.'))
 
   const mrgCupcake_name = morangoCupcake.name
-  const mrgCupcake_price = morangoCupcake.price
+  const mrgCupcake_price = parseFloat(morangoCupcake.price.replace(',', '.'))
 
   const nozesCupcake_name = nozesCupcake.name
-  const nozesCupcake_price = nozesCupcake.price
+  const nozesCupcake_price = parseFloat(nozesCupcake.price.replace(',', '.'))
 
   const amdMaracujaPie_name = amendoaMaracujaPie.name
-  const amdMaracujaPie_price = amendoaMaracujaPie.price
+  const amdMaracujaPie_price = parseFloat(amendoaMaracujaPie.price.replace(',', '.'))
 
   const amendoimPie_name = amendoimPie.name
-  const amendoimPie_price = amendoimPie.price
+  const amendoimPie_price = parseFloat(amendoimPie.price.replace(',', '.'))
 
   const macaPie_name = macaPie.name
-  const macaPie_price = macaPie.price
+  const macaPie_price = parseFloat(macaPie.price.replace(',', '.'))
 
   const pssgPie_name = pessegoPie.name
-  const pssgPie_price = (pessegoPie.price)
+  const pssgPie_price = parseFloat(pessegoPie.price.replace(',', '.'))
 
 
 
@@ -267,6 +267,11 @@ const renderListItemsSelected = () => {
   } )
 }
 
+
+
+const [total, setTotal] = useState(0)
+
+
 const totalValue = () => {
   return Object.values(itensProperties).reduce((acumulate, item) => {
     return acumulate + (item.quant * item.price)
@@ -275,12 +280,13 @@ const totalValue = () => {
 
 useEffect(() => {
   const total = totalValue()
+  setTotal(total)
   console.log('total:', total)
 }, [itensProperties])
 
 
-Object.values(itensProperties).forEach(item => {
-  console.log(`Item: ${item.name}, Quant: ${item.quant}, Price: ${item.price}, Total: ${item.quant * item.price}`)});
+// Object.values(itensProperties).forEach(item => {
+//   console.log(`Item: ${item.name}, Quant: ${item.quant}, Price: ${item.price}, Total: ${item.quant * item.price}`)});
 
 
 
@@ -766,6 +772,10 @@ Object.values(itensProperties).forEach(item => {
        
 
         {renderListItemsSelected()}
+
+        <p>total {total}</p>
+
+      
 
       
 
