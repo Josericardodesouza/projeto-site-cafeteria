@@ -409,7 +409,7 @@ const typesPie = [
 
     {
         name: 'Pêssego',
-        price: 1.00,
+        price: '2.67',
         img: pessegoPieImg
     }
 ]

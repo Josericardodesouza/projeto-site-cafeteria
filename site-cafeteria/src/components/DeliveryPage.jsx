@@ -146,12 +146,15 @@ function DeliveryPage() {
   const macaPie_price = macaPie.price
 
   const pssgPie_name = pessegoPie.name
-  const pssgPie_price = pessegoPie.price
+  const pssgPie_price = (pessegoPie.price)
 
 
 
 
-const valorTotal = 0
+
+  var total = itensProperties.input_pessegoPie.price
+
+  console.log(`O preço é ${total}`)
 
 
   
@@ -220,9 +223,7 @@ const valorTotal = 0
 
   })
 
- var total = itensProperties.input_pessegoPie.price
 
- console.log(`O preço é ${total}`)
 
 
   const addQuantity = (key) => {
@@ -230,8 +231,7 @@ const valorTotal = 0
       ...prevQuantity, [key]: {
         ...prevQuantity[key],
       quant: prevQuantity[key].quant + 1,
-     
-      
+    
 
   }}))
   }
@@ -750,7 +750,7 @@ const renderListItemsSelected = () => {
 
         {renderListItemsSelected()}
 
-        {valorTotal}
+
         
 
 
