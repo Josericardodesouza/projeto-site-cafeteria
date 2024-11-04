@@ -83,28 +83,28 @@ function DeliveryPage() {
   
 
   const coado_name = coado.name
-  const coado_price = coado.price
+  const coado_price = parseFloat(coado.price.replace(',', '.'))
 
   const cappuccino_name = cappuccino.name
-  const cappuccino_price = cappuccino.price
+  const cappuccino_price = arseFloat(cappuccino.price.replace(',', '.'))
 
   const espresso_name = espresso.name
-  const espresso_price = espresso.price
+  const espresso_price = parseFloat(espresso.price.replace(',', '.'))
 
   const latte_name = latte.name
-  const latte_price = latte.price
+  const latte_price = parseFloat(latte.price.replace(',', '.'))
 
   const mocha_name = mocha.name
-  const mocha_price = mocha.price
+  const mocha_price = parseFloat(mocha.price.replace(',', '.'))
   
   const pingado_name = pingado.name
-  const pingado_price = pingado.price
+  const pingado_price = parseFloat(pingado.price.replace(',', '.'))
 
   const cfGelado_name = cafeGelado.name
-  const cfGelado_price = cafeGelado.price
+  const cfGelado_price = parseFloat(cfGelado.price.replace(',', '.'))
 
   const coldBrew_name = coldBrew.name
-  const coldBrew_price = coldBrew.price
+  const coldBrew_price = parseFloat(coldBrew.price.replace(',', '.'))
 
   const expTonico_name = expTonico.name
   const expTonico_price = expTonico.price
@@ -152,9 +152,9 @@ function DeliveryPage() {
 
 
 
-  var total = itensProperties.input_pessegoPie.price
+  // var total = itensProperties.input_pessegoPie.price
 
-  console.log(`O preço é ${total}`)
+  // console.log(`O preço é ${total}`)
 
 
   
@@ -266,6 +266,23 @@ const renderListItemsSelected = () => {
     return null 
   } )
 }
+
+const totalValue = () => {
+  return Object.values(itensProperties).reduce((acumulate, item) => {
+    return acumulate + (item.quant * item.price)
+  }, 0)
+}
+
+useEffect(() => {
+  const total = totalValue()
+  console.log('total:', total)
+}, [itensProperties])
+
+
+Object.values(itensProperties).forEach(item => {
+  console.log(`Item: ${item.name}, Quant: ${item.quant}, Price: ${item.price}, Total: ${item.quant * item.price}`)});
+
+
 
   const [adressUser, setAdressUser] = useState ({
     state: '',
@@ -749,6 +766,8 @@ const renderListItemsSelected = () => {
        
 
         {renderListItemsSelected()}
+
+      
 
 
         
