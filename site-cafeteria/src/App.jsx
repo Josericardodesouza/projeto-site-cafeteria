@@ -47,6 +47,7 @@ import { CiCoffeeCup } from 'react-icons/ci'
 import { useEffect } from 'react'
 import MenuColdDrinks from './components/MenuColdDrinks'
 import { BsPerson } from 'react-icons/bs'
+import NavBarHome from './components/NavBarHome'
 
 
 
@@ -178,7 +179,14 @@ function App() {
    
 
     <header id='header'>
-      <NavBar scrollAboutUs = {scrollAboutUs} scrollMenus = {scrollMenus} scrollEvaluations = {scrollEvaluations} />
+      <nav id='home_navBar'>
+        <div className='box_navBarLinks'>
+          <NavBar  />
+        </div>
+        <div className='box_navBarLinks'>
+          <NavBarHome scrollAboutUs = {scrollAboutUs} scrollMenus = {scrollMenus} scrollEvaluations = {scrollEvaluations}/>
+        </div>
+      </nav>
 
      
 

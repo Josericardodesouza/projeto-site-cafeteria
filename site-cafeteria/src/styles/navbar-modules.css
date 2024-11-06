@@ -17,21 +17,28 @@
         right: 0;
        
     }  */
+.navBar {
+    
+    /* background-image: linear-gradient(to bottom, var(--copper) 30%, var(--copper2) 70%); */
 
 
-nav {
+}
+
+
+nav#conteiner_links_nav {
     width: 100vw;
     height: 20vh;
-    background-image: linear-gradient(to bottom, var(--copper) 30%, var(--copper2) 70%);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* padding: 5px; */
     margin: 0;
+   
     padding: 0;
     color: var(--cream);
     font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
-    position: fixed;
+  
     z-index: 5;
     box-shadow: 1px 1px 20px solid black;
    
