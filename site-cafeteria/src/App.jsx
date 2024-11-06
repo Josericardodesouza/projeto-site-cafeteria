@@ -193,7 +193,7 @@ function App() {
       <div id='box_header'>
         <h1 id='title_header'>LOREM IPSUM COFFEE</h1>
         {/* span */}
-        <p id='text_header'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        {/* <p id='text_header'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> */}
       </div>
     </header>
 

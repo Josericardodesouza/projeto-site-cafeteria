@@ -17,7 +17,7 @@ nav#home_navBar {
 header {
   width: 100vw;
   height: 100vh;
-  background-image: url(./assets/images/nathan-dumlao-zUNs99PGDg0-unsplash.jpg);
+  background-image: url(./assets/images/coffee-7561288_1920.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -44,8 +44,9 @@ div#box_header {
 }
 div#box_header > h1 {
   font-family: 'Lobster';
-  font-size: 5em;
-  color: var(--brownSugar);
+  font-size: 3em;
+  color: var(--beige);
+  /* color: var(--brownSugar); */
   text-shadow: 5px 2px 2px black;
   margin: 0;
 }
