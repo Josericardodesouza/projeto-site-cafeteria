@@ -208,9 +208,10 @@ function App() {
 
 
       <section id='aboutUs' ref={refSectionAboutUs}>
+      <h1 className='title_box'>Um Pouco Sobre Nós</h1>
 
         <div id='conteiner_1' className='conteiner_txtimg'>
-          <h1 className='title_box'>Um Pouco Sobre Nós</h1>
+         
           <div className='box_text'>
             <h2 className='title_box'>Início de Tudo</h2>
             <p className='p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sint expedita dolorum debitis ipsum, unde provident fugit corrupti odit numquam quidem rem ratione fugiat nostrum dolorem, necessitatibus, amet minima ipsam.</p>

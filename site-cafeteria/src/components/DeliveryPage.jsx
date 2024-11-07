@@ -368,7 +368,7 @@ useEffect(() => {
    
 
 
-    <div onClick={() => displayDivsItens('divsHotDrinks')}>
+    <div onClick={() => displayDivsItens('divsHotDrinks')} className='show_sections'>
           <h2>Bebidas Quentes</h2>
           {showDivItens.divsHotDrinks ? <IoIosArrowUp /> : <IoIosArrowDown /> }
       </div>
@@ -387,7 +387,7 @@ useEffect(() => {
             <button onClick={() => addQuantity('inputCoado')}>+</button>
             <input type='number' id='input_add_coado' value={itensProperties.inputCoado.quant} />
             <button onClick={() => subQuantity('inputCoado')}>-</button>
-            <button>confirmar</button>
+            {/* <button>confirmar</button> */}
 
           </div>
 
@@ -473,7 +473,7 @@ useEffect(() => {
     )}
 
 
-       <div onClick={() => displayDivsItens('divsColdDrinks')}>
+       <div onClick={() => displayDivsItens('divsColdDrinks')} className='show_sections'>
           <h2>Cafés Gelados</h2>
           {showDivItens.divsColdDrinks ? <IoIosArrowUp/> : <IoIosArrowDown />}
         </div>

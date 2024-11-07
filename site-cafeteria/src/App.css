@@ -372,7 +372,7 @@ section#evaluations {
   .conteiner_txtimg > img {
     width: 30%;
     height: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 5px;
   
   
