@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ItensListDelivery from "./ItensListDelivery"
+
 
 
 
@@ -14,11 +14,6 @@ function SendPage() {
         <div>
             <ItensListDelivery quantity = {quantity}/>
         </div> */}
-
-
-
-     
-
 
 
 

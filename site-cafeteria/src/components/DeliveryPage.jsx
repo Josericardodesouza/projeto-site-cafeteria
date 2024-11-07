@@ -47,6 +47,7 @@ const pessegoPie = typesPie.find(candyTypes => candyTypes.name === 'Pêssego')
 import Footer from '../components/Footer'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { FaArrowUp, FaCartArrowDown } from 'react-icons/fa'
+import SendPage from './SendPage'
 
 
 
@@ -272,6 +273,8 @@ const renderListItemsSelected = () => {
     return null 
   } )
 }
+
+
 
 
 
@@ -807,6 +810,7 @@ useEffect(() => {
        
 
         {renderListItemsSelected()}
+        <SendPage />
 
         <p>total {total}</p>
 
