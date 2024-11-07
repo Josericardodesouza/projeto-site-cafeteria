@@ -91,6 +91,8 @@ section#aboutUs {
   /* background-color: var(--cream2); */
   /* background-color: red; */
   padding-bottom: 10px;
+  padding-top: 70px;
+
 
 }
 
@@ -121,10 +123,11 @@ div#conteiner_1 {
 .title_box {
   color: var(--brownSugar);
   font-family: 'Pacifico', Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 2.0em;
   text-align: center;
   margin: 25px 0px 25px 0px;
   padding: 0;
+  text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.693);
 }
 
 
@@ -146,7 +149,7 @@ div#conteiner_1 {
 div#txt_div_pre_menu {
   width: 100vw;
   height: auto;
-  background-image: url(assets/images/pexels-vlada-karpovich-4451742.jpg);
+  /* background-image: url(assets/images/pexels-vlada-karpovich-4451742.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -160,10 +163,11 @@ p#title_pre_menu {
   width: 70%;
   font-family: 'Lobster';
   font-size: 1.9em;
-  color: var(--brownSugar);
-  text-shadow: 2px 2px 2px black;
+  /* color: var(--brown); */
+  /* text-shadow: 2px 2px 2px black; */
   margin: auto;
   padding: 0;
+  padding-top: 150px;
 }
 
 p#p_pre_menu {
@@ -171,8 +175,8 @@ p#p_pre_menu {
   text-align: center;
   margin: auto;
   padding: 0;
-  text-shadow: 2px 2px 2px black;
-  color: var(--cream);
+  /* text-shadow: 2px 2px 2px black;
+  color: var(--cream); */
   font-family: 'Pacifico';
   font-size: 1.2em;
 
@@ -181,7 +185,7 @@ p#p_pre_menu {
 
 
 .img_aboutUs {
-  width: 80%;
+  width: 60%;
   height: auto;
 
 

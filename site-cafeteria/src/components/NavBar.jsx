@@ -17,7 +17,7 @@ function NavBar() {
 
     return (
        
-    <nav className='navBar'>
+    <nav className='navBar' id='navBar_logo'>
       <div id='nav_img'>
         
           <DiCoffeescript />

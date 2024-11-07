@@ -10,7 +10,7 @@ import {EffectCoverflow, Navigation, Pagination, Scrollbar, A11y} from 'swiper/m
 import image2 from './assets/images/pexels-og-mpango-1582361-4090603.jpg'
 import image3 from './assets/images/pexels-michael-burrows-7125434.jpg'
 import image4 from './assets/images/pexels-ekrulila-2307221.jpg'
-import image5 from './assets/images/coffee-7561288_1920.jpg'
+import image5 from './assets/images/nathan-dumlao-zUNs99PGDg0-unsplash.jpg'
 
 
 import testeImg1 from './assets/images/testeSlide/pexels-8moments-3264706.jpg'
@@ -210,8 +210,9 @@ function App() {
       <section id='aboutUs' ref={refSectionAboutUs}>
 
         <div id='conteiner_1' className='conteiner_txtimg'>
+          <h1 className='title_box'>Um Pouco Sobre Nós</h1>
           <div className='box_text'>
-            <h3 className='title_box'>Nossa História</h3>
+            <h2 className='title_box'>Início de Tudo</h2>
             <p className='p_box'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sint expedita dolorum debitis ipsum, unde provident fugit corrupti odit numquam quidem rem ratione fugiat nostrum dolorem, necessitatibus, amet minima ipsam.</p>
           </div>
           <img className='img_aboutUs' src = {image2}/>
@@ -249,7 +250,7 @@ function App() {
       <section>
 
         <div id='txt_div_pre_menu'>
-          <p id='title_pre_menu'>Confira nossas delícias com os melhores preços do mercado</p>
+          <p id='title_pre_menu' ref = {refDivButtonsMenus}>Confira abaixo nosso cardápio</p>
           <p id='p_pre_menu'>Escolha uma categoria e depois clique no item para ver suas informações</p>
 
 
@@ -262,7 +263,7 @@ function App() {
       {/* <h3 className='title_box'>Confira nossos produtos com os melhores preços</h3> */}
 
 
-      <div id='box_links_menu' ref = {refDivButtonsMenus}>
+      <div id='box_links_menu'>
         <button id='btn_cf' onClick={() => setActiveComponent('MenuCoffee')}>Bebidas quentes</button>
         <button id='btn_cg' onClick={() => setActiveComponent('MenuColdDrinks')}>Bebidas Geladas</button>
         <button id='btn_mc' onClick={() => setActiveComponent('MenuCandy')}>Doces</button>
