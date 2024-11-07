@@ -56,7 +56,13 @@ function DeliveryPage() {
   const [showDivItens, setShowDivItens] = useState ({
     divsHotDrinks: false,
     divsColdDrinks: false,
-    divsCandies: false
+    divsCandies: false,
+    divsCandies_brigadeiros: false,
+    divsCandies_brownies: false,
+    divsCandies_cookies: false,
+    divsCandies_cupcakes: false,
+    divsCandies_pies: false
+
     
 
   })
@@ -547,10 +553,13 @@ useEffect(() => {
     
 
         <h1>Doces</h1>
-        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies_brigadeiros')}>
           <h2>Brigadeiros</h2>
+          {showDivItens.divsCandies_brigadeiros ? <IoIosArrowUp /> : <IoIosArrowDown />}
 
         </div>
+
+        {showDivItens.divsCandies_brigadeiros && (
 
           <section className='deliveryItens'>
 
@@ -592,10 +601,16 @@ useEffect(() => {
 
           </section>
 
+        )}
+
+
           
-        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies_brownies')}>
           <h2>Brownies</h2>
+          {showDivItens.divsCandies_brownies ? <IoIosArrowUp /> : <IoIosArrowDown /> }
         </div>
+
+        {showDivItens.divsCandies_brownies && (
 
         <section className='deliveryitens'>
           
@@ -613,10 +628,17 @@ useEffect(() => {
 
         </section>
 
-        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+        )}
+
+  
+
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies_cookies')}>
           <h2>Cookies</h2>
+          {showDivItens.divsCandies_cookies ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
 
+        {showDivItens.divsCandies_cookies && (
+ 
         <section className='deliveryItens'>
 
           <div className='deliveryItem'>
@@ -632,9 +654,15 @@ useEffect(() => {
 
         </section>
 
-        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+        )}
+
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies_cupcakes')}>
           <h2>Cupcakes</h2>
+          {showDivItens.divsCandies_cupcakes ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
+
+
+        {showDivItens.divsCandies_cupcakes && (
 
         <section className='deliveryItens'>
 
@@ -675,9 +703,14 @@ useEffect(() => {
 
         </section>
 
-        <div className='title_section' onClick={() => displayDivsItens('divsCandies')}>
+        )}
+
+        <div className='title_section' onClick={() => displayDivsItens('divsCandies_pies')}>
           <h2>Tortas</h2>
+          {showDivItens.divsCandies_pies ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
+
+        {showDivItens.divsCandies_pies && (
 
         <section className='deliveryItens'>
 
@@ -732,6 +765,8 @@ useEffect(() => {
           </div>
 
         </section>
+
+        )}
 
        
         

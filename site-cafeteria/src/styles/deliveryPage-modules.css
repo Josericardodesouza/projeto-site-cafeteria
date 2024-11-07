@@ -15,6 +15,7 @@ header#header_deliveryPage {
 
 .deliveryItens {
     background-color: green;
+    /* transform:; */
 }
 
 .deliveryItem {
