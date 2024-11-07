@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import NavBar from "./NavBar"
 
 
 
@@ -10,6 +11,18 @@ function SendPage() {
 
     return (
         <>
+
+        <NavBar />
+
+        <header>
+
+        </header>
+
+
+        <h2>Sua encomenda está a caminho!</h2>
+
+        lista dos itens pedidos
+        
 {/* 
         <div>
             <ItensListDelivery quantity = {quantity}/>
