@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import NavBar from "./NavBar"
+import { pText } from "./DeliveryPage"
 
 
 
@@ -7,7 +8,7 @@ import NavBar from "./NavBar"
 
 
 
-function SendPage() {
+function SendPage({renderListItemsSelected}) {
 
     return (
         <>
@@ -26,6 +27,9 @@ function SendPage() {
         <h2>Sua encomenda está a caminho!</h2>
 
         lista dos itens pedidos
+
+        <p>{pText}</p>
+       
 
 {/* 
         <div>

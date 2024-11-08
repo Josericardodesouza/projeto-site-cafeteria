@@ -48,6 +48,7 @@ import Footer from '../components/Footer'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { FaArrowUp, FaCartArrowDown } from 'react-icons/fa'
 import SendPage from './SendPage'
+import { useRef } from 'react'
 
 
 
@@ -256,6 +257,7 @@ const subQuantity = (key) => {
 
 
 
+
 // const updateQuantity = (e) => {
 //   const {name, quantityItens} = e.target
 //   setItensProperties.quant((prevQuantity) => ({
@@ -272,8 +274,9 @@ const renderListItemsSelected = () => {
     }
     return null 
   } )
-}
 
+
+}
 
 
 
@@ -327,7 +330,6 @@ useEffect(() => {
 
       })
 
-
       Navigate('/sendPage')
 
 
@@ -353,6 +355,20 @@ useEffect(() => {
 
 
 }
+
+
+
+const confirmar = () => {
+  console.log('teste da chamada')
+  const lista = renderListItemsSelected
+  console.log('teste', lista)
+ 
+
+}
+
+
+
+
   
 
 
@@ -797,6 +813,7 @@ useEffect(() => {
        
 
         <Link to = '/sendpage'>Concluir pedido</Link>
+        <button onClick={confirmar}>Confirmar</button>
 
         <div>
           Teste
@@ -809,10 +826,12 @@ useEffect(() => {
 
        
 
-        {renderListItemsSelected()}
-        <SendPage />
+        <p>{renderListItemsSelected()}</p>
+       
+     
 
         <p>total {total}</p>
+
 
       
 
@@ -871,6 +890,9 @@ useEffect(() => {
 }
 
 export default DeliveryPage
+
+
+
 
 
  
