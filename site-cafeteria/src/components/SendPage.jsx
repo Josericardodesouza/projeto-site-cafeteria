@@ -12,6 +12,10 @@ function SendPage() {
     return (
         <>
 
+        <div>
+          
+        </div>
+
         <NavBar />
 
         <header>
@@ -22,7 +26,7 @@ function SendPage() {
         <h2>Sua encomenda está a caminho!</h2>
 
         lista dos itens pedidos
-        
+
 {/* 
         <div>
             <ItensListDelivery quantity = {quantity}/>
