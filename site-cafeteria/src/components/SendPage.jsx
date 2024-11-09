@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import NavBar from "./NavBar"
 import { useContext } from "react"
-import ItemsListContext from "../context/ItemsListContext"
+import {ItemsListContext} from "../context/ItemsListContext"
+
 
 
 
@@ -11,23 +12,10 @@ import ItemsListContext from "../context/ItemsListContext"
 
 function SendPage() {
 
+    const textGenerate = useContext(ItemsListContext)
+
     
 
-    const itensProperties = useContext(ItemsListContext)
-
-    const renderListItemsSelected = () => {
-        if (!itensProperties || Object.keys(itensProperties).length === 0) {
-            <p>Nenhum item selecionado</p>
-        }
-        return Object.keys(itensProperties).map((key) => {
-          if (itensProperties[key].quant > 0) {
-            return <p key={key}>Você selecionou {itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
-          }
-          return null 
-        } )
-      
-      
-      }
       
       
 
@@ -35,9 +23,7 @@ function SendPage() {
 
         <>
 
-        <div>
-          
-        </div>
+       
 
         <NavBar />
 
@@ -50,7 +36,16 @@ function SendPage() {
 
         lista dos itens pedidos
 
-        {renderListItemsSelected()}
+        {/* {renderListItemsSelected()} */}
+        <div>
+            {textGenerate ? (textGenerate.split('\n').map((line, index) => (
+                <p key={index}>{line}</p>
+            ))) : (
+                <p>Nenhum item selecionado</p>
+            )}
+          
+          
+        </div>
 
         {/* <p>{pText}</p> */}
        

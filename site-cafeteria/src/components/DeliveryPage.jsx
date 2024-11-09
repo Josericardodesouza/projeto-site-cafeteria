@@ -280,8 +280,6 @@ const renderListItemsSelected = () => {
 }
 
 
-
-
 const [total, setTotal] = useState(0)
 
 
@@ -844,6 +842,8 @@ const confirmar = () => {
        
 
         <p>{renderListItemsSelected()}</p>
+
+        <SendPage />
        
      
 
