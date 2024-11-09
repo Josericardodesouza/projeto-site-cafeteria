@@ -12,9 +12,9 @@ import {ItemsListContext} from "../context/ItemsListContext"
 
 function SendPage() {
 
-    const itensProperties = useContext(ItemsListContext)
+    const texto = useContext(ItemsListContext)
 
-    console.log('Isso é o textGenerate:', itensProperties)
+    console.log('Isso é o textGenerate:', texto)
 
     
 

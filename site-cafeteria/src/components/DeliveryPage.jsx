@@ -368,13 +368,33 @@ const confirmar = () => {
 
 //passando a lista para o componente SendPage.jsx
 
-<ItemsListContextProvider value={itensProperties}>
-  <SendPage />
-
-</ItemsListContextProvider>
 
 console.log('Isso é o itensProperties:', itensProperties)
 
+
+
+const pRef = useRef(null)
+const [texto, setTexto] = useState("")
+
+useEffect(() => {
+  if (pRef.current){
+    setTexto(pRef.current.innerText)
+  }
+}, []);
+
+
+
+<ItemsListContextProvider texto = {texto}>
+<Router>
+  <Routes>
+    <Route path='/sendpage' component={SendPage} />
+    
+  </Routes>
+</Router>
+
+<p ref={pRef}>isso aqui</p>
+
+</ItemsListContextProvider> 
 
 
 
@@ -836,7 +856,7 @@ console.log('Isso é o itensProperties:', itensProperties)
 
        
 
-        <p>{renderListItemsSelected()}</p>
+        <p ref={pRef}>isso aqui</p>
 
         <SendPage />
        
