@@ -387,12 +387,11 @@ useEffect(() => {
 <ItemsListContextProvider texto = {texto}>
 <Router>
   <Routes>
-    <Route path='/sendpage' component={SendPage} />
+    <Route path='/sendpage' component={<SendPage />} />
     
   </Routes>
 </Router>
 
-<p ref={pRef}>isso aqui</p>
 
 </ItemsListContextProvider> 
 

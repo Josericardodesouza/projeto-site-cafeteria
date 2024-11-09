@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import NavBar from "./NavBar"
 import { useContext } from "react"
-import {ItemsListContext} from "../context/ItemsListContext"
+import ItemsListContext from "../context/ItemsListContext"
+import  ItemsListContextProvider  from "../context/ItemsListContextProvider"
 
 
 

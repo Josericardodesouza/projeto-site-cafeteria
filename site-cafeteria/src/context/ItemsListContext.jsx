@@ -2,4 +2,4 @@ import { createContext } from "react"
 
 const ItemsListContext = createContext()
 
-export {ItemsListContext}
+export default ItemsListContext

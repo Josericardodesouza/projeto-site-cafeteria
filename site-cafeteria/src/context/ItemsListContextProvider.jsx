@@ -1,4 +1,4 @@
-import {ItemsListContext} from "./ItemsListContext";
+import ItemsListContext from "./ItemsListContext";
 
 const ItemsListContextProvider = ({children, texto}) => {
 
@@ -21,6 +21,8 @@ const ItemsListContextProvider = ({children, texto}) => {
     //   const lista = 5
 
     //   console.log('Isso é o provider:', renderListItemsSelected)
+
+    console.log('Valor de texto no ItemsListContextProvider:', texto);
       
     return (
 
