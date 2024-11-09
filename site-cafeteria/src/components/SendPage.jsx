@@ -14,6 +14,8 @@ function SendPage() {
 
     const textGenerate = useContext(ItemsListContext)
 
+    console.log('Isso é o textGenerate:', textGenerate)
+
     
 
       

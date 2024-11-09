@@ -2,6 +2,11 @@ import {ItemsListContext} from "./ItemsListContext";
 
 const ItemsListContextProvider = ({children, itensProperties}) => {
 
+
+
+
+
+
     const renderListItemsSelected = () => {
         return Object.keys(itensProperties).map((key) => {
           if (itensProperties[key].quant > 0) {
@@ -14,6 +19,8 @@ const ItemsListContextProvider = ({children, itensProperties}) => {
       }
 
       const textGenerate = renderListItemsSelected()
+
+      console.log('Isso é o provider:', textGenerate)
       
     return (
 

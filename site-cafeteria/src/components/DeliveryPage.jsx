@@ -3,14 +3,14 @@ import '../styles/colorsAndFonts-module.css'
 
 import { hotDrinks, coldDrinks} from './ConstantsItens'
 import { typesBrigadeiro, typesBrownies,typesCookies,typesCupcakes,typesPie} from './ConstantsItens'
-import { candyList } from './ConstantsItens'
+
 import { Link, Navigate, BrowserRouter as Route, Router, Routes } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import ItensListDelivery from './ItensListDelivery'
-import NavBar from './NavBar'
+
+
 import SimpleNavBar from './SimpleNavBar'
-import MenuCoffee from './MenuCoffee'
+
 
 const coado = hotDrinks.find(coffee => coffee.name === 'coado')
 const cappuccino = hotDrinks.find(coffee => coffee.name === 'Cappuccino')
@@ -91,71 +91,71 @@ function DeliveryPage() {
   var input = document.getElementById('ent-adressUser')
   
 
-  const coado_name = coado.name
-  const coado_price = parseFloat(coado.price.replace(',', '.'))
+  const coado_name = coado ? coado.name : ''
+  const coado_price = coado ? parseFloat(coado.price.replace(',', '.')) : 0
 
-  const cappuccino_name = cappuccino.name
-  const cappuccino_price = parseFloat(cappuccino.price.replace(',', '.'))
+  const cappuccino_name = cappuccino ? cappuccino.name : ''
+  const cappuccino_price = cappuccino ? parseFloat(cappuccino.price.replace(',', '.')) : 0
 
-  const espresso_name = espresso.name
-  const espresso_price = parseFloat(espresso.price.replace(',', '.'))
+  const espresso_name = espresso ? espresso.name : ''
+  const espresso_price = espresso ? parseFloat(espresso.price.replace(',', '.')) : 0
 
-  const latte_name = latte.name
-  const latte_price = parseFloat(latte.price.replace(',', '.'))
+  const latte_name = latte ? latte.name : ''
+  const latte_price = latte ? parseFloat(latte.price.replace(',', '.')) : 0
 
-  const mocha_name = mocha.name
-  const mocha_price = parseFloat(mocha.price.replace(',', '.'))
+  const mocha_name = mocha ? mocha.name : ''
+  const mocha_price = mocha ? parseFloat(mocha.price.replace(',', '.')) : 0
   
-  const pingado_name = pingado.name
-  const pingado_price = parseFloat(pingado.price.replace(',', '.'))
+  const pingado_name = pingado ? pingado.name : ''
+  const pingado_price = pingado ? parseFloat(pingado.price.replace(',', '.')) : 0
 
-  const cfGelado_name = cafeGelado.name
-  const cfGelado_price = parseFloat(cafeGelado.price.replace(',', '.'))
+  const cfGelado_name = cafeGelado ? cafeGelado.name : ''
+  const cfGelado_price = cafeGelado ? parseFloat(cafeGelado.price.replace(',', '.')) : 0
 
-  const coldBrew_name = coldBrew.name
-  const coldBrew_price = parseFloat(coldBrew.price.replace(',', '.'))
+  const coldBrew_name = coldBrew ? coldBrew.name : ''
+  const coldBrew_price = coldBrew ? parseFloat(coldBrew.price.replace(',', '.')) : 0
 
-  const expTonico_name = expTonico.name
-  const expTonico_price = parseFloat(expTonico.price.replace(',', '.'))
+  const expTonico_name = expTonico ? expTonico.name : ''
+  const expTonico_price = expTonico ? parseFloat(expTonico.price.replace(',', '.')) : 0
 
-  const frappuccino_name = frappuccino.name
-  const frappuccino_price = parseFloat(frappuccino.price.replace(',', '.'))
+  const frappuccino_name = frappuccino ? frappuccino.name : ''
+  const frappuccino_price = frappuccino ? parseFloat(frappuccino.price.replace(',', '.')) : 0
 
-  const cocoBrig_name = cocoBrigadeiro.name
-  const cocoBrig_price = parseFloat(cocoBrigadeiro.price.replace(',', '.'))
+  const cocoBrig_name = cocoBrigadeiro ? cocoBrigadeiro.name : ''
+  const cocoBrig_price = cocoBrigadeiro ? parseFloat(cocoBrigadeiro.price.replace(',', '.')) : 0
 
-  const mrgBrig_name = morangoBrigadeiro.name
-  const mrgBrig_price = parseFloat(morangoBrigadeiro.price.replace(',', '.'))
+  const mrgBrig_name = morangoBrigadeiro ? morangoBrigadeiro.name : ''
+  const mrgBrig_price = morangoBrigadeiro ? parseFloat(morangoBrigadeiro.price.replace(',', '.')) : 0
 
-  const lightBrig_name = lightBrigadeiro.name
-  const lightBrig_price = parseFloat(lightBrigadeiro.price.replace(',', '.'))
+  const lightBrig_name = lightBrigadeiro ? lightBrigadeiro.name : ''
+  const lightBrig_price = lightBrigadeiro ? parseFloat(lightBrigadeiro.price.replace(',', '.')) : 0
 
-  const cfBrownie_name = cafeBrownie.name
-  const cfBrownie_price = parseFloat(cafeBrownie.price.replace(',', '.'))
+  const cfBrownie_name = cafeBrownie ? cafeBrownie.name : ''
+  const cfBrownie_price = cafeBrownie ? parseFloat(cafeBrownie.price.replace(',', '.')) : 0
 
-  const chCookie_name = chocolateCookie.name
-  const chCookie_price = parseFloat(chocolateCookie.price.replace(',', '.'))
+  const chCookie_name = chocolateCookie ? chocolateCookie.name : ''
+  const chCookie_price = chocolateCookie ? parseFloat(chocolateCookie.price.replace(',', '.')) : 0
 
-  const chCupcake_name = chocolateCupcake.name
-  const chCupcake_price = parseFloat(chocolateCupcake.price.replace(',', '.'))
+  const chCupcake_name = chocolateCupcake ? chocolateCupcake.name : ''
+  const chCupcake_price = chocolateCupcake ? parseFloat(chocolateCupcake.price.replace(',', '.')) : 0
 
-  const mrgCupcake_name = morangoCupcake.name
-  const mrgCupcake_price = parseFloat(morangoCupcake.price.replace(',', '.'))
+  const mrgCupcake_name = morangoCupcake ? morangoCupcake.name : ''
+  const mrgCupcake_price = morangoCupcake ? parseFloat(morangoCupcake.price.replace(',', '.')) : 0
 
-  const nozesCupcake_name = nozesCupcake.name
-  const nozesCupcake_price = parseFloat(nozesCupcake.price.replace(',', '.'))
+  const nozesCupcake_name = nozesCupcake ? nozesCupcake.name : ''
+  const nozesCupcake_price = nozesCupcake ? parseFloat(nozesCupcake.price.replace(',', '.')) : 0
 
-  const amdMaracujaPie_name = amendoaMaracujaPie.name
-  const amdMaracujaPie_price = parseFloat(amendoaMaracujaPie.price.replace(',', '.'))
+  const amdMaracujaPie_name = amendoaMaracujaPie ? amendoaMaracujaPie.name : ''
+  const amdMaracujaPie_price = amendoaMaracujaPie ? parseFloat(amendoaMaracujaPie.price.replace(',', '.')) : 0
 
-  const amendoimPie_name = amendoimPie.name
-  const amendoimPie_price = parseFloat(amendoimPie.price.replace(',', '.'))
+  const amendoimPie_name = amendoimPie ? amendoimPie.name : ''
+  const amendoimPie_price = amendoimPie ? parseFloat(amendoimPie.price.replace(',', '.')) : 0
 
-  const macaPie_name = macaPie.name
-  const macaPie_price = parseFloat(macaPie.price.replace(',', '.'))
+  const macaPie_name = macaPie ? macaPie.name : ''
+  const macaPie_price = macaPie ? parseFloat(macaPie.price.replace(',', '.')) : 0
 
-  const pssgPie_name = pessegoPie.name
-  const pssgPie_price = parseFloat(pessegoPie.price.replace(',', '.'))
+  const pssgPie_name = pessegoPie ? pessegoPie.name : ''
+  const pssgPie_price = pessegoPie ? parseFloat(pessegoPie.price.replace(',', '.')) : 0
 
 
 
