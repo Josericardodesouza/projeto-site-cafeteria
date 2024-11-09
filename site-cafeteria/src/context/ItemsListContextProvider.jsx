@@ -1,6 +1,6 @@
-import {ItemsListContext} from "./ItemsListContext";
+import ItemsListContext from "./ItemsListContext";
 
-const ItemsListContextProvider = ({children, itensProperties}) => {
+const ItemsListContextProvider = ({children}) => {
 
 
 
@@ -20,13 +20,13 @@ const ItemsListContextProvider = ({children, itensProperties}) => {
 
       const lista = 5
 
-      console.log('Isso é o provider:', lista)
+      console.log('Isso é o provider:', renderListItemsSelected)
       
     return (
 
 
 
-        <ItemsListContext.Provider value={lista}>
+        <ItemsListContext.Provider value={renderListItemsSelected}>
             {children}
         </ItemsListContext.Provider>
     )
@@ -34,4 +34,4 @@ const ItemsListContextProvider = ({children, itensProperties}) => {
 }
 
 
-export default {ItemsListContextProvider}
+export default ItemsListContextProvider

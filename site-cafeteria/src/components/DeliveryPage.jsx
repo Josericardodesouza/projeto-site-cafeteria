@@ -368,17 +368,12 @@ const confirmar = () => {
 
 //passando a lista para o componente SendPage.jsx
 
-<ItemsListContextProvider itensProperties={itensProperties || {}}>
-<Router>
-  <Routes>
-    <Route path='/sendpage' component={SendPage} />
-
-  
-    
-  </Routes>
-</Router>
+<ItemsListContextProvider value={itensProperties}>
+  <SendPage />
 
 </ItemsListContextProvider>
+
+console.log('Isso é o itensProperties:', itensProperties)
 
 
 
