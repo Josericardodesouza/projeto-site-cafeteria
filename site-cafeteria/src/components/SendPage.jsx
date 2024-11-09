@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import NavBar from "./NavBar"
-import { pText } from "./DeliveryPage"
+import { useContext } from "react"
+import ItemsListContext from "../context/ItemsListContext"
 
 
 
@@ -8,9 +9,28 @@ import { pText } from "./DeliveryPage"
 
 
 
-function SendPage({renderListItemsSelected}) {
+function SendPage() {
+
+    const itensProperties = useContext(ItemsListContext)
+
+    const renderListItemsSelected = () => {
+        if (!itensProperties) {
+            <p>Nenhum item selecionado</p>
+        }
+        return Object.keys(itensProperties).map((key) => {
+          if (itensProperties[key].quant > 0) {
+            return <p key={key}>Você selecionou {itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
+          }
+          return null 
+        } )
+      
+      
+      }
+      
+      
 
     return (
+
         <>
 
         <div>
@@ -28,7 +48,9 @@ function SendPage({renderListItemsSelected}) {
 
         lista dos itens pedidos
 
-        <p>{pText}</p>
+        {renderListItemsSelected()}
+
+        {/* <p>{pText}</p> */}
        
 
 {/* 

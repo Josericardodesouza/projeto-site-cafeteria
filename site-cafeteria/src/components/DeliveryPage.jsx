@@ -4,7 +4,7 @@ import '../styles/colorsAndFonts-module.css'
 import { hotDrinks, coldDrinks} from './ConstantsItens'
 import { typesBrigadeiro, typesBrownies,typesCookies,typesCupcakes,typesPie} from './ConstantsItens'
 import { candyList } from './ConstantsItens'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate, BrowserRouter as Route, Router, Routes } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import ItensListDelivery from './ItensListDelivery'
@@ -49,6 +49,7 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { FaArrowUp, FaCartArrowDown } from 'react-icons/fa'
 import SendPage from './SendPage'
 import { useRef } from 'react'
+import ItemsListContextProvider from '../context/ItemsListContextProvider'
 
 
 
@@ -365,6 +366,24 @@ const confirmar = () => {
  
 
 }
+ 
+
+//passando a lista para o componente SendPage.jsx
+
+<ItemsListContextProvider itensProperties={itensProperties || {}}>
+<Router>
+  <Routes>
+    <Route path='/sendpage' component={SendPage} />
+
+  
+    
+  </Routes>
+</Router>
+
+</ItemsListContextProvider>
+
+
+
 
 
 
@@ -375,8 +394,6 @@ const confirmar = () => {
   return (
 
     <>
-   
-
 
     
 
