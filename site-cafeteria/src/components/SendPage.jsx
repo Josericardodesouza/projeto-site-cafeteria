@@ -11,10 +11,12 @@ import ItemsListContext from "../context/ItemsListContext"
 
 function SendPage() {
 
+    
+
     const itensProperties = useContext(ItemsListContext)
 
     const renderListItemsSelected = () => {
-        if (!itensProperties) {
+        if (!itensProperties || Object.keys(itensProperties).length === 0) {
             <p>Nenhum item selecionado</p>
         }
         return Object.keys(itensProperties).map((key) => {
