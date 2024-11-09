@@ -12,9 +12,9 @@ import {ItemsListContext} from "../context/ItemsListContext"
 
 function SendPage() {
 
-    const textGenerate = useContext(ItemsListContext)
+    const lista = useContext(ItemsListContext)
 
-    console.log('Isso é o textGenerate:', textGenerate)
+    console.log('Isso é o textGenerate:', lista)
 
     
 
@@ -40,7 +40,7 @@ function SendPage() {
 
         {/* {renderListItemsSelected()} */}
         <div>
-            {textGenerate ? (textGenerate.split('\n').map((line, index) => (
+            {lista ? (lista.split('\n').map((line, index) => (
                 <p key={index}>{line}</p>
             ))) : (
                 <p>Nenhum item selecionado</p>

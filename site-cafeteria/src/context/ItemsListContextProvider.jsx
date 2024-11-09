@@ -18,15 +18,15 @@ const ItemsListContextProvider = ({children, itensProperties}) => {
       
       }
 
-      const textGenerate = renderListItemsSelected()
+      const lista = 5
 
-      console.log('Isso é o provider:', textGenerate)
+      console.log('Isso é o provider:', lista)
       
     return (
 
 
 
-        <ItemsListContext.Provider value={textGenerate}>
+        <ItemsListContext.Provider value={lista}>
             {children}
         </ItemsListContext.Provider>
     )
