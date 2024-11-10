@@ -1,4 +1,4 @@
-function ItensListDelivery() {
+function ItensListDelivery({renderListItemsSelected}) {
 
     const renderListItemsSelected = () => {
         return Object.keys(itensProperties).map((key) => {
@@ -11,11 +11,15 @@ function ItensListDelivery() {
       
       }
 
+
       console.log('Teste do componenente da lista')
+    //   console.log('Isso é a itensProperties: ', item )
       
 
     return (
         <>
+
+        {renderListItemsSelected}
       
         </>
     )

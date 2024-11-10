@@ -844,7 +844,7 @@ const confirmar = () => {
 
        
 
-        <p>{renderListItemsSelected()}</p>
+        <ItensListDelivery renderListItemsSelected = {renderListItemsSelected} />
 
      
       
