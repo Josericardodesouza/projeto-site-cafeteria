@@ -40,6 +40,8 @@ function SendPage() {
 
         lista dos itens pedidos
 
+        <ItensListDelivery />
+
        
 
         {/* {renderListItemsSelected()} */}

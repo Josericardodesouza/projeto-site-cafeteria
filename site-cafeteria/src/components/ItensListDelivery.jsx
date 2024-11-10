@@ -1,4 +1,29 @@
-function ItensListDelivery({renderListItemsSelected}) {
+function ItensListDelivery({ itensProperties}) {
+
+
+
+    // const addQuantity = (key) => {
+    //     setItensProperties((prevQuantity) => ({
+    //       ...prevQuantity, [key]: {
+    //         ...prevQuantity[key],
+    //       quant: prevQuantity[key].quant + 1,
+        
+    
+    //   }}))
+    //   }
+
+      
+    //   const subQuantity = (key) => {
+    //     setItensProperties((prevQuantity) => ({
+    //       ...prevQuantity, [key]: {
+    //         ...prevQuantity[key],
+    //         quant: prevQuantity[key].quant > 0 ? prevQuantity[key].quant - 1 : 0
+      
+    //   }
+    //   }))
+    //   }
+      
+      
 
     const renderListItemsSelected = () => {
         return Object.keys(itensProperties).map((key) => {
@@ -19,7 +44,9 @@ function ItensListDelivery({renderListItemsSelected}) {
     return (
         <>
 
-        {renderListItemsSelected}
+        <p>Teste lista de itens: </p>
+
+        {renderListItemsSelected()}
       
         </>
     )

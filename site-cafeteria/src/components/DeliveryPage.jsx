@@ -236,24 +236,26 @@ function DeliveryPage() {
 
 
 
-  const addQuantity = (key) => {
-    setItensProperties((prevQuantity) => ({
+   const addQuantity = (key) => {
+     setItensProperties((prevQuantity) => ({
       ...prevQuantity, [key]: {
         ...prevQuantity[key],
-      quant: prevQuantity[key].quant + 1,
+       quant: prevQuantity[key].quant + 1,
     
 
-  }}))
-  }
+   }}))
 
-const subQuantity = (key) => {
-  setItensProperties((prevQuantity) => ({
-    ...prevQuantity, [key]: {
-      ...prevQuantity[key],
-      quant: prevQuantity[key].quant > 0 ? prevQuantity[key].quant - 1 : 0
 
-}
-}))
+   }
+
+ const subQuantity = (key) => {
+   setItensProperties((prevQuantity) => ({
+     ...prevQuantity, [key]: {
+       ...prevQuantity[key],
+       quant: prevQuantity[key].quant > 0 ? prevQuantity[key].quant - 1 : 0
+
+ }
+ }))
 }
 
 
@@ -269,16 +271,17 @@ const subQuantity = (key) => {
 // }}))
 // }
 
-const renderListItemsSelected = () => {
-  return Object.keys(itensProperties).map((key) => {
-    if (itensProperties[key].quant > 0) {
-      return <p key={key}>Você selecionou {itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
-    }
-    return null 
-  } )
+
+// const renderListItemsSelected = () => {
+//   return Object.keys(itensProperties).map((key) => {
+//     if (itensProperties[key].quant > 0) {
+//       return <p key={key}>Você selecionou {itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
+//     }
+//     return null 
+//   } )
 
 
-}
+// }
 
 
 const [total, setTotal] = useState(0)
@@ -844,7 +847,7 @@ const confirmar = () => {
 
        
 
-        <ItensListDelivery renderListItemsSelected = {renderListItemsSelected} />
+        <ItensListDelivery itensProperties = {itensProperties} setItensProperties = {setItensProperties} />
 
      
       
