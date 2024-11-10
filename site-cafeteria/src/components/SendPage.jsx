@@ -3,6 +3,7 @@ import NavBar from "./NavBar"
 import { useContext } from "react"
 import ItemsListContext from "../context/ItemsListContext"
 import  ItemsListContextProvider  from "../context/ItemsListContextProvider"
+import ItensListDelivery from "./ItensListDelivery"
 
 
 
@@ -13,9 +14,9 @@ import  ItemsListContextProvider  from "../context/ItemsListContextProvider"
 
 function SendPage() {
 
-    const texto = useContext(ItemsListContext)
+  
 
-    console.log('Isso é o textGenerate:', texto)
+  
 
     
 
@@ -38,6 +39,8 @@ function SendPage() {
         <h2>Sua encomenda está a caminho!</h2>
 
         lista dos itens pedidos
+
+       
 
         {/* {renderListItemsSelected()} */}
         <div>

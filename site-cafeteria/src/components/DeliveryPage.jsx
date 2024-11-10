@@ -50,6 +50,7 @@ import { FaArrowUp, FaCartArrowDown } from 'react-icons/fa'
 import SendPage from './SendPage'
 import { useRef } from 'react'
 import ItemsListContextProvider from '../context/ItemsListContextProvider'
+import ItensListDelivery from './ItensListDelivery'
 
 
 
@@ -267,6 +268,17 @@ const subQuantity = (key) => {
 //     quant: Number(quantityItens)
 // }}))
 // }
+
+const renderListItemsSelected = () => {
+  return Object.keys(itensProperties).map((key) => {
+    if (itensProperties[key].quant > 0) {
+      return <p key={key}>Você selecionou {itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
+    }
+    return null 
+  } )
+
+
+}
 
 
 const [total, setTotal] = useState(0)
@@ -832,9 +844,10 @@ const confirmar = () => {
 
        
 
-        <p ref={pRef}>isso aqui</p>
+        <p>{renderListItemsSelected()}</p>
 
-        <SendPage />
+     
+      
        
      
 
