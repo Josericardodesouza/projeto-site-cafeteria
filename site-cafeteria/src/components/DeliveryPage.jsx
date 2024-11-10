@@ -373,14 +373,14 @@ console.log('Isso é o itensProperties:', itensProperties)
 
 
 
-const pRef = useRef(null)
-const [texto, setTexto] = useState("")
+// const pRef = useRef(null)
+// const [texto, setTexto] = useState("")
 
-useEffect(() => {
-  if (pRef.current){
-    setTexto(pRef.current.innerText)
-  }
-}, []);
+// useEffect(() => {
+//   if (pRef.current){
+//     setTexto(pRef.current.innerText)
+//   }
+// }, []);
 
 
 
