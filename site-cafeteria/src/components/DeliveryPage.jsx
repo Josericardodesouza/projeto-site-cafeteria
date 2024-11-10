@@ -268,17 +268,6 @@ const subQuantity = (key) => {
 // }}))
 // }
 
-const renderListItemsSelected = () => {
-  return Object.keys(itensProperties).map((key) => {
-    if (itensProperties[key].quant > 0) {
-      return <p key={key}>Você selecionou {itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
-    }
-    return null 
-  } )
-
-
-}
-
 
 const [total, setTotal] = useState(0)
 
@@ -369,7 +358,7 @@ const confirmar = () => {
 //passando a lista para o componente SendPage.jsx
 
 
-console.log('Isso é o itensProperties:', itensProperties)
+// console.log('Isso é o itensProperties:', itensProperties)
 
 
 
