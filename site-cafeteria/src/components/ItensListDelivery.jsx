@@ -1,12 +1,14 @@
 import { useContext } from "react"
 import ItemsListContext from "../context/ItemsListContext"
 
-function ItensListDelivery({ itensProperties}) {
+function ItensListDelivery(itensProperties) {
 
 
 
 
-    const {} = useContext(ItemsListContext)
+
+
+  
       
       
 

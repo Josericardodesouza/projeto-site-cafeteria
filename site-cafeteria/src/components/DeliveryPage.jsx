@@ -857,7 +857,14 @@ const confirmar = () => {
 
        
 
-         <ItensListDelivery itensProperties = {itensProperties} setItensProperties = {setItensProperties} /> 
+         <ItensListDelivery itensProperties = {itensProperties}  /> 
+
+
+         <p>Vindo do contexto:</p>
+         <ItemsListContextProvider items = {itensProperties}>
+          <ItensListDelivery />
+
+         </ItemsListContextProvider>
 
   
       
