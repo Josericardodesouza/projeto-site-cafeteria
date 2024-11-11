@@ -51,10 +51,16 @@ import SendPage from './SendPage'
 import { useRef } from 'react'
 import ItemsListContextProvider from '../context/ItemsListContextProvider'
 import ItensListDelivery from './ItensListDelivery'
+import { useContext } from 'react'
 
 
 
 function DeliveryPage() {
+
+
+
+
+  
 
 
   const [showDivItens, setShowDivItens] = useState ({
@@ -257,6 +263,10 @@ function DeliveryPage() {
  }
  }))
 }
+
+
+
+
 
 
 
@@ -847,7 +857,7 @@ const confirmar = () => {
 
        
 
-        <ItensListDelivery itensProperties = {itensProperties} setItensProperties = {setItensProperties} />
+         <ItensListDelivery itensProperties = {itensProperties} setItensProperties = {setItensProperties} /> 
 
   
       

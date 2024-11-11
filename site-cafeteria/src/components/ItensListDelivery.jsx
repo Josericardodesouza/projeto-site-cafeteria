@@ -5,28 +5,6 @@ function ItensListDelivery({ itensProperties}) {
 
 
 
-    // const addQuantity = (key) => {
-    //     setItensProperties((prevQuantity) => ({
-    //       ...prevQuantity, [key]: {
-    //         ...prevQuantity[key],
-    //       quant: prevQuantity[key].quant + 1,
-        
-    
-    //   }}))
-    //   }
-
-      
-    //   const subQuantity = (key) => {
-    //     setItensProperties((prevQuantity) => ({
-    //       ...prevQuantity, [key]: {
-    //         ...prevQuantity[key],
-    //         quant: prevQuantity[key].quant > 0 ? prevQuantity[key].quant - 1 : 0
-      
-    //   }
-    //   }))
-    //   }
-
-
 
     const {} = useContext(ItemsListContext)
       
