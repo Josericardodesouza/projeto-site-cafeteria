@@ -38,8 +38,7 @@ function SendPage() {
 
         lista dos itens pedidos
 
-        <ItensListDelivery itensProperties={itensProperties}/>
-
+      
 
 
 
