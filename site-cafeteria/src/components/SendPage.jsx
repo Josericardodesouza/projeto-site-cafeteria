@@ -40,7 +40,7 @@ function SendPage() {
 
         lista dos itens pedidos
 
-        <ItensListDelivery />
+      z
 
        
 
