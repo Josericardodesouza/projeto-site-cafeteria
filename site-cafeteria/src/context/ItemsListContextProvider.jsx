@@ -1,10 +1,17 @@
+import { createContext, useContext, useState } from "react";
 import ItemsListContext from "./ItemsListContext";
 
-const ItemsListContextProvider = () => {
+const ItemsListContext = createContext()
 
-    <ItemsListContext.Provider>
-        {children}
-    </ItemsListContext.Provider>
+const ItemsListContextProvider = ({children}) => {
+    const [itensProperties, setItensProperties] = useState({})
+
+
+    return (
+        <ItemsListContext.Provider value= {{itensProperties, setItensProperties}}>
+            {children}
+        </ItemsListContext.Provider>
+    )
 
     
 
@@ -13,3 +20,4 @@ const ItemsListContextProvider = () => {
 
 
 export default ItemsListContextProvider
+export {ItemsListContext}

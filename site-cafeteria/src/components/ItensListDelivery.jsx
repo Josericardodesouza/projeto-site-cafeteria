@@ -1,5 +1,3 @@
-import ItemsListContextProvider from "../context/ItemsListContextProvider"
-
 function ItensListDelivery({ itensProperties}) {
 
 
@@ -48,7 +46,7 @@ function ItensListDelivery({ itensProperties}) {
 
         <p>Teste lista de itens: </p>
 
-        <ItemsListContextProvider
+        <p> aqui estão os itens: {renderListItemsSelected()}</p>
       
         </>
     )
