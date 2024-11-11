@@ -1,6 +1,6 @@
 
 
-function ItensListDelivery(itensProperties) {
+function ItensListDelivery({itensProperties}) {
 
 
     const renderListItemsSelected = () => {
@@ -13,14 +13,6 @@ function ItensListDelivery(itensProperties) {
       
       
       }
-
-
-
-  
-      
-      
-
-
 
       console.log('Teste do componenente da lista', {renderListItemsSelected})
     //   console.log('Isso é a itensProperties: ', item )

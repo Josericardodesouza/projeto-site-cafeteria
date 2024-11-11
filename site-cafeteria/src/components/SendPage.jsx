@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom"
 import NavBar from "./NavBar"
-import { useContext } from "react"
-import ItemsListContext from "../context/ItemsListContext"
-import  ItemsListContextProvider  from "../context/ItemsListContextProvider"
 import ItensListDelivery from "./ItensListDelivery"
+
 
 
 
@@ -40,33 +38,9 @@ function SendPage() {
 
         lista dos itens pedidos
 
+        <ItensListDelivery itensProperties={itensProperties}/>
 
 
-   
-
-    
-       
-
-        {/* {renderListItemsSelected()} */}
-        <div>
-            {/* {lista ? (lista.split('\n').map((line, index) => (
-                <p key={index}>{line}</p>
-            ))) : (
-                <p>Nenhum item selecionado</p>
-            )}
-           */}
-
-          
-          
-        </div>
-
-        {/* <p>{pText}</p> */}
-       
-
-{/* 
-        <div>
-            <ItensListDelivery quantity = {quantity}/>
-        </div> */}
 
 
 

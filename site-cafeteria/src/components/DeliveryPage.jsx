@@ -49,13 +49,15 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { FaArrowUp, FaCartArrowDown } from 'react-icons/fa'
 import SendPage from './SendPage'
 import { useRef } from 'react'
-import ItemsListContextProvider from '../context/ItemsListContextProvider'
+
 import ItensListDelivery from './ItensListDelivery'
-import { useContext } from 'react'
+
 
 
 
 function DeliveryPage() {
+
+  
 
 
 
@@ -857,9 +859,9 @@ const confirmar = () => {
 
 
        
-
-         <ItensListDelivery itensProperties = {itensProperties}  /> 
-
+ 
+         <ItensListDelivery itensProperties = {itensProperties}  />  
+   
 
 
   
