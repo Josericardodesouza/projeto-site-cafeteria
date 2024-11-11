@@ -41,9 +41,6 @@ function SendPage() {
         lista dos itens pedidos
 
 
-        <ItemsListContextProvider>
-            <ItensListDelivery /> 
-        </ItemsListContextProvider>
 
    
 

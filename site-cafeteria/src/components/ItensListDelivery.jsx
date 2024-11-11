@@ -1,16 +1,7 @@
-import { useContext } from "react"
-import ItemsListContext from "../context/ItemsListContext"
+
 
 function ItensListDelivery(itensProperties) {
 
-
-
-
-
-
-  
-      
-      
 
     const renderListItemsSelected = () => {
         return Object.keys(itensProperties).map((key) => {
@@ -24,7 +15,14 @@ function ItensListDelivery(itensProperties) {
       }
 
 
-      console.log('Teste do componenente da lista')
+
+  
+      
+      
+
+
+
+      console.log('Teste do componenente da lista', {renderListItemsSelected})
     //   console.log('Isso é a itensProperties: ', item )
       
 

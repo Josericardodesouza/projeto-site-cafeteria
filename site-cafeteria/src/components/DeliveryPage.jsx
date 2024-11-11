@@ -855,16 +855,12 @@ const confirmar = () => {
 
       <div id='box_phrases_quantity'>
 
+
        
 
          <ItensListDelivery itensProperties = {itensProperties}  /> 
 
 
-         <p>Vindo do contexto:</p>
-         <ItemsListContextProvider items = {itensProperties}>
-          <ItensListDelivery />
-
-         </ItemsListContextProvider>
 
   
       
