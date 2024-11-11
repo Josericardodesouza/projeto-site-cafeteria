@@ -10,8 +10,6 @@ import MenuCofee from './components/MenuCoffee.jsx'
 import MenuCandy from './components/MenuCandy.jsx'
 import SendPage from './components/SendPage.jsx'
 import MenuColdDrinks from './components/MenuColdDrinks.jsx'
-import { UserAdressContext } from './context/UserAdressContext.jsx'
-import UserAdressProvider from './context/UserAdressProvider.jsx'
 
 
 const router = createBrowserRouter ([
@@ -21,15 +19,7 @@ const router = createBrowserRouter ([
   },
 
   {path: '/deliveryPage',
-    element:
-
-    <UserAdressProvider>
-
-     <DeliveryPage />
-
-    </UserAdressProvider>
-    
- 
+    element: <DeliveryPage />
   },
 
   {path: '/about',
@@ -49,15 +39,7 @@ const router = createBrowserRouter ([
   },
 
   {path: '/sendPage',
-    element: 
-
-    <UserAdressProvider>
-
-      <SendPage />
-
-    </UserAdressProvider>
-    
-  
+    element: < SendPage/>
   }
 
 ])

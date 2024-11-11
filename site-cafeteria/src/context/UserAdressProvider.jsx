@@ -24,5 +24,3 @@ function UserAdressProvider({children}) {
        </UserAdressContext.Provider>
     )
 }
-
-export default UserAdressProvider
