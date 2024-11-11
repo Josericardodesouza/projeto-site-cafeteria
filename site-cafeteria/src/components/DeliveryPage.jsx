@@ -51,11 +51,16 @@ import SendPage from './SendPage'
 import { useRef } from 'react'
 
 import ItensListDelivery from './ItensListDelivery'
+import UserAdress from './UserAdress'
+import { useContext } from 'react'
+import { UserAdressContext } from '../context/UserAdressContext'
 
 
 
 
 function DeliveryPage() {
+
+  const {adressUser} = useContext(UserAdressContext)
 
   
 
@@ -317,59 +322,17 @@ useEffect(() => {
 
 
 
-  const [adressUser, setAdressUser] = useState ({
-    state: '',
-    city: '',
-    neighborhood: '',
-    street: ''
+  // const [adressUser, setAdressUser] = useState ({
+  //   state: '',
+  //   city: '',
+  //   neighborhood: '',
+  //   street: ''
 
 
-  })
+  // })
  
 
 
-  const localSearch = (e) => { 
-    const cep = e.target.value.replace(/\D/g, '')
-    console.log(cep)
-    fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data =>{
-
-     
-      console.log(data)
-
-      setAdressUser ({
-
-        state: data.estado,
-        city: data.localidade,
-        neighborhood: data.bairro,
-        street: data.logradouro
-
-      })
-
-      Navigate('/sendPage')
-
-
-      const state = data.estado 
-      const city = data.localidade 
-      const neighborhood = data.bairro 
-      const street = data.logradouro
-
-
-      document.getElementById('output_uf').innerHTML = `Estado: ${state}`
-      document.getElementById('output_city').innerHTML = `Cidade: ${city}`
-      document.getElementById('output_neighborhood').innerHTML = `Bairro: ${neighborhood}`
-      document.getElementById('output_street').innerHTML = `Rua: ${street}`
-
-
-
-     
-
-
-   
-        
-  })
-
-
-}
 
 
 
@@ -821,9 +784,16 @@ const confirmar = () => {
         )}
 
        
-        
+<label htmlFor="user_name">Digite seu nome</label>
+<input id='user_name' name='user_name'></input>
 
-    
+<div>
+      <h2>Resumo do Endereço</h2>
+      <p>Estado: {adressUser.state}</p>
+      <p>Cidade: {adressUser.city}</p>
+      <p>Bairro: {adressUser.neighborhood}</p>
+      <p>Rua: {adressUser.street}</p>
+    </div>
 
      
 
@@ -831,18 +801,7 @@ const confirmar = () => {
        
        
 
-          <label htmlFor="user_name">Digite seu nome</label>
-        <input id='user_name' name='user_name'></input>
-
-        <label htmlFor="ent_adressUser"> Insira seu CEP</label>
-          <input type='text' id='ent_adressUser' name='ent_adressUser' onBlur={localSearch}></input>
-         
-         
-
-          <p id='output_uf'>{adressUser.state}</p>
-          <p id='output_city'></p>
-          <p id='output_neighborhood'></p>
-          <p id='output_street'></p>
+ 
        
 
         <Link to = '/sendpage'>Concluir pedido</Link>
@@ -854,6 +813,7 @@ const confirmar = () => {
           {/* {quantity.inputCafeBrownie} */}
 
         </div>
+
 
       <div id='box_phrases_quantity'>
 
