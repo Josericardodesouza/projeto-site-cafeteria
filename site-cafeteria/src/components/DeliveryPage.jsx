@@ -787,13 +787,19 @@ const confirmar = () => {
 <label htmlFor="user_name">Digite seu nome</label>
 <input id='user_name' name='user_name'></input>
 
-<div>
-      <h2>Resumo do Endereço</h2>
-      <p>Estado: {adressUser.state}</p>
-      <p>Cidade: {adressUser.city}</p>
-      <p>Bairro: {adressUser.neighborhood}</p>
-      <p>Rua: {adressUser.street}</p>
+
+        <UserAdress />
+
+
+
+
+    <div>
+
+<p>Entrega em {adressUser.state}, na cidade de {adressUser.city}, no bairro {adressUser.neighborhood}, na rua {adressUser.street} </p>
+
+  
     </div>
+
 
      
 

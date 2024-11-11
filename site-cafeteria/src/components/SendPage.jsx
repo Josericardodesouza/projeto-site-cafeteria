@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import NavBar from "./NavBar"
 import ItensListDelivery from "./ItensListDelivery"
+import { useContext } from "react"
+import { UserAdressContext } from "../context/UserAdressContext"
 
 
 
@@ -11,6 +13,11 @@ import ItensListDelivery from "./ItensListDelivery"
 
 
 function SendPage() {
+
+    const {adressUser} = useContext(UserAdressContext)
+
+
+
 
   
 
@@ -37,6 +44,11 @@ function SendPage() {
         <h2>Sua encomenda está a caminho!</h2>
 
         lista dos itens pedidos
+
+        
+        <p>Entrega em {adressUser.state}, na cidade de {adressUser.city}, no bairro {adressUser.neighborhood}, na rua {adressUser.street} </p>
+
+
 
       
 

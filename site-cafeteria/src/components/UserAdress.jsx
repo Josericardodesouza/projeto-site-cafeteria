@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
 import { useState } from "react"
 
+
 function UserAdress() {
 
     const {setAdressUser} = useContext(UserAdressContext)
@@ -69,14 +70,14 @@ function UserAdress() {
       
 
         <label htmlFor="ent_adressUser"> Insira seu CEP</label>
-          <input type='text' id='ent_adressUser' name='ent_adressUser' value={cep} onBlur={(e) => setCep(e.target.value)} maxLength={8}></input>
+        <input type='text' id='ent_adressUser' name='ent_adressUser' value={cep} onChange={(e) => setCep(e.target.value)} onBlur={localSearch} maxLength={9}></input>
          
          
 
-          <p id='output_uf'></p>
+          {/* <p id='output_uf'></p>
           <p id='output_city'></p>
           <p id='output_neighborhood'></p>
-          <p id='output_street'></p>
+          <p id='output_street'></p> */}
 
 
           </>
