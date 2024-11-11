@@ -1,13 +1,16 @@
+import { useState } from "react";
 import ItemsListContext from "./ItemsListContext";
 
-const ItemsListContextProvider = ({}) => {
+const ItemsListContextProvider = ({children}) => {
+
+   
 
 
 
     return (
-        <ItemsListContextProvider>
-            
-        </ItemsListContextProvider>
+        <ItemsListContext.Provider>
+            {children}
+        </ItemsListContext.Provider>
     )
 
     

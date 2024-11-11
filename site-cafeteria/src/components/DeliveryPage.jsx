@@ -849,7 +849,7 @@ const confirmar = () => {
 
         <ItensListDelivery itensProperties = {itensProperties} setItensProperties = {setItensProperties} />
 
-     
+  
       
        
      
