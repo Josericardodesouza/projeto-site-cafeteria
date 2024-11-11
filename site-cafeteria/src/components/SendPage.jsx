@@ -40,8 +40,7 @@ function SendPage() {
 
         lista dos itens pedidos
 
-      z
-
+    
        
 
         {/* {renderListItemsSelected()} */}
