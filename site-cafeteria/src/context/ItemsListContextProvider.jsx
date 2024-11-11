@@ -1,6 +1,10 @@
 import ItemsListContext from "./ItemsListContext";
 
-const ItemsListContextProvider = ({}) => {
+const ItemsListContextProvider = () => {
+
+    <ItemsListContext.Provider>
+        {children}
+    </ItemsListContext.Provider>
 
     
 
