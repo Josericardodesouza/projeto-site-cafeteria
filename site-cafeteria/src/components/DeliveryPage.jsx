@@ -54,6 +54,8 @@ import ItensListDelivery from './ItensListDelivery'
 import UserAdress from './UserAdress'
 import { useContext } from 'react'
 import { UserAdressContext } from '../context/UserAdressContext'
+import UserName from './UserName'
+import { UserNameContext } from '../context/UserNameContext'
 
 
 
@@ -61,6 +63,7 @@ import { UserAdressContext } from '../context/UserAdressContext'
 function DeliveryPage() {
 
   const {adressUser} = useContext(UserAdressContext)
+  const {userNameInput} = useContext(UserNameContext)
 
   
 
@@ -783,6 +786,10 @@ const confirmar = () => {
 
         )}
 
+
+        <UserName />
+
+        <p>nome: {userNameInput}</p>
 
 
 

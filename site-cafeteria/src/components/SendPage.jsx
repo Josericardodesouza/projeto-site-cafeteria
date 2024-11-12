@@ -3,6 +3,7 @@ import NavBar from "./NavBar"
 import ItensListDelivery from "./ItensListDelivery"
 import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
+import { UserNameContext } from "../context/UserNameContext"
 
 
 
@@ -15,6 +16,8 @@ import { UserAdressContext } from "../context/UserAdressContext"
 function SendPage() {
 
     const {adressUser} = useContext(UserAdressContext)
+    const {userNameInput} = useContext(UserNameContext)
+
 
 
 
@@ -47,6 +50,10 @@ function SendPage() {
 
         
         <p>Entrega em {adressUser.state}, na cidade de {adressUser.city}, no bairro {adressUser.neighborhood}, na rua {adressUser.street} </p>
+
+        <h1>Para</h1>
+
+        <p>{userNameInput}</p>
 
 
 

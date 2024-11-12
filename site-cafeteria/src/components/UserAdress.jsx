@@ -41,10 +41,10 @@ function UserAdress() {
     //   const street = data.logradouro
 
 
-      document.getElementById('output_uf').innerHTML = `Estado: ${data.state}`
-      document.getElementById('output_city').innerHTML = `Cidade: ${data.city}`
-      document.getElementById('output_neighborhood').innerHTML = `Bairro: ${data.neighborhood}`
-      document.getElementById('output_street').innerHTML = `Rua: ${data.street}`
+      // document.getElementById('output_uf').innerHTML = `Estado: ${data.state}`
+      // document.getElementById('output_city').innerHTML = `Cidade: ${data.city}`
+      // document.getElementById('output_neighborhood').innerHTML = `Bairro: ${data.neighborhood}`
+      // document.getElementById('output_street').innerHTML = `Rua: ${data.street}`
 
    
         
