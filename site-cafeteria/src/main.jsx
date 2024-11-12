@@ -17,7 +17,12 @@ import UserNameProvider from './context/UserNameProvider.jsx'
 const router = createBrowserRouter ([
 
   {path: '/',
-    element: <App />
+    element: 
+    <UserNameProvider>
+        <App />
+    </UserNameProvider>
+    
+  
   },
 
   {path: '/deliveryPage',

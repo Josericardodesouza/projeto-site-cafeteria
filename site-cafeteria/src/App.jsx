@@ -49,6 +49,9 @@ import MenuColdDrinks from './components/MenuColdDrinks'
 import { BsPerson } from 'react-icons/bs'
 import NavBarHome from './components/NavBarHome'
 
+import { useContext } from 'react'
+import { UserNameContext } from '../src/context/UserNameContext'
+
 
 
 
@@ -58,7 +61,9 @@ import NavBarHome from './components/NavBarHome'
 
 function App() {
 
-  
+  const {userNameInput} = useContext(UserNameContext);
+
+  console.log('vindo do contexto do nome de usuário', userNameInput)
 
 
 
