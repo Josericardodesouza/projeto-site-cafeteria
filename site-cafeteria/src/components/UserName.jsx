@@ -10,7 +10,7 @@ function UserName() {
    const {setUserNameInput} = useContext(UserNameContext)
 
 
-    const renderName = (e) => {
+    const renderUserName = (e) => {
 
         setUserNameInput(e.target.value)
         
@@ -26,7 +26,7 @@ function UserName() {
         <>
         
             <label htmlFor="user_name">Digite seu nome</label>
-            <input id='user_name' name='user_name' onBlur={renderName}></input>
+            <input id='user_name' name='user_name' onBlur={renderUserName}></input>
 
         
         
