@@ -4,6 +4,8 @@ import ItensListDelivery from "./ItensListDelivery"
 import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
+import MenuItems from "./MenuItems"
+import { MenuItemsContext } from "../context/MenuItemsContext"
 
 
 
@@ -17,6 +19,7 @@ function SendPage() {
 
     const { adressUser } = useContext(UserAdressContext)
     const { userNameInput } = useContext(UserNameContext)
+    const renderListSelected = useContext(MenuItemsContext)
 
 
 
@@ -54,6 +57,10 @@ function SendPage() {
             <h1>Para</h1>
 
             <p>{userNameInput}</p>
+
+            <p>
+                {renderListSelected}
+            </p>
 
 
 

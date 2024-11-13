@@ -4,6 +4,9 @@ import { typesBrigadeiro, typesBrownies, typesCookies, typesCupcakes, typesPie }
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { useContext } from 'react'
+import { MenuItemsContext } from '../context/MenuItemsContext'
+import { Children } from 'react'
 
 
 
@@ -43,6 +46,8 @@ const macaPie = typesPie.find(candyTypes => candyTypes.name === 'Maçã')
 const pessegoPie = typesPie.find(candyTypes => candyTypes.name === 'Pêssego')
 
 function MenuItems() {
+
+ 
 
 
     const [showDivItens, setShowDivItens] = useState({
@@ -674,7 +679,15 @@ function MenuItems() {
             )}
 
 
-            <p> aqui estão os itens: {renderListItemsSelected()}</p>
+            <div ref={refListItemsSelected}>
+                
+                aqui estão os itens: {renderListItemsSelected()}
+
+            </div>
+
+            <MenuItemsContext.Provider value = {renderListItemsSelected()}>
+                {Children}
+            </MenuItemsContext.Provider>
 
 
         </>
