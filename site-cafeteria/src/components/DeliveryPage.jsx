@@ -24,18 +24,21 @@ import ItensListDelivery from './ItensListDelivery'
 import UserAdress from './UserAdress'
 import { useContext } from 'react'
 import { UserAdressContext } from '../context/UserAdressContext'
+import MenuItems from './MenuItems'
+
 import UserName from './UserName'
 import { UserNameContext } from '../context/UserNameContext'
-import MenuItems from './MenuItems'
 
 
 
 
 function DeliveryPage() {
 
+  
   const { adressUser } = useContext(UserAdressContext)
   const { userNameInput } = useContext(UserNameContext)
-  
+
+
 
 
 
@@ -161,36 +164,22 @@ function DeliveryPage() {
 
       <main>
 
+
+      <UserName />
+
+      <p>nome: {userNameInput}</p>
+
         <MenuItems />
-
-
-
-
-        <UserName />
-
-        <p>nome: {userNameInput}</p>
-
-
 
         <UserAdress />
 
-
-
-
+       
         <div>
 
           <p>Entrega em {adressUser.state}, na cidade de {adressUser.city}, no bairro {adressUser.neighborhood}, na rua {adressUser.street} </p>
 
 
         </div>
-
-
-
-
-
-
-
-
 
 
 

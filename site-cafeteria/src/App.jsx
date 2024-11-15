@@ -2,9 +2,7 @@ import { useRef, useState } from 'react'
 import './App.css'
 import './styles/colorsAndFonts-module.css'
 import {Link} from 'react-router-dom'
-import {SwiperSlide, Swiper} from 'swiper/react'
-import 'swiper/swiper-bundle.css'
-import {EffectCoverflow, Navigation, Pagination, Scrollbar, A11y} from 'swiper/modules'
+
 
 
 import image2 from './assets/images/pexels-og-mpango-1582361-4090603.jpg'
@@ -13,16 +11,12 @@ import image4 from './assets/images/pexels-ekrulila-2307221.jpg'
 import image5 from './assets/images/nathan-dumlao-zUNs99PGDg0-unsplash.jpg'
 
 
-import testeImg1 from './assets/images/testeSlide/pexels-8moments-3264706.jpg'
-import testeImg2 from './assets/images/testeSlide/pexels-graeme-travers-637657729-26820674.jpg'
-import testeImg3 from './assets/images/testeSlide/pexels-jimmy-1233438433-26851738.jpg'
-import testeImg4 from './assets/images/testeSlide/pexels-neujus-26795366.jpg'
-import testeImg5 from './assets/images/testeSlide/pexels-peter-mansson-1522474240-27143629.jpg'
+
 import NavBar from './components/NavBar'
 import Menu from './components/Menu'
 import MenuCoffee from './components/MenuCoffee'
 import MenuCandy from './components/MenuCandy'
-import { MdOutlineStar, MdOutlineStarBorder, MdOutlineStarHalf } from 'react-icons/md'
+
 import Footer from './components/Footer'
 
 
@@ -46,11 +40,13 @@ import tortaImg from './assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplas
 import { CiCoffeeCup } from 'react-icons/ci'
 import { useEffect } from 'react'
 import MenuColdDrinks from './components/MenuColdDrinks'
-import { BsPerson } from 'react-icons/bs'
+
 import NavBarHome from './components/NavBarHome'
 
-import { useContext } from 'react'
-import { UserNameContext } from '../src/context/UserNameContext'
+
+
+import Evaluations from './components/Evaluations'
+
 
 
 
@@ -61,10 +57,7 @@ import { UserNameContext } from '../src/context/UserNameContext'
 
 function App() {
 
-  const {userNameInput} = useContext(UserNameContext);
-
-  console.log('vindo do contexto do nome de usuário', userNameInput)
-
+  
 
 
 
@@ -294,169 +287,9 @@ function App() {
       <h3>Avaliados recentemente</h3>
 
       <section id='evaluations' ref = {refSectionEv}>
-       
 
-        {/* Swiper area */}
-
-        <Swiper
-
-          modules={ [Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
-
-          spaceBetween={20}
-          slidesPerView={1.5}
-          navigation
-          pagination = {{clickable: true}}
-          scrollbar = {{draggable: true}}
-          // effect= {'coverflow'}
-          // coverflowEffect= { {
-
-          //   rotate: 10,
-          //   stretch: 0,
-          //   depth: 100,
-          //   modifier: 1,
-          //   slideShadows: false
-
-
-          // } }
-        >
-
-          <SwiperSlide>
-
-            <div className='conteiner_ev'>
-
-              <div className='ev_img_box'> <img src = {cappucinoImg} /></div>
-
-              <div className='ev_box'>
-                <p>Cappuccino</p>
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStarHalf />
-                <MdOutlineStarBorder />
-              </div>
-
-              <div className = 'box_opinion'>
-                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                <p className='clientName'><BsPerson />Angélica Silva</p>
-              </div>
-
-
-            </div>
-
-          </SwiperSlide>
-
-          <SwiperSlide>
-
-            <div className = 'conteiner_ev'>
-
-              <div className = 'ev_img_box'>
-                <img src = {cafeCoadoImg}></img>
-              </div>
-
-              <div className='ev_box'>
-                <p>Cappuccino</p>
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStarHalf />
-                <MdOutlineStarBorder />
-              </div>
-
-              <div className = 'box_opinion'>
-                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                <p className='clientName'>Silvana Almeida</p>
-              </div>
-
-            </div>
-
-          </SwiperSlide>
-
-          <SwiperSlide>
-
-        <div className = 'conteiner_ev'>
-
-          <div className = 'ev_img_box'>
-            <img src = {testeImg3}></img>
-          </div>
-
-          <div className='ev_box'>
-                <p>Frapuccino</p>
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStarHalf />
-                <MdOutlineStarBorder />
-              </div>
-
-              <div className = 'box_opinion'>
-                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                <p className='clientName'>Juvenal Silva</p>
-              </div>
-
-        </div>
-
-          </SwiperSlide>
-
-          <SwiperSlide>
-
-            <div className = 'conteiner_ev'>
-
-              <div className = 'ev_img_box'>
-                <img src = {testeImg4}/>
-                </div>
-
-                <div className='ev_box'>
-                <p>Bolo</p>
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStarHalf />
-                <MdOutlineStarBorder />
-              </div>
-              <div className='box_opinion'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nesciunt nisi omnis eveniet tenetur velit fugit voluptates, expedita numquam veniam excepturi quidem sunt? Laudantium maxime ratione ipsum dignissimos cum ipsa.
-                <p className='clientName'>Felipe Damasco</p>
-
-              </div>
-
-              <div className = 'box_opinion'>
-                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                <p className='clientName'>Marco Túlio</p>
-              </div>
-
-            </div>
-
-          </SwiperSlide>
-
-          <SwiperSlide>
-
-            <div className = 'conteiner_ev'>
-
-              <div className = 'ev_img_box'>
-                <img src = {testeImg5}/>
-              </div>
-
-              <div className='ev_box'>
-                <p>Cupcake</p>
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStar />
-                <MdOutlineStarHalf />
-                <MdOutlineStarBorder />
-              </div>
-
-              <div className = 'box_opinion'>
-                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                <p className='clientName'>Cláudia Faria</p>
-              </div>
-
-            </div>
-
-          </SwiperSlide>
-
-        </Swiper>
-
-        
+        <Evaluations />
+   
 
       </section>
 

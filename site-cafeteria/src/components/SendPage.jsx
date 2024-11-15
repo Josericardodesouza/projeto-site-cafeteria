@@ -4,8 +4,7 @@ import ItensListDelivery from "./ItensListDelivery"
 import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
-import MenuItems from "./MenuItems"
-import { MenuItemsContext } from "../context/MenuItemsContext"
+
 
 
 
@@ -17,9 +16,9 @@ import { MenuItemsContext } from "../context/MenuItemsContext"
 
 function SendPage() {
 
-    const { adressUser } = useContext(UserAdressContext)
-    const { userNameInput } = useContext(UserNameContext)
-    const renderListSelected = useContext(MenuItemsContext)
+    const { adressUser } = useContext(UserAdressContext);
+    const { userNameInput } = useContext(UserNameContext);
+    
 
 
 
@@ -49,6 +48,8 @@ function SendPage() {
 
             <h2>Sua encomenda está a caminho!</h2>
 
+          
+
             lista dos itens pedidos
 
 
@@ -59,8 +60,16 @@ function SendPage() {
             <p>{userNameInput}</p>
 
             <p>
-                {renderListSelected}
+               
             </p>
+
+
+            
+
+     
+
+
+
 
 
 

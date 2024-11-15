@@ -14,6 +14,7 @@ import UserAdressProvider from './context/UserAdressProvider.jsx'
 import UserNameProvider from './context/UserNameProvider.jsx'
 import MenuItems from './components/MenuItems.jsx'
 import MenuItemsProvider from './context/MenuItemsProvider.jsx'
+import Evaluations from './components/Evaluations.jsx'
 
 
 const router = createBrowserRouter([
@@ -21,9 +22,13 @@ const router = createBrowserRouter([
   {
     path: '/',
     element:
-      <UserNameProvider>
+
+    <UserNameProvider>
         <App />
-      </UserNameProvider>
+    </UserNameProvider>
+     
+      
+     
 
 
   },
@@ -60,16 +65,24 @@ const router = createBrowserRouter([
 
 
   {
-    path: '/sendPage',
+    path: '/sendpage',
     element:
       <UserAdressProvider>
         <UserNameProvider>
-          <MenuItemsProvider>
+         
           <SendPage />
-          </MenuItemsProvider>
+         
         </UserNameProvider>
       </UserAdressProvider>
 
+  },
+
+  {
+    path: '/evaluations',
+    element:
+    <UserNameProvider>
+        <Evaluations />
+    </UserNameProvider>
   }
 
 ])

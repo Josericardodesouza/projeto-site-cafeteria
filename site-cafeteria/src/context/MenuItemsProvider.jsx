@@ -1,10 +1,12 @@
-function MenuItemsProvider({ Children }) {
+function MenuItemsProvider() {
     return (
         <>
 
-            <MenuItemsContext.Provider value={renderListItemsSelected()}>
+            {/* <MenuItemsContext.Provider>
+              
                 {Children}
-            </MenuItemsContext.Provider>
+            </MenuItemsContext.Provider> */}
+
 
 
         </>

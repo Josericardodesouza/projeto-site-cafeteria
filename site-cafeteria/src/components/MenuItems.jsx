@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { useContext } from 'react'
 import { MenuItemsContext } from '../context/MenuItemsContext'
 import { Children } from 'react'
+import { useRef } from 'react'
 
 
 
@@ -228,6 +229,11 @@ function MenuItems() {
     }
 
 
+    
+    const [itemsListSelected, setItemsListSelected] = useState('')
+  
+
+
 
     const renderListItemsSelected = () => {
         return Object.keys(itensProperties).map((key) => {
@@ -242,6 +248,9 @@ function MenuItems() {
 
     console.log('Teste do componenente da lista', { renderListItemsSelected })
     //   console.log('Isso é a itensProperties: ', item )
+
+
+
 
 
     const [total, setTotal] = useState(0)
@@ -679,15 +688,12 @@ function MenuItems() {
             )}
 
 
-            <div ref={refListItemsSelected}>
+           
                 
                 aqui estão os itens: {renderListItemsSelected()}
 
-            </div>
-
-            <MenuItemsContext.Provider value = {renderListItemsSelected()}>
-                {Children}
-            </MenuItemsContext.Provider>
+        
+     
 
 
         </>
