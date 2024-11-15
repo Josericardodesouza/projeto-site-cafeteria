@@ -4,6 +4,7 @@ import ItensListDelivery from "./ItensListDelivery"
 import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
+import UserComment from "./UserComment"
 
 
 
@@ -59,9 +60,8 @@ function SendPage() {
 
             <p>{userNameInput}</p>
 
-            <p>
-               
-            </p>
+
+        <UserComment />
 
 
             
