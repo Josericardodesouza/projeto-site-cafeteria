@@ -33,14 +33,21 @@ function Evaluations() {
 
     
   const { userNameInput } = useContext(UserNameContext);
-  const {setStoredComment} = useContext(CommentContext)
+  const {storedComment} = useContext(CommentContext)
 
   console.log('vindo do contexto do nome de usuário para o evaluations', userNameInput)
-  console.log('comentário: ', setStoredComment)
+  console.log('comentário: ', storedComment)
 
 
     return (
         <>
+
+
+        <div id='UserEvaluationBox'>
+          <p>Teste</p>
+        </div>
+
+        <br />
 
             
 
@@ -84,7 +91,7 @@ function Evaluations() {
               </div>
 
               <div className = 'box_opinion'>
-                <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
+                <p className='txt_opinion'>{storedComment}</p>
                 <p className='clientName'><BsPerson />Angélica Silva</p>
               </div>
 

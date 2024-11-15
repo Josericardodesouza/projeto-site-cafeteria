@@ -26,7 +26,9 @@ const router = createBrowserRouter([
     element:
 
     <UserNameProvider>
-        <App />
+      <CommentProvider>
+      <App />
+      </CommentProvider>
     </UserNameProvider>
      
       

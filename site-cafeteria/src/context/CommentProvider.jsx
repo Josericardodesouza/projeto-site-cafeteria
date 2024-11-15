@@ -4,7 +4,7 @@ import { CommentContext } from "./CommentContext";
 
 function CommentProvider({children}) {
 
-    const [storedComment, setStoredComment] = useState('teste')
+    const [storedComment, setStoredComment] = useState('')
     return (
         <>
 

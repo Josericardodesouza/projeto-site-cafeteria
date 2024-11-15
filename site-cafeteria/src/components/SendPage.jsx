@@ -5,7 +5,8 @@ import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
 import UserComment from "./UserComment"
-import Evaluations from "./Evaluations"
+import { CommentContext } from "../context/CommentContext"
+
 
 
 
@@ -20,6 +21,7 @@ function SendPage() {
 
     const { adressUser } = useContext(UserAdressContext);
     const { userNameInput } = useContext(UserNameContext);
+    const {storedComment} = useContext(CommentContext)
     
 
 
@@ -63,6 +65,8 @@ function SendPage() {
 
 
         <UserComment />
+ 
+        <p>Valor do textArea: {storedComment}</p> 
  
 
      
