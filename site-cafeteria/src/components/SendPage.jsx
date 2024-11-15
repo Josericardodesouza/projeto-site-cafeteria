@@ -5,6 +5,7 @@ import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
 import UserComment from "./UserComment"
+import Evaluations from "./Evaluations"
 
 
 
@@ -62,6 +63,7 @@ function SendPage() {
 
 
         <UserComment />
+ 
 
      
 

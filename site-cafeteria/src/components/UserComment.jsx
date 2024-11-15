@@ -1,10 +1,17 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { CommentContext } from "../context/CommentContext"
+
+
 
 function UserComment() {
 
+    
+    const {storedComment, setStoredComment} = useContext(CommentContext)
+ 
+
     const [comment, setComment] = useState('')
 
-    const [storedComment, setStoredComment] = useState('')
+    
 
 
     const textChange = (e) => {
@@ -12,6 +19,8 @@ function UserComment() {
 
 
     }
+
+  
 
     const confirmComment = (e) => {
         setStoredComment(comment)
@@ -22,13 +31,14 @@ function UserComment() {
     return (
         <>
 
-        <textarea placeholder="teste" onChange={textChange}></textarea>
+        <textarea placeholder="teste" onChange={textChange}>Teste</textarea>
 
         <button onClick={confirmComment}>Confirmar</button>
 
         <div>
             <p>comentário:</p>
-            {storedComment}
+           
+          
         </div>
 
         

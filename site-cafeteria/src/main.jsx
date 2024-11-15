@@ -15,6 +15,8 @@ import UserNameProvider from './context/UserNameProvider.jsx'
 import MenuItems from './components/MenuItems.jsx'
 import MenuItemsProvider from './context/MenuItemsProvider.jsx'
 import Evaluations from './components/Evaluations.jsx'
+import CommentProvider from './context/CommentProvider.jsx'
+import UserComment from './components/UserComment.jsx'
 
 
 const router = createBrowserRouter([
@@ -69,9 +71,11 @@ const router = createBrowserRouter([
     element:
       <UserAdressProvider>
         <UserNameProvider>
+        <CommentProvider>
          
           <SendPage />
          
+          </CommentProvider>
         </UserNameProvider>
       </UserAdressProvider>
 
@@ -81,8 +85,20 @@ const router = createBrowserRouter([
     path: '/evaluations',
     element:
     <UserNameProvider>
+      <CommentProvider>
         <Evaluations />
+      </CommentProvider>
     </UserNameProvider>
+  },
+
+  {
+    path: '/userComment',
+    element:
+      <CommentProvider>
+          <UserComment />
+      </CommentProvider>
+
+      
   }
 
 ])

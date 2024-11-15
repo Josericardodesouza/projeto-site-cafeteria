@@ -21,6 +21,7 @@ import {EffectCoverflow, Navigation, Pagination, Scrollbar, A11y} from 'swiper/m
 import { UserNameContext } from '../context/UserNameContext'
 import { useContext } from 'react';
 import React from 'react'
+import { CommentContext } from '../context/CommentContext'
 
 
 
@@ -32,8 +33,10 @@ function Evaluations() {
 
     
   const { userNameInput } = useContext(UserNameContext);
+  const {setStoredComment} = useContext(CommentContext)
 
   console.log('vindo do contexto do nome de usuário para o evaluations', userNameInput)
+  console.log('comentário: ', setStoredComment)
 
 
     return (
