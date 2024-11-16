@@ -49,6 +49,9 @@ import Evaluations from './components/Evaluations'
 import { UserNameContext } from './context/UserNameContext'
 
 import { useContext } from 'react'
+import { CommentContext } from './context/CommentContext'
+import UserNameProvider from './context/UserNameProvider'
+import CommentProvider from './context/CommentProvider'
 
 
 
@@ -61,9 +64,9 @@ import { useContext } from 'react'
 
 function App() {
 
-  const {userNameInput, setUserNameInput} = useContext(UserNameContext)
 
-  console.log('Username no App: ', userNameInput)
+
+
 
 
 
@@ -203,13 +206,7 @@ function App() {
       </div>
     </header>
 
-    <div>
-      <p>Nome de usuário: {userNameInput}</p>
-      <button onClick={() => setUserNameInput('Nome teste')}>Atualizar nome</button>
-    </div>
-
-
-    <p>Nome de usuário: {userNameInput}</p>
+   
 
 
     <main>
@@ -298,6 +295,12 @@ function App() {
       <h3>Avaliados recentemente</h3>
 
       <section id='evaluations' ref = {refSectionEv}>
+
+        <UserNameProvider>
+          <CommentProvider>
+            <Evaluations />
+          </CommentProvider>
+        </UserNameProvider>
 
       
    

@@ -31,7 +31,7 @@ function UserComment() {
     return (
         <>
 
-        <textarea placeholder="teste" onChange={textChange} onBlur={confirmComment}>Teste</textarea>
+        <textarea placeholder="teste" onChange={textChange} onBlur={confirmComment} value={comment}>Teste</textarea>
 
      
 
