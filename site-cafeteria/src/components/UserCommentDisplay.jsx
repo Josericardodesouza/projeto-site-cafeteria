@@ -1,18 +1,18 @@
-import { useContext } from "react"
-import { CommentContext } from "../context/CommentContext"
+// import { useContext } from "react"
+// import { CommentContext } from "../context/CommentContext"
 
-function UserCommentDisplay() {
+// function UserCommentDisplay() {
 
-    const {storedComment} = useContext(CommentContext)
+//     const {storedComment} = useContext(CommentContext)
 
 
-    return (
-        <>
+//     return (
+//         <>
 
-        <p>{storedComment}</p>
+//         <p>{storedComment}</p>
         
-        </>
-    )
-}
+//         </>
+//     )
+// }
 
-export default UserCommentDisplay
+// export default UserCommentDisplay
