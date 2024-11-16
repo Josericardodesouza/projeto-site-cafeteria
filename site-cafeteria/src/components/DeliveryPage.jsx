@@ -28,6 +28,7 @@ import MenuItems from './MenuItems'
 
 import UserName from './UserName'
 import { UserNameContext } from '../context/UserNameContext'
+import { CommentContext } from '../context/CommentContext'
 
 
 
@@ -37,6 +38,7 @@ function DeliveryPage() {
   
   const { adressUser } = useContext(UserAdressContext)
   const { userNameInput } = useContext(UserNameContext)
+ 
 
 
 
@@ -180,6 +182,9 @@ function DeliveryPage() {
 
 
         </div>
+
+
+    
 
 
 

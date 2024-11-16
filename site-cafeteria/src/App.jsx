@@ -46,6 +46,8 @@ import NavBarHome from './components/NavBarHome'
 
 
 import Evaluations from './components/Evaluations'
+import { UserNameContext } from './context/UserNameContext'
+import { CommentContext } from './context/CommentContext'
 
 
 
@@ -56,6 +58,9 @@ import Evaluations from './components/Evaluations'
 
 
 function App() {
+
+  const { userNameInput } = useContext(UserNameContext);
+  const {storedComment} = useContext(CommentContext)
 
   
 

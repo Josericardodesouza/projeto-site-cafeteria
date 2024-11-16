@@ -17,35 +17,41 @@ import MenuItemsProvider from './context/MenuItemsProvider.jsx'
 import Evaluations from './components/Evaluations.jsx'
 import CommentProvider from './context/CommentProvider.jsx'
 import UserComment from './components/UserComment.jsx'
-import UserCommentDisplay from './components/UserCommentDisplay.jsx'
+import UserName from './components/UserName.jsx'
+
 
 
 const router = createBrowserRouter([
 
   {
     path: '/',
-    element:
+    element: (
+      <UserNameProvider>
+        <CommentProvider>
 
-    <UserNameProvider>
-      <CommentProvider>
-      <App />
-      </CommentProvider>
-    </UserNameProvider>
-     
-      
-     
+          <App />
+
+        </CommentProvider>
+      </UserNameProvider>
+
+    )
+
+
+
 
 
   },
 
   {
     path: '/deliveryPage',
-    element:
+    element: (
       <UserAdressProvider>
         <UserNameProvider>
-            <DeliveryPage />
+          <DeliveryPage />
         </UserNameProvider>
       </UserAdressProvider>
+
+    )
   },
 
   {
@@ -71,44 +77,59 @@ const router = createBrowserRouter([
 
   {
     path: '/sendpage',
-    element:
+    element: (
       <UserAdressProvider>
         <UserNameProvider>
-        <CommentProvider>
-         
-          <SendPage />
-         
+          <CommentProvider>
+
+
+
+            <SendPage />
+
+
           </CommentProvider>
         </UserNameProvider>
       </UserAdressProvider>
+
+    )
 
   },
 
   {
     path: '/evaluations',
-    element:
-    <UserNameProvider>
-      <CommentProvider>
-        <Evaluations />
-      </CommentProvider>
-    </UserNameProvider>
+    element: (
+
+      <UserNameProvider>
+        <CommentProvider>
+          <Evaluations />
+        </CommentProvider>
+      </UserNameProvider>
+
+    )
+
+
+
   },
 
   {
     path: '/userComment',
-    element:
-      <CommentProvider>
-          <UserComment />
-      </CommentProvider>
+    element: (
+    <CommentProvider>
+         <UserComment />
+    </CommentProvider>
 
-  },
+    )
+   
+
+
+  }
 
   // {
   //   path: '/userCommentDisplay',
   //   element:
-  //   <CommentProvider>
+
   //     <UserCommentDisplay />
-  //   </CommentProvider>
+
   // }
 
 ])

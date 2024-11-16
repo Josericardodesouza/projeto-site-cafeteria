@@ -6,7 +6,8 @@ import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
 import UserComment from "./UserComment"
 import { CommentContext } from "../context/CommentContext"
-import UserCommentDisplay from "./UserCommentDisplay"
+import Evaluations from "./Evaluations"
+
 
 
 
@@ -26,6 +27,9 @@ function SendPage() {
     
 
     console.log('O que vem do provider do stored: ', storedComment)
+
+    console.log('vindo do contexto do nome de usuário para o evaluations', userNameInput)
+    console.log('comentário para o evaluation: ', storedComment)
 
 
 
@@ -71,7 +75,7 @@ function SendPage() {
  
         <p>Valor do textArea: {storedComment}</p> 
 
-        <UserCommentDisplay />
+    
         
  
 
@@ -103,6 +107,8 @@ function SendPage() {
 
             <Link to='/'>Voltar para a Home</Link>
 
+
+<Evaluations />
 
 
 
