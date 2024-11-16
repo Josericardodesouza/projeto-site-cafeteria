@@ -6,6 +6,7 @@ import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
 import UserComment from "./UserComment"
 import { CommentContext } from "../context/CommentContext"
+import UserCommentDisplay from "./UserCommentDisplay"
 
 
 
@@ -23,6 +24,8 @@ function SendPage() {
     const { userNameInput } = useContext(UserNameContext);
     const {storedComment} = useContext(CommentContext)
     
+
+    console.log('O que vem do provider do stored: ', storedComment)
 
 
 
@@ -67,6 +70,9 @@ function SendPage() {
         <UserComment />
  
         <p>Valor do textArea: {storedComment}</p> 
+
+        <UserCommentDisplay />
+        
  
 
      

@@ -6,7 +6,7 @@ import { CommentContext } from "../context/CommentContext"
 function UserComment() {
 
     
-    const {storedComment, setStoredComment} = useContext(CommentContext)
+    const {setStoredComment} = useContext(CommentContext)
  
 
     const [comment, setComment] = useState('')

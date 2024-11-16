@@ -17,6 +17,7 @@ import MenuItemsProvider from './context/MenuItemsProvider.jsx'
 import Evaluations from './components/Evaluations.jsx'
 import CommentProvider from './context/CommentProvider.jsx'
 import UserComment from './components/UserComment.jsx'
+import UserCommentDisplay from './components/UserCommentDisplay.jsx'
 
 
 const router = createBrowserRouter([
@@ -100,7 +101,14 @@ const router = createBrowserRouter([
           <UserComment />
       </CommentProvider>
 
-      
+  },
+
+  {
+    path: '/userCommentDisplay',
+    element:
+    <CommentProvider>
+      <UserCommentDisplay />
+    </CommentProvider>
   }
 
 ])

@@ -1,0 +1,84 @@
+
+.swiper {
+    z-index: 0;
+  }
+  
+  section#evaluations {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 120px;
+   
+  
+  }
+
+  
+
+.swiper-slide {
+    /* background-color: green; */
+    padding-bottom: 0;
+    z-index: 0;
+    box-sizing: border-box;
+  
+  }
+  
+
+  
+  
+
+.conteiner_ev {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: red;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px black;
+    align-items: center;
+  }
+
+  
+  
+.ev_img_box {
+    width: 95%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+  
+  
+  }
+
+  
+.ev_img_box img {
+
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+    
+  }
+
+  
+  
+
+
+.box_opinion {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .box_opinion > .clientName {
+    text-align: right;
+  }
+  
+  
+  
+  
+div#testeEva {
+    width: 700px;
+}  
