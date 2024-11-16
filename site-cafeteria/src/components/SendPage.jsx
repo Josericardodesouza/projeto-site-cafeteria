@@ -6,7 +6,7 @@ import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
 import UserComment from "./UserComment"
 import { CommentContext } from "../context/CommentContext"
-import Evaluations from "./Evaluations"
+
 
 
 
@@ -106,7 +106,7 @@ function SendPage() {
             </div>
 
             <Link to='/'>Voltar para a Home</Link>
-            <Link to='/evaluations'>Evaluation</Link>
+         
 
     
 

@@ -14,7 +14,7 @@ import UserAdressProvider from './context/UserAdressProvider.jsx'
 import UserNameProvider from './context/UserNameProvider.jsx'
 import MenuItems from './components/MenuItems.jsx'
 import MenuItemsProvider from './context/MenuItemsProvider.jsx'
-import Evaluations from './components/Evaluations.jsx'
+
 import CommentProvider from './context/CommentProvider.jsx'
 import UserComment from './components/UserComment.jsx'
 import UserName from './components/UserName.jsx'
@@ -88,21 +88,21 @@ const router = createBrowserRouter([
 
   },
 
-  {
-    path: '/evaluations',
-    element: (
+  // {
+  //   path: '/evaluations',
+  //   element: (
 
-      <UserNameProvider>
-        <CommentProvider>
-          <Evaluations />
-        </CommentProvider>
-      </UserNameProvider>
+  //     <UserNameProvider>
+  //       <CommentProvider>
+  //         <Evaluations />
+  //       </CommentProvider>
+  //     </UserNameProvider>
 
-    )
+  //   )
 
 
 
-  },
+  // },
 
   {
     path: '/userComment',
