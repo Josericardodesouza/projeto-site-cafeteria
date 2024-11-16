@@ -50,8 +50,6 @@ import { UserNameContext } from './context/UserNameContext'
 
 import { useContext } from 'react'
 import { CommentContext } from './context/CommentContext'
-import UserNameProvider from './context/UserNameProvider'
-import CommentProvider from './context/CommentProvider'
 
 
 
@@ -296,11 +294,7 @@ function App() {
 
       <section id='evaluations' ref = {refSectionEv}>
 
-        <UserNameProvider>
-          <CommentProvider>
-            <Evaluations />
-          </CommentProvider>
-        </UserNameProvider>
+        <Evaluations />
 
       
    

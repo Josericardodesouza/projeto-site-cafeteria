@@ -57,7 +57,6 @@ function Evaluations() {
       <div id='testeEva'>
 
 
-        <p>'Nome: ', {userNameInput}</p>
         <p>'Comentário ', {storedComment}</p>
      
      

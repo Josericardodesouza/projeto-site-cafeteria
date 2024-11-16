@@ -106,6 +106,7 @@ function SendPage() {
             </div>
 
             <Link to='/'>Voltar para a Home</Link>
+            <Link to='/evaluations'>Evaluation</Link>
 
     
 
