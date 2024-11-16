@@ -107,8 +107,8 @@ function SendPage() {
 
             <Link to='/'>Voltar para a Home</Link>
 
+    
 
-<Evaluations />
 
 
 

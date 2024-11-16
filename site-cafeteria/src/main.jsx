@@ -25,19 +25,10 @@ const router = createBrowserRouter([
 
   {
     path: '/',
-    element: (
-      <UserNameProvider>
-        <CommentProvider>
-
+    element: 
+    <UserNameProvider>
           <App />
-
-        </CommentProvider>
-      </UserNameProvider>
-
-    )
-
-
-
+    </UserNameProvider>
 
 
   },
@@ -119,6 +110,8 @@ const router = createBrowserRouter([
     </CommentProvider>
 
     )
+
+    
    
 
 

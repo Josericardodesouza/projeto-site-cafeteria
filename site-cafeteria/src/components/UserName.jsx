@@ -13,9 +13,12 @@ function UserName() {
     const renderUserName = (e) => {
 
         setUserNameInput(e.target.value)
+        console.log("Valor digitado: ", e.target.value); // Adicione isso
         
     }
 
+
+  
 
 
 

@@ -47,7 +47,9 @@ import NavBarHome from './components/NavBarHome'
 
 import Evaluations from './components/Evaluations'
 import { UserNameContext } from './context/UserNameContext'
-import { CommentContext } from './context/CommentContext'
+
+import { useContext } from 'react'
+
 
 
 
@@ -59,10 +61,9 @@ import { CommentContext } from './context/CommentContext'
 
 function App() {
 
-  const { userNameInput } = useContext(UserNameContext);
-  const {storedComment} = useContext(CommentContext)
+  const {userNameInput, setUserNameInput} = useContext(UserNameContext)
 
-  
+  console.log('Username no App: ', userNameInput)
 
 
 
@@ -202,8 +203,13 @@ function App() {
       </div>
     </header>
 
+    <div>
+      <p>Nome de usuário: {userNameInput}</p>
+      <button onClick={() => setUserNameInput('Nome teste')}>Atualizar nome</button>
+    </div>
 
 
+    <p>Nome de usuário: {userNameInput}</p>
 
 
     <main>
@@ -293,7 +299,7 @@ function App() {
 
       <section id='evaluations' ref = {refSectionEv}>
 
-        <Evaluations />
+      
    
 
       </section>

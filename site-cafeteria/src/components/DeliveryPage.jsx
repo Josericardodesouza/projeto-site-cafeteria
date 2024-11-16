@@ -38,6 +38,8 @@ function DeliveryPage() {
   
   const { adressUser } = useContext(UserAdressContext)
   const { userNameInput } = useContext(UserNameContext)
+
+  console.log('Username no DeliveryPage: ', userNameInput);
  
 
 
