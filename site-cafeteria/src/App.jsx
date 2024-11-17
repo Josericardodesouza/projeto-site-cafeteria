@@ -55,7 +55,7 @@ import NavBarHome from './components/NavBarHome'
 import { UserNameContext } from './context/UserNameContext'
 
 import { useContext } from 'react'
-import { CommentContext } from './context/CommentContext'
+// import { CommentContext } from './context/CommentContext'
 
 
 
@@ -66,6 +66,7 @@ import { SwiperSlide, Swiper } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import { EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
 import { MdOutlineStar, MdOutlineStarBorder, MdOutlineStarHalf } from 'react-icons/md'
+import UserNameDisplay from './components/UserNameDisplay'
 
 
 
@@ -82,10 +83,10 @@ function App() {
 
   
   const { userNameInput } = useContext(UserNameContext);
-  const { storedComment } = useContext(CommentContext)
+  // const { storedComment } = useContext(CommentContext)
 
-  console.log('vindo do contexto do nome de usuário para o evaluations', userNameInput)
-  console.log('comentário para o evaluation: ', storedComment)
+  console.log('vindo do contexto do nome de usuário para o App.jsx', userNameInput)
+  // console.log('comentário para o evaluation: ', storedComment)
 
 
 
@@ -211,6 +212,12 @@ function App() {
   return (
 
     <>
+
+
+    <p>Nome de usuário: {userNameInput}</p>
+    {/* <p>Comentário: {storedComment} </p> */}
+
+    <UserNameDisplay />
    
 
     <header id='header'>
@@ -387,7 +394,7 @@ scrollbar={{ draggable: true }}
     </div>
 
     <div className='box_opinion'>
-      <p className='txt_opinion'>{storedComment}</p>
+      <p className='txt_opinion'>Comentário</p>
       <p className='clientName'><BsPerson />Angélica Silva</p>
     </div>
 
@@ -415,7 +422,7 @@ scrollbar={{ draggable: true }}
 
     <div className='box_opinion'>
       <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-      <p className='clientName'>{userNameInput}</p>
+      <p className='clientName'>Jason</p>
     </div>
 
   </div>

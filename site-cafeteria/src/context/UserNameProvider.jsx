@@ -3,7 +3,7 @@ import { UserNameContext } from "./UserNameContext"
 
 function UserNameProvider({children}) {
 
-    const [userNameInput, setUserNameInput] = useState('')
+    const [userNameInput, setUserNameInput] = useState('nome inicial')
 
 
     return (
