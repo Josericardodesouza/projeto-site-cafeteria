@@ -29,7 +29,7 @@ function UserName() {
         <>
         
             <label htmlFor="user_name">Digite seu nome</label>
-            <input id='user_name' name='user_name' onBlur={renderUserName}></input>
+            <input id='user_name' name='user_name' onChange={renderUserName}></input>
 
         
         

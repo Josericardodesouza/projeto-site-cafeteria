@@ -1,9 +1,18 @@
 import { useState } from "react"
 import { UserNameContext } from "./UserNameContext"
+import { useEffect } from "react";
 
 function UserNameProvider({children}) {
 
-    const [userNameInput, setUserNameInput] = useState('nome inicial')
+    const [userNameInput, setUserNameInput] = useState(() => {
+     
+        
+            return localStorage.getItem('userName') || '';
+          });
+   
+          useEffect(() => {
+            localStorage.setItem('userName', userNameInput);
+          }, [userNameInput]);
 
 
     return (

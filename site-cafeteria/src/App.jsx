@@ -67,6 +67,7 @@ import 'swiper/swiper-bundle.css'
 import { EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
 import { MdOutlineStar, MdOutlineStarBorder, MdOutlineStarHalf } from 'react-icons/md'
 import UserNameDisplay from './components/UserNameDisplay'
+import UserNameProvider from './context/UserNameProvider'
 
 
 
@@ -210,6 +211,7 @@ function App() {
 
   
   return (
+
 
     <>
 
@@ -533,6 +535,8 @@ scrollbar={{ draggable: true }}
     
    
     </>
+
+  
   )
 }
 

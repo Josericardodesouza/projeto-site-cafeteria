@@ -18,6 +18,7 @@ import MenuItemsProvider from './context/MenuItemsProvider.jsx'
 import CommentProvider from './context/CommentProvider.jsx'
 import UserComment from './components/UserComment.jsx'
 import UserName from './components/UserName.jsx'
+import UserNameDisplay from './components/UserNameDisplay.jsx'
 
 
 
@@ -112,12 +113,23 @@ const router = createBrowserRouter([
     </CommentProvider>
 
     )
+  },
+
+
+    {
+      path: '/userNameDisplay',
+      element: 
+      <UserNameProvider>
+        <UserNameDisplay />
+      </UserNameProvider>
+
+    }
 
     
    
 
 
-  }
+  
 
   // {
   //   path: '/userCommentDisplay',
