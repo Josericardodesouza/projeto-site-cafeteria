@@ -352,7 +352,8 @@ scrollbar={{ draggable: true }}
   <div className='ev_img_box'> <img src={cappucinoImg} /></div>
 
   <div className='ev_box'>
-    <p>Cappuccino</p>
+    <h2>Testando comentários</h2>
+    <p>Slide de teste</p>
     <MdOutlineStar />
     <MdOutlineStar />
     <MdOutlineStar />
@@ -361,8 +362,8 @@ scrollbar={{ draggable: true }}
   </div>
 
   <div className='box_opinion'>
-    <p className='txt_opinion'>{storedComment}</p>
-    <p className='clientName'><BsPerson />Angélica Silva</p>
+    <p className='txt_opinion'>Comentário de teste</p>
+    <p className='clientName'><BsPerson />Nome teste</p>
   </div>
 
 
