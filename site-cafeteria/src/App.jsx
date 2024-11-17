@@ -99,8 +99,6 @@ function App() {
 
 
 
-
-
   const coffesImg = [cafeCoadoImg, cafeGeladoImg, cappucinoImg, coldBrewImg, espressoImg, espressoTonicoImg, frappuccinoImg, latteImg, mochaImg, pingadoImg
     ]
 
@@ -361,8 +359,8 @@ scrollbar={{ draggable: true }}
   <div className='ev_img_box'> <img src={cappucinoImg} /></div>
 
   <div className='ev_box'>
-    <h2>Testando comentários</h2>
-    <p>Slide de teste</p>
+    <h2>{storedComment}</h2>
+    <p>{userNameInput}</p>
     <MdOutlineStar />
     <MdOutlineStar />
     <MdOutlineStar />
