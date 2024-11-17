@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CommentContext } from "./CommentContext";
 
 
 function CommentProvider({children}) {
 
-    const [storedComment, setStoredComment] = useState('nome inicial')
+    const [storedComment, setStoredComment] = useState(() => {
+        return localStorage.getItem('comment') || ''
+    })
+
+    useEffect(() => {
+        localStorage.setItem('comment', storedComment)
+    }, [storedComment])
 
    
 

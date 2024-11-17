@@ -68,6 +68,7 @@ import { EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from 'swiper
 import { MdOutlineStar, MdOutlineStarBorder, MdOutlineStarHalf } from 'react-icons/md'
 import UserNameDisplay from './components/UserNameDisplay'
 import UserNameProvider from './context/UserNameProvider'
+import { CommentContext } from './context/CommentContext'
 
 
 
@@ -84,7 +85,7 @@ function App() {
 
   
   const { userNameInput } = useContext(UserNameContext);
-  // const { storedComment } = useContext(CommentContext)
+   const { storedComment } = useContext(CommentContext)
 
   console.log('vindo do contexto do nome de usuário para o App.jsx', userNameInput)
   // console.log('comentário para o evaluation: ', storedComment)
@@ -217,8 +218,7 @@ function App() {
 
 
     <p>Nome de usuário: {userNameInput}</p>
-    {/* <p>Comentário: {storedComment} </p> */}
-
+    <p>Comentário: {storedComment} </p> 
     <UserNameDisplay />
    
 
