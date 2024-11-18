@@ -91,6 +91,19 @@ function App() {
   // console.log('comentário para o evaluation: ', storedComment)
 
 
+  if (userNameInput === 'Sim') {
+    console.log('é sim')
+  } else {
+    console.log('É não')
+  }
+
+  if (userNameInput.length > 1 && storedComment.length > 1) {
+    console.log('Os dois tem caracteres')
+  } else {
+    console.log('Não retorno')
+  }
+
+
 
 
 
@@ -205,6 +218,12 @@ function App() {
 
     }
   }
+
+
+
+
+ 
+
 
 
 
@@ -354,23 +373,11 @@ scrollbar={{ draggable: true }}
 
 <SwiperSlide>
 
-<div className='conteiner_ev'>
-
-  <div className='ev_img_box'> <img src={cappucinoImg} /></div>
-
-  <div className='ev_box'>
-    <h2>{storedComment}</h2>
-    <p>{userNameInput}</p>
-    <MdOutlineStar />
-    <MdOutlineStar />
-    <MdOutlineStar />
-    <MdOutlineStarHalf />
-    <MdOutlineStarBorder />
-  </div>
+<div className='conteiner_ev' id='userComment_container'>
 
   <div className='box_opinion'>
-    <p className='txt_opinion'>Comentário de teste</p>
-    <p className='clientName'><BsPerson />Nome teste</p>
+    <p className='txt_opinion'>{storedComment}</p>
+    <p className='clientName'><BsPerson />{userNameInput}</p>
   </div>
 
 
