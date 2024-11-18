@@ -226,9 +226,9 @@ function App() {
   useEffect(() => {
 
       if (userNameInput.length > 1 && storedComment.length > 1) {
-    boxEvaluation.current.style.backgroundColor = 'green'
+    boxEvaluation.current.style.display = 'block'
   } else {
-    boxEvaluation.current.style.backgroundColor = 'yellow'
+    boxEvaluation.current.style.display = 'none'
   }
 
   })
