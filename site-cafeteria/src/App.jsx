@@ -221,6 +221,26 @@ function App() {
 
 
 
+  const boxEvaluation = useRef(null)
+
+  useEffect(() => {
+
+      if (userNameInput.length > 1 && storedComment.length > 1) {
+    boxEvaluation.current.style.backgroundColor = 'green'
+  } else {
+    boxEvaluation.current.style.backgroundColor = 'yellow'
+  }
+
+  })
+
+  
+
+
+
+
+
+
+
 
  
 
@@ -373,7 +393,7 @@ scrollbar={{ draggable: true }}
 
 <SwiperSlide>
 
-<div className='conteiner_ev' id='userComment_container'>
+<div className='conteiner_ev' ref={boxEvaluation}>
 
   <div className='box_opinion'>
     <p className='txt_opinion'>{storedComment}</p>
