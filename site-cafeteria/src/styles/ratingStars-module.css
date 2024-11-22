@@ -1,0 +1,30 @@
+#stars_evaluation_box {
+    display: flex;
+}
+
+.starIcon {
+    cursor: pointer;
+    list-style-type: none;
+    border: 2px solid var(--cooper2);
+    color: yellow;
+    font-size: 30px;
+}
+
+.starIcon::before {
+    content: "\2605"; /*estrela cheia */
+}
+
+.starIcon.active ~ .starIcon::before {
+    content: "\2606"; /*estrela vazia */
+}
+
+#stars_evaluation_box:hover .starIcon::before {
+    content: "\2605"; /* estrela cheia */
+
+}
+
+.starIcon:hover ~ .starIcon::before {
+    content: "\2606"; /* estrela vazia */
+}
+
+

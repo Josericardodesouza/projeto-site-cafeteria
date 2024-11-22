@@ -19,6 +19,8 @@ import CommentProvider from './context/CommentProvider.jsx'
 import UserComment from './components/UserComment.jsx'
 import UserName from './components/UserName.jsx'
 import UserNameDisplay from './components/UserNameDisplay.jsx'
+import RatingStars from './components/RatingStars.jsx'
+import RatingNoteProvider from './context/RatingNoteProvider.jsx'
 
 
 
@@ -29,11 +31,10 @@ const router = createBrowserRouter([
     element: 
     <UserNameProvider>
       <CommentProvider>
-
-      <App />
-
+        <RatingNoteProvider>
+         <App />
+        </RatingNoteProvider>
       </CommentProvider>
-   
     </UserNameProvider>
 
 
@@ -78,12 +79,11 @@ const router = createBrowserRouter([
       <UserAdressProvider>
         <UserNameProvider>
           <CommentProvider>
+            <RatingNoteProvider>
+              
+             <SendPage />
 
-
-
-            <SendPage />
-
-
+            </RatingNoteProvider>
           </CommentProvider>
         </UserNameProvider>
       </UserAdressProvider>
@@ -126,6 +126,15 @@ const router = createBrowserRouter([
         <UserNameDisplay />
       </UserNameProvider>
 
+    },
+
+    {
+      path: '/ratingStars',
+      element:
+      <RatingNoteProvider>
+        <RatingStars />
+      </RatingNoteProvider>
+ 
     }
 
     

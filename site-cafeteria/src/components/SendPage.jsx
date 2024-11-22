@@ -6,6 +6,7 @@ import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
 import UserComment from "./UserComment"
 import { CommentContext } from "../context/CommentContext"
+import RatingStars from "./RatingStars"
 
 
 
@@ -74,6 +75,10 @@ function SendPage() {
         <UserComment />
  
         <p>Valor do textArea: {storedComment}</p> 
+
+        <p>Selecione uma nota: </p>
+        <RatingStars />
+      
 
     
         

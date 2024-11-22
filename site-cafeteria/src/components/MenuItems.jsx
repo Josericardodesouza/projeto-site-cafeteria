@@ -690,7 +690,7 @@ function MenuItems() {
 
            
                 
-                aqui estão os itens: {renderListItemsSelected()}
+                <p>aqui estão os itens: {renderListItemsSelected()}</p>
 
         
      
