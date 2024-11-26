@@ -64,6 +64,8 @@ function SendPage() {
 
             lista dos itens pedidos
 
+            
+
 
             <p>Entrega em {adressUser.state}, na cidade de {adressUser.city}, no bairro {adressUser.neighborhood}, na rua {adressUser.street} </p>
 

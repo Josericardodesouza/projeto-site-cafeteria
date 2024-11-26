@@ -1,13 +1,17 @@
+import '../styles/menus-module.css'
+
 import { hotDrinks, coldDrinks } from './ConstantsItens'
 import { typesBrigadeiro, typesBrownies, typesCookies, typesCupcakes, typesPie } from './ConstantsItens'
 
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { useContext } from 'react'
-import { MenuItemsContext } from '../context/MenuItemsContext'
-import { Children } from 'react'
+
 import { useRef } from 'react'
+import { useContext } from 'react'
+
+import { SelectedItemsContext } from '../../src/context/SelectedItemsContext'
+
 
 
 
@@ -47,6 +51,17 @@ const macaPie = typesPie.find(candyTypes => candyTypes.name === 'Maçã')
 const pessegoPie = typesPie.find(candyTypes => candyTypes.name === 'Pêssego')
 
 function MenuItems() {
+
+
+     const {storedListItemsNames, setStoredListItemsNames} = useContext(SelectedItemsContext)
+
+
+     console.log('valor do provider da lista de itens: ', setStoredListItemsNames)
+
+
+
+
+
 
  
 
@@ -229,22 +244,77 @@ function MenuItems() {
     }
 
 
-    
-    const [itemsListSelected, setItemsListSelected] = useState('')
-  
-
 
 
     const renderListItemsSelected = () => {
+
         return Object.keys(itensProperties).map((key) => {
             if (itensProperties[key].quant > 0) {
-                return <p key={key}>Você selecionou {itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
+             
+                return <p key={key}>{itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
             }
             return null
         })
 
 
     }
+
+
+    // const [itemsListSelected, setItemsListSelected] = useState('')
+
+
+
+ 
+
+    var lista = setStoredListItemsNames
+
+
+
+
+
+
+
+
+    const testeList = ''
+
+       
+    const renderListItemsSelected_Names = () => {
+
+        return Object.keys(itensProperties).map((key) => {
+            if (itensProperties[key].quant > 0) {
+             
+                return <p key={key}>{itensProperties[key].name},&nbsp;</p>
+            }
+            return null
+        })
+
+
+    }
+
+
+    const [text, setText] = useState([])
+    
+    const selectedsRef = useRef('')
+
+
+    useEffect(() => { 
+        if (selectedsRef.current) {
+            const paragraphs = Array.from(selectedsRef.current.querySelectorAll('p'))
+            const textParagraphs = paragraphs.map((p) => p.textContent)
+
+            setText(textParagraphs)
+            setStoredListItemsNames(textParagraphs)
+
+            console.log('lista de selecionados: ', textParagraphs)
+        }
+     
+    }, [itensProperties])
+
+
+
+ 
+
+
 
     console.log('Teste do componenente da lista', { renderListItemsSelected })
     //   console.log('Isso é a itensProperties: ', item )
@@ -690,7 +760,34 @@ function MenuItems() {
 
            
                 
-                <p>aqui estão os itens: {renderListItemsSelected()}</p>
+                <div>aqui estão os itens: {renderListItemsSelected()}</div>
+             
+
+
+              
+
+                <div ref={selectedsRef} >
+               
+                    {renderListItemsSelected_Names()}
+                </div>
+
+
+                <p>valor da const Text: {text}</p>
+
+             
+
+                <p>Valor storedListItemsNames do Provider: {storedListItemsNames}</p>
+
+
+          
+
+
+            
+
+             
+
+
+                
 
         
      

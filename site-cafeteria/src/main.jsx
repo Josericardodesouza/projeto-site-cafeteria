@@ -13,7 +13,7 @@ import MenuColdDrinks from './components/MenuColdDrinks.jsx'
 import UserAdressProvider from './context/UserAdressProvider.jsx'
 import UserNameProvider from './context/UserNameProvider.jsx'
 import MenuItems from './components/MenuItems.jsx'
-import MenuItemsProvider from './context/MenuItemsProvider.jsx'
+
 
 import CommentProvider from './context/CommentProvider.jsx'
 import UserComment from './components/UserComment.jsx'
@@ -21,6 +21,8 @@ import UserName from './components/UserName.jsx'
 import UserNameDisplay from './components/UserNameDisplay.jsx'
 import RatingStars from './components/RatingStars.jsx'
 import RatingNoteProvider from './context/RatingNoteProvider.jsx'
+import SelectedItemsProvider from './context/SelectedItemsProvider.jsx'
+import { SelectedItemsContext } from './context/SelectedItemsContext.jsx'
 
 
 
@@ -32,7 +34,9 @@ const router = createBrowserRouter([
     <UserNameProvider>
       <CommentProvider>
         <RatingNoteProvider>
-         <App />
+          <SelectedItemsProvider>
+          <App />
+          </SelectedItemsProvider>
         </RatingNoteProvider>
       </CommentProvider>
     </UserNameProvider>
@@ -45,7 +49,9 @@ const router = createBrowserRouter([
     element: (
       <UserAdressProvider>
         <UserNameProvider>
+          <SelectedItemsProvider>
           <DeliveryPage />
+          </SelectedItemsProvider>
         </UserNameProvider>
       </UserAdressProvider>
 
@@ -80,9 +86,9 @@ const router = createBrowserRouter([
         <UserNameProvider>
           <CommentProvider>
             <RatingNoteProvider>
-              
-             <SendPage />
-
+              <SelectedItemsProvider>
+               <SendPage />
+              </SelectedItemsProvider>
             </RatingNoteProvider>
           </CommentProvider>
         </UserNameProvider>
@@ -135,7 +141,29 @@ const router = createBrowserRouter([
         <RatingStars />
       </RatingNoteProvider>
  
+    },
+
+    {
+
+    path: '/menuitems', 
+    element: 
+       <SelectedItemsProvider>
+             <MenuItems />
+       </SelectedItemsProvider>
+ 
+
+    },
+
+    {
+
+    path: '/menuitemscontext',
+    element:
+      <SelectedItemsProvider>
+          <SelectedItemsContext />
+      </SelectedItemsProvider>
+
     }
+
 
     
    

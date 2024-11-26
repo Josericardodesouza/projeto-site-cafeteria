@@ -132,6 +132,10 @@ th {
 }
 
 
+div#testeNomes {
+    display: flex;
+}
+
 
 
 

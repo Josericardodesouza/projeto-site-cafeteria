@@ -71,6 +71,8 @@ import UserNameProvider from './context/UserNameProvider'
 import { CommentContext } from './context/CommentContext'
 import RatingStars from './components/RatingStars'
 import { RatingNoteContext } from './context/RatingNoteContext'
+import SelectedItemsProvider from './context/SelectedItemsProvider'
+import { SelectedItemsContext } from './context/SelectedItemsContext'
 
 
 
@@ -89,6 +91,10 @@ function App() {
   const { userNameInput } = useContext(UserNameContext);
   const { storedComment } = useContext(CommentContext)
   const { storedNote } = useContext(RatingNoteContext)
+  const {storedListItemsNames} = useContext(SelectedItemsContext)
+
+
+  console.log('Valor do provider da lista de selecionados:', storedListItemsNames)
 
   console.log('vindo do contexto do nome de usuário para o App.jsx', userNameInput)
   console.log('valor da nota:', storedNote)
@@ -345,6 +351,7 @@ function App() {
       
       </div>
 
+    <p>itens selecionados: {storedListItemsNames}</p>
   
 
 
