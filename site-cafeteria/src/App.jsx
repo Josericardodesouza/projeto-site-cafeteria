@@ -91,7 +91,7 @@ function App() {
   const { userNameInput } = useContext(UserNameContext);
   const { storedComment } = useContext(CommentContext)
   const { storedNote } = useContext(RatingNoteContext)
-  const {storedListItemsNames} = useContext(SelectedItemsContext)
+  const { storedListItemsNames } = useContext(SelectedItemsContext)
 
 
   console.log('Valor do provider da lista de selecionados:', storedListItemsNames)
@@ -247,7 +247,7 @@ function App() {
 
 
 
-  var testeNum = parseInt(storedNote) 
+  var testeNum = parseInt(storedNote)
 
 
 
@@ -338,21 +338,12 @@ function App() {
     <>
 
 
-      <p>Nome de usuário: {userNameInput}</p>
-      <p>Comentário: {storedComment} </p>
-      <UserNameDisplay />
-      <span>&#9733;</span>
-      <span>&#9734;</span>
 
 
 
-      <div id="stars_container">
-      <div>exibido pelo switch case: {displayStars()}</div>
-      
-      </div>
 
-    <p>itens selecionados: {storedListItemsNames}</p>
-  
+
+
 
 
 
@@ -498,8 +489,19 @@ function App() {
                 <div className='box_opinion'>
                   <p className='txt_opinion'>{storedComment}</p>
                   <p className='clientName'><BsPerson />{userNameInput}</p>
+                  <div id="stars_container">
+                    <div>exibido pelo switch case: {displayStars()}</div>
+                  </div>
 
                 </div>
+
+
+
+
+
+
+
+
 
 
               </div>
