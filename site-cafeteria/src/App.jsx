@@ -3,20 +3,17 @@ import './App.css'
 import './styles/colorsAndFonts-module.css'
 import { Link } from 'react-router-dom'
 
+import videoHeader from './assets/videos/7487669-hd_1920_1080_24fps.mp4'
+
 
 
 import image2 from './assets/images/pexels-og-mpango-1582361-4090603.jpg'
 import image3 from './assets/images/pexels-michael-burrows-7125434.jpg'
 import image4 from './assets/images/pexels-ekrulila-2307221.jpg'
 import image5 from './assets/images/nathan-dumlao-zUNs99PGDg0-unsplash.jpg'
-
-
-
 import NavBar from './components/NavBar'
-import Menu from './components/Menu'
 import MenuCoffee from './components/MenuCoffee'
 import MenuCandy from './components/MenuCandy'
-
 import Footer from './components/Footer'
 
 
@@ -73,6 +70,7 @@ import RatingStars from './components/RatingStars'
 import { RatingNoteContext } from './context/RatingNoteContext'
 import SelectedItemsProvider from './context/SelectedItemsProvider'
 import { SelectedItemsContext } from './context/SelectedItemsContext'
+import { DiCoffeescript } from 'react-icons/di'
 
 
 
@@ -337,33 +335,33 @@ function App() {
 
     <>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <header id='header'>
-        <nav id='home_navBar'>
+<nav id='home_navBar'>
           <div className='box_navBarLinks'>
             <NavBar />
           </div>
+
           <div className='box_navBarLinks'>
             <NavBarHome scrollAboutUs={scrollAboutUs} scrollMenus={scrollMenus} scrollEvaluations={scrollEvaluations} />
           </div>
         </nav>
 
 
+      
+
+      <header id='header'>
+    
 
         <div id='box_header'>
-          <h1 id='title_header'>LOREM IPSUM COFFEE</h1>
+     
+
+          <video autoPlay muted loop>
+          <source src={videoHeader} type='video/mp4'></source>
+          </video>
+
+
+      
+
+
           {/* span */}
           {/* <p id='text_header'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> */}
         </div>
