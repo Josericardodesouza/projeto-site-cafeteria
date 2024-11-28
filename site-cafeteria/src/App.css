@@ -8,7 +8,7 @@ html, body {
 
 
 #hidden {
-  display: none;
+  display: block;
 }
 
 
@@ -16,6 +16,7 @@ nav#home_navBar {
   
   display: flex;
   flex-direction: column;
+  position: fixed;
 
  
 }
@@ -36,7 +37,7 @@ video {
   height: auto;
   margin: 0;
   padding: 0;
-  margin-top: 10vh;
+  margin-top: 15vh;
 
 }
 
@@ -369,6 +370,23 @@ div#testeEva {
 
 
 @media (min-width: 500px) {
+
+  
+nav#home_navBar {
+  
+  display: flex;
+  flex-direction: row;
+  height: 15vh;
+
+}
+
+video {
+  margin-top: 0px;
+}
+
+
+
+  
 
 /* 
   #div_box_links_nav {

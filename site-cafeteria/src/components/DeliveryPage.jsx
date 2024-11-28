@@ -29,6 +29,7 @@ import MenuItems from './MenuItems'
 import UserName from './UserName'
 import { UserNameContext } from '../context/UserNameContext'
 import { CommentContext } from '../context/CommentContext'
+import NavBar from './NavBar'
 
 
 
@@ -156,10 +157,13 @@ function DeliveryPage() {
 
     <>
 
+   
+    <NavBar />
+  
 
 
       <header id='header_deliveryPage'>
-        <SimpleNavBar />
+     
 
       </header>
 

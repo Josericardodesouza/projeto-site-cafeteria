@@ -1,6 +1,9 @@
 #navBar_scrolls {
     width: 100vw;
-    background-color: var(--brown);
+    background-color: var(--brownSugar);
+
+    
+    /* background-color: var(--brown); */
     display: flex;
     justify-content: center;
     height: 10vh;
@@ -36,6 +39,7 @@ label {
 .navBar_item {
     display: flex;
     flex-direction: row;
+    height: auto;
 
 }
 
@@ -64,6 +68,7 @@ input {
     transform: translateX(100%);
     transition: all .3s;
     margin: 0;
+    margin-bottom: 5px;
     padding: 2px;
     
   
@@ -76,6 +81,7 @@ input {
     text-align: center;
     margin: 0;
     color: black;
+    display: block;
   
   
 
@@ -94,22 +100,83 @@ input {
 
 
 input:checked ~ .btn {
-    cursor: default;
-    background: yellow;
-  
-   
+   animation: teste2 3s ease;
    
 }
 
 input:checked ~.btn .btn-icon {
     color: black;
+    
     /* transform: translateX(-5px); */
 }
 
 input:checked ~.btn .btn-text {
-    opacity: 1;
-    transform: translateY(10px);
-    transition-delay: .2s;
-   
+    animation: teste 3s forwards;
    
 }
+
+
+@keyframes teste {
+    0% {
+
+        opacity: 0;
+        transform: translateY(0);
+       background-color: transparent;
+        transition-delay: 0s;
+        margin-top: 0px;
+
+    }
+
+
+    50% {
+        opacity: 1;
+        transform: translateY(15px);
+       background-color: red;
+        transition-delay: .1s;
+        margin-top: 5px;
+    }
+
+    100% {
+
+        opacity: 0;
+        transform: translateY(0);
+       background-color: transparent;
+        transition-delay: 0s;
+        margin-top: 0px;
+
+    }
+}
+
+
+@keyframes teste2 {
+
+    0% {
+        cursor: default;
+        background: initial;
+        height: 0px;  
+    }
+
+    50% {
+        cursor: default;
+        background: yellow;
+        height: 50px;  
+    }
+
+    100% {
+        cursor: default;
+        background: initial;
+        height: 0px; 
+
+    }
+
+}
+
+@media (min-width: 500px) {
+    #navBar_scrolls {
+        width: 50vw;
+        height: 100%;
+    }
+}
+
+
+

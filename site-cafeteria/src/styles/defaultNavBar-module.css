@@ -1,7 +1,8 @@
 #navBar_logo {
     width: 100vw;
     height: auto;
-    background-color: var(--brown);
+    background-color: var(--brownSugar);
+    /* background-color: var(--brown); */
     
    
 
@@ -27,4 +28,14 @@
     color: black;
     font-size: 1.1em;
     font-family: 'lobster';
+}
+
+
+
+@media (min-width: 500px) {
+    #navBar_logo {
+        width: 50vw;
+        height: 100%;
+       
+    }
 }

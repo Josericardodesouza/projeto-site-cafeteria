@@ -18,11 +18,11 @@ function NavBarHome({ scrollAboutUs, scrollMenus, scrollEvaluations }) {
       <nav id="navBar_scrolls" className="navBar">
 
         <ul className="navBar_list">
-          
+
           <li className="navBar_item">
             <label for="input-1">
 
-              <input type="radio" id="input-1" name="group" checked />
+              <input type="radio" id="input-1" name="group" />
 
               <span className="btn">
                 <span className="btn-icon">
@@ -81,16 +81,16 @@ function NavBarHome({ scrollAboutUs, scrollMenus, scrollEvaluations }) {
           <li className="nav-item">
             <label for='input-4'>
 
-              <input type="radio" id="input-4" name="group" />
+            
 
-              <span className="btn">
+              {/* <span className="btn">
                 <span className="btn-icon">
                   <MdOutlineEmail  />
                 </span>
                 <span className="btn-text">
                   <Link to='/about'>Contato</Link>
                 </span>
-              </span>
+              </span> */}
 
 
             </label>
