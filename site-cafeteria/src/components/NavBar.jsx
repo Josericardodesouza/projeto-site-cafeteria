@@ -22,7 +22,7 @@ function NavBar() {
         
           <DiCoffeescript />
         
-         <a href="#" id='title_nav'>Cafeteria Bom Grão</a>
+         {/* <a href="#" id='title_nav'>Cafeteria Bom Grão</a> */}
       </div>
 
      

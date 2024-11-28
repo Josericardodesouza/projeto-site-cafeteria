@@ -25,13 +25,25 @@
 .navBar {
     width: 100vw;
     height: auto;
-    background-color: transparent;
-     /* background-color: var(--caramelBrown);  */
+   
+     background-color: var(--caramelBrown);  
   
     /* background-image: linear-gradient(to bottom, var(--copper) 30%, var(--copper2) 70%); */
 
 
 }
+
+div#testeIcon:hover::after {
+    display: flex;
+    content: 'Home';
+    align-content: center;
+    background-color: red;
+   
+}
+
+
+
+
 
 
 
@@ -90,8 +102,23 @@ div#conteiner_links_nav {
 }
 
 
+
+#btn_aboutUs:hover::after {
+    content: 'Quem somos';
+    padding-right: 2px;
+    display: flex;
+   
+    justify-content: center;
+}
+
+
 #btn_aboutUs {
     width: auto;
+}
+
+
+#btn_aboutUs > a {
+    margin: auto;
 }
 
 .box_links_nav {
