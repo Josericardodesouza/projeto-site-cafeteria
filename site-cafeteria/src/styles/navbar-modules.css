@@ -1,205 +1,115 @@
-
-
-     /* button {
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        border: none;
-    }
-
-    div#menu_lateral {
-        background-color: red;
-        height: 500px;
-        width: auto;
-        display: none;
-        z-index: 10;
-        position: relative;
-        right: 0;
-       
-    }  */
-
-
-
-
-
-.navBar {
+nav {
     width: 100vw;
-    height: auto;
-   
-     background-color: var(--caramelBrown);  
-  
-    /* background-image: linear-gradient(to bottom, var(--copper) 30%, var(--copper2) 70%); */
-
-
-}
-
-div#testeIcon:hover::after {
+    background-color: var(--brown);
     display: flex;
-    content: 'Home';
-    align-content: center;
-    background-color: red;
-   
-}
-
-
-
-
-
-
-
-
-nav#navBar_scrolls {
-     color: var(--beige); 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 5px; */
-    margin: 0;
-    padding: 0;
-    font-family: 'Lobster', Verdana, Geneva, Tahoma, sans-serif;
-    z-index: 5;
-    box-shadow: 1px 1px 20px solid black;
-   
-}
-
-nav > div#nav_img {
-    width: auto;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
     justify-content: center;
-
-}
-
-nav > div#nav_img > svg {
-    color: var(--brown);
-    font-size: 4em;
     height: auto;
-    margin: 2px;
-
-}
-
-a#title_nav {
-    font-size: 1.6em;
-    font-family: 'Lobster';
-    color: var(--brown);
-   
-}
-
-div#conteiner_links_nav {
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
-    white-space: nowrap;
-    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
     overflow-x: auto;
-    
-}
-
-
-
-#btn_aboutUs:hover::after {
-    content: 'Quem somos';
-    padding-right: 2px;
-    display: flex;
    
-    justify-content: center;
 }
 
 
-#btn_aboutUs {
-    width: auto;
-}
 
 
-#btn_aboutUs > a {
-    margin: auto;
-}
-
-.box_links_nav {
-    margin: 2px;
-    font-size: 1.4em;
+.navBar_list {
     display: flex;
-    align-items: center;
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+   
+   
 }
 
+label {
+    width: auto;
+    height: auto;
+    display: flex;
+    margin: 0;
+    padding: 0;
 
-.box_links_nav > a {
-    display: block;
-    color: var(--cream);
-    padding: 5px;
-    /* background-color: var(--cor7); */
-    text-decoration: none;
-    margin: 2px;
-    border-radius: 2px;
-    font-size: 1.0;
+
+}
+
+.navBar_item {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.btn {
+    width: auto;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    height: 30px;
     
-
+    
+    
 }
 
-.box_links_nav > a:hover {
-    background-color: var(--cream);
-    color: var(--cor7);
-    animation: buttonAnimation 1s ease;
+input {
+    display: none;
 }
 
-
-
-@media (max-width: 250px) {
-
-
-    div#conteiner_links_nav {
-        display: flex;
-        font-size: 1.5em;
-        overflow: hidden;
-        overflow-x: auto;
-        padding-left: 50px;
-      
-    }
-}
-
-
-
-
-
-@media (max-width: 800px) { 
-
-    nav {
-
-         height: auto;
-         display: block;
-         font-size: 0.9em;
-       
-
-    }
+.btn .btn-icon {
+    
+    color: yellow;
+    font-size: 15px;
+    transform: translateX(100%);
+    transition: all .3s;
+    margin: 0;
+    padding: 2px;
+    
   
-    div#conteiner_links_nav {
-        display: flex;
-        font-size: 1.0em;
-        
-       
-    }
-
-    .box_links_nav > a {
-        margin: auto;
-        width: 100%;
-        background-color: transparent;
-        border: 0px;
-        /* border-bottom: 5px solid var(--brownSugar); */
-        border-radius: 6px;
-
-    }
+   
+}
 
 
+.btn-text > a {
+    width: auto;
+    text-align: center;
+    margin: 0;
+    color: black;
+  
+  
 
-    
+}
+
+.btn .btn-text {
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    opacity: 0;
+    transition: all .2s;
+ 
+    height: 100%; 
+
+}
 
 
+input:checked ~ .btn {
+    cursor: default;
+    background: yellow;
+  
+   
+   
+}
 
+input:checked ~.btn .btn-icon {
+    color: black;
+    /* transform: translateX(-5px); */
+}
 
+input:checked ~.btn .btn-text {
+    opacity: 1;
+    transform: translateY(10px);
+    transition-delay: .2s;
+   
+   
 }
