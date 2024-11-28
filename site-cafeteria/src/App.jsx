@@ -340,11 +340,13 @@ function App() {
             <NavBar />
           </div> 
 
-          <div className='box_navBarLinks'>
+
+ 
+          <div className='box_navBarLinks' id='hidden'>
             <NavBarHome scrollAboutUs={scrollAboutUs} scrollMenus={scrollMenus} scrollEvaluations={scrollEvaluations} />
           </div>
         </nav>
-
+ 
 
       
 

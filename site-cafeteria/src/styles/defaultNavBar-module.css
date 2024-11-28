@@ -1,0 +1,30 @@
+#navBar_logo {
+    width: 100vw;
+    height: auto;
+    background-color: var(--brown);
+    
+   
+
+
+   
+}
+
+#nav_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}
+
+
+#nav_img > svg {
+    color: black;
+    font-size: 2em;
+}
+
+
+#title_nav {
+    color: black;
+    font-size: 1.1em;
+    font-family: 'lobster';
+}

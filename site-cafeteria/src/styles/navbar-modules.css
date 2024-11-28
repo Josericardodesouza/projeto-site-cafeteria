@@ -1,10 +1,10 @@
-nav {
+#navBar_scrolls {
     width: 100vw;
     background-color: var(--brown);
     display: flex;
     justify-content: center;
-    height: auto;
-    position: fixed;
+    height: 10vh;
+ 
     left: 0;
     right: 0;
     overflow-x: auto;
