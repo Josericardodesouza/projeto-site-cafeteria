@@ -1,7 +1,7 @@
 #navBar_logo {
     width: 100vw;
     height: auto;
-    background-color: var(--brownSugar);
+    background-color: transparent;
     /* background-color: var(--brown); */
     
    
@@ -19,13 +19,13 @@
 
 
 #nav_img > svg {
-    color: black;
+    color: var(--brown);
     font-size: 2em;
 }
 
 
 #title_nav {
-    color: black;
+    color: var(--brownSugar);
     font-size: 1.1em;
     font-family: 'lobster';
 }

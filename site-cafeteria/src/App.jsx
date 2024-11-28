@@ -335,7 +335,7 @@ function App() {
 
     <>
 
-<nav id='home_navBar'>
+<nav id='home_navBar' >
            <div className='box_navBarLinks'>
             <NavBar />
           </div> 
