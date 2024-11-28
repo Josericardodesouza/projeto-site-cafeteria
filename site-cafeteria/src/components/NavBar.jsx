@@ -1,5 +1,5 @@
 
-import '../styles/navbar-modules.css'
+import '../styles/defaultNavBar-module.css'
 import '../styles/colorsAndFonts-module.css'
 
 import { DiCoffeescript } from 'react-icons/di'

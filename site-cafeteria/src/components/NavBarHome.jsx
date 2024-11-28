@@ -13,25 +13,13 @@ import '../styles/navbar-modules.css'
 function NavBarHome({scrollAboutUs, scrollMenus, scrollEvaluations}) {
     return (
         <>
-
-
-        <nav>
-
-          <ul className=''>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-          </ul>
-
-
-        </nav>
          <nav id='navBar_scrolls' className='navBar'>
              <div id='conteiner_links_nav'>
 
               <div id='testeIcon'>
+                <input>
+                  Sobre nós
+                </input>
                 <span>
                   <BsShop />
                 </span>
