@@ -214,6 +214,9 @@ p#p_pre_menu {
 
 
 
+/*
+
+
 div#box_links_menu {
   width: 100vw;
   height: auto;
@@ -237,17 +240,17 @@ div#box_links_menu > a {
 div#box_links_menu > button {
   width: 25%;
 
-  /* margin: 20px; */
+  /* margin: 20px; 
   margin: 10px;
   background-color: var(--cor7);
   height: auto;
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
-  /* border-bottom: 5px solid var(--cor7); */
+  /* border-bottom: 5px solid var(--cor7); 
   border-left: 0;
   border-radius: 10px;
-  /* border-radius: 4px; */
+  /* border-radius: 4px; 
   font-size: 1.5em;
   font-family: 'Pacifico', Arial, Helvetica, sans-serif;
   
@@ -258,6 +261,12 @@ button#btn_cf:active {
   transform: scale(50%);
 
 }
+
+
+
+
+*/
+
 
 div#goDeliveryPage {
   width: 25%;

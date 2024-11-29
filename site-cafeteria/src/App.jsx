@@ -426,12 +426,12 @@ function App() {
 
         {/* <h3 className='title_box'>Confira nossos produtos com os melhores preços</h3> */}
 
-
+{/* 
         <div id='box_links_menu'>
           <button id='btn_cf' onClick={() => setActiveComponent('MenuCoffee')}>Bebidas quentes</button>
           <button id='btn_cg' onClick={() => setActiveComponent('MenuColdDrinks')}>Bebidas Geladas</button>
           <button id='btn_mc' onClick={() => setActiveComponent('MenuCandy')}>Doces</button>
-        </div>
+        </div> */}
 
         <section id='render_menu'>
           {renderComponent()}
