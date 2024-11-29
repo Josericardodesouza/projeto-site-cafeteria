@@ -212,10 +212,104 @@ p#p_pre_menu {
 
 }
 
+* {
+  list-style: none;
+}
 
 
-/*
+#buttons_display_menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+#box_buttons_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: auto;
+  border-radius: 8px;
+  background-color: white;
+  font-family: 'Nunito';
+
+
+}
+
+#box_buttons_menu > .ul_list {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+#box_buttons_menu .nav_item {
+  line-height: 95px;
+
+}
+
+
+.btn_menus {
+ 
+  cursor: pointer;
+  padding: 16px 24px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  
+
+
+
+
+}
+
+.input_menus {
+  display: none;
+}
+
+.btn_menus .btn_icon {
+  color: var(--cor7);
+  font-size: 24px;
+  transform: translateX(100%);
+  transition: all .3s;
+
+
+}
+
+.btn_menus .btn_text {
+  color: #202020;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.input_menus:checked ~ .btn_menus {
+  cursor: default;
+  background: var(--cor7);
+
+}
+
+.input_menus:checked ~ .btn_menus .btn_icon {
+  color: white;
+  transform: translateX(-5px);
+
+
+}
+
+.input_menus:checked ~ .btn_menus .btn_text {
+  opacity: 1;
+  transform: translateX(20px);
+  transition-delay: .2s;
+
+}
+
+
+
+
+
+/* 
 
 div#box_links_menu {
   width: 100vw;
@@ -256,16 +350,11 @@ div#box_links_menu > button {
   
 }
 
-button#btn_cf:active {
-  color: red;
-  transform: scale(50%);
 
-}
+ */
 
 
 
-
-*/
 
 
 div#goDeliveryPage {

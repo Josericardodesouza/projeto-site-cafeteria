@@ -71,6 +71,8 @@ import { RatingNoteContext } from './context/RatingNoteContext'
 import SelectedItemsProvider from './context/SelectedItemsProvider'
 import { SelectedItemsContext } from './context/SelectedItemsContext'
 import { DiCoffeescript } from 'react-icons/di'
+import { FaCoffee, FaCookie } from 'react-icons/fa'
+import { GiCoffeeCup } from 'react-icons/gi'
 
 
 
@@ -203,7 +205,6 @@ function App() {
 
 
 
-
   const [activeComponent, setActiveComponent] = useState(null)
 
   const renderComponent = () => {
@@ -212,6 +213,7 @@ function App() {
 
       case 'MenuCoffee':
         return <MenuCoffee />
+
 
 
       case 'MenuCandy':
@@ -335,29 +337,29 @@ function App() {
 
     <>
 
-<nav id='home_navBar' >
-           <div className='box_navBarLinks'>
-            <NavBar />
-          </div> 
+      <nav id='home_navBar' >
+        <div className='box_navBarLinks'>
+          <NavBar />
+        </div>
 
 
- 
-          <div className='box_navBarLinks' id='hidden'>
-            <NavBarHome scrollAboutUs={scrollAboutUs} scrollMenus={scrollMenus} scrollEvaluations={scrollEvaluations} />
-          </div>
-        </nav>
- 
 
-      
+        <div className='box_navBarLinks' id='hidden'>
+          <NavBarHome scrollAboutUs={scrollAboutUs} scrollMenus={scrollMenus} scrollEvaluations={scrollEvaluations} />
+        </div>
+      </nav>
+
+
+
 
       <header id='header'>
-    
+
 
         <div id='box_header'>
-     
+
 
           <video autoPlay muted loop>
-          <source src={videoHeader} type='video/mp4'></source>
+            <source src={videoHeader} type='video/mp4'></source>
           </video>
 
           {/* span */}
@@ -423,11 +425,72 @@ function App() {
 
         </section>
 
+<section id='buttons_display_menus'>
+  
+          <div id='box_buttons_menu' >
+            <ul className='ul_list'>
+              <li className='li_item'>
+  
+                <div onClick={() => setActiveComponent('MenuCofee')}>
+                  <label for="input_cf">
+                    <input type="radio" id="input_cf" className="input_menus" name="groupScroll" />
+                    <span className='btn_menus'>
+                      <GiCoffeeCup className='btn_icon' />
+                      <span className='btn_text'>
+                      Bebidas quentes
+                    </span>
+                    </span>
+                  
+                  </label>
+                </div>
+  
+              </li>
+  
+              <li className='li_item'>
+  
+                <div onClick={() => setActiveComponent('MenuColdDrinks')}>
+                  <label for="input_cg">
+                    <input type="radio" id="input_cg" className="input_menus" name="groupScroll" />
+                    <span className='btn_menus'>
+                      <FaCoffee className='btn_icon'/>
+                      <span className='btn_text'>
+                      Bebidas geladas
+                    </span>
+                    </span>
+                  
+                  </label>
+                </div>
+  
+              </li>
+  
+              <li className='li_item'>
+  
+                <div onClick={() => setActiveComponent('MenuCandy')}>
+                  <label for="input_mc">
+                    <input type="radio" id="input_mc" className="input_menus" name="groupScroll" />
+                    <span className='btn_menus'>
+                      <FaCookie className='btn_icon' />
+                      <span className='btn_text'>
+                      Doces
+                    </span>
+                    </span>
+                  
+                  </label>
+                </div>
+  
+              </li>
+  
+            </ul>
+  
+  
+          </div>
+</section>
+
 
         {/* <h3 className='title_box'>Confira nossos produtos com os melhores preços</h3> */}
 
-{/* 
-        <div id='box_links_menu'>
+
+        {/* <div id='box_links_menu'>
           <button id='btn_cf' onClick={() => setActiveComponent('MenuCoffee')}>Bebidas quentes</button>
           <button id='btn_cg' onClick={() => setActiveComponent('MenuColdDrinks')}>Bebidas Geladas</button>
           <button id='btn_mc' onClick={() => setActiveComponent('MenuCandy')}>Doces</button>
