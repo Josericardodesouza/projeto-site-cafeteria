@@ -360,22 +360,14 @@ function App() {
           <source src={videoHeader} type='video/mp4'></source>
           </video>
 
-
-      
-
-
           {/* span */}
           {/* <p id='text_header'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> */}
         </div>
       </header>
 
-
-
-
       <main>
 
         {/* <button id='btn_scroll_to_header'>GO UP</button> */}
-
 
 
         <section id='aboutUs' ref={refSectionAboutUs}>
