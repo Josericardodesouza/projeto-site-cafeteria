@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
 .section_menu {
     width: 100vw;
     height: auto;
@@ -19,8 +23,10 @@
 .box_menu {
     width: 85vw;
     height: 100%;
+    background-color: black;
     /* background-color: aqua; */
-    background-image: url(../assets/images/festa-de-halloween.jpg);  
+    /* background-image: radial-gradient(circle, var(--brown), white); */
+    /* background-image: url(../assets/images/festa-de-halloween.jpg);   */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,7 +37,8 @@
     font-weight: 200;
     vertical-align: center;
     align-items: center;
-    border: 10px solid #826546;
+    border: 10px solid var(--brown);
+    /* border: 10px solid #826546; */
 
     padding-top: 80px;
     padding-bottom: 80px;
@@ -71,9 +78,9 @@
 .item_text_menu {
     width: 70%;
     color: white;
-    font-family: 'Pacifico';
+    font-family: 'Fredericka the Great', sans-serif;
     font-size: 0.8em;
-    font-weight: 100;
+    font-weight: 700;
   
 }
 
