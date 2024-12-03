@@ -365,19 +365,32 @@ div#goDeliveryPage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--flax);
+  background-color: var(--cream);
+  box-shadow: 0px 0px 5px var(--generalShadow);
   border-radius: 20px;
 }
 
 div#goDeliveryPage:hover {
-  cursor: pointer;
+  background-color: var(--copper2);
+}
+
+div#goDeliveryPage:hover > .goDeliveryPage_hover {
+  color: var(--cream);
+ 
+
 }
 
 a {
   text-decoration: none;
 }
 
-div#goDeliveryPage > p {
+#goDeliveryPage_icon {
+  font-size: 2.5em;
+  color: var(--copper2);
+
+}
+
+#goDeliveryPage_p {
   font-size: 1.3em;
   text-decoration: none;
   color: var(--copper2);
@@ -385,10 +398,11 @@ div#goDeliveryPage > p {
   text-align: center;
 }
 
-div#goDeliveryPage > svg {
-  font-size: 2.5em;
-  color: var(--copper2);
-}
+
+
+
+
+
 
 
 
