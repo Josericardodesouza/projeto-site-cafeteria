@@ -93,11 +93,11 @@ function MenuCandy() {
 
         <section className='section_menu'>
             <div className = 'box_menu'>
-            <h1 className = 'title_table'>Doces</h1>
+            {/* <h1 className = 'title_table'></h1> */}
 
             <div className='conteiner_img_text' id='conteiner_img_text_candys'>
 
-                <p id='item_title_candy' className='item_title_menu'></p>
+                <p id='item_title_candy' className='item_title_menu'>Doces</p>
 
                 <img src="" alt="" id='item_img_candy' className='item_img_menu'/>
                 <svg className='icon_item_menu' id='icon_candy_menu'><GiCookie /></svg>

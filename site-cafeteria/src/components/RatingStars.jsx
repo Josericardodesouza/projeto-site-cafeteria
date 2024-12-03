@@ -70,7 +70,7 @@ function RatingStars() {
             <div id='-stars_evaluation_box' ref={boxStarsRef}>
 
                 <ul className="ratingStars">
-                    <li className="starIcon active" data-evaluation='1' onClick={confirmaValor}></li>
+                    <li className="starIcon" data-evaluation='1' onClick={confirmaValor}></li>
                     <li className="starIcon" data-evaluation='2' onClick={confirmaValor}></li>
                     <li className="starIcon" data-evaluation='3' onClick={confirmaValor}></li>
                     <li className="starIcon" data-evaluation='4' onClick={confirmaValor}></li>

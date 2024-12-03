@@ -152,13 +152,14 @@ function MenuCoffee() {
 
        <section className='section_menu'>
 
-        <div className = 'box_menu'>
+        <div id='box_links_menu' className = 'box_menu'>
    
 
         <div className='conteiner_img_text' id='conteiner_img_text_hotDrinks'>
-            <p id='title_item' className='item_title_menu'></p>
+        <svg className='icon_item_menu' id = 'icon_coffee_menu'><GiCoffeeCup /></svg>
+            <p id='title_item' className='item_title_menu'>Bebidas quentes</p>
             <img src= "" alt="" id='item_img' className = 'item_img_menu'/>
-            <svg className='icon_item_menu' id = 'icon_coffee_menu'><GiCoffeeCup /></svg>
+           
             <p id='item_text' className='item_text_menu'>Clique em um dos itens do cardápio abaixo para <strong>saber sobre</strong></p>
         </div>
             <table className='cardapio'>

@@ -84,7 +84,7 @@ function MenuColdDrinks() {
 
                 <div className='conteiner_img_text' id='conteiner_img_text_coldDrinks'>
 
-                    <p id='title_item_cd' className='item_title_menu'></p>
+                    <p id='title_item_cd' className='item_title_menu'>Bebidas geladas</p>
 
                     <img src="" alt="" id='item_img_cd' className='item_img_menu' />
                     <svg className='icon_item_menu' id='icon_cd_menu'><GiCoffeeMug /></svg>

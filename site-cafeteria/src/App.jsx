@@ -72,7 +72,7 @@ import SelectedItemsProvider from './context/SelectedItemsProvider'
 import { SelectedItemsContext } from './context/SelectedItemsContext'
 import { DiCoffeescript } from 'react-icons/di'
 import { FaCoffee, FaCookie } from 'react-icons/fa'
-import { GiCoffeeCup } from 'react-icons/gi'
+import { GiCoffeeCup, GiCoffeeMug } from 'react-icons/gi'
 
 
 
@@ -237,7 +237,8 @@ function App() {
 
   useEffect(() => {
 
-    if (userNameInput.length > 1 && storedComment.length > 1) {
+    if (userNameInput.length > 1 && storedComment.length > 1 && storedNote > 1 && storedListItemsNames.length > 1 ) {
+
       boxEvaluation.current.style.display = 'block'
     } else {
       boxEvaluation.current.style.display = 'none'
@@ -452,7 +453,7 @@ function App() {
                   <label for="input_cg">
                     <input type="radio" id="input_cg" className="input_menus" name="groupScroll" />
                     <span className='btn_menus'>
-                      <FaCoffee className='btn_icon'/>
+                      <GiCoffeeMug className='btn_icon'/>
                       <span className='btn_text'>
                       Bebidas geladas
                     </span>
@@ -502,8 +503,8 @@ function App() {
 
         <Link to='/deliveryPage'>
           <div id='goDeliveryPage'>
-            <CiCoffeeCup />
-            <p>Fazer um pedido</p>
+            <CiCoffeeCup className='goDeliveryPage_hover' id='goDeliveryPage_icon' />
+            <p className='goDeliveryPage_hover' id='goDeliveryPage_p'>Fazer um pedido</p>
           </div>
         </Link>
 
