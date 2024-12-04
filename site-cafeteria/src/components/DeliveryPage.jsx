@@ -30,6 +30,7 @@ import UserName from './UserName'
 import { UserNameContext } from '../context/UserNameContext'
 import { CommentContext } from '../context/CommentContext'
 import NavBar from './NavBar'
+import { TbTruckDelivery } from 'react-icons/tb'
 
 
 
@@ -173,32 +174,50 @@ function DeliveryPage() {
       <main>
 
 
-      <UserName />
+       <UserName />
 
       <p>nome: {userNameInput}</p>
 
-        <MenuItems />
-
-        <UserAdress />
-
-       
-        <div>
-
-          <p>Entrega em {adressUser.state}, na cidade de {adressUser.city}, no bairro {adressUser.neighborhood}, na rua {adressUser.street} </p>
+        <section id='section_menu'>
+          <MenuItems />
+        </section>
 
 
+        <p>Insira seu CEP e nome para confirmar o pedido: </p>
+
+
+
+        <section id='section_userAdress'>
+          <UserAdress />
+     
+        <div id='output_adressUser'>
+          <p>{adressUser.state} </p>
+          <p>{adressUser.city} </p>
+          <p>{adressUser.neighborhood}</p>
+          <p>{adressUser.street} </p>
         </div>
+
+        </section>
 
 
     
 
 
 
-        <Link to='/sendpage'>Concluir pedido</Link>
-        <button onClick={confirmar}>Confirmar</button>
+      
+          
+            <Link to='/sendpage' id='btn_toSendPage'>
+            <div id='goSendPage'>
+              <TbTruckDelivery className='goSendPage_hover' id='goSendPage_icon' />
+              <p className='goSendPage_hover' id='goSendPage_p'>Concluir pedido</p>
+            </div>
+            </Link>
+        
+
+        {/* <button onClick={confirmar}>Confirmar</button> */}
 
         <div>
-          Teste
+          {/* Teste */}
           <br />
           {/* {quantity.inputCafeBrownie} */}
 

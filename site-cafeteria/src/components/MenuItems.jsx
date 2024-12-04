@@ -508,7 +508,7 @@ function MenuItems() {
                         <p>{expTonico.name}</p>
                         <p>{expTonico.price}</p>
 
-                        <div>
+                        <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputExpTonico')}>+</button>
                             <input type="number" value={itensProperties.inputExpTonico.quant} />
                             <button onClick={() => subQuantity('inputExpTonico')}>-</button>
@@ -521,7 +521,7 @@ function MenuItems() {
                         <p>{frappuccino.name}</p>
                         <p>{frappuccino.price}</p>
 
-                        <div>
+                        <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputFrappuccino')}>+</button>
                             <input type="number" value={itensProperties.inputFrappuccino.quant} />
                             <button onClick={() => subQuantity('inputFrappuccino')}>-</button>
@@ -536,7 +536,7 @@ function MenuItems() {
 
 
             <h1>Doces</h1>
-            <div className='title_section' onClick={() => displayDivsItens('divsCandies_brigadeiros')}>
+            <div className='show_sections' onClick={() => displayDivsItens('divsCandies_brigadeiros')}>
                 <h2>Brigadeiros</h2>
                 {showDivItens.divsCandies_brigadeiros ? <IoIosArrowUp /> : <IoIosArrowDown />}
 
@@ -552,9 +552,11 @@ function MenuItems() {
                         <p>{cocoBrigadeiro.name}</p>
                         <p>{cocoBrigadeiro.price}</p>
 
-                        <button onClick={() => addQuantity('inputCocoBrig')}>+</button>
-                        <input type="number" id='inputBrig' value={itensProperties.inputCocoBrig.quant} readOnly />
-                        <button onClick={() => subQuantity('inputCocoBrig')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('inputCocoBrig')}>+</button>
+                            <input type="number" id='inputBrig' value={itensProperties.inputCocoBrig.quant} readOnly />
+                            <button onClick={() => subQuantity('inputCocoBrig')}>-</button>
+                        </div>
 
                     </div>
 
@@ -564,9 +566,11 @@ function MenuItems() {
                         <p>{morangoBrigadeiro.name}</p>
                         <p>{morangoBrigadeiro.price}</p>
 
-                        <button onClick={() => addQuantity('inputMrgBrig')}>+</button>
-                        <input type="number" id='inputMrBrig' value={itensProperties.inputMrgBrig.quant} />
-                        <button onClick={() => subQuantity('inputMrgBrig')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('inputMrgBrig')}>+</button>
+                            <input type="number" id='inputMrBrig' value={itensProperties.inputMrgBrig.quant} />
+                            <button onClick={() => subQuantity('inputMrgBrig')}>-</button>
+                        </div>
 
                     </div>
 
@@ -576,9 +580,11 @@ function MenuItems() {
                         <p>{lightBrigadeiro.name}</p>
                         <p>{lightBrigadeiro.price}</p>
 
-                        <button onClick={() => addQuantity('inputLightBrig')}>+</button>
-                        <input type="number" id='inputLightBrig' value={itensProperties.inputLightBrig.quant} />
-                        <button onClick={() => subQuantity('inputLightBrig')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('inputLightBrig')}>+</button>
+                            <input type="number" id='inputLightBrig' value={itensProperties.inputLightBrig.quant} />
+                            <button onClick={() => subQuantity('inputLightBrig')}>-</button>
+                        </div>
 
                     </div>
 
@@ -588,14 +594,14 @@ function MenuItems() {
 
 
 
-            <div className='title_section' onClick={() => displayDivsItens('divsCandies_brownies')}>
+            <div className='title_section show_sections' onClick={() => displayDivsItens('divsCandies_brownies')}>
                 <h2>Brownies</h2>
                 {showDivItens.divsCandies_brownies ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </div>
 
             {showDivItens.divsCandies_brownies && (
 
-                <section className='deliveryitens'>
+                <section className='deliveryItens'>
 
                     <div className='deliveryItem'>
 
@@ -603,9 +609,11 @@ function MenuItems() {
                         <p>{cafeBrownie.name}</p>
                         <p>{cafeBrownie.price}</p>
 
-                        <button onClick={() => addQuantity('inputCafeBrownie')}>+</button>
-                        <input type="number" id='inputCafeBrownie' value={itensProperties.inputCafeBrownie.quant} />
-                        <button onClick={() => subQuantity('inputCafeBrownie')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('inputCafeBrownie')}>+</button>
+                            <input type="number" id='inputCafeBrownie' value={itensProperties.inputCafeBrownie.quant} />
+                            <button onClick={() => subQuantity('inputCafeBrownie')}>-</button>
+                        </div>
 
                     </div>
 
@@ -615,7 +623,7 @@ function MenuItems() {
 
 
 
-            <div className='title_section' onClick={() => displayDivsItens('divsCandies_cookies')}>
+            <div className='title_section show_sections' onClick={() => displayDivsItens('divsCandies_cookies')}>
                 <h2>Cookies</h2>
                 {showDivItens.divsCandies_cookies ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </div>
@@ -629,9 +637,11 @@ function MenuItems() {
                         <p>{chocolateCookie.name}</p>
                         <p>{chocolateCookie.price}</p>
 
-                        <button onClick={() => addQuantity('inputChCookie')}>+</button>
-                        <input type="number" id='inputChCookie' value={itensProperties.inputChCookie.quant} />
-                        <button onClick={() => subQuantity('inputChCookie')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('inputChCookie')}>+</button>
+                            <input type="number" id='inputChCookie' value={itensProperties.inputChCookie.quant} />
+                            <button onClick={() => subQuantity('inputChCookie')}>-</button>
+                        </div>
 
                     </div>
 
@@ -639,7 +649,7 @@ function MenuItems() {
 
             )}
 
-            <div className='title_section' onClick={() => displayDivsItens('divsCandies_cupcakes')}>
+            <div className='title_section show_sections' onClick={() => displayDivsItens('divsCandies_cupcakes')}>
                 <h2>Cupcakes</h2>
                 {showDivItens.divsCandies_cupcakes ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </div>
@@ -654,9 +664,11 @@ function MenuItems() {
                         <p>{chocolateCupcake.name}</p>
                         <p>{chocolateCupcake.price}</p>
 
-                        <button onClick={() => addQuantity('inputChCupcake')}>+</button>
-                        <input type="number" id='inputChCupcake' value={itensProperties.inputChCupcake.quant} />
-                        <button onClick={() => subQuantity('inputChCupcake')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('inputChCupcake')}>+</button>
+                            <input type="number" id='inputChCupcake' value={itensProperties.inputChCupcake.quant} />
+                            <button onClick={() => subQuantity('inputChCupcake')}>-</button>
+                        </div>
 
                     </div>
 
@@ -666,9 +678,11 @@ function MenuItems() {
                         <p>{morangoCupcake.name}</p>
                         <p>{morangoCupcake.price}</p>
 
-                        <button onClick={() => addQuantity('inputMrgCupcake')}>+</button>
-                        <input type="number" value={itensProperties.inputMrgCupcake.quant} />
-                        <button onClick={() => subQuantity('inputMrgCupcake')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('inputMrgCupcake')}>+</button>
+                            <input type="number" value={itensProperties.inputMrgCupcake.quant} />
+                            <button onClick={() => subQuantity('inputMrgCupcake')}>-</button>
+                        </div>
 
                     </div>
 
@@ -678,9 +692,11 @@ function MenuItems() {
                         <p>{nozesCupcake.name}</p>
                         <p>{nozesCupcake.price}</p>
 
-                        <button onClick={() => addQuantity('inputNozesCupcake')}>+</button>
-                        <input type="number" value={itensProperties.inputNozesCupcake.quant} />
-                        <button onClick={() => subQuantity('inputNozesCupcake')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('inputNozesCupcake')}>+</button>
+                            <input type="number" value={itensProperties.inputNozesCupcake.quant} />
+                            <button onClick={() => subQuantity('inputNozesCupcake')}>-</button>
+                        </div>
 
                     </div>
 
@@ -688,7 +704,7 @@ function MenuItems() {
 
             )}
 
-            <div className='title_section' onClick={() => displayDivsItens('divsCandies_pies')}>
+            <div className='title_section show_sections' onClick={() => displayDivsItens('divsCandies_pies')}>
                 <h2>Tortas</h2>
                 {showDivItens.divsCandies_pies ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </div>
@@ -703,9 +719,11 @@ function MenuItems() {
                         <p>{amendoaMaracujaPie.name}</p>
                         <p>{amendoaMaracujaPie.price}</p>
 
-                        <button onClick={() => addQuantity('input_amendoaMaracujaPie')}>+</button>
-                        <input type="number" value={itensProperties.input_amendoaMaracujaPie.quant} />
-                        <button onClick={() => subQuantity('input_amendoaMaracujaPie')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('input_amendoaMaracujaPie')}>+</button>
+                            <input type="number" value={itensProperties.input_amendoaMaracujaPie.quant} />
+                            <button onClick={() => subQuantity('input_amendoaMaracujaPie')}>-</button>
+                        </div>
 
 
 
@@ -716,9 +734,11 @@ function MenuItems() {
                         <p>{amendoimPie.name}</p>
                         <p>{amendoimPie.price}</p>
 
-                        <button onClick={() => addQuantity('input_amendoimPie')}>+</button>
-                        <input type="number" value={itensProperties.input_amendoimPie.quant} />
-                        <button onClick={() => subQuantity('input_amendoimPie')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('input_amendoimPie')}>+</button>
+                            <input type="number" value={itensProperties.input_amendoimPie.quant} />
+                            <button onClick={() => subQuantity('input_amendoimPie')}>-</button>
+                        </div>
 
                     </div>
 
@@ -740,9 +760,11 @@ function MenuItems() {
                         <p>{pessegoPie.name}</p>
                         <p>{pessegoPie.price}</p>
 
-                        <button onClick={() => addQuantity('input_pessegoPie')}>+</button>
-                        <input type="number" value={itensProperties.input_pessegoPie.quant} />
-                        <button onClick={() => subQuantity('input_pessegoPie')}>-</button>
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('input_pessegoPie')}>+</button>
+                            <input type="number" value={itensProperties.input_pessegoPie.quant} />
+                            <button onClick={() => subQuantity('input_pessegoPie')}>-</button>
+                        </div>
 
 
                     </div>
@@ -750,34 +772,40 @@ function MenuItems() {
                 </section>
 
 
-
-
-
-
-
-
             )}
 
-
-           
                 
-                <div>aqui estão os itens: {renderListItemsSelected()}</div>
-             
+                <div id='conteiner_selectedItems'> 
+                    <div id='box_quantityItems'>
+                    {renderListItemsSelected()}
 
 
-              
+                    </div>
+                    <div id='box_value'>
+                        <p>valor total</p>
+                        {total}
+                       
 
-                <div ref={selectedsRef} >
+
+                    </div>
+                 
+                    </div>
+
+
+
+                    {/* Confira o que você escolheu:  */}
+
+                <div ref={selectedsRef} id='selected_names' >
                
                     {renderListItemsSelected_Names()}
                 </div>
 
 
-                <p>valor da const Text: {text}</p>
+                {/* <p>valor da const Text: {text}</p> */}
 
              
-
-                <p>Valor storedListItemsNames do Provider: {storedListItemsNames}</p>
+{/* 
+                <p>Valor storedListItemsNames do Provider: {storedListItemsNames}</p> */}
 
 
           
