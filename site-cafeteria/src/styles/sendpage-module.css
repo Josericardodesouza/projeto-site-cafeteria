@@ -1,0 +1,45 @@
+#header_sendPage {
+    height: auto;
+    background-color: red;
+    
+}
+
+#header_sendPage > video {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+#section_send > h1 {
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 100px 0px 100px 0px;
+
+}
+
+#adress_send {
+    display: flex;
+}
+
+
+
+#section_send > p {
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#icon_send {
+    font-size: 7.5em;
+    border-radius: 50%;
+    border: 5px solid black;
+    padding: 15px;
+   
+}
+
+
+
+
+

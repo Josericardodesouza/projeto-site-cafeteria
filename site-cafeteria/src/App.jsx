@@ -359,7 +359,7 @@ function App() {
         <div id='box_header'>
 
 
-          <video autoPlay muted loop>
+          <video autoPlay muted loop id='video_header_home'>
             <source src={videoHeader} type='video/mp4'></source>
           </video>
 

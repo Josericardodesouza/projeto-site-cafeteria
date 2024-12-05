@@ -23,6 +23,7 @@ import RatingStars from './components/RatingStars.jsx'
 import RatingNoteProvider from './context/RatingNoteProvider.jsx'
 import SelectedItemsProvider from './context/SelectedItemsProvider.jsx'
 import { SelectedItemsContext } from './context/SelectedItemsContext.jsx'
+import QuantItemsSelectedsProvider from './context/QuantItemsSelectedsProvider.jsx'
 
 
 
@@ -50,7 +51,9 @@ const router = createBrowserRouter([
       <UserAdressProvider>
         <UserNameProvider>
           <SelectedItemsProvider>
-          <DeliveryPage />
+            <QuantItemsSelectedsProvider>
+            <DeliveryPage />
+            </QuantItemsSelectedsProvider>
           </SelectedItemsProvider>
         </UserNameProvider>
       </UserAdressProvider>
@@ -87,7 +90,9 @@ const router = createBrowserRouter([
           <CommentProvider>
             <RatingNoteProvider>
               <SelectedItemsProvider>
-               <SendPage />
+                <QuantItemsSelectedsProvider>
+                <SendPage />
+                </QuantItemsSelectedsProvider>
               </SelectedItemsProvider>
             </RatingNoteProvider>
           </CommentProvider>
@@ -148,7 +153,9 @@ const router = createBrowserRouter([
     path: '/menuitems', 
     element: 
        <SelectedItemsProvider>
-             <MenuItems />
+        <QuantItemsSelectedsProvider>
+        <MenuItems />
+        </QuantItemsSelectedsProvider>
        </SelectedItemsProvider>
  
 

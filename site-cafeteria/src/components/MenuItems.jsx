@@ -12,6 +12,7 @@ import { useRef } from 'react'
 import { useContext } from 'react'
 
 import { SelectedItemsContext } from '../../src/context/SelectedItemsContext'
+import { QuantItemsSelectedsContext } from '../context/QuantItemsSelectedsContext'
 
 
 
@@ -55,6 +56,8 @@ function MenuItems() {
 
 
      const {storedListItemsNames, setStoredListItemsNames} = useContext(SelectedItemsContext)
+
+     const {storedQuantItems, setStoredQuantItems} = useContext(QuantItemsSelectedsContext)
 
 
      console.log('valor do provider da lista de itens: ', setStoredListItemsNames)
@@ -276,6 +279,7 @@ function MenuItems() {
 
 
 
+
     const testeList = ''
 
        
@@ -285,6 +289,9 @@ function MenuItems() {
             if (itensProperties[key].quant > 0) {
              
                 return <p key={key}>{itensProperties[key].name},&nbsp;</p>
+
+                
+
             }
             return null
         })
@@ -292,10 +299,16 @@ function MenuItems() {
 
     }
 
+ 
+
 
     const [text, setText] = useState([])
     
     const selectedsRef = useRef('')
+
+    const quantityItemsRef = useRef('')
+
+    const [itemsSelectedsQuant, setItemsSelectedsQuant] = useState([])
 
 
     useEffect(() => { 
@@ -312,6 +325,17 @@ function MenuItems() {
     }, [itensProperties])
 
 
+    useEffect(() => {
+        if (quantityItemsRef.current) {
+            const items = Array.from(quantityItemsRef.current.querySelectorAll('p'))
+            const listItems = items.map((p) => p.textContent)
+
+            setStoredQuantItems(listItems)
+
+           console.log('Quantidades: ', listItems)
+
+        }
+    }, [itensProperties])
 
  
 
@@ -776,7 +800,7 @@ function MenuItems() {
 
                 
                 <div id='conteiner_selectedItems'> 
-                    <div id='box_quantityItems'>
+                    <div id='box_quantityItems' ref={quantityItemsRef}>
                     {renderListItemsSelected()}
 
 
@@ -801,7 +825,7 @@ function MenuItems() {
                 </div>
 
 
-                {/* <p>valor da const Text: {text}</p> */}
+                 <p>valor da const Text: {text}</p> 
 
              
 {/* 
