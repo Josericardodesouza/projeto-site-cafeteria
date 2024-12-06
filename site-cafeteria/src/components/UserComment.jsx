@@ -31,15 +31,16 @@ function UserComment() {
     return (
         <>
 
-        <textarea placeholder="teste" onChange={textChange} onBlur={confirmComment} value={comment}>Teste</textarea>
+    
 
      
 
-        <div>
-            <p>comentário:</p>
+      
+            <p>Deixe um comentário:</p>
+            <textarea placeholder="teste" onChange={textChange} onBlur={confirmComment} value={comment}>Teste</textarea>
            
           
-        </div>
+      
 
         
         

@@ -1,5 +1,11 @@
 #stars_evaluation_box {
     display: flex;
+
+}
+
+.ratingStars {
+    display: inline-flex;
+    
 }
 
 .starIcon {
@@ -8,6 +14,7 @@
     border: 2px solid var(--cooper2);
     color: yellow;
     font-size: 30px;
+    margin: 5px;
 }
 
 .starIcon::before {

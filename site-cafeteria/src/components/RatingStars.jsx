@@ -66,7 +66,7 @@ function RatingStars() {
     return (
 
         <>
-            <h1>Componente das estrelas</h1>
+            {/* <h1>Componente das estrelas</h1> */}
             <div id='-stars_evaluation_box' ref={boxStarsRef}>
 
                 <ul className="ratingStars">

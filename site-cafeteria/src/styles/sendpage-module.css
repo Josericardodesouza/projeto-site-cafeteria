@@ -12,7 +12,7 @@
 }
 
 
-#section_send > h1 {
+#adress_send > h1 {
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
     font-weight: 700;
     text-align: center;
@@ -22,22 +22,59 @@
 
 #adress_send {
     display: flex;
+    flex-direction: column;
+    margin: 50px 0px 50px 0px;
+}
+
+#saida {
+    margin: auto;
+    width: 70vw;
 }
 
 
 
-#section_send > p {
+#adress_send > p {
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
-#icon_send {
-    font-size: 7.5em;
+
+
+#box_icon_send {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 5px solid black;
-    padding: 15px;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
+
+#icon_send {
+    font-size: 7.5em;
+    padding: 15px;
+}
+
+#evaluation_conteiner {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-family: 'Nunito';
+}
+
+
+#evaluation_conteiner > textarea {
+    width: 70%;
+    height: 110px;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+
+
 
 
 

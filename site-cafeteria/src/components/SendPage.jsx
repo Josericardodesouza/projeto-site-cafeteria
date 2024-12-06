@@ -29,9 +29,9 @@ function SendPage() {
 
     const { adressUser } = useContext(UserAdressContext);
     const { userNameInput } = useContext(UserNameContext);
-    const {storedComment} = useContext(CommentContext)
-    const {storedQuantItems} = useContext(QuantItemsSelectedsContext)
-    
+    const { storedComment } = useContext(CommentContext)
+    const { storedQuantItems } = useContext(QuantItemsSelectedsContext)
+
 
     console.log('O que vem do provider do stored: ', storedComment)
 
@@ -71,27 +71,45 @@ function SendPage() {
 
                 <section id='section_send'>
 
-                 <h1>Seu pedido está a caminho!</h1>
+                    <h1>Seu pedido está a caminho!</h1>
 
-                 <div id='adress_send'>
+                    
+
+                <div id='box_icon_send'>
+                    <FaTruck id='icon_send' />
+                </div>
+
+                    <div id='adress_send'>
+
+                        <p>Pedido enviado para <strong>{userNameInput}</strong></p>
+
+                        <p>A entrega será feita em: </p>
+                        <p>No logradouro <strong>{adressUser.street}, {adressUser.neighborhood}</strong></p>
+                        <p>Em <strong>{adressUser.city}, {adressUser.state}</strong></p>
+
+                        <p>Com os seguintes produtos: </p>
+                        
+                        <p id='saida'>{storedQuantItems}</p>
+
+                    </div>
+
+                    <div id='evaluation_conteiner'>
+
+                    <UserComment />
+
+                    <p>Selecione uma nota: </p>
+                    <RatingStars />
+
+
+                    </div>
 
 
 
 
-                 </div>
-
-
-                 <p>Pedido enviado para <strong>{userNameInput}</strong></p>
-
-                 <p>A entrega será feita em: </p>
-                <p>No logradouro <strong>{adressUser.street}, {adressUser.neighborhood}</strong></p>
-                <p>Em <strong>{adressUser.city}, {adressUser.state}</strong></p>
-
-                <p>Com os seguintes produtos: </p>
-                <p id='saida'>{storedQuantItems}</p>
+                 
 
                 </section>
-          
+
 
 
 
@@ -106,20 +124,16 @@ function SendPage() {
 
             </main>
 
-           
-            
+
+
 
             <section>
-        
-
-      
 
 
 
 
-            <div id='box_icon_send'>
-                <FaTruck id='icon_send' />
-            </div>
+
+
 
 
 
@@ -129,38 +143,37 @@ function SendPage() {
             </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        
 
-          
+            <p>Valor do textArea: {storedComment}</p>
 
            
 
-            
 
 
-            
-
-            
 
 
-        <UserComment />
- 
-        <p>Valor do textArea: {storedComment}</p> 
-
-        <p>Selecione uma nota: </p>
-        <RatingStars />
-      
-
-    
-        
- 
-
-     
 
 
-            
 
-     
+
+
+
+
 
 
 
@@ -182,9 +195,9 @@ function SendPage() {
             </div>
 
             <Link to='/'>Voltar para a Home</Link>
-         
 
-    
+
+
 
 
 

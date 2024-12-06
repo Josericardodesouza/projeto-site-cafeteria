@@ -264,6 +264,8 @@ function MenuItems() {
     }
 
 
+
+
     // const [itemsListSelected, setItemsListSelected] = useState('')
 
 
@@ -275,12 +277,8 @@ function MenuItems() {
 
 
 
-
-
-
-
-
     const testeList = ''
+
 
        
     const renderListItemsSelected_Names = () => {
@@ -290,14 +288,19 @@ function MenuItems() {
              
                 return <p key={key}>{itensProperties[key].name},&nbsp;</p>
 
-                
-
             }
             return null
         })
 
 
     }
+
+
+
+
+
+
+
 
  
 
@@ -309,6 +312,10 @@ function MenuItems() {
     const quantityItemsRef = useRef('')
 
     const [itemsSelectedsQuant, setItemsSelectedsQuant] = useState([])
+
+
+
+
 
 
     useEffect(() => { 
@@ -325,7 +332,7 @@ function MenuItems() {
     }, [itensProperties])
 
 
-    useEffect(() => {
+    useEffect(() => { 
         if (quantityItemsRef.current) {
             const items = Array.from(quantityItemsRef.current.querySelectorAll('p'))
             const listItems = items.map((p) => p.textContent)
