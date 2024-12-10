@@ -72,7 +72,7 @@ import SelectedItemsProvider from './context/SelectedItemsProvider'
 import { SelectedItemsContext } from './context/SelectedItemsContext'
 import { DiCoffeescript } from 'react-icons/di'
 import { FaCoffee, FaCookie } from 'react-icons/fa'
-import { GiCoffeeCup, GiCoffeeMug } from 'react-icons/gi'
+import { GiCoffeeCup, GiCoffeeMug, GiCupcake } from 'react-icons/gi'
 
 
 
@@ -168,6 +168,16 @@ function App() {
 
 
   const refDivButtonsMenus = useRef(null)
+
+
+
+  const activeMenu = () => {
+    setActiveComponent('MenuCofee')
+    scrollEvaluations()
+  }
+
+
+  //criar um ref para o cardápio e uma function de scroll igual a de cima.
 
   const scrollMenus = () => {
 
@@ -374,7 +384,7 @@ function App() {
 
 
         <section id='aboutUs' ref={refSectionAboutUs}>
-          <h1 className='title_box'>Um Pouco Sobre Nós</h1>
+          <h1 id='title_aboutUs'>Um Pouco Sobre Nós</h1>
 
           <div id='conteiner_1' className='conteiner_txtimg'>
 
@@ -437,6 +447,7 @@ function App() {
                     <input type="radio" id="input_cf" className="input_menus" name="groupScroll" />
                     <span className='btn_menus'>
                       <GiCoffeeCup className='btn_icon' />
+                      {/* <a className='btn_text' onClick={() => activeMenu()}> */}
                       <span className='btn_text'>
                       Bebidas quentes
                     </span>
@@ -470,9 +481,9 @@ function App() {
                   <label for="input_mc">
                     <input type="radio" id="input_mc" className="input_menus" name="groupScroll" />
                     <span className='btn_menus'>
-                      <FaCookie className='btn_icon' />
+                      <GiCupcake className='btn_icon' />
                       <span className='btn_text'>
-                      Doces
+                        Doces
                     </span>
                     </span>
                   
@@ -511,7 +522,7 @@ function App() {
 
 
 
-        <h3>Avaliados recentemente</h3>
+        <h3 className='title_box' id='title_evaluations'>Avaliados recentemente</h3>
 
         <section id='evaluations' ref={refSectionEv}>
 
@@ -523,7 +534,7 @@ function App() {
             slidesPerView={1.5}
             navigation
             pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
+          
           // effect= {'coverflow'}
           // coverflowEffect= { {
 
@@ -538,15 +549,16 @@ function App() {
           >
 
 
-            <SwiperSlide>
+            <SwiperSlide ref={boxEvaluation}>
 
-              <div className='conteiner_ev' ref={boxEvaluation}>
+              <div className='conteiner_ev'>
 
                 <div className='box_opinion'>
-                  <p className='txt_opinion'>{storedComment}</p>
+                  <p>Avaliando: {storedListItemsNames}</p>
+                  <p className='txt_opinion'>" {storedComment} "</p>
                   <p className='clientName'><BsPerson />{userNameInput}</p>
                   <div id="stars_container">
-                    <div>exibido pelo switch case: {displayStars()}</div>
+                    <div className='box_stars'>{displayStars()}</div>
                   </div>
 
                 </div>
@@ -568,7 +580,7 @@ function App() {
 
               <div className='conteiner_ev'>
 
-                <div className='ev_img_box'> <img src={cappucinoImg} /></div>
+                {/* <div className='ev_img_box'> <img src={cappucinoImg} /></div> */}
 
                 <div className='ev_box'>
                   <p>Cappuccino</p>
@@ -593,9 +605,9 @@ function App() {
 
               <div className='conteiner_ev'>
 
-                <div className='ev_img_box'>
+                {/* <div className='ev_img_box'>
                   <img src={cafeCoadoImg}></img>
-                </div>
+                </div> */}
 
                 <div className='ev_box'>
                   <p>Cappuccino</p>
@@ -619,9 +631,9 @@ function App() {
 
               <div className='conteiner_ev'>
 
-                <div className='ev_img_box'>
+                {/* <div className='ev_img_box'>
                   <img src={testeImg3}></img>
-                </div>
+                </div> */}
 
                 <div className='ev_box'>
                   <p>Frapuccino</p>
@@ -644,10 +656,10 @@ function App() {
             <SwiperSlide>
 
               <div className='conteiner_ev'>
-
+{/* 
                 <div className='ev_img_box'>
                   <img src={testeImg4} />
-                </div>
+                </div> */}
 
                 <div className='ev_box'>
                   <p>Bolo</p>
@@ -675,10 +687,10 @@ function App() {
             <SwiperSlide>
 
               <div className='conteiner_ev'>
-
+{/* 
                 <div className='ev_img_box'>
                   <img src={testeImg5} />
-                </div>
+                </div> */}
 
                 <div className='ev_box'>
                   <p>Cupcake</p>

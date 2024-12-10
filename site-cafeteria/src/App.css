@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: var(--cream2)
 }
 
 
@@ -19,6 +20,7 @@ nav#home_navBar {
   position: fixed;
   background-color: var(--cream2);
   box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.232);
+  z-index: 10;
 
  
 }
@@ -37,8 +39,8 @@ header {
 }
 
 #video_header_home {
-  width: 100vw;
-  height: auto;
+  width: auto;
+  height: 100vh;
   margin: 0;
   padding: 0;
   margin-top: 11vh;
@@ -84,9 +86,7 @@ h3 {
   font-family: 'Roboto';
 } */
 
-body {
-  background-color: whitesmoke;
-}
+
 
 /* 
 button#btn_scroll_to_header {
@@ -111,6 +111,17 @@ section#aboutUs {
   padding-top: 70px;
 
 
+}
+
+
+#title_aboutUs {
+  color: var(--brown);
+  font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+  font-size: 2.0em;
+  text-align: center;
+  margin: 0px 0px 25px 0px;
+  padding: 0;
+  text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.693);
 }
 
 
@@ -150,7 +161,7 @@ div#conteiner_1 {
 .title_box {
   color: var(--brownSugar);
   font-family: 'Pacifico', Arial, Helvetica, sans-serif;
-  font-size: 2.0em;
+  font-size: 1.8em;
   text-align: center;
   margin: 25px 0px 25px 0px;
   padding: 0;
@@ -160,7 +171,7 @@ div#conteiner_1 {
 
 
 .p_box {
-  font-size: 1.1em;
+  font-size: 1.0em;
   font-family: 'Nunito';
   font-weight: 300;
   width: 100%;
@@ -206,7 +217,7 @@ p#p_pre_menu {
   padding: 0;
   /* text-shadow: 2px 2px 2px black;
   color: var(--cream); */
-  font-family: 'Pacifico';
+  font-family: 'Nunito';
   font-size: 1.2em;
   color: var(--cocoa);
 
@@ -227,10 +238,10 @@ p#p_pre_menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 450px;
+  width: 100vw;
   height: auto;
   border-radius: 8px;
-  background-color: white;
+  background-color: transparent;
   font-family: 'Nunito';
 
 
@@ -254,9 +265,9 @@ p#p_pre_menu {
   padding: 16px 24px;
   border-radius: 4px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: auto;
+  width: 70%;
   
 
 
@@ -270,16 +281,17 @@ p#p_pre_menu {
 
 .btn_menus .btn_icon {
   color: var(--cor7);
-  font-size: 24px;
+  font-size: 3em;
   transform: translateX(100%);
   transition: all .3s;
+  padding: 5px;
 
 
 }
 
 .btn_menus .btn_text {
   color: #202020;
-  font-size: 12px;
+  font-size: 1.1em;
   font-weight: 700;
   opacity: 0;
   transition: all .2s;
@@ -414,6 +426,14 @@ a {
   z-index: 0;
 }
 
+
+#title_evaluations {
+  margin: 100px 0px 100px 0px;
+}
+
+
+
+
 section#evaluations {
   width: 100vw;
   height: auto;
@@ -436,21 +456,31 @@ section#evaluations {
 }
 
 
+.swiper-button-next {
+  color: red;
+}
+
+
 
 
 
 .conteiner_ev {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   height: auto;
   margin-bottom: 15px;
+  margin-top: 60px;
   box-sizing: border-box;
-  background-color: red;
-  margin: 5px;
+  background-color: var(--brownSugar);
+  /* margin: 5px; */
   padding: 5px;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 6px var(--generalShadow);
   align-items: center;
+  border-radius: 10px;
+  padding: 30px;
+
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
 }
 
 
@@ -495,6 +525,31 @@ div#testeEva {
 }  
 
 
+.swiper-wrapper {
+  margin-left: 20px;
+}
+
+
+.swiper-button-next::after {
+  display: none;
+
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+  background-color: red;
+}
+
+
+/*-----------------------------------------------------------*/
+
+
+
+
 
 
 @media (min-width: 500px) {
@@ -529,9 +584,11 @@ video {
 } */
 
 
-  .box_text {
-    width: 60%;
-  }
+
+ section#aboutUs {
+  width: 95vw;
+  margin: auto;
+ }
 
 
   div.conteiner_txtimg {
@@ -548,6 +605,12 @@ video {
   } 
 
 
+  
+  .box_text {
+    width: 60%;
+  }
+
+
   .conteiner_txtimg > img {
     width: 30%;
     height: auto;
@@ -557,9 +620,31 @@ video {
   
   }
 
-  
+
+  div.conteiner_ev {
+    width: 90%;
+  }
+
+  .btn_menus .btn_icon {
+    font-size: 3em;
+  } 
+
+
+
+  section#evaluations {
+    width: 95vw;
+    background-color: red;
+  }
+
+  div.swiper-slide .swiper-slide-next {
+    width: 300px;
+
+  }
 
 }
+
+
+/*-----------------------------------------------------------*/
 
 
 
@@ -568,24 +653,31 @@ video {
 
   
 section#aboutUs {
-  width: 95vw;
+  width: 90vw;
   margin: auto;
 }
 
 .title_box {
-  font-size: 2.5em;
+  font-size: 2.0em;
 }
 
 .p_box {
-  font-size: 1.4em;
+  font-size: 1.2em;
+}
+
+
+section#evaluations {
+  width: 80%;
+}
+
+div.conteiner_ev {
+  width: 350px;
+}
+
+
 }
 
 
 
-
-
-
-
-}
 
 
