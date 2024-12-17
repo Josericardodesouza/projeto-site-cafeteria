@@ -282,7 +282,7 @@ function MenuItems() {
         return Object.keys(itensProperties).map((key) => {
             if (itensProperties[key].quant > 0) {
 
-                return <p key={key}>{itensProperties[key].quant} unidade(s) de {itensProperties[key].category} {itensProperties[key].name} no valor de R$<strong>{itensProperties[key].price.replace('.', ',')}</strong></p>
+                return <p key={key}>{itensProperties[key].quant} unidade(s) de {itensProperties[key].category} {itensProperties[key].name} no valor de R$<strong>{itensProperties[key].price.replace('.', ',')}</strong> cada</p>
 
 
            

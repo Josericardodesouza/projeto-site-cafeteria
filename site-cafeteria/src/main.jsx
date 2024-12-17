@@ -93,7 +93,9 @@ const router = createBrowserRouter([
      <UserAdressProvider>
       <UserNameProvider>
         <TotalValueProvider>
-        <Confirmation />
+          <QuantItemsSelectedsProvider>
+            <Confirmation />
+          </QuantItemsSelectedsProvider>
         </TotalValueProvider>
       </UserNameProvider>
      </UserAdressProvider>

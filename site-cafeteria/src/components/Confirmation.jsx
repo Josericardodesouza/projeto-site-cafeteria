@@ -1,11 +1,13 @@
+import '../styles/confirmationpage-module.css'
+import NavBar from './NavBar'
 import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
 import UserName from "./UserName"
 import UserAdress from "./UserAdress"
 import { Link } from "react-router-dom"
-import TotalValueProvider from "../context/TotalValueProvider"
 import { TotalValueContext } from "../context/TotalValueContext"
+import { QuantItemsSelectedsContext } from '../context/QuantItemsSelectedsContext'
 
 function Confirmation() {
 
@@ -13,6 +15,7 @@ function Confirmation() {
     const {userNameInput} = useContext(UserNameContext)
     const {adressUser} = useContext(UserAdressContext)
     const {storedTotal} = useContext(TotalValueContext)
+    const {storedQuantItems} = useContext(QuantItemsSelectedsContext)
 
     console.log('valor do storedTotal: ', storedTotal)
     
@@ -20,21 +23,20 @@ function Confirmation() {
 
         <>
 
-        <h1>Componente de confirmação</h1>
+      <nav>
+      <NavBar />
+      </nav>
 
-        <h1>Teste</h1>
+      <main>
 
+      <h1>Preencha os dados abaixo para confirmar seu pedido</h1>
 
-        <div>
-          <h2>Para continuar, preencha os campos abaixo.</h2>
-        </div>
-
-
+      <section id='input_name_conteiner'>
         <p>Qual o seu nome?</p>
         <UserName />
         <p>nome: {userNameInput}</p>
+        </section>
 
-              
         <section id='section_userAdress'>
         <p>Insira seu CEP e nome para confirmar o pedido: </p>
           <UserAdress />
@@ -46,7 +48,39 @@ function Confirmation() {
             <p>{adressUser.street} </p>
           </div>
 
+
         </section>
+
+
+        <section>
+
+          <div id='output_items_confirmation'>
+         
+            <p>{storedQuantItems}</p>
+          </div>
+
+
+
+
+
+        </section>
+
+
+
+
+      </main>
+
+
+
+     
+
+   
+
+              
+
+
+   
+
 
 
         <h1>{storedTotal}</h1>
