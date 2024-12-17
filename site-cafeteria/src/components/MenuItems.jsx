@@ -1,4 +1,4 @@
-import '../styles/menus-module.css'
+
 
 
 import { hotDrinks, coldDrinks } from './ConstantsItens'
@@ -13,12 +13,13 @@ import { useContext } from 'react'
 
 import { SelectedItemsContext } from '../../src/context/SelectedItemsContext'
 import { QuantItemsSelectedsContext } from '../context/QuantItemsSelectedsContext'
+import { TotalValueContext } from '../context/TotalValueContext'
 
 
 
 
 
-const coado = hotDrinks.find(coffee => coffee.name === 'coado')
+const coado = hotDrinks.find(coffee => coffee.name === 'Coado')
 const cappuccino = hotDrinks.find(coffee => coffee.name === 'Cappuccino')
 const espresso = hotDrinks.find(coffee => coffee.name === 'Espresso')
 const latte = hotDrinks.find(coffee => coffee.name === 'Latte')
@@ -26,7 +27,7 @@ const mocha = hotDrinks.find(coffee => coffee.name === 'Mocha')
 const pingado = hotDrinks.find(coffee => coffee.name === 'Pingado')
 
 
-const cafeGelado = coldDrinks.find(coldDrink => coldDrink.name === 'café gelado')
+const cafeGelado = coldDrinks.find(coldDrink => coldDrink.name === 'Gelado')
 const coldBrew = coldDrinks.find(coldDrink => coldDrink.name === 'Cold Brew')
 const expTonico = coldDrinks.find(coldDrink => coldDrink.name === 'Expresso Tônico')
 const frappuccino = coldDrinks.find(coldDrink => coldDrink.name === 'Frappuccino')
@@ -55,19 +56,23 @@ const pessegoPie = typesPie.find(candyTypes => candyTypes.name === 'Pêssego')
 function MenuItems() {
 
 
-     const {storedListItemsNames, setStoredListItemsNames} = useContext(SelectedItemsContext)
+    const { storedListItemsNames, setStoredListItemsNames } = useContext(SelectedItemsContext)
 
-     const {storedQuantItems, setStoredQuantItems} = useContext(QuantItemsSelectedsContext)
+    const { storedQuantItems, setStoredQuantItems } = useContext(QuantItemsSelectedsContext)
 
+    const {storedTotal, setStoredTotal} = useContext(TotalValueContext)
 
-     console.log('valor do provider da lista de itens: ', setStoredListItemsNames)
-
-
-
+    
 
 
+    console.log('valor do provider da lista de itens: ', setStoredListItemsNames)
 
- 
+
+
+
+
+
+
 
 
     const [showDivItens, setShowDivItens] = useState({
@@ -104,69 +109,91 @@ function MenuItems() {
 
     const coado_name = coado ? coado.name : ''
     const coado_price = coado ? parseFloat(coado.price.replace(',', '.')) : 0
+    const coado_category = coado ? coado.category : ''
 
     const cappuccino_name = cappuccino ? cappuccino.name : ''
     const cappuccino_price = cappuccino ? parseFloat(cappuccino.price.replace(',', '.')) : 0
+    const cappuccino_category = cappuccino ? cappuccino.category : ''
 
     const espresso_name = espresso ? espresso.name : ''
     const espresso_price = espresso ? parseFloat(espresso.price.replace(',', '.')) : 0
+    const espresso_category = espresso ? espresso.category : ''
 
     const latte_name = latte ? latte.name : ''
     const latte_price = latte ? parseFloat(latte.price.replace(',', '.')) : 0
+     const latte_category = latte ? latte.category : ''
 
     const mocha_name = mocha ? mocha.name : ''
     const mocha_price = mocha ? parseFloat(mocha.price.replace(',', '.')) : 0
+     const mocha_category = mocha ? mocha.category : ''
 
     const pingado_name = pingado ? pingado.name : ''
     const pingado_price = pingado ? parseFloat(pingado.price.replace(',', '.')) : 0
+     const pingado_category = pingado ? pingado.category : ''
 
     const cfGelado_name = cafeGelado ? cafeGelado.name : ''
     const cfGelado_price = cafeGelado ? parseFloat(cafeGelado.price.replace(',', '.')) : 0
+     const cfGelado_category = cafeGelado ? cafeGelado.category : ''
 
     const coldBrew_name = coldBrew ? coldBrew.name : ''
     const coldBrew_price = coldBrew ? parseFloat(coldBrew.price.replace(',', '.')) : 0
+     const coldBrew_category = coldBrew ? coldBrew.category : ''
 
     const expTonico_name = expTonico ? expTonico.name : ''
     const expTonico_price = expTonico ? parseFloat(expTonico.price.replace(',', '.')) : 0
+     const expTonico_category = expTonico ? expTonico.category : ''
 
     const frappuccino_name = frappuccino ? frappuccino.name : ''
     const frappuccino_price = frappuccino ? parseFloat(frappuccino.price.replace(',', '.')) : 0
+     const frappuccino_category = frappuccino ? frappuccino.category : ''
 
     const cocoBrig_name = cocoBrigadeiro ? cocoBrigadeiro.name : ''
     const cocoBrig_price = cocoBrigadeiro ? parseFloat(cocoBrigadeiro.price.replace(',', '.')) : 0
+     const cocoBrig_category = cocoBrigadeiro ? cocoBrigadeiro.category : ''
 
     const mrgBrig_name = morangoBrigadeiro ? morangoBrigadeiro.name : ''
     const mrgBrig_price = morangoBrigadeiro ? parseFloat(morangoBrigadeiro.price.replace(',', '.')) : 0
+     const mrBrig_category = morangoBrigadeiro ? morangoBrigadeiro.category : ''
 
     const lightBrig_name = lightBrigadeiro ? lightBrigadeiro.name : ''
     const lightBrig_price = lightBrigadeiro ? parseFloat(lightBrigadeiro.price.replace(',', '.')) : 0
+     const lightBrig_category = lightBrigadeiro ? lightBrigadeiro.category : ''
 
     const cfBrownie_name = cafeBrownie ? cafeBrownie.name : ''
     const cfBrownie_price = cafeBrownie ? parseFloat(cafeBrownie.price.replace(',', '.')) : 0
+     const cfBrownie_category = cafeBrownie ? cafeBrownie.category : ''
 
     const chCookie_name = chocolateCookie ? chocolateCookie.name : ''
     const chCookie_price = chocolateCookie ? parseFloat(chocolateCookie.price.replace(',', '.')) : 0
+     const chCookie_category = chocolateCookie ? chocolateCookie.category : ''
 
     const chCupcake_name = chocolateCupcake ? chocolateCupcake.name : ''
     const chCupcake_price = chocolateCupcake ? parseFloat(chocolateCupcake.price.replace(',', '.')) : 0
+     const chCupcake_category = chocolateCupcake ? chocolateCupcake.category : ''
 
     const mrgCupcake_name = morangoCupcake ? morangoCupcake.name : ''
     const mrgCupcake_price = morangoCupcake ? parseFloat(morangoCupcake.price.replace(',', '.')) : 0
+     const mrgCupcake_category = morangoCupcake ? morangoCupcake.category : ''
 
     const nozesCupcake_name = nozesCupcake ? nozesCupcake.name : ''
     const nozesCupcake_price = nozesCupcake ? parseFloat(nozesCupcake.price.replace(',', '.')) : 0
+     const nozesCupcake_category = nozesCupcake ? nozesCupcake.category : ''
 
     const amdMaracujaPie_name = amendoaMaracujaPie ? amendoaMaracujaPie.name : ''
     const amdMaracujaPie_price = amendoaMaracujaPie ? parseFloat(amendoaMaracujaPie.price.replace(',', '.')) : 0
+     const amdMaracujaPie_category = amendoaMaracujaPie ? amendoaMaracujaPie.category : ''
 
     const amendoimPie_name = amendoimPie ? amendoimPie.name : ''
     const amendoimPie_price = amendoimPie ? parseFloat(amendoimPie.price.replace(',', '.')) : 0
+     const amendoimPie_category = amendoimPie ? amendoimPie.category : ''
 
     const macaPie_name = macaPie ? macaPie.name : ''
     const macaPie_price = macaPie ? parseFloat(macaPie.price.replace(',', '.')) : 0
+     const macaPie_category = macaPie ? macaPie.category : ''
 
     const pssgPie_name = pessegoPie ? pessegoPie.name : ''
     const pssgPie_price = pessegoPie ? parseFloat(pessegoPie.price.replace(',', '.')) : 0
+     const pssgPie_category = pessegoPie ? pessegoPie.category : ''
 
 
 
@@ -176,48 +203,48 @@ function MenuItems() {
 
 
 
-        inputCoado: { quant: 0, name: coado_name, price: coado_price },
-        inputCappuccino: { quant: 0, name: cappuccino_name, price: cappuccino_price },
+        inputCoado: { quant: 0, name: coado_name, price: coado_price.toFixed(2), category: coado_category },
+        inputCappuccino: { quant: 0, name: cappuccino_name, price: cappuccino_price.toFixed(2), category: cappuccino_category },
 
-        inputEspresso: { quant: 0, name: espresso_name, price: espresso_price },
+        inputEspresso: { quant: 0, name: espresso_name, price: espresso_price.toFixed(2), category: espresso_category },
 
-        inputLatte: { quant: 0, name: latte_name, price: latte_price },
+        inputLatte: { quant: 0, name: latte_name, price: latte_price.toFixed(2), category: latte_category },
 
-        inputMocha: { quant: 0, name: mocha_name, price: mocha_price },
+        inputMocha: { quant: 0, name: mocha_name, price: mocha_price.toFixed(2), category: mocha_category },
 
-        inputPingado: { quant: 0, name: pingado_name, price: pingado_price },
+        inputPingado: { quant: 0, name: pingado_name, price: pingado_price.toFixed(2), category: pingado_category },
 
-        inputCafeGelado: { quant: 0, name: cfGelado_name, price: cfGelado_price },
+        inputCafeGelado: { quant: 0, name: cfGelado_name, price: cfGelado_price.toFixed(2), category: cfGelado_category },
 
-        inputColdBrew: { quant: 0, name: coldBrew_name, price: coldBrew_price },
+        inputColdBrew: { quant: 0, name: coldBrew_name, price: coldBrew_price.toFixed(2), category: coldBrew_category },
 
-        inputExpTonico: { quant: 0, name: expTonico_name, price: expTonico_price },
+        inputExpTonico: { quant: 0, name: expTonico_name, price: expTonico_price.toFixed(2), category: expTonico_category },
 
-        inputFrappuccino: { quant: 0, name: frappuccino_name, price: frappuccino_price },
+        inputFrappuccino: { quant: 0, name: frappuccino_name, price: frappuccino_price.toFixed(2), category: frappuccino_category },
 
-        inputCocoBrig: { quant: 0, name: cocoBrig_name, price: cocoBrig_price },
+        inputCocoBrig: { quant: 0, name: cocoBrig_name, price: cocoBrig_price.toFixed(2), category: cocoBrig_category },
 
-        inputMrgBrig: { quant: 0, name: mrgBrig_name, price: mrgBrig_price },
+        inputMrgBrig: { quant: 0, name: mrgBrig_name, price: mrgBrig_price.toFixed(2), category: mrBrig_category },
 
-        inputLightBrig: { quant: 0, name: lightBrig_name, price: lightBrig_price },
+        inputLightBrig: { quant: 0, name: lightBrig_name, price: lightBrig_price.toFixed(2), category: lightBrig_category },
 
-        inputCafeBrownie: { quant: 0, name: cfBrownie_name, price: cfBrownie_price },
+        inputCafeBrownie: { quant: 0, name: cfBrownie_name, price: cfBrownie_price.toFixed(2), category: cfBrownie_category },
 
-        inputChCookie: { quant: 0, name: chCookie_name, price: chCookie_price },
+        inputChCookie: { quant: 0, name: chCookie_name, price: chCookie_price.toFixed(2), category: chCookie_category },
 
-        inputChCupcake: { quant: 0, name: chCupcake_name, price: chCookie_price },
+        inputChCupcake: { quant: 0, name: chCupcake_name, price: chCookie_price.toFixed(2), category: chCookie_category },
 
-        inputMrgCupcake: { quant: 0, name: mrgCupcake_name, price: mrgBrig_price },
+        inputMrgCupcake: { quant: 0, name: mrgCupcake_name, price: mrgBrig_price.toFixed(2), category: mrgCupcake_category },
 
-        inputNozesCupcake: { quant: 0, name: nozesCupcake_name, price: nozesCupcake_price },
+        inputNozesCupcake: { quant: 0, name: nozesCupcake_name, price: nozesCupcake_price.toFixed(2), category: nozesCupcake_category },
 
-        input_amendoaMaracujaPie: { quant: 0, name: amdMaracujaPie_name, price: amdMaracujaPie_price },
+        input_amendoaMaracujaPie: { quant: 0, name: amdMaracujaPie_name, price: amdMaracujaPie_price.toFixed(2), category: amdMaracujaPie_category },
 
-        input_amendoimPie: { quant: 0, name: amendoimPie_name, price: amendoimPie_price },
+        input_amendoimPie: { quant: 0, name: amendoimPie_name, price: amendoimPie_price.toFixed(2), category: amendoimPie_category },
 
-        input_macaPie: { quant: 0, name: macaPie_name, price: macaPie_price },
+        input_macaPie: { quant: 0, name: macaPie_name, price: macaPie_price.toFixed(2), category: macaPie_category },
 
-        input_pessegoPie: { quant: 0, name: pssgPie_name, price: pssgPie_price }
+        input_pessegoPie: { quant: 0, name: pssgPie_name, price: pssgPie_price.toFixed(2), category: pssgPie_category }
 
     })
 
@@ -254,8 +281,11 @@ function MenuItems() {
 
         return Object.keys(itensProperties).map((key) => {
             if (itensProperties[key].quant > 0) {
-             
-                return <p key={key}>{itensProperties[key].quant} unidades de {itensProperties[key].name} no valor de {itensProperties[key].price}</p>
+
+                return <p key={key}>{itensProperties[key].quant} unidade(s) de {itensProperties[key].category} {itensProperties[key].name} no valor de R$<strong>{itensProperties[key].price.replace('.', ',')}</strong></p>
+
+
+           
             }
             return null
         })
@@ -270,7 +300,7 @@ function MenuItems() {
 
 
 
- 
+
 
     var lista = setStoredListItemsNames
 
@@ -280,12 +310,12 @@ function MenuItems() {
     const testeList = ''
 
 
-       
+
     const renderListItemsSelected_Names = () => {
 
         return Object.keys(itensProperties).map((key) => {
             if (itensProperties[key].quant > 0) {
-             
+
                 return <p key={key}>{itensProperties[key].name},&nbsp;</p>
 
             }
@@ -302,11 +332,11 @@ function MenuItems() {
 
 
 
- 
+
 
 
     const [text, setText] = useState([])
-    
+
     const selectedsRef = useRef('')
 
     const quantityItemsRef = useRef('')
@@ -318,7 +348,7 @@ function MenuItems() {
 
 
 
-    useEffect(() => { 
+    useEffect(() => {
         if (selectedsRef.current) {
             const paragraphs = Array.from(selectedsRef.current.querySelectorAll('p'))
             const textParagraphs = paragraphs.map((p) => p.textContent)
@@ -328,23 +358,23 @@ function MenuItems() {
 
             console.log('lista de selecionados: ', textParagraphs)
         }
-     
+
     }, [itensProperties])
 
 
-    useEffect(() => { 
+    useEffect(() => {
         if (quantityItemsRef.current) {
             const items = Array.from(quantityItemsRef.current.querySelectorAll('p'))
             const listItems = items.map((p) => p.textContent)
 
             setStoredQuantItems(listItems)
 
-           console.log('Quantidades: ', listItems)
+            console.log('Quantidades: ', listItems)
 
         }
     }, [itensProperties])
 
- 
+
 
 
 
@@ -356,6 +386,7 @@ function MenuItems() {
 
 
     const [total, setTotal] = useState(0)
+   
 
 
     const totalValue = () => {
@@ -365,16 +396,33 @@ function MenuItems() {
     }
 
     useEffect(() => {
-        const total = totalValue()
-        setTotal(total)
-        console.log('total:', total)
+        const total = totalValue().toFixed(2)
+        setTotal(total.replace('.', ','))
+        setStoredTotal(total)
+        console.log('total: ', total)
     }, [itensProperties])
 
 
+   
 
 
 
 
+
+    console.log('valor do stored total', storedTotal)
+
+    const box_total = useRef('')
+    const p_selectedItems = useRef('')
+
+    useEffect(() => {
+        if (storedTotal >= 1) {
+            box_total.current.style.display = 'block'
+            p_selectedItems.current.innerText = 'Esses são os itens que você escolheu'
+        } else {
+            box_total.current.style.display = 'none'
+            p_selectedItems.current.innerText = 'Você ainda não selecionou nenhum item.'
+        }
+    })
 
 
 
@@ -388,9 +436,20 @@ function MenuItems() {
 
 
 
+            <div className='box_titles_section'>
+                <h1 className='title_section'>Bebidas</h1>
+            </div>
+
+
+
+
             <div onClick={() => displayDivsItens('divsHotDrinks')} className='show_sections'>
-                <h2>Bebidas Quentes</h2>
-                {showDivItens.divsHotDrinks ? <IoIosArrowUp /> : <IoIosArrowDown />}
+               
+                    <p>Bebidas Quentes</p>
+              
+             
+                    {showDivItens.divsHotDrinks ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                
             </div>
 
             {showDivItens.divsHotDrinks && (
@@ -399,9 +458,11 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <img src={coado.img} alt='imagem café coado' />
-                        <p>{coado.name}</p>
-                        <p>{coado.price}</p>
+                        <div className='img_item'>
+                            <img src={coado.img} alt='imagem café coado' />
+                        </div>
+                        <p className='name_item'>{coado.name}</p>
+                        <p className='price_item'>R${coado.price}</p>
                         <div className='quantity_input'>
 
                             <button onClick={() => addQuantity('inputCoado')}>+</button>
@@ -414,10 +475,11 @@ function MenuItems() {
                     </div>
 
                     <div className='deliveryItem'>
-
+                        <div className='img_item'>
                         <img src={cappuccino.img} alt='imagem café cappuccino' />
-                        <p>{cappuccino.name}</p>
-                        <p>{cappuccino.price}</p>
+                        </div>
+                        <p className='name_item'>{cappuccino.name}</p>
+                        <p className='price_item'>R${cappuccino.price}</p>
                         <div className='quantity_input'>
 
                             <button onClick={() => addQuantity('inputCappuccino')}>+</button>
@@ -430,9 +492,13 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
+                        <div className='img_item'>
                         <img src={espresso.img} alt='imagem café espresso' />
-                        <p>{espresso.name}</p>
-                        <p>{espresso.price}</p>
+                        </div>
+
+                        
+                        <p className='name_item'>{espresso.name}</p>
+                        <p className='price_item'>R${espresso.price}</p>
 
                         <div className='quantity_input'>
 
@@ -446,9 +512,13 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
+                        <div className='img_item'>
                         <img src={latte.img} alt='imagem café latte' />
-                        <p>{latte.name}</p>
-                        <p>{latte.price}</p>
+                        </div>
+
+                      
+                        <p className='name_item'>{latte.name}</p>
+                        <p className='price_item'>R${latte.price}</p>
 
                         <div className='quantity_input'>
 
@@ -461,9 +531,11 @@ function MenuItems() {
                     </div>
 
                     <div className='deliveryItem'>
-                        <img src={mocha.img} alt='imagem café mocha' />
-                        <p>{mocha.name}</p>
-                        <p>{mocha.price}</p>
+                        <div className='img_item'>
+                            <img src={mocha.img} alt='imagem café mocha' />
+                        </div>
+                        <p className='name_item'>{mocha.name}</p>
+                        <p className='price_item'>R${mocha.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputMocha')}>+</button>
@@ -475,9 +547,11 @@ function MenuItems() {
                     </div>
 
                     <div className='deliveryItem'>
-                        <img src={pingado.img} alt="imagem café pingado" />
-                        <p>{pingado.name}</p>
-                        <p>{pingado.price}</p>
+                        <div className='img_item'>
+                            <img src={pingado.img} alt="imagem café pingado" />
+                            </div>
+                        <p className='name_item'>{pingado.name}</p>
+                        <p className='price_item'>R${pingado.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputPingado')}>+</button>
@@ -494,7 +568,7 @@ function MenuItems() {
 
 
             <div onClick={() => displayDivsItens('divsColdDrinks')} className='show_sections'>
-                <h2>Cafés Gelados</h2>
+                <p>Cafés Gelados</p>
                 {showDivItens.divsColdDrinks ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </div>
 
@@ -507,9 +581,12 @@ function MenuItems() {
                 <section className='deliveryItens' id='coldDrinks_section'>
 
                     <div className='deliveryItem'>
+                        <div className='img_item'>
                         <img src={cafeGelado.img} alt="imagem café gelado" />
-                        <p>{cafeGelado.name}</p>
-                        <p>{cafeGelado.price}</p>
+                        </div>
+                        
+                        <p className='name_item'>{cafeGelado.name}</p>
+                        <p className='price_item'>R${cafeGelado.price}</p>
 
                         <div className='quantity_input'>
 
@@ -521,9 +598,12 @@ function MenuItems() {
                     </div>
 
                     <div className='deliveryItem'>
+                        <div className='img_item'>
                         <img src={coldBrew.img} alt="imagem de um café Cold Brew" />
-                        <p>{coldBrew.name}</p>
-                        <p>{coldBrew.price}</p>
+                        </div>
+                        
+                        <p className='name_item'>{coldBrew.name}</p>
+                        <p className='price_item'>R${coldBrew.price}</p>
 
                         <div className='quantity_input'>
 
@@ -535,9 +615,13 @@ function MenuItems() {
                     </div>
 
                     <div className='deliveryItem'>
+                        <div className='img_item'>
+
                         <img src={expTonico.img} alt="imagem de um expresso tônico" />
-                        <p>{expTonico.name}</p>
-                        <p>{expTonico.price}</p>
+                        </div>
+                       
+                        <p className='name_item'>{expTonico.name}</p>
+                        <p className='price_item'>R${expTonico.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputExpTonico')}>+</button>
@@ -548,9 +632,13 @@ function MenuItems() {
                     </div>
 
                     <div className='deliveryItem'>
+                       
+                        <div className='img_item'>
                         <img src={frappuccino.img} alt="imagem de um frappuccino" />
-                        <p>{frappuccino.name}</p>
-                        <p>{frappuccino.price}</p>
+
+                        </div>
+                        <p className='name_item'>{frappuccino.name}</p>
+                        <p className='price_item'>R${frappuccino.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputFrappuccino')}>+</button>
@@ -566,9 +654,13 @@ function MenuItems() {
 
 
 
-            <h1>Doces</h1>
+            <div className='box_titles_section'>
+                <h1 className='title_section'>Doces</h1>
+            </div>
+
+
             <div className='show_sections' onClick={() => displayDivsItens('divsCandies_brigadeiros')}>
-                <h2>Brigadeiros</h2>
+                <p>Brigadeiros</p>
                 {showDivItens.divsCandies_brigadeiros ? <IoIosArrowUp /> : <IoIosArrowDown />}
 
             </div>
@@ -579,9 +671,14 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
+                        <div className='img_item'>
                         <img src={cocoBrigadeiro.img} alt='imagem de brigadeiro de coco' />
-                        <p>{cocoBrigadeiro.name}</p>
-                        <p>{cocoBrigadeiro.price}</p>
+
+                        </div>
+
+                        
+                        <p className='name_item'>{cocoBrigadeiro.name}</p>
+                        <p className='price_item'>R${cocoBrigadeiro.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputCocoBrig')}>+</button>
@@ -593,9 +690,12 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
+                        <div className='img_item'>
                         <img src={morangoBrigadeiro.img} alt="imagem de brigadeiro de morango" />
-                        <p>{morangoBrigadeiro.name}</p>
-                        <p>{morangoBrigadeiro.price}</p>
+                        </div>
+
+                        <p className='name_item'>{morangoBrigadeiro.name}</p>
+                        <p className='price_item'>R${morangoBrigadeiro.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputMrgBrig')}>+</button>
@@ -607,9 +707,14 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
+                        <div className='img_item'>
                         <img src={lightBrigadeiro.img} alt="imagem de brigadeiro light" />
-                        <p>{lightBrigadeiro.name}</p>
-                        <p>{lightBrigadeiro.price}</p>
+
+                        </div>
+
+                      
+                        <p className='name_item'>{lightBrigadeiro.name}</p>
+                        <p className='price_item'>R${lightBrigadeiro.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputLightBrig')}>+</button>
@@ -626,7 +731,7 @@ function MenuItems() {
 
 
             <div className='title_section show_sections' onClick={() => displayDivsItens('divsCandies_brownies')}>
-                <h2>Brownies</h2>
+                <p>Brownies</p>
                 {showDivItens.divsCandies_brownies ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </div>
 
@@ -636,9 +741,14 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
+                        <div className='img_item'>
                         <img src={cafeBrownie.img} alt="imagem de um brownie de café" />
-                        <p>{cafeBrownie.name}</p>
-                        <p>{cafeBrownie.price}</p>
+
+                        </div>
+
+                    
+                        <p className='name_item'>{cafeBrownie.name}</p>
+                        <p className='price_item'>R${cafeBrownie.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputCafeBrownie')}>+</button>
@@ -655,7 +765,7 @@ function MenuItems() {
 
 
             <div className='title_section show_sections' onClick={() => displayDivsItens('divsCandies_cookies')}>
-                <h2>Cookies</h2>
+                <p>Cookies</p>
                 {showDivItens.divsCandies_cookies ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </div>
 
@@ -664,9 +774,12 @@ function MenuItems() {
                 <section className='deliveryItens'>
 
                     <div className='deliveryItem'>
+                        <div className='img_item'>
                         <img src={chocolateCookie.img} alt="imagem de um cookie de chocolate" />
-                        <p>{chocolateCookie.name}</p>
-                        <p>{chocolateCookie.price}</p>
+                        </div>
+                      
+                        <p className='name_item'>{chocolateCookie.name}</p>
+                        <p className='price_item'>R${chocolateCookie.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputChCookie')}>+</button>
@@ -681,7 +794,7 @@ function MenuItems() {
             )}
 
             <div className='title_section show_sections' onClick={() => displayDivsItens('divsCandies_cupcakes')}>
-                <h2>Cupcakes</h2>
+                <p>Cupcakes</p>
                 {showDivItens.divsCandies_cupcakes ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </div>
 
@@ -691,9 +804,12 @@ function MenuItems() {
                 <section className='deliveryItens'>
 
                     <div className='deliveryItem'>
+                        <div className='img_item'>
                         <img src={chocolateCupcake.img} alt="imagem de cupcake de chocolate" />
-                        <p>{chocolateCupcake.name}</p>
-                        <p>{chocolateCupcake.price}</p>
+                        </div>
+                    
+                        <p className='name_item'>{chocolateCupcake.name}</p>
+                        <p className='price_item'>R${chocolateCupcake.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputChCupcake')}>+</button>
@@ -704,10 +820,14 @@ function MenuItems() {
                     </div>
 
                     <div className='deliveryItem'>
-
+                        <div className='img_item'>
                         <img src={morangoCupcake.img} alt="imagem de um cupcake de morango" />
-                        <p>{morangoCupcake.name}</p>
-                        <p>{morangoCupcake.price}</p>
+
+                        </div>
+
+                  
+                        <p className='name_item'>{morangoCupcake.name}</p>
+                        <p className='price_item'>R${morangoCupcake.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputMrgCupcake')}>+</button>
@@ -719,9 +839,14 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <img src={nozesCupcake.img} alt="imagem de um cupcake de nozes" />
-                        <p>{nozesCupcake.name}</p>
-                        <p>{nozesCupcake.price}</p>
+                        <div className='img_item'>
+                        <img src={morangoCupcake.img} alt="imagem de um cupcake de morango" />
+
+                        </div>
+
+              x
+                        <p className='name_item'>{nozesCupcake.name}</p>
+                        <p className='price_item'>R${nozesCupcake.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('inputNozesCupcake')}>+</button>
@@ -736,7 +861,7 @@ function MenuItems() {
             )}
 
             <div className='title_section show_sections' onClick={() => displayDivsItens('divsCandies_pies')}>
-                <h2>Tortas</h2>
+                <p>Tortas</p>
                 {showDivItens.divsCandies_pies ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </div>
 
@@ -746,9 +871,14 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
+                        <div className='img_item'>
                         <img src={amendoaMaracujaPie.img} alt="imagem de uma torta de maçã" />
-                        <p>{amendoaMaracujaPie.name}</p>
-                        <p>{amendoaMaracujaPie.price}</p>
+                             
+                        </div>
+
+                    
+                        <p className='name_item'>{amendoaMaracujaPie.name}</p>
+                        <p className='price_item'>R${amendoaMaracujaPie.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('input_amendoaMaracujaPie')}>+</button>
@@ -761,9 +891,13 @@ function MenuItems() {
                     </div>
 
                     <div className='deliveryItem'>
+                        <div className='img_item'>
                         <img src={amendoimPie.img} alt="imagem de uma torta de amendoim" />
-                        <p>{amendoimPie.name}</p>
-                        <p>{amendoimPie.price}</p>
+
+                        </div>
+                
+                        <p className='name_item'>{amendoimPie.name}</p>
+                        <p className='price_item'>R${amendoimPie.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('input_amendoimPie')}>+</button>
@@ -775,21 +909,33 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
+                        <div className='img_item'>
                         <img src={macaPie.img} alt="imagme de uma torta de amêndoa com maracujá" />
-                        <p>{macaPie.name}</p>
-                        <p>{macaPie.price}</p>
 
-                        <button onClick={() => addQuantity('input_macaPie')}>+</button>
-                        <input type="number" value={itensProperties.input_macaPie.quant} />
-                        <button onClick={() => subQuantity('input_macaPie')}>-</button>
+                        </div>
+
+                    
+                        <p className='name_item'>{macaPie.name}</p>
+                        <p className='price_item'>R${macaPie.price}</p>
+
+                        <div className='quantity_input'>
+                            <button onClick={() => addQuantity('input_macaPie')}>+</button>
+                            <input type="number" value={itensProperties.input_macaPie.quant} />
+                            <button onClick={() => subQuantity('input_macaPie')}>-</button>
+                        </div>
 
                     </div>
 
                     <div className='deliveryItem'>
 
+                        <div className='img_item'>
                         <img src={pessegoPie.img} alt="imagem de uma torta de pêssego" />
-                        <p>{pessegoPie.name}</p>
-                        <p>{pessegoPie.price}</p>
+
+                        </div>
+
+                   
+                        <p className='name_item'>{pessegoPie.name}</p>
+                        <p className='price_item'>R${pessegoPie.price}</p>
 
                         <div className='quantity_input'>
                             <button onClick={() => addQuantity('input_pessegoPie')}>+</button>
@@ -805,52 +951,56 @@ function MenuItems() {
 
             )}
 
-                
-                <div id='conteiner_selectedItems'> 
-                    <div id='box_quantityItems' ref={quantityItemsRef}>
+
+            <div id='conteiner_selectedItems'>
+                <div id='box_quantityItems' ref={quantityItemsRef}>
+                    <div id='box_output_quantityItems'>
+                    <p ref={p_selectedItems}></p>
                     {renderListItemsSelected()}
-
-
-                    </div>
-                    <div id='box_value'>
-                        <p>valor total</p>
-                        {total}
-                       
-
-
                     </div>
                  
-                    </div>
+
+
+                </div>
+                <div id='box_value' ref={box_total}>
+                    <p>valor total</p>
+                    <p>R${total}</p>
 
 
 
-                    {/* Confira o que você escolheu:  */}
-
-                <div ref={selectedsRef} id='selected_names' >
-               
-                    {renderListItemsSelected_Names()}
                 </div>
 
+            </div>
 
-                 <p>valor da const Text: {text}</p> 
 
-             
-{/* 
+
+            {/* Confira o que você escolheu:  */}
+
+            <div ref={selectedsRef} id='selected_names' >
+
+                {renderListItemsSelected_Names()}
+            </div>
+
+
+            <p id='outputTeste'>valor da const Text: {text}</p>
+
+
+            {/* 
                 <p>Valor storedListItemsNames do Provider: {storedListItemsNames}</p> */}
 
 
-          
 
 
-            
-
-             
 
 
-                
 
-        
-     
+
+
+
+
+
+
+
 
 
         </>

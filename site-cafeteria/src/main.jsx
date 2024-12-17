@@ -24,6 +24,8 @@ import RatingNoteProvider from './context/RatingNoteProvider.jsx'
 import SelectedItemsProvider from './context/SelectedItemsProvider.jsx'
 import { SelectedItemsContext } from './context/SelectedItemsContext.jsx'
 import QuantItemsSelectedsProvider from './context/QuantItemsSelectedsProvider.jsx'
+import Confirmation from './components/Confirmation.jsx'
+import TotalValueProvider from './context/TotalValueProvider.jsx'
 
 
 
@@ -52,7 +54,9 @@ const router = createBrowserRouter([
         <UserNameProvider>
           <SelectedItemsProvider>
             <QuantItemsSelectedsProvider>
-            <DeliveryPage />
+              <TotalValueProvider>
+               <DeliveryPage />
+              </TotalValueProvider>
             </QuantItemsSelectedsProvider>
           </SelectedItemsProvider>
         </UserNameProvider>
@@ -79,6 +83,24 @@ const router = createBrowserRouter([
   {
     path: '/menucandy',
     element: <MenuCandy />
+  },
+
+
+  {
+    path: '/confirmation',
+     element: 
+     
+     <UserAdressProvider>
+      <UserNameProvider>
+        <TotalValueProvider>
+        <Confirmation />
+        </TotalValueProvider>
+      </UserNameProvider>
+     </UserAdressProvider>
+    
+    
+    //
+
   },
 
 

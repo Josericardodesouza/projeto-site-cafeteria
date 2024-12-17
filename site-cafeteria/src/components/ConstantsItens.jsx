@@ -53,7 +53,8 @@ const hotDrinks = [
     
         {
             id: 1,
-            name: 'coado',
+            name: 'Coado',
+            category: 'café',
             price: '1,50',
             img: cafeCoadoImg,
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, praesentium! Numquam minima aperiam libero dignissimos quam qui. Totam delectus vel ipsa illum exercitationem aperiam! Fuga officiis magnam voluptate nostrum deleniti!'
@@ -63,7 +64,8 @@ const hotDrinks = [
         {
             id: 2,
             name: 'Cappuccino',
-            price: '6,00',
+            category: 'café',
+            price: '6,05',
             img: cappucinoImg,
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis atque doloribus tempora quidem nisi odio corrupti voluptas sit ut commodi? Voluptatum quaerat delectus nihil dicta maiores! Libero minima omnis enim. Cappucino'
     
@@ -72,6 +74,7 @@ const hotDrinks = [
         {
             id: 3,
             name: 'Espresso',
+            category: 'café',
             price: '6,00',
             img: espressoImg,
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Espresso'
@@ -81,6 +84,7 @@ const hotDrinks = [
         {
             id: 4,
             name: 'Latte',
+            category: 'café',
             price: '20,00',
             img: latteImg,
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Latte'
@@ -89,6 +93,7 @@ const hotDrinks = [
         {
             id: 5,
             name: 'Mocha',
+            category: 'café',
             price: '8,00',
             img: mochaImg,
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Mocha'
@@ -98,6 +103,7 @@ const hotDrinks = [
     {
         id: 6,
         name: 'Pingado',
+        category: 'café',
         price: '5,00',
         img: pingadoImg,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Pingado'
@@ -113,7 +119,8 @@ const coldDrinks = [
 
     {
         id: 1,
-        name: 'café gelado',
+        name: 'Gelado',
+        category: 'café',
         price: '2,20',
         img: cafeGeladoImg,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Gelado'
@@ -124,6 +131,7 @@ const coldDrinks = [
     {
         id: 2,
         name: 'Cold Brew',
+        category: 'café',
         price: '11,00',
         img: coldBrewImg,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Cold Brew'
@@ -135,6 +143,7 @@ const coldDrinks = [
     {
         id: 3,
         name: 'Expresso Tônico',
+        category: 'café',
         price: '5,00',
         img: espressoTonicoImg,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Espresso Tonico'
@@ -143,6 +152,7 @@ const coldDrinks = [
     {
         id: 4,
         name: 'Frappuccino',
+        category: 'café',
         price: '19,00',
         img: frappuccinoImg,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Frappuccino'
@@ -223,20 +233,23 @@ const typesBrigadeiro = [
 
     {
         name: 'Coco',
-        price: '0,00',
+        category: 'brigadeiro sabor',
+        price: '1,00',
         img: brigCocoimg
     },
 
 
     {
         name: 'Morango',
-        price: '0,00',
+        category: 'brigadeiro sabor',
+        price: '2,00',
         img: brigChMorangoImg
     },
 
     {
         name: 'Light',
-        price: '0,00',
+        category: 'brigadeiro sabor',
+        price: '2,50',
         img: brigLightImg
     }
 
@@ -249,20 +262,23 @@ const typesBrownies = [
 
     {
         name: 'Café',
-        price: '0,00',
+        category: 'brownie sabor',
+        price: '6,50',
         img: brownieCafeImg
     },
 
     {
         name: 'Caramelo Salgado',
-        price: '0,00',
+        category: 'brownie sabor',
+        price: '6,50',
         img: brownieCarameloImg
          
     },
 
     {
         name: 'Morango',
-        price: '0,00',
+        category: 'brownie sabor',
+        price: '6,00',
         img: brownieMgImg
         
     }
@@ -312,7 +328,8 @@ const typesCookies = [
 
     {
         name: 'Chocolate',
-        price: '0,00',
+        category: 'cookie sabor',
+        price: '3,00',
         img: chCookieImg
     },
 
@@ -336,7 +353,8 @@ const typesCupcakes = [
 
     {
         name: 'Chocolate',
-        price: '0,00',
+        category: 'cupcake sabor',
+        price: '8,00',
         img: chCupcakeImg
     },
 
@@ -347,13 +365,15 @@ const typesCupcakes = [
 
     {
         name: 'Morango',
-        price: '0,00',
+        category: 'cupcake sabor',
+        price: '7,00',
         img: mrgCupcakeImg
     },
 
     {
         name: 'Nozes',
-        price: '0,00',
+        category: 'cupcake sabor',
+        price: '7,00',
         img: nozesCupcakeImg
     },
 
@@ -385,31 +405,36 @@ const typesPie = [
 
     {
         name: 'Amêndoa com maracujá',
-        price: '0,00',
+        category: 'torta sabor',
+        price: '15,00',
         img: amendoaMaracujaPieImg
     },
 
     {
         name: 'Amendoim',
-        price: '0,00',
+        category: 'torta sabor',
+        price: '13,00',
         img: amendoimPieImg
     },
 
     {
         name: 'Maçã',
-        price: '0,00',
+        category: 'torta sabor',
+        price: '16,00',
         img: macaPieimg
     },
 
     {
         name: 'Nozes',
-        price: '0,00',
+        category: 'torta sabor',
+        price: '16,00',
         img: nozesPieImg
     },
 
     {
         name: 'Pêssego',
-        price: '2.67',
+        category: 'torta sabor',
+        price: '12.50',
         img: pessegoPieImg
     }
 ]

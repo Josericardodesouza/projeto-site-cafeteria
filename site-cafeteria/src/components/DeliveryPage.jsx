@@ -31,24 +31,16 @@ import { UserNameContext } from '../context/UserNameContext'
 import { CommentContext } from '../context/CommentContext'
 import NavBar from './NavBar'
 import { TbTruckDelivery } from 'react-icons/tb'
+import { SelectedItemsContext } from '../context/SelectedItemsContext'
 
 
 
 
 function DeliveryPage() {
 
-  
-  const { adressUser } = useContext(UserAdressContext)
-  const { userNameInput } = useContext(UserNameContext)
+  const {storedListItemsNames} = useContext(SelectedItemsContext)
 
-  console.log('Username no DeliveryPage: ', userNameInput);
- 
-
-
-
-
-
-
+  // console.log('Username no DeliveryPage: ', userNameInput);
 
   var input = document.getElementById('ent-adressUser')
 
@@ -145,74 +137,48 @@ function DeliveryPage() {
   //   }
   // }, []);
 
+ const botao = useRef(null)
 
+ useEffect(() => {
 
+  
+  if (storedListItemsNames.length >= 1) {
+    botao.current.style.display = 'block'
+ 
+   
+   } else {
+     botao.current.style.display = 'none'
+ 
+   }
 
-
-
-
-
-
+ })
 
   return (
 
     <>
 
-   
-    <NavBar />
-  
+      <NavBar />
 
-
-      <header id='header_deliveryPage'>
-     
-
-      </header>
-
-      <button id='exibir'>Aqui</button>
-
+      <header id='header_deliveryPage'></header>
 
       <main>
-
-
-       <UserName />
-
-      <p>nome: {userNameInput}</p>
 
         <section id='section_menu'>
           <MenuItems />
         </section>
 
 
-        <p>Insira seu CEP e nome para confirmar o pedido: </p>
+        {/* <button ref={botao}>Teste</button> */}
 
-
-
-        <section id='section_userAdress'>
-          <UserAdress />
-     
-        <div id='output_adressUser'>
-          <p>{adressUser.state} </p>
-          <p>{adressUser.city} </p>
-          <p>{adressUser.neighborhood}</p>
-          <p>{adressUser.street} </p>
-        </div>
-
-        </section>
-
-
-    
-
-
-
-      
-          
-            <Link to='/sendpage' id='btn_toSendPage'>
+        <button ref={botao} id='btn_conteiner_toSendPage'>
+          <Link to='/confirmation' id='btn_toSendPage'>
             <div id='goSendPage'>
               <TbTruckDelivery className='goSendPage_hover' id='goSendPage_icon' />
               <p className='goSendPage_hover' id='goSendPage_p'>Concluir pedido</p>
             </div>
-            </Link>
-        
+          </Link>
+        </button>
+
 
         {/* <button onClick={confirmar}>Confirmar</button> */}
 
