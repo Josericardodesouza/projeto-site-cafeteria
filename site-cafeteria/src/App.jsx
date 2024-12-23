@@ -88,7 +88,7 @@ function App() {
 
 
 
-  const { userNameInput } = useContext(UserNameContext);
+  const { storedUserNameInput } = useContext(UserNameContext);
   const { storedComment } = useContext(CommentContext)
   const { storedNote } = useContext(RatingNoteContext)
   const { storedListItemsNames } = useContext(SelectedItemsContext)
@@ -96,18 +96,18 @@ function App() {
 
   console.log('Valor do provider da lista de selecionados:', storedListItemsNames)
 
-  console.log('vindo do contexto do nome de usuário para o App.jsx', userNameInput)
+  console.log('vindo do contexto do nome de usuário para o App.jsx', storedUserNameInput)
   console.log('valor da nota:', storedNote)
   // console.log('comentário para o evaluation: ', storedComment)
 
 
-  if (userNameInput === 'Sim') {
+  if (storedUserNameInput === 'Sim') {
     console.log('é sim')
   } else {
     console.log('É não')
   }
 
-  if (userNameInput.length > 1 && storedComment.length > 1) {
+  if (storedUserNameInput.length > 1 && storedComment.length > 1) {
     console.log('Os dois tem caracteres')
   } else {
     console.log('Não retorno')
@@ -247,7 +247,7 @@ function App() {
 
   useEffect(() => {
 
-    if (userNameInput.length > 1 && storedComment.length > 1 && storedNote > 1 && storedListItemsNames.length > 1 ) {
+    if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 1 && storedListItemsNames.length > 1 ) {
 
       boxEvaluation.current.style.display = 'block'
     } else {
@@ -556,7 +556,7 @@ function App() {
                 <div className='box_opinion'>
                   <p>Avaliando: {storedListItemsNames}</p>
                   <p className='txt_opinion'>" {storedComment} "</p>
-                  <p className='clientName'><BsPerson />{userNameInput}</p>
+                  <p className='clientName'><BsPerson />{storedUserNameInput}</p>
                   <div id="stars_container">
                     <div className='box_stars'>{displayStars()}</div>
                   </div>

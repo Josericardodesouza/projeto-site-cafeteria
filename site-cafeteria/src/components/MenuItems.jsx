@@ -282,6 +282,8 @@ function MenuItems() {
         return Object.keys(itensProperties).map((key) => {
             if (itensProperties[key].quant > 0) {
 
+                
+
                 return <p key={key}>{itensProperties[key].quant} unidade(s) de {itensProperties[key].category} {itensProperties[key].name} no valor de R$<strong>{itensProperties[key].price.replace('.', ',')}</strong> cada</p>
 
 
@@ -292,6 +294,33 @@ function MenuItems() {
 
 
     }
+
+
+
+    useEffect(() => {
+
+        
+    const listItems = []
+
+    Object.keys(itensProperties).forEach((key) => {
+        if (itensProperties[key].quant > 0) {
+            const itemList = `${itensProperties[key].quant} unidade(s) de ${itensProperties[key].category} ${itensProperties[key].name} no valor de  ${itensProperties[key].price} cada;`
+
+            listItems.push(itemList)
+        
+        }
+    })
+
+
+    setStoredQuantItems(listItems)
+    console.log('Teste da nova passagem de quantidade: ', listItems)
+
+
+
+
+    }, [itensProperties, setStoredQuantItems])
+
+
 
 
 
@@ -326,22 +355,12 @@ function MenuItems() {
     }
 
 
-
-
-
-
-
-
-
-
-
     const [text, setText] = useState([])
 
     const selectedsRef = useRef('')
 
     const quantityItemsRef = useRef('')
 
-    const [itemsSelectedsQuant, setItemsSelectedsQuant] = useState([])
 
 
 
@@ -362,17 +381,17 @@ function MenuItems() {
     }, [itensProperties])
 
 
-    useEffect(() => {
-        if (quantityItemsRef.current) {
-            const items = Array.from(quantityItemsRef.current.querySelectorAll('p'))
-            const listItems = items.map((p) => p.textContent)
+    // useEffect(() => {
+    //     if (quantityItemsRef.current) {
+    //         const items = Array.from(quantityItemsRef.current.querySelectorAll('p'))
+    //         const listItems = items.map((p) => p.textContent)
 
-            setStoredQuantItems(listItems)
+        
 
-            console.log('Quantidades: ', listItems)
+    //         console.log('Quantidades: ', listItems)
 
-        }
-    }, [itensProperties])
+    //     }
+    // }, [itensProperties])
 
 
 
@@ -953,9 +972,9 @@ function MenuItems() {
 
 
             <div id='conteiner_selectedItems'>
+            <p ref={p_selectedItems}></p>
                 <div id='box_quantityItems' ref={quantityItemsRef}>
                     <div id='box_output_quantityItems'>
-                    <p ref={p_selectedItems}></p>
                     {renderListItemsSelected()}
                     </div>
                  

@@ -7,13 +7,13 @@ function UserName() {
    
 
 
-   const {setUserNameInput} = useContext(UserNameContext)
+   const {setStoredUserNameInput} = useContext(UserNameContext)
 
 
     const renderUserName = (e) => {
 
-        setUserNameInput(e.target.value)
-        console.log("Valor digitado: ", e.target.value); // Adicione isso
+        setStoredUserNameInput(e.target.value)
+        console.log("Valor digitado: ", e.target.value);
         
     }
 

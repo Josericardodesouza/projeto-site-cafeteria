@@ -32,6 +32,7 @@ import { CommentContext } from '../context/CommentContext'
 import NavBar from './NavBar'
 import { TbTruckDelivery } from 'react-icons/tb'
 import { SelectedItemsContext } from '../context/SelectedItemsContext'
+import { GiConfirmed } from 'react-icons/gi'
 
 
 
@@ -170,14 +171,30 @@ function DeliveryPage() {
 
         {/* <button ref={botao}>Teste</button> */}
 
-        <button ref={botao} id='btn_conteiner_toSendPage'>
+
+        <div ref={botao} id='conteiner_redirect_confirmationPage'>
+          <span className='hover_goConfirmationPage' id='goSendPage_icon'><GiConfirmed /></span>
+          <Link to = '/confirmation' className='hover_goConfirmationPage'>Continuar</Link>
+ 
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <div ref={botao} id='btn_conteiner_toSendPage'>
           <Link to='/confirmation' id='btn_toSendPage'>
             <div id='goSendPage'>
-              <TbTruckDelivery className='goSendPage_hover' id='goSendPage_icon' />
+              <GiConfirmed className='goSendPage_hover' id='goSendPage_icon' />
               <p className='goSendPage_hover' id='goSendPage_p'>Concluir pedido</p>
             </div>
           </Link>
-        </button>
+        </div>
 
 
         {/* <button onClick={confirmar}>Confirmar</button> */}

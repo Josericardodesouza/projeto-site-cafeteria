@@ -7,9 +7,317 @@ h1 {
     text-align: center;
 }
 
-div#output_items_confirmation {
+
+section#inputs_conteiner {
+    /* background-color: green; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+
 }
+
+div.component_inputs_confirmationPage {
+    /* background-color: red; */
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito';
+   
+   
+}
+
+div.component_inputs_confirmationPage > label {
+    font-size: 0.8em;
+    font-family: 'Nunito';
+    text-align: start;
+}
+
+div.component_inputs_confirmationPage > input {
+    /* background-color: green; */
+    width: 60%;
+    height: 30px;
+    display: block;
+    border: 2px solid var(--brown);
+    border-radius: 2px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+/* ---- ID's in UserName component -------------------- */
+
+
+input#user_name {
+
+
+
+}
+
+
+
+/* --------- ID's in UserAdress component ----------------*/
+
+#conteiner_inputAdress {
+  
+ 
+   
+}
+
+
+div#conteiner_inputAdress > label {
+
+}
+
+
+
+
+
+div#output_items_confirmation {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito';
+   
+   
+}
+
+div#output_items_confirmation > ul {
+    width: 100%;
+    padding: 0;
+    font-size: 0.9em;
+    line-height: 30px;
+    margin: auto;
+  
+}
+
+div#output_items_confirmation > ul > li {
+    width: 100%;
+    text-align: center;
+  
+}
+/* 
+ div#output_items_confirmation li {
+    list-style: disc;
+    
+}  */
+
+
+
+
+ span.icon_output {
+    font-size: 1.5em;
+ }
+
+
+ .p_output {
+    font-size: 1.2em;
+ }
+
+
+div#output_userName_confirmation {
+    text-align: center;
+    font-family: 'Nunito';
+    display: flex;
+    flex-direction: column;
+
+}
+
+div#output_adressUser_confirmation {
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+ 
+}
+
+
+
+
+
+
+div#output_adressUser_confirmation > p {
+    margin: 10px;
+}
+
+
+
+p#p_error_cep {
+    font-size: 0.8em;
+    font-family: 'Nunito';
+    text-align: center;
+ 
+}
+
+
+section#section_totalValue {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 50px 0px;
+}
+
+
+
+div#totalValue {
+    display: block;
+    text-align: center;
+}
+
+div#totalValue {
+    font-family: 'Roboto';
+    
+}
+
+p#title_value {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+ p#output_total {
+    font-weight: 700;
+    font-size: 1.9em;
+ }
+
+
+
+div#totalValue > p {
+    margin: 10px;
+}
+
+
+
+section#section_buttons_redirect {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+
+
+
+
+div.buttons_redirect_confirmationPage {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--brown);
+    color: var(--cream);
+    padding: 15px;
+    margin: 10px auto 10px auto;
+    border-radius: 20px;
+}
+
+div.buttons_redirect_confirmationPage > .icon_button {
+    font-size: 2.5em;
+
+}
+
+div.buttons_redirect_confirmationPage > p {
+    width: 100%;
+    font-size: 1.2em;
+    margin: 10px;
+    text-align: center;
+}
+
+div.buttons_redirect_confirmationPage:hover {
+    background-color: var(--cream);
+    color: var(--brown);
+}
+
+
+ div.buttons_redirect_confirmationPage:hover > .icon_button {
+    color: var(--brown);
+}
+
+
+div.buttons_redirect_confirmationPage > .icon_button {
+    color: var(--cream);
+}
+
+
+
+p#p_alert_return {
+    font-family: 'Nunito';
+    font-size: 0.9em;
+    width: 80%;
+    margin: auto;
+}
+
+
+
+p.title_result {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+
+p#p_checkout {
+    font-size: 1.3em;
+    font-family: 'Nunito';
+    text-align: center;
+    width: 100vw;
+    height: 60px;
+    background-color: red;
+}
+
+@media (min-width: 500px) {
+
+    
+p.title_result {
+    font-size: 1.3em;
+    
+}
+
+
+    div.component_inputs_confirmationPage > label {
+        font-size: 1.0em;
+    }
+
+    div.component_inputs_confirmationPage > input {
+        width: 45%;
+    }
+
+
+    div#output_items_confirmation > ul {
+     
+     
+        font-size: 1.1em;
+        line-height: 35px;
+       
+    }
+
+
+    span.icon_output {
+        font-size: 1.9em;
+    }
+
+    div.buttons_redirect_confirmationPage {
+        width: 20%;
+        font-size: 0.9em;
+    }
+
+    
+div.buttons_redirect_confirmationPage > p {
+    font-size: 0.9em;
+}
+ 
+
+
+}
+
+
+@media (min-width: 1000px) {
+    
+}
+

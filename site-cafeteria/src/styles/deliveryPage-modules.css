@@ -217,84 +217,47 @@ img {
 }
 
 
-#section_userAdress {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#conteiner_inputAdress {
-    margin: auto;
-    width: 95%;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 5px var(--generalShadow);
-    padding: 20px;
-}
-
-
-#output_adressUser {
-    font-family: 'Nunito', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-}
-
-
-button#btn_conteiner_toSendPage {
+div#conteiner_redirect_confirmationPage {
+    width: 60%;
     background-color: var(--cream);
     margin: 30px auto 30px auto;
     height: auto;
-    
-    
-
-}
-
-
-#goSendPage {
-   width: 100%;
-   padding: 10px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   border-radius: 20px;
-}
-
-#goSendPage:hover {
-    background-color: var(--copper2);
-
-}
-
-#goSendPage:hover > .goSendPage_hover {
-    color: var(--cream);
-}
-
-#goSendPage_icon {
-    font-size: 3.5em;
-    color: var(--copper2);
-}
-
-#goSendPage_p {
     font-size: 1.2em;
     color: var(--copper2);
     text-align: center;
     text-wrap: wrap;
     margin: 12px;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
 }
+
+
+div#conteiner_redirect_confirmationPage:hover {
+    background-color: var(--copper2);
+
+}
+
+
+div#conteiner_redirect_confirmationPage:hover > .hover_goConfirmationPage {
+    color: var(--cream);
+
+}
+
+
+#goSendPage_icon {
+    font-size: 2.5em;
+    color: var(--copper2);
+}
+
+
+
+
 
 
 
 p#outputTeste {
     display: none;
-}
-
-
-
-button#btn_conteiner_toSendPage {
-    background-color: transparent;
-    border: none;
 }
 
 

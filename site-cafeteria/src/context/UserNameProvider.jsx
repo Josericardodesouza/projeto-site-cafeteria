@@ -4,20 +4,20 @@ import { useEffect } from "react";
 
 function UserNameProvider({children}) {
 
-    const [userNameInput, setUserNameInput] = useState(() => {
+    const [storedUserNameInput, setStoredUserNameInput] = useState(() => {
      
         
             return localStorage.getItem('userName') || '';
           });
    
           useEffect(() => {
-            localStorage.setItem('userName', userNameInput);
-          }, [userNameInput]);
+            localStorage.setItem('userName', storedUserNameInput);
+          }, [storedUserNameInput]);
 
 
     return (
 
-        <UserNameContext.Provider value = {{userNameInput, setUserNameInput}}>
+        <UserNameContext.Provider value = {{storedUserNameInput, setStoredUserNameInput}}>
             {children}
 
         </UserNameContext.Provider>
