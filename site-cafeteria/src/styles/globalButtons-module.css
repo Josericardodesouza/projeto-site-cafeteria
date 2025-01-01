@@ -1,0 +1,85 @@
+
+
+section.section_buttons_redirect {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+
+
+
+
+div.buttons_redirect_confirmationPage {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--brown);
+    color: var(--cream);
+    padding: 15px;
+    margin: 10px auto 10px auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px var(--generalShadow);
+}
+
+div.buttons_redirect_confirmationPage > .icon_button {
+    font-size: 1.7em;
+
+}
+
+div.buttons_redirect_confirmationPage > p {
+    width: 100%;
+    font-size: 1.1em;
+    margin: 10px;
+    text-align: center;
+}
+
+div.buttons_redirect_confirmationPage:hover {
+    background-color: var(--cream);
+    color: var(--brown);
+}
+
+
+ div.buttons_redirect_confirmationPage:hover > .icon_button {
+    color: var(--brown);
+}
+
+
+div.buttons_redirect_confirmationPage > .icon_button {
+    color: var(--cream);
+}
+
+
+
+@media (min-width: 500px) {
+
+    div.buttons_redirect_confirmationPage {
+        width: 40%;
+    }
+
+    div.buttons_redirect_confirmationPage > .icon_button {
+        font-size: 1.9em;
+    
+    }
+
+    
+div.buttons_redirect_confirmationPage > p {
+  
+    font-size: 1.6em;
+  
+}
+
+
+
+}
+
+
+@media (min-width: 1000px) {
+    div.buttons_redirect_confirmationPage {
+        width: 25%;
+    }
+    
+}

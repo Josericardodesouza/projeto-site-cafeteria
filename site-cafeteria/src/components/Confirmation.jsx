@@ -1,4 +1,5 @@
 import '../styles/confirmationpage-module.css'
+import '../styles/globalButtons-module.css'
 import NavBar from './NavBar'
 import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
@@ -225,7 +226,7 @@ function Confirmation() {
 
 
     
-<section id='section_buttons_redirect'>
+<section className='section_buttons_redirect'>
   
   
       <Link to='/sendPage' ref={ref_btnGoSendPage}>

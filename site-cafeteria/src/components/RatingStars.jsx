@@ -2,6 +2,7 @@ import '../styles/ratingStars-module.css'
 import '../styles/colorsAndFonts-module.css'
 import { useContext, useEffect, useRef, useState } from 'react';
 import { RatingNoteContext } from '../context/RatingNoteContext';
+import { IoAdd, IoHome, IoStar } from 'react-icons/io5';
 
 
 function RatingStars() {
@@ -11,13 +12,34 @@ function RatingStars() {
     const boxStarsRef = useRef(null)
     const [note, setNote] = useState('') 
 
+
+
+    //  const emoji = useRef('')
+
+
+    //  useEffect(() => {
+
+    //     if (note === 1) {
+    //         emoji.current.appendChild('<IoHome />')
+    // } else {
+       
+       
+   
+    // }   
+
+
+
+
+    //  })
+
+
+ 
+
+   
  
 
     useEffect(() => {
         const container = boxStarsRef.current;
-
-
-
 
         const starClick = (e) => {
             const classStar = e.target.classList
@@ -70,6 +92,7 @@ function RatingStars() {
             <div id='-stars_evaluation_box' ref={boxStarsRef}>
 
                 <ul className="ratingStars">
+                    
                     <li className="starIcon" data-evaluation='1' onClick={confirmaValor}></li>
                     <li className="starIcon" data-evaluation='2' onClick={confirmaValor}></li>
                     <li className="starIcon" data-evaluation='3' onClick={confirmaValor}></li>
@@ -80,7 +103,11 @@ function RatingStars() {
                 </ul>
 
                 {/* <button onClick={confirmaValor}>Confirmar avaliação</button> */}
-                <p>{note}</p>
+                {/* <p>{note}</p> */}
+
+                <div>
+
+                </div>
 
 
 

@@ -1,3 +1,14 @@
+
+
+p.p_introduction_sendPage {
+    font-family: 'Lobster';
+    font-size: 1.0em;
+    text-align: center;
+    width: 70%;
+    margin: 20px auto 20px auto;
+
+}
+
 #header_sendPage {
     height: auto;
     background-color: red;
@@ -11,6 +22,14 @@
     padding: 0;
 }
 
+h1#title_sendPage {
+    width: 70vw;
+    font-size: 0.9em;
+    margin: 30px auto 30px auto;
+}
+
+
+
 
 #adress_send > h1 {
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
@@ -20,16 +39,222 @@
 
 }
 
+#section_send {
+    width: 100vw;
+    height: auto;
+}
+
 #adress_send {
     display: flex;
     flex-direction: column;
-    margin: 50px 0px 50px 0px;
+    margin: 25px 0px 50px 0px;
 }
+
+
+div#adress_send > p {
+    margin: 5px;
+   
+}
+
+div#output_listItems_sendPage {
+    width: 85vw;
+    margin: auto;
+    font-family: 'Nunito';
+}
+
+div#output_listItems_sendPage > ul {
+    line-height: 30px;
+    margin: 0;
+}
+
+
+
+div#box_icon_send {
+    width: 200px;
+    
+    height: 200px;
+    border-radius: 100%;
+    background-image: linear-gradient(var(--cream) 50%, var(--brownSugar) 50%);
+    /* background-image: linear-gradient(#87ceeb 50%, green 50%); */
+    /* background-color: #87ceeb; */
+   
+  
+    /* border-image: linear-gradient(to right, blue 50%, transparent 30%) 1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+   
+ 
+}
+
+
+
+
+div#background_city {
+    background-color: transparent;
+    width: 200px;
+    height: 70px;
+    z-index: 0;
+    position: relative;
+    display: flex;
+    top: 5px;
+    
+  
+     animation: animation-city 20s infinite; 
+
+}
+
+ .city {
+    font-size: 2.5em;
+    /* margin-left: 20px; */
+    margin: 0;
+   
+  
+   
+ 
+    color: blue;
+ }
+
+
+ 
+#truck_icon_send {
+    font-size: 6.5em;
+    padding: 15px;
+    animation: animation-truck 2s infinite;
+    position: absolute;
+    z-index: 2;
+    color: var(--brown);
+    
+}
+
+
+
+div#lines {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+  
+
+    animation: animation-lines 1.2s infinite;
+ 
+ 
+}
+
+div.line {
+    width: 100px;
+    height: 10px;
+    background-color: white;
+    margin-left: 50px;
+
+}
+
+div#box_icon_send > div#trees {
+    width: auto;
+    height: auto;
+    position: absolute;
+     animation: animation-trees 0.8s infinite ease-in-out; 
+
+    z-index: 1;
+    display: flex;
+    margin: 0;
+   
+  
+}
+
+
+.tree_icon_send {
+  
+  
+    margin-left: 100px;
+    color: red;
+    font-size: 3.1em;
+
+}
+
+div#box_lines {
+    background-color: black;
+    width: 100%;
+}
+
+
+@keyframes animation-truck {
+
+    0% {
+        transform: translateY(0px);
+        
+    }
+
+
+    50% {
+        transform: translateY(5px);
+       
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+    
+}
+ 
+
+
+
+@keyframes animation-lines {
+
+
+
+    0% {
+
+        left: 70%;
+
+    }
+
+    100% {
+       left: -70%;
+    }
+
+
+}
+
+
+@keyframes animation-trees {
+
+    0% {
+
+        right: -220%;
+
+    }
+
+    100% {
+       right: 100%;
+    }
+
+
+}
+
+
+@keyframes animation-city {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 110%;
+    }
+}
+
+
+
+/* 
 
 #saida {
     margin: auto;
     width: 70vw;
-}
+} */
 
 
 
@@ -39,22 +264,6 @@
 }
 
 
-
-#box_icon_send {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-#icon_send {
-    font-size: 7.5em;
-    padding: 15px;
-}
 
 #evaluation_conteiner {
     width: 100vw;
@@ -66,15 +275,56 @@
     font-family: 'Nunito';
 }
 
+/* --------------- comment component --------------------*/
+
 
 #evaluation_conteiner > textarea {
     width: 70%;
     height: 110px;
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    box-shadow: var(--global-shadow-size) var(--generalShadow);
+}
+
+p#p_comment {
+    font-family: 'Lobster';
 }
 
 
 
+
+
+/*---------- stars component -------------------*/
+
+.ratingStars {
+    padding: 0;
+}
+
+
+.starIcon {
+    font-size: 45px;
+}
+
+/*------------------------------------------------*/
+
+
+
+@media (min-width: 500px) {
+
+    h1#title_sendPage {
+        font-size: 1.2em;
+
+    }
+
+
+
+    p.p_introduction_sendPage {
+        font-size: 1.3em;
+      
+       
+    }
+
+
+}
 
 
 

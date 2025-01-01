@@ -41,7 +41,7 @@ div.show_sections {
 }
 
 
-div.show_sections > p, svg {
+div.show_sections > p {
     font-size: 1.5em;
     font-family: 'Nunito';
     font-weight: 700;

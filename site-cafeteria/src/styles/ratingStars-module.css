@@ -23,15 +23,6 @@
 
 .starIcon.active ~ .starIcon::before {
     content: "\2606"; /*estrela vazia */
+    color: var(--brown);
 }
-
-#stars_evaluation_box:hover .starIcon::before {
-    content: "\2605"; /* estrela cheia */
-
-}
-
-.starIcon:hover ~ .starIcon::before {
-    content: "\2606"; /* estrela vazia */
-}
-
 

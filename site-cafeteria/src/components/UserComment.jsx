@@ -22,9 +22,19 @@ function UserComment() {
 
   
 
-    const confirmComment = (e) => {
+    const confirmComment = () => {
         setStoredComment(comment)
     }
+
+
+    
+
+
+    // const testeDuasFuncoes = (event) => {
+    //     textChange(event)
+    //     confirmComment(event)
+
+    // }
 
     
 
@@ -36,8 +46,8 @@ function UserComment() {
      
 
       
-            <p>Deixe um comentário:</p>
-            <textarea placeholder="teste" onChange={textChange} onBlur={confirmComment} value={comment}>Teste</textarea>
+            {/* <p id="p_comment">Deixe um comentário:</p> */}
+            <textarea placeholder="Deixe aqui seu comentário" onChange={textChange} onBlur={confirmComment} value={comment}>Teste</textarea>
            
           
       

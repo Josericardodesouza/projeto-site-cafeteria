@@ -115,7 +115,9 @@ const router = createBrowserRouter([
             <RatingNoteProvider>
               <SelectedItemsProvider>
                 <QuantItemsSelectedsProvider>
-                <SendPage />
+                  <RatingNoteProvider>
+                  <SendPage />
+                  </RatingNoteProvider>
                 </QuantItemsSelectedsProvider>
               </SelectedItemsProvider>
             </RatingNoteProvider>
