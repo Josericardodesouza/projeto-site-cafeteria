@@ -215,7 +215,7 @@ function SendPage() {
                 <section className='section_buttons_redirect'>
 
 
-                    <Link ref={ref_noEvaluation}>
+                    <Link to='/' ref={ref_noEvaluation}>
 
                         <div className='buttons_redirect_confirmationPage'>
                             <IoHome className='icon_button' />

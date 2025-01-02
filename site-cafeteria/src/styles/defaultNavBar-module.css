@@ -2,6 +2,9 @@
     width: 100vw;
     height: auto;
     background-color: transparent;
+    position: fixed;
+    background-color: whitesmoke;
+    ;
     /* background-color: var(--brown); */
     
    

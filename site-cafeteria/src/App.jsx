@@ -355,9 +355,9 @@ function App() {
 
 
 
-        <div className='box_navBarLinks' id='hidden'>
+        {/* <div className='box_navBarLinks' id='hidden'>
           <NavBarHome scrollAboutUs={scrollAboutUs} scrollMenus={scrollMenus} scrollEvaluations={scrollEvaluations} />
-        </div>
+        </div> */}
       </nav>
 
 

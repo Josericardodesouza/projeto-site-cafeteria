@@ -1,182 +1,27 @@
-#navBar_scrolls {
+nav#navBar_scrolls {
     width: 100vw;
-    background-color: transparent;
+    background-color: red;
+    position: fixed;
+    top: 33px;
+}
 
+div#conteiner_links_nav {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+div.box_links_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--brown);
     
-    /* background-color: var(--brown); */
-    display: flex;
-    justify-content: center;
-    height: 6vh;
- 
-    left: 0;
-    right: 0;
-    overflow-x: auto;
-   
 }
 
-
-
-
-.navBar_list {
-    display: flex;
-    list-style: none;
-    margin: 5px;
-    padding: 0;
-   
-   
-}
-
-label {
-    width: auto;
-    height: auto;
-    display: flex;
-    margin: 0;
-    padding: 0;
-
-
-}
-
-.navBar_item {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-
-}
-
-.btn {
-    width: auto;
+div.box_links_nav:hover {
     cursor: pointer;
-    padding: 0px;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    height: 30px;
-    
-    
-    
 }
-
-#input_nav {
-    display: none;
-}
-
-.btn .btn-icon {
-    
-    color: var(--brownSugar);
-    font-size: 20px;
-    transform: translateX(100%);
-    transition: all .3s;
-    margin: 0;
-    margin-bottom: 5px;
-    padding: 2px;
-    
-  
-   
-}
-
-
-.btn-text > a {
-    width: auto;
-    text-align: center;
-    margin: 0;
-    color: var(--brownSugar);
-    display: block;
-  
-  
-
-}
-
-.btn .btn-text {
-    font-size: 12px;
-    font-weight: 700;
-    display: block;
-    opacity: 0;
-    transition: all .2s;
- 
-    height: 100%; 
-
-}
-
-
-input:checked ~ .btn {
-   animation: teste2 3s ease;
-   
-}
-
-input:checked ~.btn .btn-icon {
-    color: black;
-    
-    /* transform: translateX(-5px); */
-}
-
-input:checked ~.btn .btn-text {
-    animation: teste 3s forwards;
-   
-}
-
-
-@keyframes teste {
-    0% {
-
-        opacity: 0;
-        transform: translateY(0);
-       background-color: transparent;
-        transition-delay: 0s;
-        margin-top: 0px;
-
-    }
-
-
-    50% {
-        opacity: 1;
-        transform: translateY(15px);
-       background-color: red;
-        transition-delay: .1s;
-        margin-top: 5px;
-    }
-
-    100% {
-
-        opacity: 0;
-        transform: translateY(0);
-       background-color: transparent;
-        transition-delay: 0s;
-        margin-top: 0px;
-
-    }
-}
-
-
-@keyframes teste2 {
-
-    0% {
-        cursor: default;
-        background: initial;
-        height: 0px;  
-    }
-
-    50% {
-        cursor: default;
-        background: yellow;
-        height: 50px;  
-    }
-
-    100% {
-        cursor: default;
-        background: initial;
-        height: 0px; 
-
-    }
-
-}
-
-@media (min-width: 500px) {
-    #navBar_scrolls {
-        width: 50vw;
-        height: 100%;
-    }
-}
-
-
-
