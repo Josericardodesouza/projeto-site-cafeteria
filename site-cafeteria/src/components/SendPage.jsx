@@ -225,7 +225,7 @@ function SendPage() {
                     </Link>
 
 
-                    <Link to='/sendPage' ref={ref_goHome}>
+                    <Link to='/' ref={ref_goHome}>
 
                         <div className='buttons_redirect_confirmationPage'>
                             <GiConfirmed className='icon_button' />

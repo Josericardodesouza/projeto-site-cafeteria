@@ -57,26 +57,39 @@
 }
 
 
-.icon_item_menu {
-    width: 15%;
-    font-size: 2.5em;
-    color: white;
+div.title_and_icon  {
+ 
     display: flex;
-    align-items: center;
-    justify-content: center;
-  
+    flex-direction: column;
+  align-items: center;
+    font-size: 2.1em;
 
 }
+
+
+.icon_item_menu {
+ 
+    font-size: 2.5em;
+
+    color: white;
+
+    padding: 5px;
+    text-align: center;
+    
+
+}
+
 
 .item_title_menu {
     color: white;
     font-size: 1.3em;
-    font-family: 'Lobster';
+    font-family: 'Fredericka the Great';
+    margin: 7px;
 }
 
 
 .item_img_menu {
-    display: block;
+    display: none;
     width: 40%;
     border: 2px solid white;
 }
@@ -97,11 +110,9 @@
 
 .cardapio {
     width: 80%;
-    border-collapse: separate;
+
     border-spacing: 0px;
-    color: white;
-    font-family: 'Pacifico';
-    font-size: 1.2em;
+
     margin: auto;
     /* background-image: linear-gradient(to bottom, var(--copper) 45%, var(--copper2)); */
    
@@ -115,6 +126,7 @@
     
 }
 
+
 table {
     border: 0;
    
@@ -127,16 +139,36 @@ table {
     font-size: 2.0em;
 }
 
-.value {
+td.item {
+  
+    color: white;
+    font-family: 'Ribeye Marrow';
+    font-size: 1.2em;
+    border-bottom: 1px solid white;
+   border-style: dashed;
+   color: green;
+
+  
+   
+}
+
+
+td.value {
+    color: var(--brownSugar);
     width: 30%;
+    font-family: 'Fredericka the Great';
+
+   
+   
 }
   
 td {
     width: auto;
     border-top: 0;
-    border-bottom: 0;
+
     border-left: 0;
     border-right: 0;
+   
     
 }
 
@@ -147,6 +179,30 @@ th {
 
 div#testeNomes {
     display: flex;
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+
+    div.title_and_icon {
+        text-align: center;
+    }
+
+
+    div.box_menu {
+        flex-direction: row;
+    }
+
+
+    div.conteiner_img_text {
+        width: 50%;
+    }
+
+    table.cardapio {
+        width: 50%;
+    }
 }
 
 

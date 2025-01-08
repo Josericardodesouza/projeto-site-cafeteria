@@ -1,9 +1,10 @@
 import { useRef, useState } from 'react'
 import './App.css'
 import './styles/colorsAndFonts-module.css'
+import './styles/globalButtons-module.css'
 import { Link } from 'react-router-dom'
 
-import videoHeader from './assets/videos/7487669-hd_1920_1080_24fps.mp4'
+import videoHeader from './assets/videos/6769791-hd_1920_1080_24fps-video.mp4'
 
 
 
@@ -34,7 +35,7 @@ import cookieImg from './assets/images/cards-images/pexels-sara-santos-381576-10
 import cupcake from './assets/images/cards-images/pexels-aqtai-635409-cupcake.jpg'
 import paoDeMelImg from './assets/images/cards-images/pão-de-mel-caldeirao-bruxa-solar.jpeg'
 import tortaImg from './assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplash-torta-maca.jpg'
-import { CiCoffeeCup } from 'react-icons/ci'
+import { CiCoffeeCup, CiFaceFrown } from 'react-icons/ci'
 import { useEffect } from 'react'
 import MenuColdDrinks from './components/MenuColdDrinks'
 
@@ -57,7 +58,7 @@ import { useContext } from 'react'
 
 
 
-import { BsPerson } from 'react-icons/bs'
+import { BsPerson, BsShop } from 'react-icons/bs'
 
 import { SwiperSlide, Swiper } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
@@ -73,6 +74,9 @@ import { SelectedItemsContext } from './context/SelectedItemsContext'
 import { DiCoffeescript } from 'react-icons/di'
 import { FaCoffee, FaCookie } from 'react-icons/fa'
 import { GiCoffeeCup, GiCoffeeMug, GiCupcake } from 'react-icons/gi'
+import { BiFoodMenu } from 'react-icons/bi'
+import { TbStars, TbSTurnDown } from 'react-icons/tb'
+import { FaFaceFrown, FaFaceGrinStars, FaFaceKissWinkHeart, FaFaceMeh, FaFaceSmile } from 'react-icons/fa6'
 
 
 
@@ -257,6 +261,21 @@ function App() {
   })
 
 
+    
+  // const geraComentario = () => {
+
+  //   if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 1 && storedListItemsNames.length > 1 ) {
+
+  //     
+  
+
+  //   } 
+  // }
+
+  
+
+
+
 
   var testeNum = parseInt(storedNote)
 
@@ -274,6 +293,40 @@ function App() {
   //   divStars.appendChild(newSpan)
 
   // }
+
+  // const face_userNote = useRef(null)
+
+
+  const displayFace = () => {
+
+    switch (testeNum) {
+
+      case 1:
+        return <FaFaceFrown />
+
+      case 2:
+        return <FaFaceMeh />
+
+      
+      case 3: 
+       return <FaFaceSmile />
+
+
+      case 4:
+        return <FaFaceGrinStars />
+
+     case 5:
+
+     return <FaFaceKissWinkHeart />
+
+    
+    }
+
+
+
+  }
+
+
 
   const displayStars = () => {
 
@@ -311,6 +364,10 @@ function App() {
             <span>&#9733;</span>
             <span>&#9734;</span>
             <span>&#9734;</span>
+
+            
+
+
           </>
         );
 
@@ -350,8 +407,11 @@ function App() {
 
       <nav id='home_navBar' >
         <div className='box_navBarLinks'>
-          <NavBar />
+        
+       
         </div>
+
+        <NavBar />
 
 
 
@@ -363,19 +423,42 @@ function App() {
 
 
 
-      <header id='header'>
+      <header id='header_home'>
 
-
-        <div id='box_header'>
-
-
+        <div id='background_box_video'>
           <video autoPlay muted loop id='video_header_home'>
             <source src={videoHeader} type='video/mp4'></source>
           </video>
-
-          {/* span */}
-          {/* <p id='text_header'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> */}
         </div>
+
+       
+          <div id='conteiner_header'>
+            <div id='box_1' className='box_header'>
+              <p className='phrase_header'>LOREM IPSUM.</p>
+              <p className='phrase_header'>Entregamos em todo o país.</p>
+
+            </div>
+            <div id='box_2' className='box_header'>
+              <button className='buttons_scroll' onClick={scrollAboutUs}>
+                <BsShop className='icon_buttons_header' />
+                <p>Sobre nós</p>
+              </button>
+
+              <button className='buttons_scroll' onClick={scrollMenus}>
+                <BiFoodMenu className='icon_buttons_header' />
+                <p>cardápio</p>
+                </button>
+
+              <button className='buttons_scroll' onClick={scrollEvaluations}> 
+                <TbStars className='icon_buttons_header' />
+                <p>avaliações</p>
+                </button>
+              
+
+            </div>
+
+          </div>
+     
       </header>
 
       <main>
@@ -483,7 +566,7 @@ function App() {
                     <span className='btn_menus'>
                       <GiCupcake className='btn_icon' />
                       <span className='btn_text'>
-                        Doces
+                      Doces
                     </span>
                     </span>
                   
@@ -512,17 +595,42 @@ function App() {
           {renderComponent()}
         </section>
 
+{/* 
         <Link to='/deliveryPage'>
           <div id='goDeliveryPage'>
             <CiCoffeeCup className='goDeliveryPage_hover' id='goDeliveryPage_icon' />
             <p className='goDeliveryPage_hover' id='goDeliveryPage_p'>Fazer um pedido</p>
+          </div>
+        </Link> */}
+
+
+
+
+        <Link to='/deliveryPage'>
+          <div className='buttons_redirect_confirmationPage'>
+            <CiCoffeeCup className='icon_button' />
+            <p>Fazer um pedido</p>
+
           </div>
         </Link>
 
 
 
 
-        <h3 className='title_box' id='title_evaluations'>Avaliados recentemente</h3>
+
+
+        <div>
+     
+        </div>
+
+
+
+
+        <h3 className='' id='title_evaluations'>Avaliados recentemente</h3>
+
+
+   
+        
 
         <section id='evaluations' ref={refSectionEv}>
 
@@ -554,11 +662,31 @@ function App() {
               <div className='conteiner_ev'>
 
                 <div className='box_opinion'>
-                  <p>Avaliando: {storedListItemsNames}</p>
+                  {/* <p>Avaliando: {storedListItemsNames}</p> */}
+
+                  <div className='box_icon_face_comment'>
+
+                    {displayFace()}
+               
+                 
+                  </div>
+
+                  <div className='box_stars_user_comment'>
+
+                  <div className='box_stars'>{displayStars()}</div>
+
+                </div>
+
+                  <div className='box_text_comment'>
                   <p className='txt_opinion'>" {storedComment} "</p>
-                  <p className='clientName'><BsPerson />{storedUserNameInput}</p>
-                  <div id="stars_container">
-                    <div className='box_stars'>{displayStars()}</div>
+
+                  </div>
+
+                  <div className='box_username_comment'>
+                    <BsPerson />
+                  <p className='clientName'>{storedUserNameInput}</p>
+
+
                   </div>
 
                 </div>

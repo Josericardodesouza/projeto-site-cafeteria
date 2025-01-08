@@ -1,6 +1,7 @@
 import { GiCookie } from 'react-icons/gi'
 import '../styles/menus-module.css'
 import { candyList } from './ConstantsItens'
+import { useRef } from 'react'
 
 const brigadeiros = candyList[0]
 const brownies = candyList[1]
@@ -13,17 +14,26 @@ const tortas = candyList[5]
 function MenuCandy() {
 
 
+    const candies_menu_toTop_scroll = useRef(null)
+
+    const ref_img_candies_item = useRef(null)
+
+
     const displayTextImg = (event) => {
+        
         const nameItem = event.target.textContent 
 
-        document.getElementById('icon_candy_menu').style.display = 'none'
+        // document.getElementById('icon_candy_menu').style.display = 'none'
 
-        var divItemDescription = document.getElementById('box_links_menu')
-        divItemDescription.scrollIntoView({behavior: 'smooth'})
+        candies_menu_toTop_scroll.current.scrollIntoView({behavior: 'smooth'})
 
         switch(nameItem) {
-            case 'Brigadeiros':
+
+            case brigadeiros.name:
+
                 document.getElementById('item_title_candy').innerHTML = brigadeiros.name
+
+                ref_img_candies_item.current.style.display = 'block'
 
                 document.getElementById('item_img_candy').src = brigadeiros.img
 
@@ -31,8 +41,10 @@ function MenuCandy() {
 
                 break;
 
-            case 'Brownies':
+            case brownies.name:
                 document.getElementById('item_title_candy').innerHTML = brownies.name
+
+                    ref_img_candies_item.current.style.display = 'block'
 
                 document.getElementById('item_img_candy').src = brownies.img
 
@@ -40,8 +52,11 @@ function MenuCandy() {
 
                 break;
 
-            case 'Cookies':
+            case cookies.name:
+                
                 document.getElementById('item_title_candy').innerHTML = cookies.name
+
+                    ref_img_candies_item.current.style.display = 'block'
 
                 document.getElementById('item_img_candy').src = cookies.img
 
@@ -49,8 +64,10 @@ function MenuCandy() {
 
                 break;
 
-            case 'Cupcakes':
+            case cupcakes.name:
                 document.getElementById('item_title_candy').innerHTML = cupcakes.name
+
+                    ref_img_candies_item.current.style.display = 'block'
 
                 document.getElementById('item_img_candy').src = cupcakes.img
 
@@ -58,9 +75,11 @@ function MenuCandy() {
 
                 break;
 
-            case 'Pão de mel':
+            case paodemel.name:
 
                 document.getElementById('item_title_candy').innerHTML = paodemel.name
+
+                    ref_img_candies_item.current.style.display = 'block'
 
                 document.getElementById('item_img_candy').src = paodemel.img
 
@@ -68,9 +87,11 @@ function MenuCandy() {
 
                 break;
 
-            case 'Tortas':
+            case tortas.name:
 
             document.getElementById('item_title_candy').innerHTML = tortas.name
+
+                ref_img_candies_item.current.style.display = 'block'
 
             document.getElementById('item_img_candy').src = tortas.img
 
@@ -92,15 +113,24 @@ function MenuCandy() {
         <>
 
         <section className='section_menu'>
-            <div className = 'box_menu'>
+
+            <div className = 'box_menu' ref={candies_menu_toTop_scroll}>
             {/* <h1 className = 'title_table'></h1> */}
 
             <div className='conteiner_img_text' id='conteiner_img_text_candys'>
 
+                <div className='title_and_icon'>
+
                 <p id='item_title_candy' className='item_title_menu'>Doces</p>
 
-                <img src="" alt="" id='item_img_candy' className='item_img_menu'/>
-                <svg className='icon_item_menu' id='icon_candy_menu'><GiCookie /></svg>
+
+                </div>
+
+             
+
+                <img src="" alt="" id='item_img_candy' className='item_img_menu' ref={ref_img_candies_item}/>
+
+                {/* <svg className='icon_item_menu' id='icon_candy_menu'><GiCookie /></svg> */}
 
                 <p id='item_text_candy' className='item_text_menu'>Clique em um dos itens do cardápio para saber sobre cada <strong>guloseima</strong>para acompanhar seu café</p>
 
@@ -110,12 +140,12 @@ function MenuCandy() {
                    <tbody>
 
                     <tr>
-                        <td>
+                        <td className='item'>
                             <a onClick={displayTextImg}>{brigadeiros.name}
                             </a>
                          </td>
 
-                        <td>
+                        <td className='value'>
                             <a>
                             {brigadeiros.price}
                             </a>
@@ -124,18 +154,18 @@ function MenuCandy() {
 
                     <tr>
 
-                        <td><a onClick={displayTextImg}>{brownies.name}</a></td>
+                        <td className='item'><a onClick={displayTextImg}>{brownies.name}</a></td>
 
-                        <td><a>
+                        <td className='value'><a>
                             {brownies.price}</a>
                             </td>
 
                     </tr>
 
                     <tr>
-                        <td><a onClick={displayTextImg}>{cookies.name}</a></td>
+                        <td className='item'><a onClick={displayTextImg}>{cookies.name}</a></td>
 
-                        <td>
+                        <td className='value'>
                             <a>
                                 {cookies.price}
                             </a>
@@ -145,12 +175,12 @@ function MenuCandy() {
                     </tr>
 
                     <tr>
-                        <td>
+                        <td className='item'>
                             <a onClick={displayTextImg}>{cupcakes.name}   
                             </a>
                         </td>
 
-                        <td>
+                        <td className='value'>
                             <a>
                                 {cupcakes.price}
                             </a>
@@ -158,12 +188,12 @@ function MenuCandy() {
                     </tr>
 
                     <tr>
-                        <td>
+                        <td className='item'>
                             <a onClick={displayTextImg}>{paodemel.name}
                             </a>
                         </td>
 
-                        <td>
+                        <td className='value'>
                             <a>
                                 {paodemel.price}
                             </a>
@@ -172,13 +202,13 @@ function MenuCandy() {
                     </tr>
 
                     <tr>
-                        <td>
+                        <td className='item'>
                             <a onClick={displayTextImg}>
                                 {tortas.name}
                             </a>
                         </td>
 
-                        <td>
+                        <td className='value'>
                             <a>
                                 {tortas.price}
                             </a>
