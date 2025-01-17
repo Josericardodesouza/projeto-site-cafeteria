@@ -1,6 +1,10 @@
 nav {
     box-shadow: 0px 0px 3px black;
 }
+
+main {
+    margin-top: 15vh;
+}
 h1 {
     font-size: 1.2em;
     font-family: 'Nunito';
@@ -90,7 +94,7 @@ div#output_items_confirmation {
 }
 
 div#output_items_confirmation > ul {
-    width: 100%;
+    width: 90%;
     padding: 0;
     font-size: 0.9em;
     line-height: 30px;
@@ -198,7 +202,7 @@ p#p_alert_return {
     font-family: 'Nunito';
     font-size: 0.9em;
     width: 80%;
-    margin: auto;
+    margin: 20px auto 30px auto;
 }
 
 

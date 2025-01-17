@@ -16,6 +16,7 @@
     flex-direction: column;
     vertical-align: center;
     align-items: center;
+    margin-bottom: 50px;
   
 
 }
@@ -82,9 +83,10 @@ div.title_and_icon  {
 
 .item_title_menu {
     color: white;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'Fredericka the Great';
     margin: 7px;
+    text-align: center;
 }
 
 

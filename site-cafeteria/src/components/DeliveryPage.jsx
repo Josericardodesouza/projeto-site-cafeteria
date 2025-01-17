@@ -2,44 +2,25 @@ import '../styles/deliveryPage-modules.css'
 import '../styles/colorsAndFonts-module.css'
 
 
-
 import { Link, Navigate, BrowserRouter as Route, Router, Routes } from 'react-router-dom'
 import { useEffect } from 'react'
-import { useState } from 'react'
-
-
-import SimpleNavBar from './SimpleNavBar'
-
-
-
-
-
-
 import Footer from '../components/Footer'
-
-import SendPage from './SendPage'
 import { useRef } from 'react'
-
-import ItensListDelivery from './ItensListDelivery'
-import UserAdress from './UserAdress'
 import { useContext } from 'react'
-import { UserAdressContext } from '../context/UserAdressContext'
 import MenuItems from './MenuItems'
-
-import UserName from './UserName'
-import { UserNameContext } from '../context/UserNameContext'
-import { CommentContext } from '../context/CommentContext'
 import NavBar from './NavBar'
-import { TbTruckDelivery } from 'react-icons/tb'
 import { SelectedItemsContext } from '../context/SelectedItemsContext'
 import { GiConfirmed } from 'react-icons/gi'
+import { FaArrowRight } from 'react-icons/fa'
+
+
 
 
 
 
 function DeliveryPage() {
 
-  const {storedListItemsNames} = useContext(SelectedItemsContext)
+  const { storedListItemsNames } = useContext(SelectedItemsContext)
 
   // console.log('Username no DeliveryPage: ', userNameInput);
 
@@ -138,21 +119,21 @@ function DeliveryPage() {
   //   }
   // }, []);
 
- const botao = useRef(null)
+  const botao = useRef(null)
 
- useEffect(() => {
+  useEffect(() => {
 
-  
-  if (storedListItemsNames.length >= 1) {
-    botao.current.style.display = 'block'
- 
-   
-   } else {
-     botao.current.style.display = 'none'
- 
-   }
 
- })
+    if (storedListItemsNames.length >= 1) {
+      botao.current.style.display = 'block'
+
+
+    } else {
+      botao.current.style.display = 'none'
+
+    }
+
+  })
 
   return (
 
@@ -160,9 +141,14 @@ function DeliveryPage() {
 
       <NavBar />
 
-      <header id='header_deliveryPage'></header>
+      {/* <header id='header_deliveryPage'></header> */}
+
+      
 
       <main>
+
+      <p className='titles_sections'>Temos diversas opções para você!</p>
+      <p className='subtitle_section'>Selecione a seção, em seguida defina o quantidade e, por fim, clique em "continuar" para seguirmos.</p>
 
         <section id='section_menu'>
           <MenuItems />
@@ -171,7 +157,7 @@ function DeliveryPage() {
 
         {/* <button ref={botao}>Teste</button> */}
 
-
+        {/* 
         <div ref={botao} id='conteiner_redirect_confirmationPage'>
           <span className='hover_goConfirmationPage' id='goSendPage_icon'><GiConfirmed /></span>
           <Link to = '/confirmation' className='hover_goConfirmationPage'>Continuar</Link>
@@ -181,11 +167,38 @@ function DeliveryPage() {
 
 
 
-        </div>
+        </div> */}
 
 
 
 
+        <Link to='/confirmation' ref={botao}>
+
+          <div className='buttons_redirect_confirmationPage'>
+            <FaArrowRight className='icon_button' />
+            <p>Continuar</p>
+          </div>
+
+        </Link>
+
+
+
+        {/*         
+        <div ref={botao} id='conteiner_redirect_confirmationPage'>
+          <span className='hover_goConfirmationPage' id='goSendPage_icon'><GiConfirmed /></span>
+          <Link to = '/confirmation' className='hover_goConfirmationPage'>Continuar</Link>
+ 
+
+
+
+
+
+        </div> */}
+
+
+
+
+        {/* 
 
         <div ref={botao} id='btn_conteiner_toSendPage'>
           <Link to='/confirmation' id='btn_toSendPage'>
@@ -195,7 +208,7 @@ function DeliveryPage() {
             </div>
           </Link>
         </div>
-
+ */}
 
         {/* <button onClick={confirmar}>Confirmar</button> */}
 

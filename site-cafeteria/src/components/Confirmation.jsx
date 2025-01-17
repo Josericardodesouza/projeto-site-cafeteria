@@ -143,13 +143,14 @@ function Confirmation() {
 
     <>
 
-      <nav>
+      
         <NavBar />
-      </nav>
-
+      
       <main>
 
-        <h1>Preencha os dados abaixo para confirmar seu pedido</h1>
+
+        <p className='titles_sections'>Estamos quase lá!</p>
+        <p className='subtitle_section'>Agora, por favor,preencha os dados abaixo para confirmar seu pedido</p>
 
         <section id='inputs_conteiner'>
           <div className='component_inputs_confirmationPage'>

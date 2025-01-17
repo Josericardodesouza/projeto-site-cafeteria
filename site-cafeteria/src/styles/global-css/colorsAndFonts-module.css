@@ -25,28 +25,79 @@
 
 :root {
 
-    --copper: #a8763e;
-    --copper2: #a86b26;
-    --brownSugar: #c57b57;
-    --brownSugar2:rgb(161, 62, 12)7;
-    --darkGreen: #132a13;
-    --hunterGreen: #31572c;
-    --cream: #f5fdc6;
-    --flax: #f9ea9a;
-    --cor7: #CC8B6B;
-    --cream2: #eaedd9;  /*cor de fundo da página*/
-
-    --offWhite: #F5F2D0;
-    --beige: #F5F2D0;
-    --caramelBrown: #6F4300; /*bakcground para alguma caixa dde texto*/
-    --coffee: #6F4E37;
-    --cocoa: #875F42;
-    --brown: #341C02; /**cor das sombras */
-    --mint1: #99e89d;
-    --mint2: #73c883;
     --generalShadow: rgba(0, 0, 0, 0.297);
 
     --global-shadow-size: 0px 0px 10px;
+
+
+    /*cores oficiais*/
+
+ 
+
+   --gradient1: linear-gradient(to bottom, var(--coffee), var(--cocoa));
+
+   --gradient2: linear-gradient(to bottom, var(--copper), var(--copper2));
+
+   --gradient3: linear-gradient(to bottom, var(--brownSugar), var(--brownSugar2));
+
+   --gradient4: radial-gradient(var(--hunterGreen), var(--darkGreen));
+
+   --gradient5: linear-gradient(var(--mint1), var(--mint2));
+
+   --gradient6: linear-gradient(var(--offWhite), var(--beige));
+
+  --gradient7: linear-gradient(var(--cream), var(--cream2));
+
+  --gradient8: radial-gradient(var(--cor7), var(--brownSugar));
+
+  --gradient9: linear-gradient(var(--caramelBrown), var(--brown));
+
+
+  --titleColor: var(--brown);
+  --subtitleColor: var(--cocoa);
+
+
+    /*gradient 1*/
+    --coffee: #6F4E37;
+    --cocoa: #875F42;
+
+    /*gradiente 2*/
+    --copper: #a8763e;
+    --copper2: #a86b26;
+
+    /*gradiente 3*/
+    --brownSugar: #c57b57;
+    --brownSugar2:rgb(161, 62, 12);
+
+    /*gradiente 4*/
+
+    --darkGreen: #132a13;
+    --hunterGreen: #31572c;
+
+    /*gradiente 5*/
+    --mint1: #99e89d;
+    --mint2: #73c883;
+
+
+    /*gradiente 6*/
+    --offWhite: #F5F2D0;
+    --beige: #F5F2D0;
+
+    /*gradiente 7*/
+    --cream: #f5fdc6;
+    --cream2: #eaedd9;  /*cor de fundo da página*/
+
+
+    /*gradiente 8*/
+    --flax: #f9ea9a;
+    --cor7: #CC8B6B;
+
+
+    /*gradiente 9*/
+    
+    --caramelBrown: #6F4300; /*bakcground para alguma caixa dde texto*/
+
+    --brown: #341C02; /**cor das sombras */
 
   
   

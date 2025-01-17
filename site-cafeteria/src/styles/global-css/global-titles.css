@@ -1,0 +1,35 @@
+
+
+p.titles_sections {
+
+    width: 80vw;
+    text-align: center;
+  
+  
+    color: var(--brown);
+    font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+    font-size: 2.0em;
+    font-weight: 700;
+    /* margin: 0px 0px 25px 0px; */
+    padding: 0;
+    text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.693);
+    margin: auto;
+    margin-bottom: 5px;
+  
+  
+  }
+  
+  
+  p.subtitle_section {
+  
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    /* text-shadow: 2px 2px 2px black;
+    color: var(--cream); */
+    font-family: 'Nunito';
+    font-size: 1.2em;
+    color: var(--cocoa);
+  
+  }

@@ -60,6 +60,9 @@ function SendPage() {
     const [listItems, setListItems] = useState([])
 
 
+    console.log('Valor da nota inicial: ', storedNote)
+
+
 
 
     useEffect(() => {
@@ -129,7 +132,10 @@ function SendPage() {
 
             <main>
 
-                <h1 id='title_sendPage'>Olá <strong>{storedUserNameInput}</strong>! Muito obrigado(a) pela sua compra, seu pedido está a caminho!</h1>
+
+
+                <p className='titles_sections'>Seu pedido está a caminho!</p>
+                <p id='title_sendPage' className='subtitle_section'>Olá <strong>{storedUserNameInput}</strong>! Muito obrigado(a) pela sua compra, seu pedido está a caminho!</p>
 
                 <section id='section_send'>
 
@@ -246,7 +252,7 @@ function SendPage() {
             </main>
 
 
-            <Link to='/'>Voltar para a Home</Link>
+            {/* <Link to='/'>Voltar para a Home</Link> */}
 
             <Footer />
 

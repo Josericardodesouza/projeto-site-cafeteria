@@ -3,6 +3,7 @@ import '../styles/defaultNavBar-module.css'
 import '../styles/colorsAndFonts-module.css'
 
 import { DiCoffeescript } from 'react-icons/di'
+import { Link } from 'react-router-dom'
 
 
 
@@ -18,11 +19,9 @@ function NavBar() {
     return (
        
     <nav className='navBar' id='navBar_logo'>
-      <div id='nav_img'>
-        
+      <div id='nav_icon_logo'>
           <DiCoffeescript />
-        
-          <a href="#" id='title_nav'>Lorem Ipsum Coffee</a> 
+          <Link to='/' id='title_nav'>Cafeteria</Link> 
       </div>
 
      

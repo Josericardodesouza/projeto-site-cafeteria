@@ -22,10 +22,15 @@ p.p_introduction_sendPage {
     padding: 0;
 }
 
-h1#title_sendPage {
+p#title_sendPage {
     width: 70vw;
     font-size: 0.9em;
     margin: 30px auto 30px auto;
+}
+
+
+p#subtitle_section {
+    margin-bottom: 30px;
 }
 
 
@@ -47,7 +52,8 @@ h1#title_sendPage {
 #adress_send {
     display: flex;
     flex-direction: column;
-    margin: 25px 0px 50px 0px;
+    margin: 25px auto 50px auto;
+    width: 90%;
 }
 
 
@@ -111,11 +117,7 @@ div#background_city {
     font-size: 2.5em;
     /* margin-left: 20px; */
     margin: 0;
-   
-  
-   
- 
-    color: blue;
+    color: var(--brown);
  }
 
 
@@ -170,7 +172,7 @@ div#box_icon_send > div#trees {
   
   
     margin-left: 100px;
-    color: red;
+    color: var(--hunterGreen);
     font-size: 3.1em;
 
 }
@@ -283,6 +285,16 @@ div#box_lines {
     height: 110px;
     font-family: 'Nunito', Arial, Helvetica, sans-serif;
     box-shadow: var(--global-shadow-size) var(--generalShadow);
+}
+
+
+#evaluation_conteiner > textarea:focus {
+    border: 2px solid var(--brownSugar);
+}
+
+
+#evaluation_conteiner > textarea {
+    outline: 0;
 }
 
 p#p_comment {

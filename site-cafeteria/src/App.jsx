@@ -251,7 +251,7 @@ function App() {
 
   useEffect(() => {
 
-    if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 1 && storedListItemsNames.length > 1 ) {
+    if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 1 && storedListItemsNames.length > 1) {
 
       boxEvaluation.current.style.display = 'block'
     } else {
@@ -261,18 +261,18 @@ function App() {
   })
 
 
-    
+
   // const geraComentario = () => {
 
   //   if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 1 && storedListItemsNames.length > 1 ) {
 
   //     
-  
+
 
   //   } 
   // }
 
-  
+
 
 
 
@@ -307,19 +307,19 @@ function App() {
       case 2:
         return <FaFaceMeh />
 
-      
-      case 3: 
-       return <FaFaceSmile />
+
+      case 3:
+        return <FaFaceSmile />
 
 
       case 4:
         return <FaFaceGrinStars />
 
-     case 5:
+      case 5:
 
-     return <FaFaceKissWinkHeart />
+        return <FaFaceKissWinkHeart />
 
-    
+
     }
 
 
@@ -365,7 +365,7 @@ function App() {
             <span>&#9734;</span>
             <span>&#9734;</span>
 
-            
+
 
 
           </>
@@ -400,16 +400,16 @@ function App() {
 
 
 
+
+
   return (
 
 
     <>
 
       <nav id='home_navBar' >
-        <div className='box_navBarLinks'>
-        
-       
-        </div>
+
+
 
         <NavBar />
 
@@ -431,34 +431,37 @@ function App() {
           </video>
         </div>
 
-       
-          <div id='conteiner_header'>
-            <div id='box_1' className='box_header'>
-              <p className='phrase_header'>LOREM IPSUM.</p>
-              <p className='phrase_header'>Entregamos em todo o país.</p>
 
-            </div>
-            <div id='box_2' className='box_header'>
-              <button className='buttons_scroll' onClick={scrollAboutUs}>
-                <BsShop className='icon_buttons_header' />
-                <p>Sobre nós</p>
-              </button>
-
-              <button className='buttons_scroll' onClick={scrollMenus}>
-                <BiFoodMenu className='icon_buttons_header' />
-                <p>cardápio</p>
-                </button>
-
-              <button className='buttons_scroll' onClick={scrollEvaluations}> 
-                <TbStars className='icon_buttons_header' />
-                <p>avaliações</p>
-                </button>
-              
-
-            </div>
+        <div id='conteiner_header'>
+          <div id='box_1' className='box_header'>
+            <p className='phrase_header' id='phrase_header1'>sua cafeteria online.</p>
+            <p className='phrase_header' id='phrase_header2'>Entregamos em todo o país.</p>
 
           </div>
-     
+          <div id='box_2' className='box_header'>
+            <button className='buttons_scroll' onClick={scrollAboutUs}>
+
+              {/**colocar os botões em um ul li */}
+
+              <BsShop className='icon_buttons_header' />
+              <p>Sobre nós</p>
+            </button>
+
+            <button className='buttons_scroll' onClick={scrollMenus}>
+              <BiFoodMenu className='icon_buttons_header' />
+              <p>cardápio</p>
+            </button>
+
+            <button className='buttons_scroll' onClick={scrollEvaluations}>
+              <TbStars className='icon_buttons_header' />
+              <p>avaliações</p>
+            </button>
+
+
+          </div>
+
+        </div>
+
       </header>
 
       <main>
@@ -467,7 +470,7 @@ function App() {
 
 
         <section id='aboutUs' ref={refSectionAboutUs}>
-          <h1 id='title_aboutUs'>Um Pouco Sobre Nós</h1>
+          <p id='title_aboutUs' className='titles_sections'>Um Pouco Sobre Nós</p>
 
           <div id='conteiner_1' className='conteiner_txtimg'>
 
@@ -510,8 +513,8 @@ function App() {
         <section>
 
           <div id='txt_div_pre_menu'>
-            <p id='title_pre_menu' ref={refDivButtonsMenus}>Confira abaixo nosso cardápio</p>
-            <p id='p_pre_menu'>Escolha uma categoria e depois clique no item para ver suas informações</p>
+            <p id='title_pre_menu' className='titles_sections' ref={refDivButtonsMenus}>Confira abaixo nosso cardápio</p>
+            <p id='p_pre_menu' className='subtitle_section'>Escolha uma categoria e depois clique no item para ver suas informações</p>
 
 
           </div>
@@ -519,12 +522,12 @@ function App() {
 
         </section>
 
-<section id='buttons_display_menus'>
-  
+        <section id='buttons_display_menus'>
+
           <div id='box_buttons_menu' >
             <ul className='ul_list'>
               <li className='li_item'>
-  
+
                 <div onClick={() => setActiveComponent('MenuCofee')}>
                   <label for="input_cf">
                     <input type="radio" id="input_cf" className="input_menus" name="groupScroll" />
@@ -532,54 +535,54 @@ function App() {
                       <GiCoffeeCup className='btn_icon' />
                       {/* <a className='btn_text' onClick={() => activeMenu()}> */}
                       <span className='btn_text'>
-                      Bebidas quentes
+                        Bebidas quentes
+                      </span>
                     </span>
-                    </span>
-                  
+
                   </label>
                 </div>
-  
+
               </li>
-  
+
               <li className='li_item'>
-  
+
                 <div onClick={() => setActiveComponent('MenuColdDrinks')}>
                   <label for="input_cg">
                     <input type="radio" id="input_cg" className="input_menus" name="groupScroll" />
                     <span className='btn_menus'>
-                      <GiCoffeeMug className='btn_icon'/>
+                      <GiCoffeeMug className='btn_icon' />
                       <span className='btn_text'>
-                      Bebidas geladas
+                        Bebidas geladas
+                      </span>
                     </span>
-                    </span>
-                  
+
                   </label>
                 </div>
-  
+
               </li>
-  
+
               <li className='li_item'>
-  
+
                 <div onClick={() => setActiveComponent('MenuCandy')}>
                   <label for="input_mc">
                     <input type="radio" id="input_mc" className="input_menus" name="groupScroll" />
                     <span className='btn_menus'>
                       <GiCupcake className='btn_icon' />
                       <span className='btn_text'>
-                      Doces
+                        Doces
+                      </span>
                     </span>
-                    </span>
-                  
+
                   </label>
                 </div>
-  
+
               </li>
-  
+
             </ul>
-  
-  
+
+
           </div>
-</section>
+        </section>
 
 
         {/* <h3 className='title_box'>Confira nossos produtos com os melhores preços</h3> */}
@@ -595,7 +598,7 @@ function App() {
           {renderComponent()}
         </section>
 
-{/* 
+        {/* 
         <Link to='/deliveryPage'>
           <div id='goDeliveryPage'>
             <CiCoffeeCup className='goDeliveryPage_hover' id='goDeliveryPage_icon' />
@@ -620,17 +623,17 @@ function App() {
 
 
         <div>
-     
+
         </div>
 
 
 
 
-        <h3 className='' id='title_evaluations'>Avaliados recentemente</h3>
+        <p className='titles_sections' id='title_evaluations'>Avaliados recentemente</p>
 
 
-   
-        
+
+
 
         <section id='evaluations' ref={refSectionEv}>
 
@@ -638,11 +641,12 @@ function App() {
 
             modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
 
-            spaceBetween={20}
-            slidesPerView={1.5}
+            spaceBetween={25}
+            slidesPerView={2.5}
             navigation
             pagination={{ clickable: true }}
-          
+
+
           // effect= {'coverflow'}
           // coverflowEffect= { {
 
@@ -667,39 +671,29 @@ function App() {
                   <div className='box_icon_face_comment'>
 
                     {displayFace()}
-               
-                 
+
                   </div>
 
                   <div className='box_stars_user_comment'>
 
-                  <div className='box_stars'>{displayStars()}</div>
+                    <div className='box_stars'>
+                    {displayStars()}</div>
+                   
 
-                </div>
+                  </div>
 
                   <div className='box_text_comment'>
-                  <p className='txt_opinion'>" {storedComment} "</p>
+                    <p className='txt_opinion'>" {storedComment} "</p>
 
                   </div>
 
                   <div className='box_username_comment'>
                     <BsPerson />
-                  <p className='clientName'>{storedUserNameInput}</p>
-
-
+                    <p className='clientName'>{storedUserNameInput}</p>
                   </div>
 
                 </div>
 
-
-
-
-
-
-
-
-
-
               </div>
 
             </SwiperSlide>
@@ -707,74 +701,182 @@ function App() {
             <SwiperSlide>
 
               <div className='conteiner_ev'>
-
-                {/* <div className='ev_img_box'> <img src={cappucinoImg} /></div> */}
-
-                <div className='ev_box'>
-                  <p>Cappuccino</p>
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStarHalf />
-                  <MdOutlineStarBorder />
-                </div>
 
                 <div className='box_opinion'>
-                  <p className='txt_opinion'>Comentário</p>
-                  <p className='clientName'><BsPerson />Angélica Silva</p>
+
+                  <div className='box_icon_face_comment'>
+                    <FaFaceKissWinkHeart />
+
+                  </div>
+
+                  <div className='box_stars_user_comment'>
+                    <div className='box_stars'>
+
+                      <span>&#9733;</span>
+                      <span>&#9733;</span>
+                      <span>&#9733;</span>
+                      <span>&#9733;</span>
+                      <span>&#9734;</span>
+
+                    </div>
+
+                  </div>
+
+                  <div className='box_text_comment'>
+                  <p className='txt_opinion'>
+                    "Comentário"
+                  </p>
+
+                  </div>
+
+
+                  <div className='conteiner_username_comment'>
+                    <div className='icon_user'>
+                      <BsPerson />
+                    </div>
+                    <div className='username_comment'>
+                      <p>Teste teste teste teste teste</p>
+
+                    </div>
+                
+
+
+                  </div>
+
+                  </div>
+
+                
+
                 </div>
 
 
-              </div>
+              
+                {/* <div className='ev_img_box'> <img src={cappucinoImg} /></div> */}
+
+          
 
             </SwiperSlide>
 
             <SwiperSlide>
 
               <div className='conteiner_ev'>
+
+        
 
                 {/* <div className='ev_img_box'>
                   <img src={cafeCoadoImg}></img>
                 </div> */}
 
-                <div className='ev_box'>
-                  <p>Cappuccino</p>
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStarHalf />
-                  <MdOutlineStarBorder />
+                <div className='box_opinion'>
+
+                <div className='box_icon_face_comment'>
+                    <FaFaceKissWinkHeart />
+
+                  </div>
+
+                  <div className='box_stars_user_comment'>
+                  <div className='box_stars'>
+
+                  {/* <p>Cappuccino</p> */}
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9734;</span>
+
                 </div>
 
-                <div className='box_opinion'>
-                  <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                  <p className='clientName'>Jason</p>
+
+                  </div>
+
+                  <div className='box_text_comment'>
+                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed."</p>
+               
+                </div>
+
+               
+                  <div className='conteiner_username_comment'>
+                    <div className='icon_user'>
+                    <BsPerson />
+
+                    </div>
+
+                    <div className='username_comment'>
+                    <p>Jason</p>
+
+                    </div>
+                  
+                  
+                  </div>
+              
+
+
+
                 </div>
 
               </div>
 
             </SwiperSlide>
 
+            
+
             <SwiperSlide>
 
               <div className='conteiner_ev'>
+
+                <div className='box_opinion'>
+                  <div className='box_icon_face_comment'>
+                    <FaFaceFrown />
+
+                  </div>
+
+                  <div className='box_stars_user_comment'>
+                    <div className='box_stars'>
+
+
+                    </div>
+
+                  </div>
+
+                </div>
 
                 {/* <div className='ev_img_box'>
                   <img src={testeImg3}></img>
                 </div> */}
 
-                <div className='ev_box'>
-                  <p>Frapuccino</p>
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStarHalf />
-                  <MdOutlineStarBorder />
+                <div className='box_stars_user_comment'>
+
+
+                  <div className='box_stars'>
+          
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9734;</span>
+
                 </div>
 
-                <div className='box_opinion'>
-                  <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                  <p className='clientName'>Juvenal Silva</p>
+
+                </div>
+
+
+
+                <div className='box_text_comment'>
+                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed."</p>
+                </div>
+
+                <div className='conteiner_username_comment'>
+                  <div className='icon_user'>
+                    <BsPerson />
+
+                  </div>
+
+                  <div className='username_comment'>
+                    <p>"Nome Sobrenome"</p>
+
+                  </div>
+
                 </div>
 
               </div>
@@ -784,28 +886,53 @@ function App() {
             <SwiperSlide>
 
               <div className='conteiner_ev'>
-{/* 
+                {/* 
                 <div className='ev_img_box'>
                   <img src={testeImg4} />
                 </div> */}
 
-                <div className='ev_box'>
-                  <p>Bolo</p>
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStarHalf />
-                  <MdOutlineStarBorder />
-                </div>
+
                 <div className='box_opinion'>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nesciunt nisi omnis eveniet tenetur velit fugit voluptates, expedita numquam veniam excepturi quidem sunt? Laudantium maxime ratione ipsum dignissimos cum ipsa.
-                  <p className='clientName'>Felipe Damasco</p>
+                  <div className='box_icon_face_comment'>
+                    <FaFaceKissWinkHeart />
+
+                  </div>
+
+              
+
+                <div className='box_stars_user_comment'>
+                  <div className='box_stars'>
+
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9734;</span>
 
                 </div>
 
-                <div className='box_opinion'>
-                  <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                  <p className='clientName'>Marco Túlio</p>
+
+                </div>
+
+                <div className='box_text_comment'>
+                  
+                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nesciunt nisi omnis eveniet tenetur velit fugit voluptates, expedita numquam veniam excepturi quidem sunt? Laudantium maxime ratione ipsum dignissimos cum ipsa."</p>
+             
+
+                </div>
+
+                <div className='conteiner_username_comment'>
+                  <div className='icon_user'>
+                    <BsPerson />
+                  </div>
+
+                  <div className='username_comment'>
+                    <p>Nome Sobrenome</p>
+
+                  </div>
+
+                  </div>
+
                 </div>
 
               </div>
@@ -815,23 +942,48 @@ function App() {
             <SwiperSlide>
 
               <div className='conteiner_ev'>
-{/* 
+                {/* 
                 <div className='ev_img_box'>
                   <img src={testeImg5} />
                 </div> */}
 
-                <div className='ev_box'>
-                  <p>Cupcake</p>
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStar />
-                  <MdOutlineStarHalf />
-                  <MdOutlineStarBorder />
-                </div>
-
                 <div className='box_opinion'>
-                  <p className='txt_opinion'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed.</p>
-                  <p className='clientName'>Cláudia Faria</p>
+                  <div className='box_icon_face_comment'>
+                    <FaFaceKissWinkHeart />
+
+                  </div>
+                  <div className='box_stars_user_comment'>
+                    <div className='box_stars'>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+
+
+                    </div>
+
+                  </div>
+
+                  <div className='box_text_comment'>
+                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed."</p>
+
+                  </div>
+
+                  <div className='conteiner_username_comment'>
+                    <div className='icon_user'>
+                      <BsPerson />
+
+                    </div>
+
+                    <div className='username_comment'>
+                    <p>Cláudia Faria</p>
+
+                    </div>
+
+                  </div>
+               
+                
                 </div>
 
               </div>
