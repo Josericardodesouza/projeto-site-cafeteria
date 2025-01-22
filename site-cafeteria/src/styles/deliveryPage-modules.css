@@ -5,6 +5,8 @@
     --backgroundHotDrinks: url('../assets/images/backgrounds/pexels-nurseryart-373639.jpg');
 
     --backgroundColdDrinks: url('../assets/images/backgrounds/pexels-teresa-jang-6930116-14802987.jpg');
+
+
 }
 
 
@@ -24,6 +26,9 @@ header#header_deliveryPage {
 
 
 #section_menu {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
    /* box-shadow: 0px 0px 2px var(--generalShadow); */
    margin-bottom: 20px;
 }
@@ -89,68 +94,27 @@ div.box_icon_category > svg {
     border-radius: 50%;
     color: white;
     margin: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-div.show_sections > p {
-    font-size: 1.5em;
-    font-family: 'Nunito';
-    font-weight: 700;
-    color: var(--brown);
-    margin: 10px;
-    
-}
-
-div.show_sections > svg {
-    font-size: 1.6em;
-    background-color: var(--brown);
-    padding: 5px;
-    border-radius: 50%;
-    color: white;
-    margin: 10px;
-
-}
-
- */
-
-
-
-
-
-
+}y
 
 
 section.deliveryItens {
-    width: 100vw;
+    width: 95%;
     height: auto;
     background-color: default;
     display: inline-flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    margin: 50px 0px 50px 0px;
-   
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 
-   
-   
     /* transform:; */
 }
+
+
+
 
 /* 
 section#hotDrinks_section {
@@ -161,20 +125,204 @@ section#coldDrinks_section {
     background-image: var(--gradiente1);
 } */
 
+
+
+
 div.deliveryItem {
    
-    width: 40vw;
-    height: auto;
+    width: 35%;
+    height: 50%;
     background-color: white;
     /* background-color: var(--brownSugar); */
     box-shadow: 0px 0px 5px var(--brown);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
+
+
+div.grid_img_text {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+div.grid_img_text > div.img_item {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    border: 5px solid var(--brownSugar);
+    border-radius: 4px;
+
+}
+
+div.grid_img_text > div.img_text > img {
+    width: 100%;
+    max-height: 100%;
+   
+}
+
+div.box_text_item {
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: green; */
+    text-align: center;
+    margin-top: 30px;
+   
+
+}
+
+div.box_text_item > p.name_item {
+    font-size: 0.9em;
+    font-family: 'Nunito';
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--brown);
+    margin: 0;
+    text-align: center;
+}
+
+
+div.box_text_item > p.label_item_menu {
+    font-size: 0.9em;
+    font-family: 'Nunito';
+    margin: 2.5px 0px 2.5px 0px;
+    text-align: center;
+}
+
+div.box_text_item > p.price_item {
+    font-size: 1.3em;
+    font-family: 'Nunito';
+    font-weight: 700;
+    margin: 5px;
+    color: var(--brown);
+    text-align: center;
+}
+
+div.conteiner_quantityInput {
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* box-shadow: 0px 0px 10px var(--generalShadow); */
+    border-radius: 10px;
+    /* background-color: yellow; */
+    margin: 5px 0px 0px 0px;
+}
+
+
+div.box_quant {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: pink; */
+    align-items: center;
+    border-top: 1px solid var(--generalShadow);
+    border-radius: 10px;
+    border: 1px solid var(--brownSugar);
+
+}
+
+div.conteiner_quantityInput > div.box_quant > button {
+    width: 25%;
+    height: auto;
+    margin: 15px;
+    font-size: 1.5em;
+    /* background-image: var(--gradient8); */
+    /* background-color: var(--brownSugar); */
+    color: var(--cor7);
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+
+    /* border: 1px solid var(--generalShadow);
+    box-shadow: 0px 0px 4px var(--generalShadow); */
+}
+
+
+div.conteiner_quantityInput > div.box_quant > button:hover {
+    cursor: pointer;
+}
+
+div.conteiner_quantityInput > div.box_quant > div.quant_item {
+    width: 70%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lobster';
+    font-size: 1.1em;
+    /* border: 1px solid var(--brownSugar); */
+    color: var(--brown);
+    border: 1px solid var(--brown)
+}
+
+
+div.conteiner_quantityInput > div.box_quant > input {
+    width: 70%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lobster';
+    font-size: 1.1em;
+    /* border: 1px solid var(--brownSugar); */
+    color: var(--cor7);
+    /* border: 2px solid var(--brown); */
+    border-radius: 10px;
+    border: none;
+ 
+}
+
+
+div.box_quant:focus-within {
+    background-image: var(--gradient8);
+    color: white;
+}
+
+
+div.conteiner_quantityInput > div.box_quant > input:focus {
+    outline: none;
+    
+}
+
+/* 
+div.box_quantityInput > div.box_quant > input:focus {
+    border: 1px solid;
+    border-color: var(--brown);
+    outline: none;
+} */
+
+
+
+
+
+
+
+div.conteiner_quantityInput > div.box_quant > input[type=number]::-webkit-inner-spin-button, input[type=number]
+::-webkit-outer-spin-button {    
+    -webkit-appearance: none; 
+    margin: 0;
+}
+
+div.conteiner_quantityInput > div.box_quant > input[type=number] {
+    appearance: default;
+     -moz-appearance: textfield; 
+    }
+
 
 
 
@@ -210,6 +358,7 @@ div.img_item {
     justify-content: center;
     border: 5px solid var(--brownSugar);
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 div.img_item > img {
@@ -259,7 +408,7 @@ div.quantity_input > button {
     height: 30%;
     margin: 15px;
     font-size: 1.2em;
-    background-image: var(--gradiente8);
+    background-image: var(--gradient8);
     /* background-color: var(--brownSugar); */
     color: white;
     border: none;
@@ -268,19 +417,11 @@ div.quantity_input > button {
     box-shadow: 0px 0px 4px var(--generalShadow);
 }
 
-div.quantity_input > div.quant_item {
-    width: 70%;
-    height: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-family: 'Lobster';
-    font-size: 1.1em;
-    /* border: 1px solid var(--brownSugar); */
-    color: var(--brown);
-    border: 1px solid var(--brown)
-   
+
+div.quantity_input > button:hover {
+    cursor: pointer;
 }
+
 
 
 div.quantity_input > input {
@@ -296,6 +437,12 @@ div.quantity_input > input {
     border: 1px solid var(--brown)
    
 }
+
+
+
+
+
+
 
 label.label_item_menu:hover {
     cursor: pointer;
@@ -401,7 +548,7 @@ div#conteiner_selectedItems > p#phrase_yourItems {
 #selected_names {
     display: none;
 }
-
+/* 
 
 div#conteiner_redirect_confirmationPage {
     width: 60%;
@@ -435,7 +582,7 @@ div#conteiner_redirect_confirmationPage:hover > .hover_goConfirmationPage {
     font-size: 2.5em;
     color: var(--copper2);
 }
-
+ */
 
 
 
@@ -448,12 +595,11 @@ p#outputTeste {
 
 
 
-@media (min-width: 500px) {
+@media screen and (min-width: 500px) {
 
 
     div.box_title_category {
-        width: 50%;
-       
+        width: 50%; 
         margin: 0;
         text-align: left;
         text-indent: 25%;
@@ -480,6 +626,13 @@ p#outputTeste {
 
 
 
+    section.deliveryItens {
+        gap: 15px;
+    }
+
+
+
+
     div.show_sections {
         flex-direction: row;
         justify-content: space-around;
@@ -488,60 +641,163 @@ p#outputTeste {
     }
 
 
+    div.deliveryItem {
+        width: 35%;
+        flex-direction: column;
+    }
+
+    div.grid_img_text {
+        flex-direction: row;
+    }
+
+    div.grid_img_text > div.img_item {
+      
+   
+    }
+
+
+
+
+    div.conteiner_quantityInput {
+        width: 70%;
+     
+    }
+
+    
+
+div.box_quant {
+    width: 100%;
+    /* margin-left: 50%; */
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+/* 
     section.deliveryItens {
-        width: 100%;
-        gap: 20px;
+        width: 95vw;
+        gap: 15px;
+        margin: auto;
+        padding: 0;
        
     }
 
 
     div.deliveryItem {
-        flex-direction: row;
-        width: 25%;
-        
+        width: 29%;
+    }
+
+
+    div.box_top_item_menu {
+        height: 30%;
+    }
+
+
+    div.box_bottom_item_menu {
+        height: auto;
     }
 
     div.img_item {
-        width: 75%;
-    }
+        width: 90%;
+    } */
 
-
-
-
-
-
-
-    div.quantity_input {
-        width: 100%;
-
-        flex-direction: row;
-        
-    }
-
-    div.quantity_input > button {
-        margin: 5px;
-        width: 100%;
-        height: auto;
-    }
 
 
   
 }
 
 
-@media (min-width: 1000px) {
 
+
+@media screen and (min-width: 700px) {
+
+
+    /* div.deliveryItem {
+        width: 27%;
+    } */
+
+    /* div.box_quantityInput {
+        width: 44%;
+   
+       
+    } */
+
+
+
+  
+
+        
     section.deliveryItens {
-        gap: 25px;
+        width: 100%;
+       
+        gap: 20px;
     }
+
 
     div.deliveryItem {
-        width: 15%;
+   
+    }
+    
+
+    div.box_quant {
+        width: 100%;
+        background-color: white;
     }
 
-    div.img_item {
-        width: 80%;
+
+    div.grid_img_text > div.img_item {
+        height: 190px;
     }
+
+
+/* 
+    section.deliveryItens {
+        gap: 20px;
+      
+    }
+
+    
+    div.deliveryItem {
+        height: auto;
+   
+
+    }
+
+    div.box_top_item_menu {
+     
+    }
+
+    div.box_bottom_item_menu {
+      
+    }
+    
+
+    div.img_item {
+  
+    }
+
+
+    div.quantity_input {
+        width: 100%;
+        flex-direction: row; 
+    }
+
+    div.quantity_input > button {
+         width: 70%;
+        height: 70%; 
+    } */
+
+
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    
+    div.deliveryItem {
+        width: 20%;
+    }
+
 
 }
 

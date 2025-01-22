@@ -731,7 +731,7 @@ div#testeEva {
 
 
 
-@media (min-width: 500px) {
+@media screen and (min-width: 500px) {
 
   
 nav#home_navBar {
@@ -745,6 +745,15 @@ nav#home_navBar {
 
 video {
   margin-top: 0px;
+}
+
+
+
+
+button.buttons_scroll {
+  width: 35%;
+  transition: 2s ease;
+  
 }
 
 
@@ -786,8 +795,6 @@ video {
  p.txt_opinion {
   font-size: 1.0em;
  }
-
-
  
 
  div.icon_user {
@@ -801,14 +808,6 @@ video {
   font-size: 1.0em;
 
  }
-
- 
-
-
-
-
-
-
 
 
   div.conteiner_txtimg {
@@ -896,6 +895,12 @@ video {
     justify-content: center;
   }
 
+
+  button.buttons_scroll {
+    width: 60%;
+    
+  }
+
 }
 
 
@@ -911,9 +916,13 @@ video {
 
 
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 
 
+  button.buttons_scroll {
+    width: 40%;
+    
+  }
   
 section#aboutUs {
   width: 90vw;

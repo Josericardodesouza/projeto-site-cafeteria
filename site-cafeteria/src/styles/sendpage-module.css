@@ -1,11 +1,12 @@
 
 
 p.p_introduction_sendPage {
-    font-family: 'Lobster';
+    font-family: 'Nunito';
     font-size: 1.0em;
     text-align: center;
     width: 70%;
-    margin: 20px auto 20px auto;
+    margin: 30px auto 30px auto;
+    font-weight: 700;
 
 }
 
@@ -66,11 +67,13 @@ div#output_listItems_sendPage {
     width: 85vw;
     margin: auto;
     font-family: 'Nunito';
+    text-align: center;
 }
 
 div#output_listItems_sendPage > ul {
     line-height: 30px;
     margin: 0;
+    padding: 0;
 }
 
 
@@ -320,7 +323,7 @@ p#p_comment {
 
 
 
-@media (min-width: 500px) {
+@media screen and (min-width: 500px) {
 
     h1#title_sendPage {
         font-size: 1.2em;
@@ -335,7 +338,27 @@ p#p_comment {
        
     }
 
+    div#evaluation_conteiner > textarea {
+        width: 60%;
+    
+    }
 
+
+}
+
+
+@media screen and (min-width: 700px) {
+    div#evaluation_conteiner > textarea {
+        width: 45%;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    div#evaluation_conteiner > textarea {
+        width: 40%;
+    
+    }
 }
 
 

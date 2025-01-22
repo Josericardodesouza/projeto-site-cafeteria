@@ -254,7 +254,7 @@ function MenuItems() {
 
 
 
-   
+
 
     const changeValueInput = (event, key) => {
         const { value } = event.target;
@@ -499,71 +499,104 @@ function MenuItems() {
 
                 <section className='deliveryItens' id='hotDrinks_section'>
 
+
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={coado.img} alt='imagem café coado' />
                             </div>
+
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{coado.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${coado.price}</p>
+                            </div>
+
                         </div>
 
-                        <div className='box_bottom_item_menu'>
 
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{coado.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${coado.price}</p>
+                        <div className='box_quantityInput'>
+
                             <label htmlFor="input_add_coado" className='label_item_menu'>quantidade</label>
-                            <div className='quantity_input'>
+
+
+                            <div className='box_quant'>
+
                                 <button onClick={() => addQuantity('inputCoado')}>+</button>
                                 <input type='number' id='input_add_coado' value={itensProperties.inputCoado.quant} onChange={(e) => changeValueInput(e, 'inputCoado')} />
                                 <button onClick={() => subQuantity('inputCoado')}>-</button>
                                 {/* <button>confirmar</button> */}
                             </div>
 
+
+
                         </div>
+
 
                     </div>
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
                             <div className='img_item'>
                                 <img src={cappuccino.img} alt='imagem café cappuccino' />
                             </div>
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{cappuccino.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${cappuccino.price}</p>
+
+                            </div>
+
                         </div>
 
-                        <div className='box_bottom_item_menu'>
-                            <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{cappuccino.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${cappuccino.price}</p>
+                        <div className='conteiner_quantityInput'>
                             <label htmlFor="input_quant_cappuccino" className='label_item_menu'>quantidade</label>
-                            <div className='quantity_input'>
+
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputCappuccino')}>+</button>
                                 <input type="number" id='input_quant_cappuccino' onChange={(e) => changeValueInput(e, 'inputCappuccino')} value={itensProperties.inputCappuccino.quant} />
                                 <button onClick={() => subQuantity('inputCappuccino')}>-</button>
+
                             </div>
+
                         </div>
+
+
 
                     </div>
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
                             <div className='img_item'>
                                 <img src={espresso.img} alt='imagem café espresso' />
                             </div>
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{espresso.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${espresso.price}</p>
+
+                            </div>
+
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                            <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{espresso.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${espresso.price}</p>
+                        <div className='conteiner_quantityInput'>
+
                             <label htmlFor="input_quant_espresso" className='label_item_menu'>quantidade</label>
-                            <div className='quantity_input'>
+
+
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputEspresso')}>+</button>
                                 <input type="number" id='input_quant_espresso' value={itensProperties.inputEspresso.quant} onChange={(e) => changeValueInput(e, 'inputEspresso')} />
                                 <button onClick={() => subQuantity('inputEspresso')}>-</button>
@@ -574,20 +607,33 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={latte.img} alt='imagem café latte' />
                             </div>
+
+
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{latte.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${latte.price}</p>
+
+                            </div>
+
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                            <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{latte.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${latte.price}</p>
+
+                        <div className='conteiner_quantityInput'>
+
+
                             <label htmlFor="input_quant_latte" className='label_item_menu'>quantidade</label>
-                            <div className='quantity_input'>
+
+
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputLatte')}>+</button>
                                 <input type="number" id='input_quant_latte' value={itensProperties.inputLatte.quant} onChange={(e) => changeValueInput(e, 'inputLatte')} />
                                 <button onClick={() => subQuantity('inputLatte')}>-</button>
@@ -596,22 +642,35 @@ function MenuItems() {
 
                     </div>
 
+
+
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={mocha.img} alt='imagem café mocha' />
                             </div>
+
+
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{mocha.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${mocha.price}</p>
+
+                            </div>
+
                         </div>
 
-                        <div className='box_bottom_item_menu'>
-                            <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{mocha.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${mocha.price}</p>
+
+                        <div className='conteiner_quantityInput'>
                             <label htmlFor="input_quant_mocha" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+
+
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputMocha')}>+</button>
                                 <input type="number" id='input_quant_mocha' value={itensProperties.inputMocha.quant} onChange={(e) => changeValueInput(e, 'inputMocha')} />
                                 <button onClick={() => subQuantity('inputMocha')}>-</button>
@@ -623,22 +682,32 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={pingado.img} alt="imagem café pingado" />
                             </div>
+
+
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>
+                                    {pingado.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${pingado.price}</p>
+
+                            </div>
+
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                            <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>
-                                {pingado.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${pingado.price}</p>
+                        <div className='conteiner_quantityInput'>
+
                             <label htmlFor="input_quant_pingado" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputPingado')}>+</button>
                                 <input type="number" id='input_quant_pingado' value={itensProperties.inputPingado.quant} onChange={(e) => changeValueInput(e, 'inputPingado')} />
                                 <button onClick={() => subQuantity('inputPingado')}>-</button>
@@ -673,43 +742,64 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
                             <div className='img_item'>
                                 <img src={cafeGelado.img} alt="imagem café gelado" />
                             </div>
+
+
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{cafeGelado.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${cafeGelado.price}</p>
+
+                            </div>
+
                         </div>
 
+                        <div className='conteiner_quantityInput'>
+                            <label htmlFor="input_quant_cfGelado"
+                                className='label_item_menu'>quantidade</label>
 
-                        <div className='box_bottom_item_menu'>
-                            <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{cafeGelado.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${cafeGelado.price}</p>
-                            <label htmlFor="input_quant_cfGelado" className='label_item_menu'>quantidade</label>
-                            <div className='quantity_input'>
+
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputCafeGelado')}>+</button>
                                 <input type="number" id='input_quant_cfGelado' value={itensProperties.inputCafeGelado.quant} onChange={(e) => changeValueInput(e, 'inputCafeGelado')} />
                                 <button onClick={() => subQuantity('inputCafeGelado')}>-</button>
+
                             </div>
                         </div>
                     </div>
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={coldBrew.img} alt="imagem de um café Cold Brew" />
                             </div>
+
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{coldBrew.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${coldBrew.price}</p>
+                            </div>
+
                         </div>
 
-                        <div className='box_bottom_item_menu'>
-                            <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{coldBrew.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${coldBrew.price}</p>
+
+
+                        <div className='conteiner_quantityInput'>
                             <label htmlFor="input_quant_coldBrew" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+
+
+
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputColdBrew')}>+</button>
                                 <input type="number" id='input_quant_coldBrew' value={itensProperties.inputColdBrew.quant} onChange={(e) => changeValueInput(e, 'inputColdBrew')} />
                                 <button onClick={() => subQuantity('inputColdBrew')}>-</button>
@@ -719,20 +809,26 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
                             <div className='img_item'>
                                 <img src={expTonico.img} alt="imagem de um expresso tônico" />
                             </div>
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{expTonico.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${expTonico.price}</p>
+
+                            </div>
+
                         </div>
 
-                        <div className='box_bottom_item_menu'>
-                            <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{expTonico.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${expTonico.price}</p>
+                        <div className='conteiner_quantityInput'>
+
                             <label htmlFor="input_quant_expTonico" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputExpTonico')}>+</button>
                                 <input type="number" id='input_quant_expTonico' value={itensProperties.inputExpTonico.quant} onChange={(e) => changeValueInput(e, 'inputExpTonico')} />
                                 <button onClick={() => subQuantity('inputExpTonico')}>-</button>
@@ -742,24 +838,34 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
                             <div className='img_item'>
                                 <img src={frappuccino.img} alt="imagem de um frappuccino" />
                             </div>
 
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{frappuccino.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${frappuccino.price}</p>
+
+                            </div>
+
                         </div>
 
-                        <div className='box_bottom_item_menu'>
-                            <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{frappuccino.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${frappuccino.price}</p>
+
+                        <div className='conteiner_quantityInput'>
+
+
+
                             <label htmlFor="input_quant_frappuccino" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputFrappuccino')}>+</button>
                                 <input type="number" id='input_quant_frappuccino' value={itensProperties.inputFrappuccino.quant} onChange={(e) => changeValueInput(e, 'inputFrappuccino')} />
                                 <button onClick={() => subQuantity('inputFrappuccino')}>-</button>
+
+
                             </div>
                         </div>
                     </div>
@@ -793,21 +899,31 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
                             <div className='img_item'>
                                 <img src={cocoBrigadeiro.img} alt='imagem de brigadeiro de coco' />
                             </div>
+
+
+                            <div className='box_text_item'>
+
+
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{cocoBrigadeiro.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${cocoBrigadeiro.price}</p>
+
+
+                            </div>
+
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{cocoBrigadeiro.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${cocoBrigadeiro.price}</p>
+                        <div className='conteiner_quantityInput'>
+
                             <label htmlFor="input_quant_cocoBrig" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputCocoBrig')}>+</button>
                                 <input type="number" id='input_quant_cocoBrig' value={itensProperties.inputCocoBrig.quant} readOnly onChange={(e) => changeValueInput(e, 'inputCocoBrig')} />
                                 <button onClick={() => subQuantity('inputCocoBrig')}>-</button>
@@ -818,22 +934,34 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={morangoBrigadeiro.img} alt="imagem de brigadeiro de morango" />
                             </div>
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{morangoBrigadeiro.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${morangoBrigadeiro.price}</p>
+
+                            </div>
+
                         </div>
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{morangoBrigadeiro.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${morangoBrigadeiro.price}</p>
+
+
+                        <div className='conteiner_quantityInput'>
+
                             <label htmlFor="input_quant_mrgBrigadeiro" className='label_item_menu'>quantidade</label>
-                            <div className='quantity_input'>
+
+                            <div className='box_quant'>
+
                                 <button onClick={() => addQuantity('inputMrgBrig')}>+</button>
                                 <input type="number" id='input_quant_mrgBrigadeiro' value={itensProperties.inputMrgBrig.quant} onChange={(e) => changeValueInput(e, 'inputMrgBrig')} />
                                 <button onClick={() => subQuantity('inputMrgBrig')}>-</button>
+
                             </div>
                         </div>
 
@@ -841,23 +969,28 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
                             <div className='img_item'>
                                 <img src={lightBrigadeiro.img} alt="imagem de brigadeiro light" />
                             </div>
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{lightBrigadeiro.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${lightBrigadeiro.price}</p>
+
+                            </div>
+
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{lightBrigadeiro.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${lightBrigadeiro.price}</p>
+                        <div className='conteiner_quantityInput' >
                             <label htmlFor="input_quant_lightBrig" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputLightBrig')}>+</button>
-                                <input type="number"  id='input_quant_lightBrig' value={itensProperties.inputLightBrig.quant} onChange={(e) => changeValueInput(e, 'inputLightBrig')} />
+                                <input type="number" id='input_quant_lightBrig' value={itensProperties.inputLightBrig.quant} onChange={(e) => changeValueInput(e, 'inputLightBrig')} />
                                 <button onClick={() => subQuantity('inputLightBrig')}>-</button>
                             </div>
                         </div>
@@ -887,21 +1020,28 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={cafeBrownie.img} alt="imagem de um brownie de café" />
                             </div>
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{cafeBrownie.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${cafeBrownie.price}</p>
+
+                            </div>
+
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{cafeBrownie.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${cafeBrownie.price}</p>
+                        <div className='conteiner_quantityInput'>
+
                             <label htmlFor="input_quant_cfBrownie" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputCafeBrownie')}>+</button>
                                 <input type="number" id='input_quant_cfBrownie' value={itensProperties.inputCafeBrownie.quant} onChange={(e) => changeValueInput(e, 'inputCafeBrownie')} />
                                 <button onClick={() => subQuantity('inputCafeBrownie')}>-</button>
@@ -933,22 +1073,30 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={chocolateCookie.img} alt="imagem de um cookie de chocolate" />
                             </div>
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{chocolateCookie.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${chocolateCookie.price}</p>
+
+                            </div>
+
+
                         </div>
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{chocolateCookie.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${chocolateCookie.price}</p>
+                        <div className='conteiner_quantityInput'>
+
+
                             <label htmlFor="input_quant_chCookie" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputChCookie')}>+</button>
-                                <input type="number"  id='input_quant_chCookie' value={itensProperties.inputChCookie.quant} onChange={(e) => changeValueInput(e, 'inputChCookie')} />
+                                <input type="number" id='input_quant_chCookie' value={itensProperties.inputChCookie.quant} onChange={(e) => changeValueInput(e, 'inputChCookie')} />
                                 <button onClick={() => subQuantity('inputChCookie')}>-</button>
                             </div>
                         </div>
@@ -978,20 +1126,26 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={chocolateCupcake.img} alt="imagem de cupcake de chocolate" />
                             </div>
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{chocolateCupcake.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${chocolateCupcake.price}</p>
+
+
+                            </div>
                         </div>
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{chocolateCupcake.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${chocolateCupcake.price}</p>
+                        <div className='conteiner_quantityInput'>
+
                             <label htmlFor="input_quant_chCupcake" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputChCupcake')}>+</button>
                                 <input type="number" id='input_quant_chCupcake' value={itensProperties.inputChCupcake.quant} onChange={(e) => changeValueInput(e, 'inputChCupcake')} />
                                 <button onClick={() => subQuantity('inputChCupcake')}>-</button>
@@ -1003,21 +1157,25 @@ function MenuItems() {
                     <div className='deliveryItem'>
 
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
                             <div className='img_item'>
                                 <img src={morangoCupcake.img} alt="imagem de um cupcake de morango" />
+                            </div>
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{morangoCupcake.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${morangoCupcake.price}</p>
+
                             </div>
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{morangoCupcake.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${morangoCupcake.price}</p>
+                        <div className='conteiner_quantityInput'>
+
                             <label htmlFor="input_quant_mrgCupcake" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputMrgCupcake')}>+</button>
                                 <input type="number" id='input_quant_mrgCupcake' value={itensProperties.inputMrgCupcake.quant} onChange={(e) => changeValueInput(e, 'inputMrgCupcake')} />
                                 <button onClick={() => subQuantity('inputMrgCupcake')}>-</button>
@@ -1028,21 +1186,26 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={nozesCupcake.img} alt="imagem de um cupcake de morango" />
+                            </div>
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{nozesCupcake.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${nozesCupcake.price}</p>
+
                             </div>
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{nozesCupcake.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${nozesCupcake.price}</p>
+                        <div className='conteiner_quantityInput'>
+
                             <label htmlFor="input_quant_nozesCupcake" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('inputNozesCupcake')}>+</button>
                                 <input type="number" id='input_quant_nozesCupcake' value={itensProperties.inputNozesCupcake.quant} onChange={(e) => changeValueInput(e, 'inputNozesCupcake')} />
                                 <button onClick={() => subQuantity('inputNozesCupcake')}>-</button>
@@ -1071,25 +1234,30 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={amendoaMaracujaPie.img} alt="imagem de uma torta de maçã" />
                             </div>
+
+                            <div className='box_text_item'>
+                                <p className='label_item_menu'>sabor</p>
+                                <p className='name_item'>{amendoaMaracujaPie.name}</p>
+                                <p className='label_item_menu'>preço</p>
+                                <p className='price_item'>R${amendoaMaracujaPie.price}</p>
+
+                            </div>
+
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
+                        <div className='conteiner_quantityInput'>
 
 
-                        <p className='label_item_menu'>sabor</p>
 
-                            <p className='name_item'>{amendoaMaracujaPie.name}</p>
-
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${amendoaMaracujaPie.price}</p>
                             <label htmlFor="input_quant_amdMrcjPie" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('input_amendoaMaracujaPie')}>+</button>
                                 <input type="number" id='input_quant_amdMrcjPie' value={itensProperties.input_amendoaMaracujaPie.quant} onChange={(e) => changeValueInput(e, 'input_amendoaMaracujaPie')} />
                                 <button onClick={() => subQuantity('input_amendoaMaracujaPie')}>-</button>
@@ -1103,20 +1271,27 @@ function MenuItems() {
                     <div className='deliveryItem'>
 
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={amendoimPie.img} alt="imagem de uma torta de amendoim" />
                             </div>
-                        </div>
-
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
+                            <div className='box_text_item'>
+                            <p className='label_item_menu'>sabor</p>
                             <p className='name_item'>{amendoimPie.name}</p>
                             <p className='label_item_menu'>preço</p>
                             <p className='price_item'>R${amendoimPie.price}</p>
+
+
+                            </div>
+
+                        </div>
+
+                        <div className='conteiner_quantityInput'>
+                          
                             <label htmlFor="input_quant_amendoimPie" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('input_amendoimPie')}>+</button>
                                 <input type="number" id='input_quant_amendoimPie' value={itensProperties.input_amendoimPie.quant} onChange={(e) => changeValueInput(e, 'input_amendoimPie')} />
                                 <button onClick={() => subQuantity('input_amendoimPie')}>-</button>
@@ -1127,21 +1302,27 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={macaPie.img} alt="imagme de uma torta de amêndoa com maracujá" />
                             </div>
+                            <div className='box_text_item'>
+                             <p className='label_item_menu'>sabor</p>
+                             <p className='name_item'>{macaPie.name}</p>
+                             <p className='label_item_menu'>preço</p>
+                             <p className='price_item'>R${macaPie.price}</p>
+
+                            </div>
+
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{macaPie.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${macaPie.price}</p>
+                        <div className='conteiner_quantityInput'>
+                       
                             <label htmlFor="input_quant_macaPie" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('input_macaPie')}>+</button>
                                 <input type="number" id='input_quant_macaPie' value={itensProperties.input_macaPie.quant} onChange={(e) => changeValueInput(e, 'input_macaPie')} />
                                 <button onClick={() => subQuantity('input_macaPie')}>-</button>
@@ -1152,21 +1333,27 @@ function MenuItems() {
 
                     <div className='deliveryItem'>
 
-                        <div className='box_top_item_menu'>
+                        <div className='grid_img_text'>
+
                             <div className='img_item'>
                                 <img src={pessegoPie.img} alt="imagem de uma torta de pêssego" />
+                            </div>
+
+                            <div className='box_text_item'>
+                            <p className='label_item_menu'>sabor</p>
+                            <p className='name_item'>{pessegoPie.name}</p>
+                            <p className='label_item_menu'>preço</p>
+                            <p className='price_item'>R${pessegoPie.price}</p>
+
                             </div>
                         </div>
 
 
-                        <div className='box_bottom_item_menu'>
-                        <p className='label_item_menu'>sabor</p>
-                            <p className='name_item'>{pessegoPie.name}</p>
-                            <p className='label_item_menu'>preço</p>
-                            <p className='price_item'>R${pessegoPie.price}</p>
+                        <div className='conteiner_quantityInput'>
+                        
                             <label htmlFor="input_quant_pessegoPie" className='label_item_menu'>quantidade</label>
 
-                            <div className='quantity_input'>
+                            <div className='box_quant'>
                                 <button onClick={() => addQuantity('input_pessegoPie')}>+</button>
                                 <input type="number" id='input_quant_pessegoPie' value={itensProperties.input_pessegoPie.quant} onChange={(e) => changeValueInput(e, 'input_pessegoPie')} />
                                 <button onClick={() => subQuantity('input_pessegoPie')}>-</button>

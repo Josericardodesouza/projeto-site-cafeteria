@@ -1,5 +1,7 @@
 import '../styles/deliveryPage-modules.css'
-import '../styles/colorsAndFonts-module.css'
+import '../styles/global-css/colorsAndFonts-module.css'
+import '../styles/global-css/global-titles.css'
+import '../styles/global-css/global-buttons.css'
 
 
 import { Link, Navigate, BrowserRouter as Route, Router, Routes } from 'react-router-dom'
@@ -171,15 +173,17 @@ function DeliveryPage() {
 
 
 
-
-        <Link to='/confirmation' ref={botao}>
-
-          <div className='buttons_redirect_confirmationPage'>
-            <FaArrowRight className='icon_button' />
-            <p>Continuar</p>
-          </div>
-
-        </Link>
+<section className='section_buttons_redirect'>
+  
+          <Link to='/confirmation' ref={botao}>
+  
+            <div className='buttons_redirect_confirmationPage'>
+              <FaArrowRight className='icon_button' />
+              <p className='p_button_redirect'>Continuar</p>
+            </div>
+  
+          </Link>
+</section>
 
 
 

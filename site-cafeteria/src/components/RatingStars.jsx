@@ -1,5 +1,5 @@
 import '../styles/ratingStars-module.css'
-import '../styles/colorsAndFonts-module.css'
+import '../styles/global-css/colorsAndFonts-module.css'
 import { useContext, useEffect, useRef, useState } from 'react';
 import { RatingNoteContext } from '../context/RatingNoteContext';
 import { IoAdd, IoHome, IoStar } from 'react-icons/io5';

@@ -1,6 +1,6 @@
 
 import '../styles/defaultNavBar-module.css'
-import '../styles/colorsAndFonts-module.css'
+import '../styles/global-css/colorsAndFonts-module.css'
 
 import { DiCoffeescript } from 'react-icons/di'
 import { Link } from 'react-router-dom'

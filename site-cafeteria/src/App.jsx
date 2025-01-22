@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react'
 import './App.css'
-import './styles/colorsAndFonts-module.css'
-import './styles/globalButtons-module.css'
+import './styles/global-css/colorsAndFonts-module.css'
+import './styles/global-css/global-buttons.css'
+import './styles/global-css/global-titles.css'
 import { Link } from 'react-router-dom'
 
 import videoHeader from './assets/videos/6769791-hd_1920_1080_24fps-video.mp4'

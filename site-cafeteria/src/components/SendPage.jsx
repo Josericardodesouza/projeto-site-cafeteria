@@ -1,7 +1,9 @@
 import '../styles/sendpage-module.css'
 import videoHeader from '../assets/videos/4170833-uhd_3840_2160_25fps.mp4'
 
-import '../styles/colorsAndFonts-module.css'
+import '../styles/global-css/colorsAndFonts-module.css'
+import '../styles/global-css/global-titles.css'
+import '../styles/global-css/global-buttons.css'
 
 import { Link } from "react-router-dom"
 import NavBar from "./NavBar"

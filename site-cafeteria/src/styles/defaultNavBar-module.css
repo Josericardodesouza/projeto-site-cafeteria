@@ -18,9 +18,7 @@ div#nav_icon_logo {
     width: 100%;
     height: 100%;
     display: flex;
-    background-image: var(--gradiente8);
-    /* background-color: var(--cor7); */
-    /* background-color: red; */
+    background-image: var(--gradient8);
     align-items: center;
     justify-content: center;
     padding: 3px;

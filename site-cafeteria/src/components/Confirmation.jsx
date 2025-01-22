@@ -1,5 +1,6 @@
 import '../styles/confirmationpage-module.css'
-import '../styles/globalButtons-module.css'
+import '../styles/global-css/global-buttons.css'
+import '../styles/global-css/global-titles.css'
 import NavBar from './NavBar'
 import { useContext } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
@@ -191,8 +192,10 @@ function Confirmation() {
           <div>
 
             <div id='output_adressUser_confirmation' ref={box_output_userAdress}>
-              <span className='icon_output'><FaMapMarkerAlt /></span>
+           
               <p className='title_result'>No endereço</p>
+
+              <span className='icon_output'><FaMapMarkerAlt /></span>
 
 
               <p className='p_output'>UF: <strong>{adressUser.state}</strong></p>

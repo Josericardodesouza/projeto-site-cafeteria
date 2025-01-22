@@ -1,6 +1,6 @@
 import { FaCoffee, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa"
 import '../styles/footer-modules.css'
-import '../styles/colorsAndFonts-module.css'
+import '../styles/global-css/colorsAndFonts-module.css'
 
 import logo from '../assets/images/coffee-shop-svgrepo-com.svg'
 import { SiCoffeescript } from "react-icons/si"

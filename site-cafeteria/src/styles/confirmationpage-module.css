@@ -5,11 +5,22 @@ nav {
 main {
     margin-top: 15vh;
 }
-h1 {
+/* h1 {
     font-size: 1.2em;
     font-family: 'Nunito';
     text-align: center;
+} */
+
+
+
+
+
+p.title_result {
+    font-size: 1.1em;
+    font-weight: 700;
+    font-family: 'Nunito';
 }
+
 
 
 section#inputs_conteiner {
@@ -22,7 +33,7 @@ section#inputs_conteiner {
 
 div.component_inputs_confirmationPage {
     /* background-color: red; */
-    width: 70vw;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +46,7 @@ div.component_inputs_confirmationPage > label {
     font-size: 0.8em;
     font-family: 'Nunito';
     text-align: start;
+    font-weight: 500;
 }
 
 div.component_inputs_confirmationPage > input {
@@ -43,9 +55,11 @@ div.component_inputs_confirmationPage > input {
     height: 30px;
     display: block;
     border: 2px solid var(--brown);
-    border-radius: 2px;
+    border-radius: 5px;
     margin-bottom: 15px;
     text-align: center;
+    font-family: 'Nunito';
+    font-size: 1.0em;
 
 }
 
@@ -57,18 +71,18 @@ div.component_inputs_confirmationPage > input {
 
 /* ---- ID's in UserName component -------------------- */
 
-
+/* 
 input#user_name {
 
 
 
-}
+} */
 
 
 
 /* --------- ID's in UserAdress component ----------------*/
 
-#conteiner_inputAdress {
+/* #conteiner_inputAdress {
   
  
    
@@ -77,7 +91,7 @@ input#user_name {
 
 div#conteiner_inputAdress > label {
 
-}
+} */
 
 
 
@@ -203,14 +217,10 @@ p#p_alert_return {
     font-size: 0.9em;
     width: 80%;
     margin: 20px auto 30px auto;
+    text-align: center;
+    color: red;
 }
 
-
-
-p.title_result {
-    font-size: 1.1em;
-    font-weight: 500;
-}
 
 
 p#p_checkout {
@@ -222,13 +232,24 @@ p#p_checkout {
     background-color: red;
 }
 
-@media (min-width: 500px) {
+@media screen and (min-width: 500px) {
 
+
+    section#inputs_conteiner {
+        width: 100vw;
+        /* background-color: green; */
+     
+    }
+
+    div.component_inputs_confirmationPage {
+        width: 80%;
+        /* background-color: blue; */
+    }
     
-p.title_result {
-    font-size: 1.3em;
-    
-}
+    p.title_result {
+        font-size: 1.3em;
+        
+    }
 
 
     div.component_inputs_confirmationPage > label {
@@ -237,6 +258,7 @@ p.title_result {
 
     div.component_inputs_confirmationPage > input {
         width: 45%;
+        height: 40px;
     }
 
 
@@ -253,7 +275,16 @@ p.title_result {
         font-size: 1.9em;
     }
 
-    div.buttons_redirect_confirmationPage {
+
+
+
+
+
+
+
+    
+
+    /* div.buttons_redirect_confirmationPage {
         width: 20%;
         font-size: 0.9em;
     }
@@ -261,14 +292,28 @@ p.title_result {
     
 div.buttons_redirect_confirmationPage > p {
     font-size: 0.9em;
-}
+} */
  
 
 
 }
 
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
+
+    section#inputs_conteiner {
+        width: 100vw;
+        /* background-color: red; */
+    }
+
+
+    div.component_inputs_confirmationPage > label {
+        font-size: 1.2em;
+    }
+
+    div.component_inputs_confirmationPage > input {
+        width: 30%;
+    }
     
 }
 
