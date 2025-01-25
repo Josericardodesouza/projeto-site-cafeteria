@@ -1,5 +1,5 @@
 
-
+import '../styles/deliveryPage-modules.css'
 
 import { hotDrinks, coldDrinks } from './ConstantsItens'
 import { typesBrigadeiro, typesBrownies, typesCookies, typesCupcakes, typesPie } from './ConstantsItens'
@@ -520,7 +520,7 @@ function MenuItems() {
                         </div>
 
 
-                        <div className='box_quantityInput'>
+                        <div className='conteiner_quantityInput'>
 
                             <label htmlFor="input_add_coado" className='label_item_menu'>quantidade</label>
 

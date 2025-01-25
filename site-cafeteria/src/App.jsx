@@ -609,14 +609,17 @@ function App() {
 
 
 
-
-        <Link to='/deliveryPage'>
-          <div className='buttons_redirect_confirmationPage'>
-            <CiCoffeeCup className='icon_button' />
-            <p>Fazer um pedido</p>
-
-          </div>
-        </Link>
+<section className='section_buttons_redirect'>
+  
+          <Link to='/deliveryPage'>
+  
+            <div className='buttons_redirect_confirmationPage'>
+              <CiCoffeeCup className='icon_button' />
+              <p>Fazer um pedido</p>
+  
+            </div>
+          </Link>
+</section>
 
 
 
