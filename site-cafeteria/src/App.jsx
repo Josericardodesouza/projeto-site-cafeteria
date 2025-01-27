@@ -77,7 +77,7 @@ import { FaCoffee, FaCookie } from 'react-icons/fa'
 import { GiCoffeeCup, GiCoffeeMug, GiCupcake } from 'react-icons/gi'
 import { BiFoodMenu } from 'react-icons/bi'
 import { TbStars, TbSTurnDown } from 'react-icons/tb'
-import { FaFaceFrown, FaFaceGrinStars, FaFaceKissWinkHeart, FaFaceMeh, FaFaceSmile } from 'react-icons/fa6'
+import { FaFaceFrown, FaFaceGrinStars, FaFaceKissWinkHeart, FaFaceMeh, FaFaceSmile, FaRegFaceFrown, FaRegFaceGrinStars, FaRegFaceKissWinkHeart, FaRegFaceMeh, FaRegFaceSmile } from 'react-icons/fa6'
 
 
 
@@ -255,6 +255,7 @@ function App() {
     if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 1 && storedListItemsNames.length > 1) {
 
       boxEvaluation.current.style.display = 'block'
+
     } else {
       boxEvaluation.current.style.display = 'none'
     }
@@ -303,22 +304,22 @@ function App() {
     switch (testeNum) {
 
       case 1:
-        return <FaFaceFrown />
+        return <FaRegFaceFrown />
 
       case 2:
-        return <FaFaceMeh />
+        return <FaRegFaceMeh />
 
 
       case 3:
-        return <FaFaceSmile />
+        return <FaRegFaceSmile />
 
 
       case 4:
-        return <FaFaceGrinStars />
+        return <FaRegFaceGrinStars />
 
       case 5:
 
-        return <FaFaceKissWinkHeart />
+        return <FaRegFaceKissWinkHeart />
 
 
     }
@@ -649,6 +650,7 @@ function App() {
             slidesPerView={2.5}
             navigation
             pagination={{ clickable: true }}
+            grabCursor='true'
 
 
           // effect= {'coverflow'}
@@ -667,7 +669,7 @@ function App() {
 
             <SwiperSlide ref={boxEvaluation}>
 
-              <div className='conteiner_ev'>
+              <div className='conteiner_ev' >
 
                 <div className='box_opinion'>
                   {/* <p>Avaliando: {storedListItemsNames}</p> */}
@@ -681,7 +683,9 @@ function App() {
                   <div className='box_stars_user_comment'>
 
                     <div className='box_stars'>
-                    {displayStars()}</div>
+
+                    {displayStars()}
+                    </div>
                    
 
                   </div>
@@ -691,10 +695,19 @@ function App() {
 
                   </div>
 
-                  <div className='box_username_comment'>
+                  <div className='conteiner_username_comment'>
+                    <div className='icon_user'>
                     <BsPerson />
-                    <p className='clientName'>{storedUserNameInput}</p>
+                    </div>
+
+                    <div className='username_comment'>
+                    <p className='username_comment'>{storedUserNameInput}</p>
+
+                    </div>
+
                   </div>
+
+                  
 
                 </div>
 
@@ -709,7 +722,7 @@ function App() {
                 <div className='box_opinion'>
 
                   <div className='box_icon_face_comment'>
-                    <FaFaceKissWinkHeart />
+                    <FaRegFaceKissWinkHeart />
 
                   </div>
 
@@ -728,7 +741,7 @@ function App() {
 
                   <div className='box_text_comment'>
                   <p className='txt_opinion'>
-                    "Comentário"
+                    "Lorem hihihihi dhdhfhdhfdhfhdfhd "
                   </p>
 
                   </div>
@@ -739,7 +752,7 @@ function App() {
                       <BsPerson />
                     </div>
                     <div className='username_comment'>
-                      <p>Teste teste teste teste teste</p>
+                      <p>Jhonnatan Campos</p>
 
                     </div>
                 
@@ -774,7 +787,7 @@ function App() {
                 <div className='box_opinion'>
 
                 <div className='box_icon_face_comment'>
-                    <FaFaceKissWinkHeart />
+                    <FaRegFaceKissWinkHeart />
 
                   </div>
 
@@ -794,7 +807,7 @@ function App() {
                   </div>
 
                   <div className='box_text_comment'>
-                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed."</p>
+                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. </p>
                
                 </div>
 
@@ -830,7 +843,7 @@ function App() {
 
                 <div className='box_opinion'>
                   <div className='box_icon_face_comment'>
-                    <FaFaceFrown />
+                    <FaRegFaceFrown />
 
                   </div>
 
@@ -898,7 +911,7 @@ function App() {
 
                 <div className='box_opinion'>
                   <div className='box_icon_face_comment'>
-                    <FaFaceKissWinkHeart />
+                    <FaRegFaceKissWinkHeart />
 
                   </div>
 
@@ -953,7 +966,7 @@ function App() {
 
                 <div className='box_opinion'>
                   <div className='box_icon_face_comment'>
-                    <FaFaceKissWinkHeart />
+                    <FaRegFaceKissWinkHeart />
 
                   </div>
                   <div className='box_stars_user_comment'>

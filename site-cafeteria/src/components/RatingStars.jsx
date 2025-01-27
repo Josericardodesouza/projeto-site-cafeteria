@@ -10,8 +10,9 @@ function RatingStars() {
     const { setStoredNote } = useContext(RatingNoteContext)
 
     const boxStarsRef = useRef(null)
-    const [note, setNote] = useState('') 
+    const [note, setNote] = useState('5') 
 
+   
 
 
     //  const emoji = useRef('')

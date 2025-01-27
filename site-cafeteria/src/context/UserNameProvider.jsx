@@ -5,9 +5,11 @@ import { useEffect } from "react";
 function UserNameProvider({children}) {
 
     const [storedUserNameInput, setStoredUserNameInput] = useState(() => {
+        const savedUserName = localStorage.getItem('userName')
+        return savedUserName != null ? savedUserName : ''
      
         
-            return localStorage.getItem('userName') || '';
+        
           });
    
           useEffect(() => {
