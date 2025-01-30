@@ -129,22 +129,22 @@ function MenuColdDrinks() {
 
                         <tr>
                             <td className='item'><a onClick={displayTextImg}>{cafeGelado.name}</a></td>
-                            <td className='value'><a>{cafeGelado.price}</a></td>
+                            <td className='value'><a>R${cafeGelado.price}</a></td>
                         </tr>
 
                         <tr>
                             <td className='item'><a onClick={displayTextImg}>{coldBrew.name}</a></td>
-                            <td className='value'><a onClick={displayTextImg}>{coldBrew.price}</a></td>
+                            <td className='value'><a onClick={displayTextImg}>R${coldBrew.price}</a></td>
                         </tr>
 
                         <tr>
                             <td className='item' onClick={displayTextImg}><a>{expressoTonico.name}</a></td>
-                            <td className='value'><a onClick={displayTextImg}>{expressoTonico.price}</a></td>
+                            <td className='value'><a onClick={displayTextImg}>R${expressoTonico.price}</a></td>
                         </tr>
 
                         <tr>
                             <td className='item'><a onClick={displayTextImg}>{frappuccino.name}</a></td>
-                            <td className='value'><a onClick={displayTextImg}>{frappuccino.price}</a></td>
+                            <td className='value'><a onClick={displayTextImg}>R${frappuccino.price}</a></td>
                         </tr>
 
 

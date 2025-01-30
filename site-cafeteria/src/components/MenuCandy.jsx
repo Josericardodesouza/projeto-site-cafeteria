@@ -145,7 +145,7 @@ function MenuCandy() {
                             </a>
                          </td>
 
-                        <td className='value'>
+                        <td className='value' id='td_value_brigadeiros'>
                             <a>
                             {brigadeiros.price}
                             </a>
@@ -157,7 +157,7 @@ function MenuCandy() {
                         <td className='item'><a onClick={displayTextImg}>{brownies.name}</a></td>
 
                         <td className='value'><a>
-                            {brownies.price}</a>
+                            R${brownies.price}</a>
                             </td>
 
                     </tr>
@@ -167,7 +167,7 @@ function MenuCandy() {
 
                         <td className='value'>
                             <a>
-                                {cookies.price}
+                                R${cookies.price}
                             </a>
                         </td>
 
@@ -182,7 +182,7 @@ function MenuCandy() {
 
                         <td className='value'>
                             <a>
-                                {cupcakes.price}
+                                R${cupcakes.price}
                             </a>
                         </td>
                     </tr>
@@ -195,7 +195,7 @@ function MenuCandy() {
 
                         <td className='value'>
                             <a>
-                                {paodemel.price}
+                                R${paodemel.price}
                             </a>
 
                         </td>
@@ -210,7 +210,7 @@ function MenuCandy() {
 
                         <td className='value'>
                             <a>
-                                {tortas.price}
+                                R${tortas.price}
                             </a>
                         </td>
                     </tr>

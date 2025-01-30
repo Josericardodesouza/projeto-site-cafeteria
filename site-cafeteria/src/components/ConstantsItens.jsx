@@ -57,7 +57,7 @@ const hotDrinks = [
             category: 'café',
             price: '1,50',
             img: cafeCoadoImg,
-            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, praesentium! Numquam minima aperiam libero dignissimos quam qui. Totam delectus vel ipsa illum exercitationem aperiam! Fuga officiis magnam voluptate nostrum deleniti!'
+            text: 'O café coado é uma das formas mais tradicionais e apreciadas de preparar café. Feito a partir de grãos moídos e água quente, o processo de coar permite que o líquido passe lentamente pelo pó, extraindo os sabores e aromas ricos. O resultado é uma bebida suave e aromática, perfeita para ser saboreada a qualquer hora do dia.'
     
         },
 
@@ -67,7 +67,7 @@ const hotDrinks = [
             category: 'café',
             price: '6,05',
             img: cappucinoImg,
-            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis atque doloribus tempora quidem nisi odio corrupti voluptas sit ut commodi? Voluptatum quaerat delectus nihil dicta maiores! Libero minima omnis enim. Cappucino'
+            text: 'O cappuccino é uma bebida clássica italiana feita a partir da combinação perfeita de café espresso, leite vaporizado e uma camada generosa de espuma de leite. A textura cremosa e o sabor equilibrado tornam o cappuccino uma escolha popular para qualquer momento do dia, proporcionando um delicioso prazer a cada gole.'
     
         },
 
@@ -77,7 +77,7 @@ const hotDrinks = [
             category: 'café',
             price: '6,00',
             img: espressoImg,
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Espresso'
+            text: 'O espresso é a essência do café em sua forma mais pura e concentrada. Preparado forçando água quente através de finas camadas de café moído, o resultado é uma bebida intensa, encorpada e cheia de sabor. Perfeito para apreciar sozinho ou como base para outras bebidas, o espresso é a escolha ideal para os amantes de café que buscam uma experiência rica e autêntica.'
         },
 
 
@@ -87,7 +87,7 @@ const hotDrinks = [
             category: 'café',
             price: '20,00',
             img: latteImg,
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Latte'
+            text: 'O latte é uma bebida cremosa e suave, composta por uma dose de espresso misturada com uma quantidade generosa de leite vaporizado e uma fina camada de espuma de leite no topo. Equilibrado e reconfortante, o latte é ideal para aqueles que apreciam o sabor do café, mas preferem uma experiência mais delicada e aconchegante.'
         },
 
         {
@@ -96,7 +96,7 @@ const hotDrinks = [
             category: 'café',
             price: '8,00',
             img: mochaImg,
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Mocha'
+            text: 'O mocha é uma deliciosa fusão de café espresso, leite vaporizado e chocolate, criando uma bebida doce e rica. Combinando o sabor forte do café com a suavidade do chocolate, o mocha é perfeito para quem deseja uma experiência de café mais indulgente e reconfortante.'
         },
 
         
@@ -106,7 +106,7 @@ const hotDrinks = [
         category: 'café',
         price: '5,00',
         img: pingadoImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Pingado'
+        text: 'O pingado é uma bebida típica brasileira, feita com café coado e um toque de leite. Simples e reconfortante, o pingado é apreciado por seu sabor suave e equilibrado, tornando-se uma escolha popular para o café da manhã ou um lanche da tarde.'
     }
 
 
@@ -123,7 +123,7 @@ const coldDrinks = [
         category: 'café',
         price: '2,20',
         img: cafeGeladoImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Gelado'
+        text: 'O café gelado é uma bebida refrescante, perfeita para dias quentes. Feito com café coado ou espresso, servido sobre gelo e muitas vezes adoçado ou misturado com leite, ele oferece uma experiência revigorante e deliciosa, combinando a intensidade do café com a frescura do gelo.'
     },
 
 
@@ -134,7 +134,7 @@ const coldDrinks = [
         category: 'café',
         price: '11,00',
         img: coldBrewImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Cold Brew'
+        text: 'O cold brew é um café preparado a frio, resultando em uma bebida suave e menos ácida. Feito ao deixar o café moído em infusão em água fria por várias horas, o cold brew oferece uma experiência refrescante e rica em sabor, ideal para os dias quentes de verão ou para quem prefere um café menos amargo.'
 
     },
 
@@ -146,7 +146,7 @@ const coldDrinks = [
         category: 'café',
         price: '5,00',
         img: espressoTonicoImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Espresso Tonico'
+        text: 'O espresso tônico é uma combinação inovadora de café espresso e água tônica. Essa mistura inesperada resulta em uma bebida efervescente e refrescante, com a intensidade do café equilibrada pelo sabor leve e borbulhante da água tônica. Ideal para quem busca uma experiência de café diferente e revitalizante.'
     },
 
     {
@@ -155,7 +155,7 @@ const coldDrinks = [
         category: 'café',
         price: '19,00',
         img: frappuccinoImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Frappuccino'
+        text: 'O frappuccino é uma bebida gelada e cremosa que combina café, leite e gelo, batidos até atingir uma textura suave e refrescante. Frequentemente coberto com chantilly e calda de chocolate ou caramelo, o frappuccino é perfeito para aqueles que buscam uma indulgência doce e revitalizante em qualquer época do ano.'
     }
 
 
@@ -175,9 +175,9 @@ const candyList = [
     {
         
         name: 'Brigadeiros',
-        price: 'entre 0,20 e 10,99',
+        price: 'entre R$0,20 e R$10,99',
         img: brigadeiroImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Brigadeiros'
+        text: 'Os brigadeiros são doces tradicionais brasileiros, feitos com leite condensado, chocolate em pó, manteiga e cobertos com granulado de chocolate. Criados na década de 1940, os brigadeiros surgiram durante a campanha presidencial do Brigadeiro Eduardo Gomes, tornando-se populares em festas e comemorações. Hoje, são um dos doces mais amados no Brasil.'
     },
 
     {
@@ -185,7 +185,7 @@ const candyList = [
         name: 'Brownies',
         price: '3,00',
         img: brownieImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Brownies'
+        text: 'Os brownies são deliciosos bolinhos de chocolate com uma textura densa e úmida, frequentemente acompanhados por pedaços de nozes ou chocolate. Originários dos Estados Unidos, surgiram no final do século XIX e rapidamente se tornaram populares ao redor do mundo. Hoje, são uma sobremesa clássica apreciada por sua simplicidade e sabor intenso.'
     },
 
     {
@@ -193,7 +193,7 @@ const candyList = [
         name: 'Cookies',
         price: '0,30',
         img: cookieImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Cookies'
+        text: 'Os cookies são os queridinhos das sobremesas. Sejam crocantes por fora e macios por dentro, recheados com pedaços generosos de chocolate ou nozes, eles são sempre um sucesso. Sua origem remonta aos Estados Unidos, onde se tornaram populares no início do século XX. Desde então, a versatilidade dos cookies permite criações infinitas, tornando-os perfeitos para qualquer momento do dia.'
     },
 
     {
@@ -201,7 +201,7 @@ const candyList = [
         name: 'Cupcakes',
         price: '7,00',
         img: cupcakeImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Cupcakes'
+        text: 'Os cupcakes são pequenos bolinhos individuais, perfeitos para qualquer ocasião. Decorados com glacê colorido e uma variedade de coberturas, eles são visualmente atraentes e deliciosamente saborosos.'
     },
 
     {
@@ -209,7 +209,7 @@ const candyList = [
         name: 'Pão de mel',
         price: '1,50',
         img: paoDeMelImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Pão de Mel'
+        text: 'O pão de mel é uma delícia tradicional, caracterizado por sua textura macia e sabor levemente picante. Feito com mel, especiarias como canela e cravo, e frequentemente coberto com chocolate, ele é um doce reconfortante. Sua origem remonta à Europa Medieval, onde era apreciado em festas e celebrações. Hoje, o pão de mel é popular em diversas partes do mundo, especialmente no Brasil, onde é uma escolha comum para presentes e festas.'
     },
 
     {
@@ -217,7 +217,7 @@ const candyList = [
         name: 'Tortas',
         price: '16,00',
         img: tortaImg,
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis omnis atque fuga, dolores repudiandae. Quas inventore ab doloremque vitae at nostrum quo nobis maiores culpa et excepturi, veritatis modi. Tortas'
+        text: 'As tortas são sobremesas versáteis e saborosas, apreciadas em todo o mundo. Com uma base geralmente feita de massa crocante, podem ser recheadas com frutas, cremes ou chocolates, agradando a todos os gostos. De origem antiga, as tortas evoluíram ao longo dos séculos, ganhando variações regionais e se tornando presença garantida em ocasiões especiais. Seja uma clássica torta de maçã americana ou uma sofisticada torta de limão francesa, elas sempre surpreendem pelo sabor e apresentação.'
     }
 ]
 

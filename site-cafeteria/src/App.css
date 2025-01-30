@@ -545,7 +545,7 @@ section#evaluations {
   flex-direction: column;
   width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 63px;
   margin-top: 60px;
   box-sizing: border-box;
   background-color: white;
@@ -725,9 +725,15 @@ div#testeEva {
 }
 
 
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
-  background-color: red;
+
+span.swiper-pagination-bullet {
+  background-color: var(--brownSugar);
 }
+
+span.swiper-pagination-bullet-active {
+  background-color: var(--copper2)
+}
+
 
 
 /*-----------------------------------------------------------*/

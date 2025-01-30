@@ -184,7 +184,7 @@ function MenuCoffee() {
        
             <img src= "" alt="" id='item_img' className = 'item_img_menu' ref={img_item_coffee}/>
            
-            <p id='item_text' className='item_text_menu'>Clique em um dos itens do cardápio abaixo para <strong>saber sobre</strong></p>
+            <p id='item_text' className='item_text_menu'>Clique em um dos itens do cardápio para <strong>saber sobre</strong> cada bebida quente.</p>
         </div>
 
 
@@ -198,6 +198,9 @@ function MenuCoffee() {
 
                         <tr>
                             <td className='item'><a onClick= {displayTextImg}>{cappuccino.name}</a></td>
+
+                            {/* <td id='teste_linha'></td> */}
+
                             <td className='value'><a onClick="">R${cappuccino.price}</a></td>
                         </tr>
 

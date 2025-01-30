@@ -252,7 +252,7 @@ function App() {
 
   useEffect(() => {
 
-    if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 1 && storedListItemsNames.length > 1) {
+    if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 0 && storedListItemsNames.length > 1) {
 
       boxEvaluation.current.style.display = 'block'
 
@@ -315,11 +315,11 @@ function App() {
 
 
       case 4:
-        return <FaRegFaceGrinStars />
+        return <FaRegFaceKissWinkHeart />
 
       case 5:
 
-        return <FaRegFaceKissWinkHeart />
+        return <FaRegFaceGrinStars />
 
 
     }
@@ -722,7 +722,7 @@ function App() {
                 <div className='box_opinion'>
 
                   <div className='box_icon_face_comment'>
-                    <FaRegFaceKissWinkHeart />
+                    <FaRegFaceGrinStars />
 
                   </div>
 
@@ -733,7 +733,7 @@ function App() {
                       <span>&#9733;</span>
                       <span>&#9733;</span>
                       <span>&#9733;</span>
-                      <span>&#9734;</span>
+                      <span>&#9733;</span>
 
                     </div>
 
@@ -741,7 +741,7 @@ function App() {
 
                   <div className='box_text_comment'>
                   <p className='txt_opinion'>
-                    "Lorem hihihihi dhdhfhdhfdhfhdfhd "
+                  " Adorei o ambiente desta cafeteria! A decoração é aconchegante e as luzes suaves tornam o lugar perfeito para relaxar. O café de origem única que provei foi simplesmente excepcional! "
                   </p>
 
                   </div>
@@ -807,7 +807,7 @@ function App() {
                   </div>
 
                   <div className='box_text_comment'>
-                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed. </p>
+                  <p className='txt_opinion'>" A experiência foi maravilhosa! O cardápio não oferece uma grande variedade de cafés e chás, mas todos os produtos são de alta qualidade. O atendimento é impecável e o ambiente é muito limpo e organizado. " </p>
                
                 </div>
 
@@ -819,7 +819,7 @@ function App() {
                     </div>
 
                     <div className='username_comment'>
-                    <p>Jason</p>
+                    <p>Rafael Gonzaga</p>
 
                     </div>
                   
@@ -867,9 +867,9 @@ function App() {
                   <div className='box_stars'>
           
                   <span>&#9733;</span>
-                  <span>&#9733;</span>
-                  <span>&#9733;</span>
-                  <span>&#9733;</span>
+                  <span>&#9734;</span>
+                  <span>&#9734;</span>
+                  <span>&#9734;</span>
                   <span>&#9734;</span>
 
                 </div>
@@ -880,7 +880,7 @@ function App() {
 
 
                 <div className='box_text_comment'>
-                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed."</p>
+                  <p className='txt_opinion'>" Minha experiência com a entrega foi horrível. O pedido chegou muito atrasado e, quando finalmente chegou, a embalagem estava toda amassada e o conteúdo derramado. Além disso, o café estava completamente frio e sem sabor. Tentei entrar em contato com a cafeteria para resolver o problema, mas não obtive resposta. Muito frustrante e decepcionante "</p>
                 </div>
 
                 <div className='conteiner_username_comment'>
@@ -890,7 +890,7 @@ function App() {
                   </div>
 
                   <div className='username_comment'>
-                    <p>"Nome Sobrenome"</p>
+                    <p>"Ana Júlia"</p>
 
                   </div>
 
@@ -911,7 +911,7 @@ function App() {
 
                 <div className='box_opinion'>
                   <div className='box_icon_face_comment'>
-                    <FaRegFaceKissWinkHeart />
+                    <FaRegFaceSmile />
 
                   </div>
 
@@ -923,7 +923,7 @@ function App() {
                   <span>&#9733;</span>
                   <span>&#9733;</span>
                   <span>&#9733;</span>
-                  <span>&#9733;</span>
+                  <span>&#9734;</span>
                   <span>&#9734;</span>
 
                 </div>
@@ -933,7 +933,7 @@ function App() {
 
                 <div className='box_text_comment'>
                   
-                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nesciunt nisi omnis eveniet tenetur velit fugit voluptates, expedita numquam veniam excepturi quidem sunt? Laudantium maxime ratione ipsum dignissimos cum ipsa."</p>
+                  <p className='txt_opinion'>" Os cafés desta cafeteria são incríveis! A qualidade é excelente e o sabor é incomparável. No entanto, fiquei decepcionado com a entrega. O pedido chegou atrasado e o café estava morno quando recebi. Espero que possam melhorar o serviço de entrega, porque o produto realmente vale a pena. "</p>
              
 
                 </div>
@@ -944,7 +944,7 @@ function App() {
                   </div>
 
                   <div className='username_comment'>
-                    <p>Nome Sobrenome</p>
+                    <p>Sebastião Bonaparte</p>
 
                   </div>
 
@@ -966,15 +966,15 @@ function App() {
 
                 <div className='box_opinion'>
                   <div className='box_icon_face_comment'>
-                    <FaRegFaceKissWinkHeart />
+                    <FaRegFaceMeh />
 
                   </div>
                   <div className='box_stars_user_comment'>
                     <div className='box_stars'>
                     <span>&#9733;</span>
                     <span>&#9733;</span>
-                    <span>&#9733;</span>
-                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
                     <span>&#9734;</span>
 
 
@@ -983,7 +983,7 @@ function App() {
                   </div>
 
                   <div className='box_text_comment'>
-                  <p className='txt_opinion'>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid provident modi expedita rerum excepturi, eaque libero pariatur magnam odio neque similique voluptate sit suscipit aut nulla explicabo deleniti numquam sed."</p>
+                  <p className='txt_opinion'>" A entrega foi muito rápida, o que foi um ponto positivo. No entanto, fiquei bastante decepcionado ao perceber que o pedido veio errado. Pedi um café latte, mas recebi um espresso. Tentei ligar para a cafeteria para resolver o problema, mas ninguém atendeu minhas ligações. A qualidade do café é ótima, mas a precisão dos pedidos e o atendimento ao cliente precisam de grandes melhorias. "</p>
 
                   </div>
 

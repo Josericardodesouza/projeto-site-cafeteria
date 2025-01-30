@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 
 .section_menu {
@@ -42,8 +41,10 @@
     border: 10px solid var(--brown);
     /* border: 10px solid #826546; */
 
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: 1.2s ease;
+    margin: 50px 0px 0px 0px;
  
   
 }
@@ -94,14 +95,16 @@ div.title_and_icon  {
     display: none;
     width: 40%;
     border: 2px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .item_text_menu {
     width: 70%;
-    color: white;
+    color: burlywood;
     font-family: 'Fredericka the Great', sans-serif;
     font-size: 0.8em;
-    font-weight: 700;
+    font-weight: 500;
   
 }
 
@@ -111,7 +114,7 @@ div.title_and_icon  {
 }
 
 .cardapio {
-    width: 80%;
+    width: 99%;
 
     border-spacing: 0px;
 
@@ -130,6 +133,7 @@ div.title_and_icon  {
 
 
 table {
+
     border: 0;
    
 }
@@ -146,23 +150,65 @@ td.item {
     color: white;
     font-family: 'Ribeye Marrow';
     font-size: 1.2em;
-    border-bottom: 1px solid white;
-   border-style: dashed;
-   color: green;
+ 
+  
 
   
    
 }
 
 
+td.item > a {
+    display: inline-flex;
+    color: green;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-style: dashed;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+ 
+    
+    
+    
+}
+
+/* 
+td#td_value_brigadeiros {
+    text-align: center;
+} */
+
+
 td.value {
-    color: var(--brownSugar);
-    width: 30%;
+    color: var(--cream2);
+    width: 100%;
     font-family: 'Fredericka the Great';
+    display: flex;
+    margin-top: 33px;
+    padding-left: 7px;
 
    
-   
+ 
+    
 }
+
+
+td.item:hover {
+    cursor: pointer;
+}
+/* 
+
+td#teste_linha {
+  
+    color: white;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px dotted white;
+}
+ */
+
+
   
 td {
     width: auto;
@@ -170,9 +216,10 @@ td {
 
     border-left: 0;
     border-right: 0;
-   
+
     
 }
+
 
 th {
     border: 0;
@@ -185,8 +232,24 @@ div#testeNomes {
 
 
 
+td#td_value_brigadeiros {
+    padding-left: 10px;
+}
+
+
+
 
 @media screen and (min-width: 800px) {
+
+
+
+    div.box_menu {
+        width: 80vw;
+    }
+
+
+
+
 
     div.title_and_icon {
         text-align: center;
@@ -195,6 +258,15 @@ div#testeNomes {
 
     div.box_menu {
         flex-direction: row;
+        padding-left: 5px;
+        padding-right: 5px;
+        align-items: initial;
+    
+
+   
+     
+       
+   
     }
 
 
@@ -204,6 +276,8 @@ div#testeNomes {
 
     table.cardapio {
         width: 50%;
+       
+      
     }
 }
 
