@@ -84,11 +84,12 @@ function UserAdress() {
       let formattedCep = ""
 
       if (clearInputCep.length > 0) {
-        formattedCep = limpaInputCep.slice(0, 5)
+        formattedCep = clearInputCep.slice(0, 5)
       }
 
       if (clearInputCep.length > 5) {
-        formattedCep += `-${limpaInputCep.slice(5, 9)}`
+        formattedCep += `-${clearInputCep.slice(5, 9)}`
+        console.log('Passou o traço do CEP')
       }
 
     inputElement.value = formattedCep
@@ -100,7 +101,7 @@ function UserAdress() {
       return () => {
         inputElement.removeEventListener('input', formatCEP)
 }
-
+  
 
 }, [])
 

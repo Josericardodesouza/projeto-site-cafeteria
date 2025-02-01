@@ -40,9 +40,21 @@ a#title_nav {
 
 @media screen and (min-width: 500px) {
     #navBar_logo {
-        height: 8vh;
+        height: 10vh;
 
     }
+
+    div#nav_icon_logo > svg {
+        font-size: 3.0em;
+    }
+    
+    
+    a#title_nav {
+    
+        font-size: 1.5em;
+       
+    }
+    
 }
 
 

@@ -21,7 +21,7 @@ function NavBar() {
     <nav className='navBar' id='navBar_logo'>
       <div id='nav_icon_logo'>
           <DiCoffeescript />
-          <Link to='/' id='title_nav'>Cafeteria</Link> 
+          <Link to='/' id='title_nav'>Cantinho do Café</Link> 
       </div>
 
      

@@ -183,7 +183,7 @@ const candyList = [
     {
        
         name: 'Brownies',
-        price: '3,00',
+        price: 'entre R$4,00 e R$7,00',
         img: brownieImg,
         text: 'Os brownies são deliciosos bolinhos de chocolate com uma textura densa e úmida, frequentemente acompanhados por pedaços de nozes ou chocolate. Originários dos Estados Unidos, surgiram no final do século XIX e rapidamente se tornaram populares ao redor do mundo. Hoje, são uma sobremesa clássica apreciada por sua simplicidade e sabor intenso.'
     },
@@ -191,7 +191,7 @@ const candyList = [
     {
         
         name: 'Cookies',
-        price: '0,30',
+        price: '3,00',
         img: cookieImg,
         text: 'Os cookies são os queridinhos das sobremesas. Sejam crocantes por fora e macios por dentro, recheados com pedaços generosos de chocolate ou nozes, eles são sempre um sucesso. Sua origem remonta aos Estados Unidos, onde se tornaram populares no início do século XX. Desde então, a versatilidade dos cookies permite criações infinitas, tornando-os perfeitos para qualquer momento do dia.'
     },
@@ -199,7 +199,7 @@ const candyList = [
     {
         
         name: 'Cupcakes',
-        price: '7,00',
+        price: 'entre R$5,00 e R$9,00',
         img: cupcakeImg,
         text: 'Os cupcakes são pequenos bolinhos individuais, perfeitos para qualquer ocasião. Decorados com glacê colorido e uma variedade de coberturas, eles são visualmente atraentes e deliciosamente saborosos.'
     },
@@ -215,7 +215,7 @@ const candyList = [
     {
        
         name: 'Tortas',
-        price: '16,00',
+        price: 'entre R$12,00 e R$16,00',
         img: tortaImg,
         text: 'As tortas são sobremesas versáteis e saborosas, apreciadas em todo o mundo. Com uma base geralmente feita de massa crocante, podem ser recheadas com frutas, cremes ou chocolates, agradando a todos os gostos. De origem antiga, as tortas evoluíram ao longo dos séculos, ganhando variações regionais e se tornando presença garantida em ocasiões especiais. Seja uma clássica torta de maçã americana ou uma sofisticada torta de limão francesa, elas sempre surpreendem pelo sabor e apresentação.'
     }
@@ -263,14 +263,14 @@ const typesBrownies = [
     {
         name: 'Café',
         category: 'brownie sabor',
-        price: '6,50',
+        price: '4,50',
         img: brownieCafeImg
     },
 
     {
         name: 'Caramelo Salgado',
         category: 'brownie sabor',
-        price: '6,50',
+        price: '7,00',
         img: brownieCarameloImg
          
     },
@@ -278,7 +278,7 @@ const typesBrownies = [
     {
         name: 'Morango',
         category: 'brownie sabor',
-        price: '6,00',
+        price: '6,50',
         img: brownieMgImg
         
     }
@@ -354,7 +354,7 @@ const typesCupcakes = [
     {
         name: 'Chocolate',
         category: 'cupcake sabor',
-        price: '8,00',
+        price: '5,50',
         img: chCupcakeImg
     },
 
@@ -366,14 +366,14 @@ const typesCupcakes = [
     {
         name: 'Morango',
         category: 'cupcake sabor',
-        price: '7,00',
+        price: '7,50',
         img: mrgCupcakeImg
     },
 
     {
         name: 'Nozes',
         category: 'cupcake sabor',
-        price: '7,00',
+        price: '8,99',
         img: nozesCupcakeImg
     },
 
@@ -406,21 +406,21 @@ const typesPie = [
     {
         name: 'Amêndoa com maracujá',
         category: 'torta sabor',
-        price: '15,00',
+        price: '14,90',
         img: amendoaMaracujaPieImg
     },
 
     {
         name: 'Amendoim',
         category: 'torta sabor',
-        price: '13,00',
+        price: '13,60',
         img: amendoimPieImg
     },
 
     {
         name: 'Maçã',
         category: 'torta sabor',
-        price: '16,00',
+        price: '15,90',
         img: macaPieimg
     },
 
@@ -434,7 +434,7 @@ const typesPie = [
     {
         name: 'Pêssego',
         category: 'torta sabor',
-        price: '12.50',
+        price: '12,50',
         img: pessegoPieImg
     }
 ]

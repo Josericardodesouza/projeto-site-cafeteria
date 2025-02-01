@@ -150,7 +150,7 @@ button.buttons_scroll:hover {
   background-color: var(--cor7);
   color: var(--brown);
   border-color: var(--brown);
-  transition: 0.6s;
+  transition: 0.6s ease;
 }
 
 button.buttons_scroll > p {
@@ -903,7 +903,20 @@ button.buttons_scroll {
     height: 100%;
   }
 
+
+  div#box_1 {
+    width: 60%;
+  }
+
+
+  p#phrase_header1 {
+    width: 97%;
+   
+
+  }
+
   div#box_2 {
+    width: 40%;
     justify-content: center;
   }
 

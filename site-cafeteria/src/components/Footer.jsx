@@ -26,7 +26,7 @@ function Footer() {
                     
                     <div id="box_img">
                         <SiCoffeescript />
-                        <p>Cafeteria</p>
+                        <p>Cantinho do Café</p>
                     </div>
 
 

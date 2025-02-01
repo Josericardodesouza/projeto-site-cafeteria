@@ -63,6 +63,13 @@ div.component_inputs_confirmationPage > input {
 
 }
 
+div.component_inputs_confirmationPage > input:focus {
+    outline: none;
+    border: 3px solid var(--brownSugar);
+    box-shadow: 0px 0px 5px var(--generalShadow);
+    
+}
+
 
 
 
@@ -228,8 +235,9 @@ p#p_checkout {
     font-family: 'Nunito';
     text-align: center;
     width: 100vw;
-    height: 60px;
-    background-color: red;
+    /* height: 60px; */
+    
+ 
 }
 
 @media screen and (min-width: 500px) {
