@@ -10,7 +10,7 @@ OBS: Este site foi desenvolvido para fins de aprendizado, portanto a marca é fi
 Link do projeto:
 
 
-<img src="./site-cafeteria/src/assets/images/imgs-readme/image-sitecafeteria.png" style="width: 60%">
+<img src="./site-cafeteria/src/assets/images/imgs-readme/image-sitecafeteria.png" style="width: 80%">
 
 ## Tecnologias
 <ul>
@@ -29,7 +29,7 @@ No cabeçalho da página inicial, o usuário tem três opções: __Sobre nós__,
 
 
  
- <img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-2.png" style="width: 60%">
+ <img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-2.png" style="width: 80%">
  
  
  <br />
@@ -39,7 +39,7 @@ No cabeçalho da página inicial, o usuário tem três opções: __Sobre nós__,
  <br />
 
 
- <img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-3.png" style="width: 60%">
+ <img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-3.png" style="width: 80%">
 
 
  <br />
@@ -51,16 +51,16 @@ Por fim, na página seguinte, o usuário poderá ver uma pequena animação feit
 <br />
 
 
-<img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-4.png" style="width: 60%">
+<img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-4.png" style="width: 80%">
 
 <br />
 
 
-<img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-5.png" style="width: 60%">
+<img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-5.png" style="width: 80%">
 
 <br />
 
-<img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-6.png" style="width: 60%">
+<img src="./site-cafeteria/src/assets/images/imgs-readme/print-readme-6.png" style="width: 80%">
 
 <br />
 
