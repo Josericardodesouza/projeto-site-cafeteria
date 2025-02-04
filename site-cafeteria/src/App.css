@@ -975,6 +975,27 @@ div.conteiner_ev {
 } */
 
 
+
+.swiper-button-next:hover {
+  cursor: pointer;
+}
+
+.swiper-button-prev:hover {
+  cursor: pointer;
+}
+
+.swiper-button-next::after {
+  display: block;
+  color: var(--brownSugar2);
+  
+
+}
+
+.swiper-button-prev::after {
+  display: block;
+  color: var(--brownSugar2);
+}
+
 }
 
 
