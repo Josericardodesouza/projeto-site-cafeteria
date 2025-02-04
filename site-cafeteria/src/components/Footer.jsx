@@ -34,10 +34,10 @@ function Footer() {
 
                     <p className="title_box_footer">Créditos das imagens</p>
 
-                    <a className="credits">Pexels</a>
-                    <a className="credits">Pixabay</a>
-                    <a className="credits">FreePik</a>
-                    <a className="credits">Unsplash</a>
+                    <a className="credits" href="https://www.pexels.com/pt-br/">Pexels</a>
+                    <a className="credits" href="https://pixabay.com/pt/">Pixabay</a>
+                    <a className="credits" href="https://br.freepik.com/">FreePik</a>
+                    <a className="credits" href="https://unsplash.com/pt-br/">Unsplash</a>
 
 
                     </div>
@@ -49,11 +49,16 @@ function Footer() {
                         <div id="flex_icons">
 
                        
-                            <FaGithub className="icon_footer" />
-                            <FaLinkedin className="icon_footer" />
-                     
+                            <a href="https://github.com/Josericardodesouza" target="blank">
+                                <FaGithub className="icon_footer" />
+                            </a>
 
-                            <FaInstagram className="icon_footer" />
+                            <a href="www.linkedin.com/in/josé-ricardo-de-souza-034a90317" target="blank">
+                                <FaLinkedin className="icon_footer" />
+                            </a>
+                     
+{/* 
+                            <FaInstagram className="icon_footer" /> */}
                     
                         </div>
 

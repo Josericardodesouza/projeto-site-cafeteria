@@ -10,6 +10,7 @@ footer {
 
 }
 
+
 p.title_box_footer {
     color: black;
     font-weight: 600;
@@ -60,6 +61,7 @@ div#conteiner_footer {
     /* background-color: red; */
     display: flex;
     height: 100%;
+
 }
 
 div#box_img {
@@ -69,12 +71,13 @@ div#box_img {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: white;
     
     /* background-color: blue; */
 }
 
 div#box_img > svg {
-    color: black;
+  
     font-size: 3.5em;
     margin: 0px 5px 0px 0px;
     
@@ -93,7 +96,7 @@ div#box_credits {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 1px;
     padding-bottom: 10px;
 }
 
@@ -101,10 +104,12 @@ div#box_credits > a {
     font-size: 1.1em;
     text-decoration: underline;
     margin-bottom: 5px;
+    color: black;
 }
 
 div#box_credits > a:hover {
     cursor: pointer;
+    color: var(--cream);
 }
 
 div#box_icons {
@@ -121,6 +126,7 @@ div#box_icons {
     margin: 0px 0px 0px 0px;
     padding-top: 10px;
     padding-bottom: 20px;
+  
 
 }
 
@@ -133,6 +139,16 @@ div#box_icons > p {
 div#box_icons > div#flex_icons {
     display: flex;
     justify-content: center;
+    gap: 5px;
+}
+
+div#flex_icons > a {
+    color: black;
+    cursor: pointer;
+}
+
+div#flex_icons > a:hover {
+    color: var(--cream);
 }
 
 
