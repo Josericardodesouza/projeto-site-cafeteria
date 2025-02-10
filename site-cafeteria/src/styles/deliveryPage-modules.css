@@ -595,6 +595,21 @@ p#outputTeste {
 
 
 
+
+@media screen and (max-width: 400px) {
+
+    section.deliveryItens {
+        gap: 6px;
+
+    }
+    div.deliveryItem {
+        width: 40%;
+    }
+    
+}
+
+
+
 @media screen and (min-width: 500px) {
 
 
