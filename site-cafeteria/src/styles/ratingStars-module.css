@@ -26,3 +26,178 @@
     color: var(--brown);
 }
 
+
+
+div#box_emoji_ratingStars {
+    margin: auto;
+    width: auto;
+   
+}
+   
+span.animation {
+    
+}
+
+span.emoji_note_1 {
+    /* background-color: red; */
+    animation: emojiSendPage 1.16s ease;
+    color: var(--brown);
+  
+
+    
+}
+
+
+span.emoji_note_2 {
+    /* background-color: blue; */
+    animation: emojiSendPage2 1.12s ease;
+    color: var(--brown);
+   
+
+
+    
+  
+ 
+ 
+}
+
+span.emoji_note_3 {
+    /* background-color: brown; */
+    animation: emojiSendPage3 0.10s ease;
+    color: var(--brown);
+
+    /* o 3 tá funcionando*/
+ 
+    
+
+}
+
+span.emoji_note_4 {
+    /* background-color: pink; */
+    animation: emojiSendPage4 0.5s ease;
+    color: var(--brown);
+   
+  
+
+    
+
+}
+
+span.emoji_note_5 {
+    /* background-color: green; */
+    animation: emojiSendPage5 0.2s ease;
+    color: var(--brown);
+   
+ 
+
+
+}
+
+
+
+@keyframes emojiSendPage {
+
+    0% {
+     transform: translateY(0);
+    }
+ 
+    50% {
+     transform: translateY(-10px);
+    }
+
+ 
+    100% {
+     transform: translateY(0px);
+    }
+     
+ }
+
+ 
+@keyframes emojiSendPage2 {
+
+    0% {
+     transform: translateY(0);
+    }
+ 
+    50% {
+     transform: translateY(-10px);
+    }
+ 
+    60% {
+     transform: translateY(-20px);
+    }
+ 
+    100% {
+     transform: translateY(0px);
+    }
+     
+ }
+
+
+  
+@keyframes emojiSendPage3 {
+
+    0% {
+     transform: translateY(0);
+    }
+ 
+    50% {
+     transform: translateY(-10px);
+    }
+ 
+    60% {
+     transform: translateY(-20px);
+    }
+ 
+    100% {
+     transform: translateY(0px);
+    }
+     
+ }
+
+  
+@keyframes emojiSendPage4 {
+
+    0% {
+     transform: translateY(0);
+    }
+ 
+    50% {
+     transform: translateY(-10px);
+    }
+ 
+    60% {
+     transform: translateY(-20px);
+    }
+ 
+    100% {
+     transform: translateY(0px);
+    }
+     
+ }
+
+  
+@keyframes emojiSendPage5 {
+
+    0% {
+     transform: translateY(0);
+    }
+ 
+    50% {
+     transform: translateY(-10px);
+    }
+ 
+    60% {
+     transform: translateY(-20px);
+    }
+ 
+    100% {
+     transform: translateY(0px);
+    }
+     
+ }
+ 
+ 
+ 
+
+

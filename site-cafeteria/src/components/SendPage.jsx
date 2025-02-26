@@ -28,6 +28,8 @@ import { MdLocationCity } from 'react-icons/md'
 import { BiSolidCity } from 'react-icons/bi'
 import { HiHome } from 'react-icons/hi'
 import Footer from './Footer'
+import ConstEvaluationContext from '../context/ConstEvaluationContext'
+import { FaRegFaceFrown, FaRegFaceGrinStars, FaRegFaceKissWinkHeart, FaRegFaceMeh, FaRegFaceSmile } from 'react-icons/fa6'
 
 
 
@@ -48,6 +50,8 @@ function SendPage() {
     const { storedComment } = useContext(CommentContext)
     const { storedQuantItems } = useContext(QuantItemsSelectedsContext)
     const { storedNote } = useContext(RatingNoteContext)
+
+    // const {setStoredEvaluation} = useContext(ConstEvaluationContext)
 
 
     console.log('O que vem do provider do stored: ', storedComment)
@@ -84,18 +88,28 @@ function SendPage() {
 
 
 
+    const [valueComment, setValueComment] = useState('')
+
+
+
+    const changedText = () => {
+
+        setValueComment(commentRef.current.value)
+
+
+    }
+
+
 
     useEffect(() => {
 
 
-
-
-
-        if (storedComment.length < 1) {
+        if ( valueComment < 1) {
 
             console.log('Não foi digitado nada')
             ref_noEvaluation.current.style.display = 'block'
             ref_goHome.current.style.display = 'none'
+          
 
 
         } else {
@@ -108,11 +122,185 @@ function SendPage() {
 
 
 
+    }, [valueComment])
 
 
 
-    })
 
+
+
+
+
+
+    const userNameRef = useRef('')
+    const commentRef = useRef(null)
+    const UserNoteRef = useRef(null)
+
+  
+
+
+    let completeEvaluation = []
+
+
+    // const [evaluation, setEvaluation] = useState('')
+
+
+    const newEvaluation = () => {
+        console.log('Executou a função novoComentário')
+
+
+        const valorTextArea = commentRef.current.value 
+        const name = userNameRef.current.innerText
+        const note = storedNote
+        // const note = notaUsuario.current.innerText
+        
+        
+
+
+        completeEvaluation.push({comentario: valorTextArea, nota: note, nome: name}) 
+        
+    console.log('nome do usuário vindo do ref do strong', userNameRef.current.innerText)
+    console.log('Comentário', storedComment)
+    console.log('valor das estrelas', storedNote)
+
+    console.log('Valor da const:', completeEvaluation)
+
+
+    const lastEvaluations = JSON.parse(localStorage.getItem('storedUserEvaluation')) || []
+
+
+   
+    lastEvaluations.push({comentario: valorTextArea, nota: note, nome: name})
+
+
+    localStorage.setItem('storedUserEvaluation', JSON.stringify(lastEvaluations))
+
+
+    
+
+
+
+        
+    }
+
+
+    
+  
+
+
+
+    // var testeNum = parseInt(storedNote)
+
+
+
+    // const displayEmoji = () => {
+
+
+    //     switch(testeNum) {
+
+          
+    //             case 1:
+            
+    //               return <FaRegFaceFrown />
+                  
+
+          
+    //             case 2:
+             
+    //               return  <FaRegFaceMeh />
+          
+          
+    //             case 3:
+              
+    //               return <FaRegFaceSmile />
+          
+          
+    //             case 4:
+              
+    //               return <FaRegFaceKissWinkHeart />
+          
+    //             case 5:
+            
+                
+          
+    //               return <FaRegFaceGrinStars />
+
+
+        
+
+
+    //     }
+
+     
+
+
+
+
+
+        
+    // }
+
+
+
+
+
+
+    // useEffect(() => {
+
+
+    //     if (testeNum === 1) {
+
+    //         emoji.current.className = 'emoji_note_1'
+
+    //         console.log('adicionou classe 1')
+
+    //     } else if (testeNum === 2) {
+
+    //         emoji.current.className ='emoji_note_2'
+
+    //         console.log('adicionou classe 2')
+
+    //     } else if (testeNum === 3) {
+
+    //         emoji.current.className = 'emoji_note_3'
+
+    //         console.log('adicionou classe 3')
+
+    //     } else if (testeNum === 4) {
+
+    //         emoji.current.className = 'emoji_note_4'
+
+    //         console.log('adicionou classe 4')
+
+    //     } else if (testeNum === 5) {
+    //         emoji.current.className = 'emoji_note_5'
+
+    //         console.log('adicionou classe 5')
+
+    //     }
+
+
+
+  
+
+   
+
+           
+
+
+
+    // })
+
+
+
+
+
+ 
+
+
+
+
+  
 
     return (
 
@@ -137,7 +325,7 @@ function SendPage() {
 
 
                 <p className='titles_sections'>Seu pedido está a caminho!</p>
-                <p id='title_sendPage' className='subtitle_section'>Olá <strong>{storedUserNameInput}</strong>! Muito obrigado(a) pela sua compra, seu pedido está a caminho!</p>
+                <p id='title_sendPage' className='subtitle_section'>Olá <strong ref={userNameRef}>{storedUserNameInput}</strong>! Muito obrigado(a) pela sua compra, seu pedido está a caminho!</p>
 
                 <section id='section_send'>
 
@@ -202,10 +390,17 @@ function SendPage() {
 
 
 
-                        <UserComment />
+                 
+
+
+
+                      <textarea ref={commentRef} onChange={changedText}placeholder="Deixe aqui seu comentário"></textarea>  
+
+                     {/* <UserComment /> */}
 
 
                         <RatingStars />
+
 
 
                     </div>
@@ -233,9 +428,12 @@ function SendPage() {
                     </Link>
 
 
+
+                     {/* <button onClick={newEvaluation}>Novo comentário</button>  */}
+
                     <Link to='/' ref={ref_goHome}>
 
-                        <div className='buttons_redirect_confirmationPage'>
+                        <div onClick = {newEvaluation} className='buttons_redirect_confirmationPage'>
                             <GiConfirmed className='icon_button' />
                             <p>Terminar</p>
                         </div>

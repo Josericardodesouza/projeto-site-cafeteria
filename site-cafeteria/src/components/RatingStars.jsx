@@ -3,6 +3,7 @@ import '../styles/global-css/colorsAndFonts-module.css'
 import { useContext, useEffect, useRef, useState } from 'react';
 import { RatingNoteContext } from '../context/RatingNoteContext';
 import { IoAdd, IoHome, IoStar } from 'react-icons/io5';
+import { FaRegFaceFrown, FaRegFaceGrinStars, FaRegFaceKissWinkHeart, FaRegFaceMeh, FaRegFaceSmile } from 'react-icons/fa6';
 
 
 function RatingStars() {
@@ -10,7 +11,10 @@ function RatingStars() {
     const { setStoredNote } = useContext(RatingNoteContext)
 
     const boxStarsRef = useRef(null)
-    const [note, setNote] = useState('5') 
+    const [note, setNote] = useState('')
+
+
+    
 
    
 
@@ -86,6 +90,114 @@ function RatingStars() {
     }
 
 
+
+    const emoji = useRef(null)
+
+
+    
+        const displayEmoji = () => {
+    
+    
+            switch(note) {
+    
+              
+                    case '1':
+                
+                      return <FaRegFaceFrown />
+                      
+    
+              
+                    case '2':
+                 
+                      return  <FaRegFaceMeh />
+              
+              
+                    case '3':
+                  
+                      return <FaRegFaceSmile />
+              
+              
+                    case '4':
+                  
+                      return <FaRegFaceKissWinkHeart />
+              
+                    case '5':
+                
+                    
+              
+                      return <FaRegFaceGrinStars />
+    
+    
+            
+    
+    
+            }
+    
+         
+    
+    
+    
+    
+    
+            
+        }
+
+
+        
+
+    useEffect(() => {
+
+
+        if (note === '1') {
+
+            emoji.current.className = 'emoji_note_1'
+          
+
+            // console.log('adicionou classe 1')
+
+        } else if (note === '2') {
+
+            emoji.current.className ='emoji_note_2'
+
+            // console.log('adicionou classe 2')
+
+        } else if (note === '3') {
+
+            emoji.current.className = 'emoji_note_3'
+
+            // console.log('adicionou classe 3')
+
+        } else if (note === '4') {
+
+            emoji.current.className = 'emoji_note_4'
+
+            // console.log('adicionou classe 4')
+
+        } else if (note === '5') {
+            emoji.current.className = 'emoji_note_5'
+
+            // console.log('adicionou classe 5')
+
+        }
+
+
+
+  
+
+   
+
+           
+
+
+
+    })
+
+
+
+
+
+
+
     return (
 
         <>
@@ -114,6 +226,14 @@ function RatingStars() {
 
 
             </div>
+
+          
+  
+            <span id='emoji_sendPage' ref={emoji}>{displayEmoji()}</span>
+
+          
+
+
 
         </>
     )

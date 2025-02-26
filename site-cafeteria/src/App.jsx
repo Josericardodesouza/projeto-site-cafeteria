@@ -78,6 +78,7 @@ import { GiCoffeeCup, GiCoffeeMug, GiCupcake } from 'react-icons/gi'
 import { BiFoodMenu } from 'react-icons/bi'
 import { TbStars, TbSTurnDown } from 'react-icons/tb'
 import { FaFaceFrown, FaFaceGrinStars, FaFaceKissWinkHeart, FaFaceMeh, FaFaceSmile, FaRegFaceFrown, FaRegFaceGrinStars, FaRegFaceKissWinkHeart, FaRegFaceMeh, FaRegFaceSmile } from 'react-icons/fa6'
+import Comments from './components/Comments'
 
 
 
@@ -248,19 +249,19 @@ function App() {
 
 
 
-  const boxEvaluation = useRef(null)
+  // const boxEvaluation = useRef(null)
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 0 && storedListItemsNames.length > 1) {
+  //   if (storedUserNameInput.length > 1 && storedComment.length > 1 && storedNote > 0 && storedListItemsNames.length > 1) {
 
-      boxEvaluation.current.style.display = 'block'
+  //     boxEvaluation.current.style.display = 'block'
 
-    } else {
-      boxEvaluation.current.style.display = 'none'
-    }
+  //   } else {
+  //     boxEvaluation.current.style.display = 'none'
+  //   }
 
-  })
+  // })
 
 
 
@@ -327,6 +328,7 @@ function App() {
 
 
   }
+
 
 
 
@@ -425,6 +427,7 @@ function App() {
 
 
 
+
       <header id='header_home'>
 
         <div id='background_box_video'>
@@ -466,7 +469,15 @@ function App() {
 
       </header>
 
+
+   
+
       <main>
+
+      <div>
+        <Link to='/comments'>Ir para teste de comentários</Link>
+
+      </div>
 
         {/* <button id='btn_scroll_to_header'>GO UP</button> */}
 
@@ -639,6 +650,14 @@ function App() {
 
 
 
+        <section id='evaluations'  ref={refSectionEv}>
+          <Comments />
+
+        </section>
+
+
+
+{/* 
 
         <section id='evaluations' ref={refSectionEv}>
 
@@ -672,7 +691,7 @@ function App() {
               <div className='conteiner_ev' >
 
                 <div className='box_opinion'>
-                  {/* <p>Avaliando: {storedListItemsNames}</p> */}
+                  {/* <p>Avaliando: {storedListItemsNames}</p> 
 
                   <div className='box_icon_face_comment'>
 
@@ -752,7 +771,7 @@ function App() {
                       <BsPerson />
                     </div>
                     <div className='username_comment'>
-                      <p>Jhonnatan Campos</p>
+                      <p>"Jhonnatan Campos"</p>
 
                     </div>
                 
@@ -768,7 +787,7 @@ function App() {
 
 
               
-                {/* <div className='ev_img_box'> <img src={cappucinoImg} /></div> */}
+                {/* <div className='ev_img_box'> <img src={cappucinoImg} /></div> 
 
           
 
@@ -782,7 +801,7 @@ function App() {
 
                 {/* <div className='ev_img_box'>
                   <img src={cafeCoadoImg}></img>
-                </div> */}
+                </div> 
 
                 <div className='box_opinion'>
 
@@ -794,7 +813,7 @@ function App() {
                   <div className='box_stars_user_comment'>
                   <div className='box_stars'>
 
-                  {/* <p>Cappuccino</p> */}
+                  {/* <p>Cappuccino</p> 
                   <span>&#9733;</span>
                   <span>&#9733;</span>
                   <span>&#9733;</span>
@@ -819,7 +838,7 @@ function App() {
                     </div>
 
                     <div className='username_comment'>
-                    <p>Rafael Gonzaga</p>
+                    <p>"Rafael Gonzaga"</p>
 
                     </div>
                   
@@ -859,7 +878,7 @@ function App() {
 
                 {/* <div className='ev_img_box'>
                   <img src={testeImg3}></img>
-                </div> */}
+                </div> 
 
                 <div className='box_stars_user_comment'>
 
@@ -906,7 +925,7 @@ function App() {
                 {/* 
                 <div className='ev_img_box'>
                   <img src={testeImg4} />
-                </div> */}
+                </div> 
 
 
                 <div className='box_opinion'>
@@ -944,7 +963,7 @@ function App() {
                   </div>
 
                   <div className='username_comment'>
-                    <p>Sebastião Bonaparte</p>
+                    <p>"Sebastião Bonaparte"</p>
 
                   </div>
 
@@ -959,10 +978,10 @@ function App() {
             <SwiperSlide>
 
               <div className='conteiner_ev'>
-                {/* 
+                 
                 <div className='ev_img_box'>
                   <img src={testeImg5} />
-                </div> */}
+                </div> 
 
                 <div className='box_opinion'>
                   <div className='box_icon_face_comment'>
@@ -994,7 +1013,7 @@ function App() {
                     </div>
 
                     <div className='username_comment'>
-                    <p>Cláudia Faria</p>
+                    <p>"Cláudia Faria"</p>
 
                     </div>
 
@@ -1016,7 +1035,11 @@ function App() {
 
 
 
-        </section>
+        </section> */}
+
+
+
+        
 
 
 

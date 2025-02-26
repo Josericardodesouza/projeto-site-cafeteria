@@ -16,6 +16,7 @@ function UserComment() {
 
     const textChange = (e) => {
         setComment(e.target.value)
+        setStoredComment(comment)
 
 
     }
@@ -23,7 +24,7 @@ function UserComment() {
   
 
     const confirmComment = () => {
-        setStoredComment(comment)
+        // setStoredComment(comment)
     }
 
 
@@ -47,7 +48,7 @@ function UserComment() {
 
       
             {/* <p id="p_comment">Deixe um comentário:</p> */}
-            <textarea placeholder="Deixe aqui seu comentário" onChange={textChange} onBlur={confirmComment} value={comment}>Teste</textarea>
+            <textarea placeholder={comment} onChange={textChange} onBlur={confirmComment} value={comment}>Teste</textarea>
            
           
       

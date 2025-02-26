@@ -73,6 +73,6 @@ __OBS__: Ao comentar novamente, o __primeiro comentário na página inicial irá
 
 
 
-## Imagens do projeto:
+
 
 

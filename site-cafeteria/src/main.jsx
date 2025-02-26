@@ -26,6 +26,9 @@ import { SelectedItemsContext } from './context/SelectedItemsContext.jsx'
 import QuantItemsSelectedsProvider from './context/QuantItemsSelectedsProvider.jsx'
 import Confirmation from './components/Confirmation.jsx'
 import TotalValueProvider from './context/TotalValueProvider.jsx'
+import Comment from './components/Comments.jsx'
+import ConstEvaluationProvider from './context/ConstEvaluationProvider.jsx'
+import Comments from './components/Comments.jsx'
 
 
 
@@ -116,7 +119,9 @@ const router = createBrowserRouter([
               <SelectedItemsProvider>
                 <QuantItemsSelectedsProvider>
                   <RatingNoteProvider>
-                  <SendPage />
+                  
+                      <SendPage />
+                   
                   </RatingNoteProvider>
                 </QuantItemsSelectedsProvider>
               </SelectedItemsProvider>
@@ -195,7 +200,22 @@ const router = createBrowserRouter([
           <SelectedItemsContext />
       </SelectedItemsProvider>
 
-    }
+    },
+
+    {
+      path: '/comments',
+      element:
+      <UserNameProvider>
+        <CommentProvider>
+          <RatingNoteProvider>
+         
+              <Comments />
+         
+          </RatingNoteProvider>
+        </CommentProvider>
+      </UserNameProvider>
+    },
+
 
 
     

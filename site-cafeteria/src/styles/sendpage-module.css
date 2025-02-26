@@ -280,6 +280,84 @@ div#box_lines {
     font-family: 'Nunito';
 }
 
+
+span#emoji_sendPage {
+    font-size: 2.5em;
+
+
+
+   
+    
+}
+
+
+span#emoji_sendPage {
+
+   
+   
+}
+/* 
+span.emoji_note_1 {
+    animation: emojiSendPage 4.5s ease;
+  
+
+    
+}
+
+
+span.emoji_note_2 {
+
+    
+  
+ 
+ 
+}
+
+span.emoji_note_3 {
+
+    /* o 3 tá funcionando
+ 
+    
+
+}
+
+span.emoji_note_4 {
+    animation: emojiSendPage 4.5s ease;
+  
+
+    
+
+}
+
+span.emoji_note_5 {
+   
+ 
+    animation: emojiSendPage 4.5s ease;
+
+} */
+
+
+
+@keyframes emojiSendPage {
+
+   0% {
+    transform: translateY(0);
+   }
+
+   50% {
+    transform: translateY(-10px);
+   }
+
+   60% {
+    transform: translateY(-20px);
+   }
+
+   100% {
+    transform: translateY(0px);
+   }
+    
+}
+
 /* --------------- comment component --------------------*/
 
 
