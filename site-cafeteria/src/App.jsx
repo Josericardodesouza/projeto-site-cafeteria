@@ -475,7 +475,7 @@ function App() {
       <main>
 
       <div>
-        <Link to='/comments'>Ir para teste de comentários</Link>
+        {/* <Link to='/comments'>Ir para teste de comentários</Link> */}
 
       </div>
 

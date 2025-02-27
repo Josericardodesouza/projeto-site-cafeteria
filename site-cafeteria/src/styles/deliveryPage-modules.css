@@ -288,10 +288,10 @@ div.conteiner_quantityInput > div.box_quant > input {
 }
 
 
-div.box_quant:focus-within {
+/* div.box_quant:focus-within {
     background-image: var(--gradient8);
     color: white;
-}
+} */
 
 
 div.conteiner_quantityInput > div.box_quant > input:focus {
