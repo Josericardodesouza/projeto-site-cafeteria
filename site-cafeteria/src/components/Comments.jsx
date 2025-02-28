@@ -151,7 +151,7 @@ function Comments() {
 
 
     updateScreenWidthSize() 
-    window.addEventListener('resize', updateSize)
+    window.addEventListener('resize', updateScreenWidthSize)
 
 
   
@@ -159,7 +159,7 @@ function Comments() {
 
 
     return () => {
-      window.removeEventListener('resize', updateSize) 
+      window.removeEventListener('resize', updateScreenWidthSize) 
     }
 
   }, [])
