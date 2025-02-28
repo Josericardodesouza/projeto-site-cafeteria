@@ -422,7 +422,7 @@ function SendPage() {
 
                         <div className='buttons_redirect_confirmationPage'>
                             <IoHome className='icon_button' />
-                            <p>Não quero opinar. ir para página inicial.</p>
+                            <p>Não quero opinar. Ir para página inicial.</p>
                         </div>
 
                     </Link>

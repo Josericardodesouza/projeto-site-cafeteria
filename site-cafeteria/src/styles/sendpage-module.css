@@ -83,7 +83,7 @@ div#box_icon_send {
     
     height: 200px;
     border-radius: 100%;
-    background-image: linear-gradient(var(--cream) 50%, var(--brownSugar) 50%);
+    background-image: linear-gradient(var(--cream2) 50%, var(--brownSugar) 50%);
     /* background-image: linear-gradient(#87ceeb 50%, green 50%); */
     /* background-color: #87ceeb; */
    

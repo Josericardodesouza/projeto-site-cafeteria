@@ -131,6 +131,45 @@ function Comments() {
 
 
 
+  const [sizeSlidesPerView, setSizeSlidesPerView] = useState(null)
+
+
+  useEffect(() => {
+
+    const updateScreenWidthSize = () => {
+
+      if (window.innerWidth < 500) {
+
+        setSizeSlidesPerView(1.5)
+
+      } else {
+  
+        setSizeSlidesPerView(2.5)
+      }
+     
+    }
+
+
+    updateScreenWidthSize() 
+    window.addEventListener('resize', updateSize)
+
+
+  
+
+
+
+    return () => {
+      window.removeEventListener('resize', updateSize) 
+    }
+
+  }, [])
+
+ 
+
+
+
+
+
 
   const displayStars = (nota) => {
 
@@ -234,7 +273,7 @@ function Comments() {
   modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
 
   spaceBetween={25}
-  slidesPerView={2.5}
+  slidesPerView={sizeSlidesPerView}
   Navigation
   pagination={{ clickable: true }}
   grabCursor='true'
@@ -458,16 +497,9 @@ function Comments() {
 
         </div>
 
-        <div className='box_stars_user_comment'>
-          <div className='box_stars'>
+        
 
-
-          </div>
-
-        </div>
-
-      </div>
-
+    
       {/* <div className='ev_img_box'>
         <img src={testeImg3}></img>
       </div> */}
@@ -491,7 +523,7 @@ function Comments() {
 
 
       <div className='box_text_comment'>
-        <p className='txt_opinion'>" Minha experiência com a entrega foi horrível. O pedido chegou muito atrasado e, quando finalmente chegou, a embalagem estava toda amassada e o conteúdo derramado. Além disso, o café estava completamente frio e sem sabor. Tentei entrar em contato com a cafeteria para resolver o problema, mas não obtive resposta. Muito frustrante e decepcionante "</p>
+        <p className='txt_opinion'>" Minha experiência com a entrega foi horrível. O pedido chegou muito atrasado e, quando finalmente chegou, a embalagem estava toda amassada e o conteúdo derramado. Além disso, o café estava completamente frio e sem sabor. Tentei entrar em contato com a cafeteria para resolver o problema, mas não obtive resposta. Muito frustrante e decepcionante. "</p>
       </div>
 
       <div className='conteiner_username_comment'>
@@ -506,6 +538,8 @@ function Comments() {
         </div>
 
       </div>
+
+    </div>
 
     </div>
 

@@ -12,7 +12,7 @@
     cursor: pointer;
     list-style-type: none;
     border: 2px solid var(--cooper2);
-    color: yellow;
+    color: var(--flax);
     font-size: 30px;
     margin: 5px;
 }
@@ -40,7 +40,7 @@ span.animation {
 
 span.emoji_note_1 {
     /* background-color: red; */
-    animation: emojiSendPage 1.16s ease;
+    animation: emojiSendPage 1.14s ease;
     color: var(--brown);
   
 
@@ -116,20 +116,17 @@ span.emoji_note_5 {
 @keyframes emojiSendPage2 {
 
     0% {
-     transform: translateY(0);
-    }
- 
-    50% {
-     transform: translateY(-10px);
-    }
- 
-    60% {
-     transform: translateY(-20px);
-    }
- 
-    100% {
-     transform: translateY(0px);
-    }
+        transform: translateY(0);
+       }
+    
+       50% {
+        transform: translateY(-10px);
+       }
+   
+    
+       100% {
+        transform: translateY(0px);
+       }
      
  }
 
@@ -138,20 +135,17 @@ span.emoji_note_5 {
 @keyframes emojiSendPage3 {
 
     0% {
-     transform: translateY(0);
-    }
- 
-    50% {
-     transform: translateY(-10px);
-    }
- 
-    60% {
-     transform: translateY(-20px);
-    }
- 
-    100% {
-     transform: translateY(0px);
-    }
+        transform: translateY(0);
+       }
+    
+       50% {
+        transform: translateY(-10px);
+       }
+   
+    
+       100% {
+        transform: translateY(0px);
+       }
      
  }
 
@@ -159,20 +153,17 @@ span.emoji_note_5 {
 @keyframes emojiSendPage4 {
 
     0% {
-     transform: translateY(0);
-    }
- 
-    50% {
-     transform: translateY(-10px);
-    }
- 
-    60% {
-     transform: translateY(-20px);
-    }
- 
-    100% {
-     transform: translateY(0px);
-    }
+        transform: translateY(0);
+       }
+    
+       50% {
+        transform: translateY(-10px);
+       }
+   
+    
+       100% {
+        transform: translateY(0px);
+       }
      
  }
 
@@ -180,20 +171,17 @@ span.emoji_note_5 {
 @keyframes emojiSendPage5 {
 
     0% {
-     transform: translateY(0);
-    }
- 
-    50% {
-     transform: translateY(-10px);
-    }
- 
-    60% {
-     transform: translateY(-20px);
-    }
- 
-    100% {
-     transform: translateY(0px);
-    }
+        transform: translateY(0);
+       }
+    
+       50% {
+        transform: translateY(-10px);
+       }
+   
+    
+       100% {
+        transform: translateY(0px);
+       }
      
  }
  
