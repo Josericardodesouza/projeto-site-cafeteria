@@ -65,7 +65,7 @@ Por fim, na página seguinte, o usuário poderá ver uma pequena animação feit
 <br />
 
 
-__OBS__: Ao comentar novamente, o __primeiro comentário na página inicial irá apenas ter os textos atualizados__. Em breve, adicionarei uma função para que uma nova caixa de comentário seja adicionada.
+
 
 
 
@@ -73,7 +73,6 @@ __OBS__: Ao comentar novamente, o __primeiro comentário na página inicial irá
 
 
 
-## Imagens do projeto:
 
 
 
