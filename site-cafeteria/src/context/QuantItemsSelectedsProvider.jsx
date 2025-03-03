@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { SelectedItemsContext } from "./SelectedItemsContext";
 import { QuantItemsSelectedsContext } from "./QuantItemsSelectedsContext";
 
 function QuantItemsSelectedsProvider( {children} ) {

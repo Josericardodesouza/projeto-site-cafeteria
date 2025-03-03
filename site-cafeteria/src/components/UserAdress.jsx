@@ -17,19 +17,19 @@ function UserAdress() {
     
   const localSearch = (e) => { 
     const cep = e.target.value.replace(/\D/g, '')
-    console.log(cep)
+    //console.log(cep)
 
 
     if (cep.length === 8) {
 
-      console.log('É igual a 8')
+      //console.log('É igual a 8')
 
 
 
     fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data =>{
 
      
-      console.log(data)
+      //console.log(data)
 
       setAdressUser ({
 
@@ -89,7 +89,7 @@ function UserAdress() {
 
       if (clearInputCep.length > 5) {
         formattedCep += `-${clearInputCep.slice(5, 9)}`
-        console.log('Passou o traço do CEP')
+        //console.log('Passou o traço do CEP')
       }
 
     inputElement.value = formattedCep

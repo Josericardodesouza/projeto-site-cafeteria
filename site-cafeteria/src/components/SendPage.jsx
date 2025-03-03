@@ -1,5 +1,4 @@
 import '../styles/sendpage-module.css'
-import videoHeader from '../assets/videos/4170833-uhd_3840_2160_25fps.mp4'
 
 import '../styles/global-css/colorsAndFonts-module.css'
 import '../styles/global-css/global-titles.css'
@@ -7,30 +6,21 @@ import '../styles/global-css/global-buttons.css'
 
 import { Link } from "react-router-dom"
 import NavBar from "./NavBar"
-import ItensListDelivery from "./ItensListDelivery"
-import { useContext, useReducer, useRef } from "react"
+import { useContext, useRef } from "react"
 import { UserAdressContext } from "../context/UserAdressContext"
 import { UserNameContext } from "../context/UserNameContext"
-import UserComment from "./UserComment"
 import { CommentContext } from "../context/CommentContext"
 import RatingStars from "./RatingStars"
-import { FaCity, FaTruck } from 'react-icons/fa'
+import { FaTruck } from 'react-icons/fa'
 import { QuantItemsSelectedsContext } from '../context/QuantItemsSelectedsContext'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { IoMdArrowRoundBack } from 'react-icons/io'
 import { IoHome } from 'react-icons/io5'
-import { IconBase } from 'react-icons'
 import { GiConfirmed } from 'react-icons/gi'
 import { TbTree } from 'react-icons/tb'
 import { RatingNoteContext } from '../context/RatingNoteContext'
-import { MdLocationCity } from 'react-icons/md'
 import { BiSolidCity } from 'react-icons/bi'
-import { HiHome } from 'react-icons/hi'
 import Footer from './Footer'
-import ConstEvaluationContext from '../context/ConstEvaluationContext'
-import { FaRegFaceFrown, FaRegFaceGrinStars, FaRegFaceKissWinkHeart, FaRegFaceMeh, FaRegFaceSmile } from 'react-icons/fa6'
-
 
 
 
@@ -54,10 +44,10 @@ function SendPage() {
     // const {setStoredEvaluation} = useContext(ConstEvaluationContext)
 
 
-    console.log('O que vem do provider do stored: ', storedComment)
+   /* console.log('O que vem do provider do stored: ', storedComment)
 
     console.log('vindo do contexto do nome de usuário para o evaluations',)
-    console.log('comentário para o evaluation: ', storedComment)
+    console.log('comentário para o evaluation: ', storedComment)*/
 
 
     const splitted = storedQuantItems.split(',')
@@ -66,7 +56,7 @@ function SendPage() {
     const [listItems, setListItems] = useState([])
 
 
-    console.log('Valor da nota inicial: ', storedNote)
+    //console.log('Valor da nota inicial: ', storedNote)
 
 
 
@@ -82,7 +72,7 @@ function SendPage() {
     const ref_goHome = useRef(null)
 
 
-    console.log('quantidade de caracteres do comentário', storedComment.length)
+    //console.log('quantidade de caracteres do comentário', storedComment.length)
 
 
 
@@ -106,7 +96,7 @@ function SendPage() {
 
         if ( valueComment < 1) {
 
-            console.log('Não foi digitado nada')
+            //console.log('Não foi digitado nada')
             ref_noEvaluation.current.style.display = 'block'
             ref_goHome.current.style.display = 'none'
           
@@ -115,7 +105,7 @@ function SendPage() {
         } else {
 
 
-            console.log('Digitação detectada')
+            //console.log('Digitação detectada')
             ref_noEvaluation.current.style.display = 'none'
             ref_goHome.current.style.display = 'block'
         }
@@ -134,7 +124,7 @@ function SendPage() {
 
     const userNameRef = useRef('')
     const commentRef = useRef(null)
-    const UserNoteRef = useRef(null)
+    //const UserNoteRef = useRef(null)
 
   
 
@@ -146,7 +136,7 @@ function SendPage() {
 
 
     const newEvaluation = () => {
-        console.log('Executou a função novoComentário')
+        //console.log('Executou a função novoComentário')
 
 
         const valorTextArea = commentRef.current.value 
@@ -159,11 +149,11 @@ function SendPage() {
 
         completeEvaluation.push({comentario: valorTextArea, nota: note, nome: name}) 
         
-    console.log('nome do usuário vindo do ref do strong', userNameRef.current.innerText)
+    /*console.log('nome do usuário vindo do ref do strong', userNameRef.current.innerText)
     console.log('Comentário', storedComment)
-    console.log('valor das estrelas', storedNote)
+    console.log('valor das estrelas', storedNote)*/
 
-    console.log('Valor da const:', completeEvaluation)
+    //console.log('Valor da const:', completeEvaluation)
 
 
     const lastEvaluations = JSON.parse(localStorage.getItem('storedUserEvaluation')) || []

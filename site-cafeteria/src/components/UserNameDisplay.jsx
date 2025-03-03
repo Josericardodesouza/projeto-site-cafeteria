@@ -5,7 +5,7 @@ function UserNameDisplay() {
 
     const { userNameInput } = useContext(UserNameContext);
 
-    console.log('UserNameDisplay: ', userNameInput)
+    //console.log('UserNameDisplay: ', userNameInput)
 
 
     return (

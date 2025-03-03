@@ -1,19 +1,7 @@
 import '../styles/menus-module.css'
 
-
-import cafeCoadoImg from '../assets/images/cards-images/cafe-coado.jpeg'
-import cappucinoImg from '../assets/images/cards-images/pexels-andrew-peterson-113438-350478.jpg'
-import espressoImg from '../assets/images/cards-images/pexels-raymond-petrik-1448389535-28320963-espresso.jpg'
-import latteImg from '../assets/images/cards-images/latte-art-2431160_1280-latte.jpg'
-import mochaImg from '../assets/images/cards-images/cafe-mocha.jpeg'
-import pingadoImg from '../assets/images/cards-images/pingado.jpg'
-
-
-
 import { hotDrinks } from './ConstantsItens'
 import { useRef } from 'react'
-import { GiCoffeeCup } from 'react-icons/gi'
-import { DiCoffeescript } from 'react-icons/di'
 
 const coado = hotDrinks[0]
 const cappuccino = hotDrinks[1]
@@ -30,15 +18,15 @@ const pingado = hotDrinks[5]
 function MenuCoffee() {
 
 
-    const nameRef = useRef(null)
+    //const nameRef = useRef(null)
 
    
     
 
 
-    const imageCoffee = document.getElementById('item_img')
+   /* const imageCoffee = document.getElementById('item_img')
     var description = document.getElementById('item_text')
-    var texto = ''
+    var texto = ''*/
 
     const menu_coffee_toTop_scroll = useRef(null)
 
@@ -65,7 +53,7 @@ function MenuCoffee() {
             case coado.name:
 
 
-                console.log('teste coado')
+                //console.log('teste coado')
 
                 document.getElementById('title_item').innerHTML = coado.name
 
@@ -82,12 +70,12 @@ function MenuCoffee() {
                 
                
                 
-                console.log(coado.text)
+                //console.log(coado.text)
                 break;
 
             case cappuccino.name:
 
-                console.log('teste cappuccino')
+                //console.log('teste cappuccino')
 
                 document.getElementById('title_item').innerHTML = cappuccino.name
                 img_item_coffee.current.style.display = 'block'
@@ -95,12 +83,12 @@ function MenuCoffee() {
                 document.getElementById('item_text').innerHTML = `${cappuccino.text}`
                 
 
-                console.log(cappuccino.text)
+                //console.log(cappuccino.text)
                 break;
 
             case espresso.name:
 
-                console.log('teste espresso')
+                //console.log('teste espresso')
                 document.getElementById('title_item').innerHTML = espresso.name
                 img_item_coffee.current.style.display = 'block'
                 document.getElementById('item_img').src = espresso.img
@@ -112,7 +100,7 @@ function MenuCoffee() {
                 break;
             
             case latte.name:
-                console.log('teste latte')
+                //console.log('teste latte')
                 document.getElementById('title_item').innerHTML = latte.name
                 img_item_coffee.current.style.display = 'block'
                 document.getElementById('item_img').src = latte.img
@@ -122,7 +110,7 @@ function MenuCoffee() {
                 break;
 
             case mocha.name:
-                console.log('teste Mocha')
+                //console.log('teste Mocha')
                 document.getElementById('title_item').innerHTML = mocha.name
                 img_item_coffee.current.style.display = 'block'
                 document.getElementById('item_img').src = mocha.img
@@ -132,7 +120,7 @@ function MenuCoffee() {
                 break;
 
             case pingado.name:
-                console.log('teste pingado')
+                //console.log('teste pingado')
                 document.getElementById('title_item').innerHTML = pingado.name
                 img_item_coffee.current.style.display = 'block'
                 document.getElementById('item_img').src =  pingado.img
@@ -142,7 +130,7 @@ function MenuCoffee() {
                 break;
             
             default:
-                console.log('não passou')
+                //console.log('não passou')
         }
 
 

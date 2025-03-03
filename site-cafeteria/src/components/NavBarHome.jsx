@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { BsShop } from 'react-icons/bs'
 import { BiFoodMenu } from 'react-icons/bi'
 import { TbStars } from 'react-icons/tb'
-import { MdEmail, MdOutlineEmail } from 'react-icons/md'
+import { MdOutlineEmail } from 'react-icons/md'
 // import { IoIosMenu } from 'react-icons/io'
 //  import SideMenu from './SideMenu'
 

@@ -12,7 +12,6 @@ import { useContext } from 'react'
 import MenuItems from './MenuItems'
 import NavBar from './NavBar'
 import { SelectedItemsContext } from '../context/SelectedItemsContext'
-import { GiConfirmed } from 'react-icons/gi'
 import { FaArrowRight } from 'react-icons/fa'
 
 
@@ -26,7 +25,7 @@ function DeliveryPage() {
 
   // console.log('Username no DeliveryPage: ', userNameInput);
 
-  var input = document.getElementById('ent-adressUser')
+//  var input = document.getElementById('ent-adressUser')
 
 
 
@@ -96,14 +95,14 @@ function DeliveryPage() {
 
 
 
-  const confirmar = () => {
+  /*const confirmar = () => {
     console.log('teste da chamada')
     const lista = renderListItemsSelected
     console.log('teste', lista)
 
 
   }
-
+*/
 
   //passando a lista para o componente SendPage.jsx
 

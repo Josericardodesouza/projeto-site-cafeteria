@@ -11,7 +11,6 @@ import { Link } from "react-router-dom"
 import { TotalValueContext } from "../context/TotalValueContext"
 import { QuantItemsSelectedsContext } from '../context/QuantItemsSelectedsContext'
 import { FaMapMarkerAlt, FaTruck, FaUser } from 'react-icons/fa'
-import { TbTruckDelivery } from 'react-icons/tb'
 import { useRef } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
@@ -34,10 +33,10 @@ function Confirmation() {
   const [listItems, setListItems] = useState([])
 
   const splitted = storedQuantItems.split(',')
-  console.log('Corte no split', splitted)
+  // console.log('Corte no split', splitted)
 
 
-  console.log('cidade', adressUser.city)
+  // console.log('cidade', adressUser.city)
 
   const userName_output = useRef(null)
 
@@ -118,7 +117,7 @@ function Confirmation() {
 
 
 
-  console.log('valor do storedTotal: ', storedTotal)
+  //console.log('valor do storedTotal: ', storedTotal)
 
 
   useEffect(() => {
@@ -128,11 +127,11 @@ function Confirmation() {
 
     if (trimmedInput.length < 1 || div_output_userAdress.display === 'none') {
 
-      console.log('Não tem nome ou cep')
+      // console.log('Não tem nome ou cep')
       ref_btnGoSendPage.current.style.display = 'none'
 
     } else {
-      console.log(' tem nome ou cep')
+      // console.log(' tem nome ou cep')
       ref_btnGoSendPage.current.style.display = 'flex'
 
     }

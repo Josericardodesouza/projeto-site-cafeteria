@@ -30,23 +30,10 @@ import latteImg from './assets/images/cards-images/latte-art-2431160_1280-latte.
 import mochaImg from './assets/images/cards-images/cafe-mocha.jpeg'
 import pingadoImg from './assets/images/cards-images/pingado.jpg'
 
-import brigadeiroImg from './assets/images/cards-images/pexels-livilla-latini-1678510737-27850066-brigadeiro.jpg'
-import brownieImg from './assets/images/cards-images/pexels-ella-olsson-572949-3026804-brownie.jpg'
-import cookieImg from './assets/images/cards-images/pexels-sara-santos-381576-1020585-cookies.jpg'
-import cupcake from './assets/images/cards-images/pexels-aqtai-635409-cupcake.jpg'
-import paoDeMelImg from './assets/images/cards-images/pão-de-mel-caldeirao-bruxa-solar.jpeg'
-import tortaImg from './assets/images/cards-images/kavya-p-k-zQ4jrYelvLs-unsplash-torta-maca.jpg'
-import { CiCoffeeCup, CiFaceFrown } from 'react-icons/ci'
-import { useEffect } from 'react'
+import { CiCoffeeCup } from 'react-icons/ci'
+
 import MenuColdDrinks from './components/MenuColdDrinks'
 
-import NavBarHome from './components/NavBarHome'
-
-import testeImg1 from './assets/images/testeSlide/pexels-8moments-3264706.jpg'
-import testeImg2 from './assets/images/testeSlide/pexels-graeme-travers-637657729-26820674.jpg'
-import testeImg3 from './assets/images/testeSlide/pexels-jimmy-1233438433-26851738.jpg'
-import testeImg4 from './assets/images/testeSlide/pexels-neujus-26795366.jpg'
-import testeImg5 from './assets/images/testeSlide/pexels-peter-mansson-1522474240-27143629.jpg'
 
 
 
@@ -56,28 +43,19 @@ import { UserNameContext } from './context/UserNameContext'
 import { useContext } from 'react'
 // import { CommentContext } from './context/CommentContext'
 
+import { BsShop } from 'react-icons/bs'
 
-
-
-import { BsPerson, BsShop } from 'react-icons/bs'
-
-import { SwiperSlide, Swiper } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
-import { EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
-import { MdOutlineStar, MdOutlineStarBorder, MdOutlineStarHalf } from 'react-icons/md'
-import UserNameDisplay from './components/UserNameDisplay'
-import UserNameProvider from './context/UserNameProvider'
 import { CommentContext } from './context/CommentContext'
-import RatingStars from './components/RatingStars'
+
 import { RatingNoteContext } from './context/RatingNoteContext'
-import SelectedItemsProvider from './context/SelectedItemsProvider'
+
 import { SelectedItemsContext } from './context/SelectedItemsContext'
-import { DiCoffeescript } from 'react-icons/di'
-import { FaCoffee, FaCookie } from 'react-icons/fa'
+
 import { GiCoffeeCup, GiCoffeeMug, GiCupcake } from 'react-icons/gi'
 import { BiFoodMenu } from 'react-icons/bi'
-import { TbStars, TbSTurnDown } from 'react-icons/tb'
-import { FaFaceFrown, FaFaceGrinStars, FaFaceKissWinkHeart, FaFaceMeh, FaFaceSmile, FaRegFaceFrown, FaRegFaceGrinStars, FaRegFaceKissWinkHeart, FaRegFaceMeh, FaRegFaceSmile } from 'react-icons/fa6'
+import { TbStars } from 'react-icons/tb'
+import {FaRegFaceFrown, FaRegFaceGrinStars, FaRegFaceKissWinkHeart, FaRegFaceMeh, FaRegFaceSmile } from 'react-icons/fa6'
 import Comments from './components/Comments'
 
 
@@ -97,15 +75,16 @@ function App() {
   const { storedUserNameInput } = useContext(UserNameContext);
   const { storedComment } = useContext(CommentContext)
   const { storedNote } = useContext(RatingNoteContext)
-  const { storedListItemsNames } = useContext(SelectedItemsContext)
+  // const { storedListItemsNames } = useContext(SelectedItemsContext)
 
 
-  console.log('Valor do provider da lista de selecionados:', storedListItemsNames)
+  // console.log('Valor do provider da lista de selecionados:', storedListItemsNames)
 
-  console.log('vindo do contexto do nome de usuário para o App.jsx', storedUserNameInput)
-  console.log('valor da nota:', storedNote)
+  // console.log('vindo do contexto do nome de usuário para o App.jsx', storedUserNameInput)
+  // console.log('valor da nota:', storedNote)
   // console.log('comentário para o evaluation: ', storedComment)
 
+  /*
 
   if (storedUserNameInput === 'Sim') {
     console.log('é sim')
@@ -117,21 +96,12 @@ function App() {
     console.log('Os dois tem caracteres')
   } else {
     console.log('Não retorno')
-  }
+  }*/
 
 
 
-
-
-
-
-
-
-
-
-
-  const coffesImg = [cafeCoadoImg, cafeGeladoImg, cappucinoImg, coldBrewImg, espressoImg, espressoTonicoImg, frappuccinoImg, latteImg, mochaImg, pingadoImg
-  ]
+  // const coffesImg = [cafeCoadoImg, cafeGeladoImg, cappucinoImg, coldBrewImg, espressoImg, espressoTonicoImg, frappuccinoImg, latteImg, mochaImg, pingadoImg
+  // ]
 
 
 
@@ -166,7 +136,7 @@ function App() {
 
 
     if (refSectionAboutUs.current) {
-      console.log('chamou a função')
+      // console.log('chamou a função')
       refSectionAboutUs.current.scrollIntoView({ behavior: 'smooth' })
     }
   }
@@ -176,25 +146,25 @@ function App() {
   const refDivButtonsMenus = useRef(null)
 
 
-
+/*
   const activeMenu = () => {
     setActiveComponent('MenuCofee')
     scrollEvaluations()
   }
-
+*/
 
   //criar um ref para o cardápio e uma function de scroll igual a de cima.
 
   const scrollMenus = () => {
 
-    console.log('teste2')
+    // console.log('teste2')
 
 
     if (refDivButtonsMenus.current) {
-      console.log('chamou 2a funcao')
+      // console.log('chamou 2a funcao')
       refDivButtonsMenus.current.scrollIntoView({ behavior: 'smooth' })
     } else {
-      console.log('este elemento não está passando')
+      // console.log('este elemento não está passando')
     }
 
   }
@@ -205,10 +175,10 @@ function App() {
 
     if (refSectionEv.current) {
 
-      console.log('teste3')
+      // console.log('teste3')
       refSectionEv.current.scrollIntoView({ behavior: 'smooth' })
     } else {
-      console.log('erro')
+      // console.log('erro')
     }
 
   }
@@ -300,6 +270,7 @@ function App() {
   // const face_userNote = useRef(null)
 
 
+  /*
   const displayFace = () => {
 
     switch (testeNum) {
@@ -329,8 +300,10 @@ function App() {
 
   }
 
+*/
 
 
+/*
 
   const displayStars = () => {
 
@@ -404,7 +377,7 @@ function App() {
 
 
 
-
+*/
 
   return (
 

@@ -2,7 +2,6 @@ import { useContext, useRef, useState } from "react";
 import { UserNameContext } from "../context/UserNameContext";
 import { CommentContext } from "../context/CommentContext";
 import { RatingNoteContext } from "../context/RatingNoteContext";
-import ConstEvaluationContext from "../context/ConstEvaluationContext";
 import { useEffect } from "react";
 
 
@@ -17,9 +16,9 @@ import { BsPerson } from "react-icons/bs";
 function Comments() {
 
     
-      const { storedUserNameInput } = useContext(UserNameContext);
+      /*const { storedUserNameInput } = useContext(UserNameContext);
       const { storedComment } = useContext(CommentContext)
-      const { storedNote } = useContext(RatingNoteContext)
+      const { storedNote } = useContext(RatingNoteContext)*/
 
     //   const {storedEvaluation} = useContext(ConstEvaluationContext)
 
@@ -45,7 +44,7 @@ function Comments() {
 
       
         
-      console.log('vindo do storage: ', commentsList)
+      //console.log('vindo do storage: ', commentsList)
 
       
       var newStoredUserEvaluation = ''

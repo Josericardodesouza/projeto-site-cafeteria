@@ -1,4 +1,3 @@
-import { GiCookie } from 'react-icons/gi'
 import '../styles/menus-module.css'
 import { candyList } from './ConstantsItens'
 import { useRef } from 'react'

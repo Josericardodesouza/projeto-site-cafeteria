@@ -2,7 +2,6 @@ import '../styles/ratingStars-module.css'
 import '../styles/global-css/colorsAndFonts-module.css'
 import { useContext, useEffect, useRef, useState } from 'react';
 import { RatingNoteContext } from '../context/RatingNoteContext';
-import { IoAdd, IoHome, IoStar } from 'react-icons/io5';
 import { FaRegFaceFrown, FaRegFaceGrinStars, FaRegFaceKissWinkHeart, FaRegFaceMeh, FaRegFaceSmile } from 'react-icons/fa6';
 
 
@@ -65,7 +64,7 @@ function RatingStars() {
 
                 const evaluationValue = e.target.getAttribute('data-evaluation')
                 setNote(evaluationValue)
-                console.log('valor selecionado: ', evaluationValue)
+                //console.log('valor selecionado: ', evaluationValue)
 
 
             }
@@ -85,7 +84,7 @@ function RatingStars() {
     }, [])
 
     const confirmaValor = () => {
-        console.log('Valor confirmado: ', note)
+        //console.log('Valor confirmado: ', note)
         setStoredNote(note)
     }
 

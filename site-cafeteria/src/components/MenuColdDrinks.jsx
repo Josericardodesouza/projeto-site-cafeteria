@@ -1,8 +1,5 @@
-import { SiHomebrew } from 'react-icons/si'
 import '../styles/menus-module.css'
-
 import { coldDrinks } from './ConstantsItens'
-import { GiCoffeeMug } from 'react-icons/gi'
 import { useRef } from 'react'
 
 const cafeGelado = coldDrinks[0]
@@ -80,7 +77,7 @@ function MenuColdDrinks() {
 
 
             default:
-                console.log('Bebidas geladas: não passou')
+                //console.log('Bebidas geladas: não passou')
 
 
             // default:

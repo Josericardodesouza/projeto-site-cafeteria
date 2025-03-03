@@ -17,7 +17,6 @@ import MenuItems from './components/MenuItems.jsx'
 
 import CommentProvider from './context/CommentProvider.jsx'
 import UserComment from './components/UserComment.jsx'
-import UserName from './components/UserName.jsx'
 import UserNameDisplay from './components/UserNameDisplay.jsx'
 import RatingStars from './components/RatingStars.jsx'
 import RatingNoteProvider from './context/RatingNoteProvider.jsx'
@@ -26,8 +25,6 @@ import { SelectedItemsContext } from './context/SelectedItemsContext.jsx'
 import QuantItemsSelectedsProvider from './context/QuantItemsSelectedsProvider.jsx'
 import Confirmation from './components/Confirmation.jsx'
 import TotalValueProvider from './context/TotalValueProvider.jsx'
-import Comment from './components/Comments.jsx'
-import ConstEvaluationProvider from './context/ConstEvaluationProvider.jsx'
 import Comments from './components/Comments.jsx'
 
 

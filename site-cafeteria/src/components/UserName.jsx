@@ -13,7 +13,7 @@ function UserName() {
     const renderUserName = (e) => {
 
         setStoredUserNameInput(e.target.value)
-        console.log("Valor digitado: ", e.target.value);
+        //console.log("Valor digitado: ", e.target.value);
         
     }
 

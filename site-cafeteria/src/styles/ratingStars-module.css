@@ -191,6 +191,14 @@ span.emoji_note_5 {
        }
      
  }
+
+
+ @media screen and (min-width: 400px) {
+    
+    .starIcon {
+        font-size: 45px;
+    }
+ }
  
  
  

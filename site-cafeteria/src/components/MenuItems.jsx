@@ -4,9 +4,6 @@ import '../styles/deliveryPage-modules.css'
 import { hotDrinks, coldDrinks } from './ConstantsItens'
 import { typesBrigadeiro, typesBrownies, typesCookies, typesCupcakes, typesPie } from './ConstantsItens'
 
-
-import backgroundCandies from '../assets/images/backgrounds/pexels-pham-ngoc-anh-170983008-28146830.jpg'
-
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { useEffect } from 'react'
 import { useState } from 'react'
@@ -68,7 +65,7 @@ function MenuItems() {
 
 
 
-    console.log('valor do provider da lista de itens: ', setStoredListItemsNames)
+   // console.log('valor do provider da lista de itens: ', setStoredListItemsNames)
 
 
 
@@ -333,7 +330,7 @@ function MenuItems() {
 
 
         setStoredQuantItems(listItems)
-        console.log('Teste da nova passagem de quantidade: ', listItems)
+        //console.log('Teste da nova passagem de quantidade: ', listItems)
 
 
 
@@ -351,12 +348,12 @@ function MenuItems() {
 
 
 
-    var lista = setStoredListItemsNames
+    //var lista = setStoredListItemsNames
 
 
 
 
-    const testeList = ''
+    //const testeList = ''
 
 
 
@@ -395,7 +392,7 @@ function MenuItems() {
             setText(textParagraphs)
             setStoredListItemsNames(textParagraphs)
 
-            console.log('lista de selecionados: ', textParagraphs)
+            //console.log('lista de selecionados: ', textParagraphs)
         }
 
     }, [itensProperties])
@@ -417,7 +414,7 @@ function MenuItems() {
 
 
 
-    console.log('Teste do componenente da lista', { renderListItemsSelected })
+    //console.log('Teste do componenente da lista', { renderListItemsSelected })
     //   console.log('Isso é a itensProperties: ', item )
 
 
@@ -438,7 +435,7 @@ function MenuItems() {
         const total = totalValue().toFixed(2)
         setTotal(total.replace('.', ','))
         setStoredTotal(total)
-        console.log('total: ', total)
+        //console.log('total: ', total)
     }, [itensProperties])
 
 
@@ -448,7 +445,7 @@ function MenuItems() {
 
 
 
-    console.log('valor do stored total', storedTotal)
+    //console.log('valor do stored total', storedTotal)
 
     const box_total = useRef('')
     const p_selectedItems = useRef('')
