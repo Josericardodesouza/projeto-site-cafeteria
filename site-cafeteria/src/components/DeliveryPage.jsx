@@ -149,7 +149,7 @@ function DeliveryPage() {
       <main>
 
       <p className='titles_sections'>Temos diversas opções para você!</p>
-      <p className='subtitle_section'>Selecione a seção, em seguida defina o quantidade e, por fim, clique em "continuar" para seguirmos.</p>
+      <p className='subtitle_section'>Selecione a seção, em seguida defina o quantidade e, por fim, clique em "continuar" para prosseguirmos com seu pedido.</p>
 
         <section id='section_menu'>
           <MenuItems />
