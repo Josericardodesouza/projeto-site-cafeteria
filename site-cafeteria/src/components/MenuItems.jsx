@@ -596,9 +596,11 @@ function MenuItems() {
 
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputEspresso')}>+</button>
+                                  <button onClick={() => subQuantity('inputEspresso')}>-</button>
+                            
                                 <input type="number" id='input_quant_espresso' value={itensProperties.inputEspresso.quant} onChange={(e) => changeValueInput(e, 'inputEspresso')} />
-                                <button onClick={() => subQuantity('inputEspresso')}>-</button>
+                                  <button onClick={() => addQuantity('inputEspresso')}>+</button>
+                              
                             </div>
                         </div>
 
@@ -633,9 +635,10 @@ function MenuItems() {
 
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputLatte')}>+</button>
-                                <input type="number" id='input_quant_latte' value={itensProperties.inputLatte.quant} onChange={(e) => changeValueInput(e, 'inputLatte')} />
                                 <button onClick={() => subQuantity('inputLatte')}>-</button>
+                                <input type="number" id='input_quant_latte' value={itensProperties.inputLatte.quant} onChange={(e) => changeValueInput(e, 'inputLatte')} />
+                                <button onClick={() => addQuantity('inputLatte')}>+</button>
+                                
                             </div>
                         </div>
 
@@ -670,9 +673,11 @@ function MenuItems() {
 
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputMocha')}>+</button>
-                                <input type="number" id='input_quant_mocha' value={itensProperties.inputMocha.quant} onChange={(e) => changeValueInput(e, 'inputMocha')} />
+                               
                                 <button onClick={() => subQuantity('inputMocha')}>-</button>
+                                <input type="number" id='input_quant_mocha' value={itensProperties.inputMocha.quant} onChange={(e) => changeValueInput(e, 'inputMocha')} />
+                                 <button onClick={() => addQuantity('inputMocha')}>+</button>
+                                
 
                             </div>
                         </div>
@@ -707,9 +712,9 @@ function MenuItems() {
 
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputPingado')}>+</button>
+                                 <button onClick={() => subQuantity('inputPingado')}>-</button>
                                 <input type="number" id='input_quant_pingado' value={itensProperties.inputPingado.quant} onChange={(e) => changeValueInput(e, 'inputPingado')} />
-                                <button onClick={() => subQuantity('inputPingado')}>-</button>
+                                  <button onClick={() => addQuantity('inputPingado')}>+</button>
                             </div>
                         </div>
                     </div>
@@ -764,9 +769,10 @@ function MenuItems() {
 
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputCafeGelado')}>+</button>
+                               <button onClick={() => subQuantity('inputCafeGelado')}>-</button>
                                 <input type="number" id='input_quant_cfGelado' value={itensProperties.inputCafeGelado.quant} onChange={(e) => changeValueInput(e, 'inputCafeGelado')} />
-                                <button onClick={() => subQuantity('inputCafeGelado')}>-</button>
+                                 <button onClick={() => addQuantity('inputCafeGelado')}>+</button>
+                                
 
                             </div>
                         </div>
@@ -799,9 +805,11 @@ function MenuItems() {
 
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputColdBrew')}>+</button>
-                                <input type="number" id='input_quant_coldBrew' value={itensProperties.inputColdBrew.quant} onChange={(e) => changeValueInput(e, 'inputColdBrew')} />
+                               
                                 <button onClick={() => subQuantity('inputColdBrew')}>-</button>
+                                <input type="number" id='input_quant_coldBrew' value={itensProperties.inputColdBrew.quant} onChange={(e) => changeValueInput(e, 'inputColdBrew')} />
+                                 <button onClick={() => addQuantity('inputColdBrew')}>+</button>
+                          
                             </div>
                         </div>
                     </div>
@@ -828,9 +836,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_expTonico" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputExpTonico')}>+</button>
-                                <input type="number" id='input_quant_expTonico' value={itensProperties.inputExpTonico.quant} onChange={(e) => changeValueInput(e, 'inputExpTonico')} />
                                 <button onClick={() => subQuantity('inputExpTonico')}>-</button>
+                                <input type="number" id='input_quant_expTonico' value={itensProperties.inputExpTonico.quant} onChange={(e) => changeValueInput(e, 'inputExpTonico')} />
+                                <button onClick={() => addQuantity('inputExpTonico')}>+</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -860,9 +869,11 @@ function MenuItems() {
                             <label htmlFor="input_quant_frappuccino" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputFrappuccino')}>+</button>
-                                <input type="number" id='input_quant_frappuccino' value={itensProperties.inputFrappuccino.quant} onChange={(e) => changeValueInput(e, 'inputFrappuccino')} />
+                                
                                 <button onClick={() => subQuantity('inputFrappuccino')}>-</button>
+                                <input type="number" id='input_quant_frappuccino' value={itensProperties.inputFrappuccino.quant} onChange={(e) => changeValueInput(e, 'inputFrappuccino')} />
+                                <button onClick={() => addQuantity('inputFrappuccino')}>+</button>
+                                
 
 
                             </div>
@@ -923,9 +934,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_cocoBrig" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputCocoBrig')}>+</button>
-                                <input type="number" id='input_quant_cocoBrig' value={itensProperties.inputCocoBrig.quant} readOnly onChange={(e) => changeValueInput(e, 'inputCocoBrig')} />
                                 <button onClick={() => subQuantity('inputCocoBrig')}>-</button>
+                                <input type="number" id='input_quant_cocoBrig' value={itensProperties.inputCocoBrig.quant} readOnly onChange={(e) => changeValueInput(e, 'inputCocoBrig')} />
+                                <button onClick={() => addQuantity('inputCocoBrig')}>+</button>
+                                
                             </div>
                         </div>
 
@@ -957,9 +969,11 @@ function MenuItems() {
 
                             <div className='box_quant'>
 
-                                <button onClick={() => addQuantity('inputMrgBrig')}>+</button>
-                                <input type="number" id='input_quant_mrgBrigadeiro' value={itensProperties.inputMrgBrig.quant} onChange={(e) => changeValueInput(e, 'inputMrgBrig')} />
+                                
                                 <button onClick={() => subQuantity('inputMrgBrig')}>-</button>
+                                <input type="number" id='input_quant_mrgBrigadeiro' value={itensProperties.inputMrgBrig.quant} onChange={(e) => changeValueInput(e, 'inputMrgBrig')} />
+                                <button onClick={() => addQuantity('inputMrgBrig')}>+</button>
+                                
 
                             </div>
                         </div>
@@ -988,9 +1002,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_lightBrig" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputLightBrig')}>+</button>
-                                <input type="number" id='input_quant_lightBrig' value={itensProperties.inputLightBrig.quant} onChange={(e) => changeValueInput(e, 'inputLightBrig')} />
                                 <button onClick={() => subQuantity('inputLightBrig')}>-</button>
+                                <input type="number" id='input_quant_lightBrig' value={itensProperties.inputLightBrig.quant} onChange={(e) => changeValueInput(e, 'inputLightBrig')} />
+                                <button onClick={() => addQuantity('inputLightBrig')}>+</button>
+                                
                             </div>
                         </div>
 
@@ -1041,9 +1056,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_cfBrownie" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputCafeBrownie')}>+</button>
+                                 <button onClick={() => subQuantity('inputCafeBrownie')}>-</button>
                                 <input type="number" id='input_quant_cfBrownie' value={itensProperties.inputCafeBrownie.quant} onChange={(e) => changeValueInput(e, 'inputCafeBrownie')} />
-                                <button onClick={() => subQuantity('inputCafeBrownie')}>-</button>
+                                <button onClick={() => addQuantity('inputCafeBrownie')}>+</button>
+                               
                             </div>
                         </div>
 
@@ -1094,9 +1110,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_chCookie" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputChCookie')}>+</button>
+                               <button onClick={() => subQuantity('inputChCookie')}>-</button>
                                 <input type="number" id='input_quant_chCookie' value={itensProperties.inputChCookie.quant} onChange={(e) => changeValueInput(e, 'inputChCookie')} />
-                                <button onClick={() => subQuantity('inputChCookie')}>-</button>
+                                 <button onClick={() => addQuantity('inputChCookie')}>+</button>
+                                
                             </div>
                         </div>
 
@@ -1145,9 +1162,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_chCupcake" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputChCupcake')}>+</button>
-                                <input type="number" id='input_quant_chCupcake' value={itensProperties.inputChCupcake.quant} onChange={(e) => changeValueInput(e, 'inputChCupcake')} />
                                 <button onClick={() => subQuantity('inputChCupcake')}>-</button>
+                                <input type="number" id='input_quant_chCupcake' value={itensProperties.inputChCupcake.quant} onChange={(e) => changeValueInput(e, 'inputChCupcake')} />
+                                 <button onClick={() => addQuantity('inputChCupcake')}>+</button>
+                               
                             </div>
                         </div>
 
@@ -1175,9 +1193,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_mrgCupcake" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputMrgCupcake')}>+</button>
-                                <input type="number" id='input_quant_mrgCupcake' value={itensProperties.inputMrgCupcake.quant} onChange={(e) => changeValueInput(e, 'inputMrgCupcake')} />
                                 <button onClick={() => subQuantity('inputMrgCupcake')}>-</button>
+                                <input type="number" id='input_quant_mrgCupcake' value={itensProperties.inputMrgCupcake.quant} onChange={(e) => changeValueInput(e, 'inputMrgCupcake')} />
+                                <button onClick={() => addQuantity('inputMrgCupcake')}>+</button>
+                                
                             </div>
                         </div>
 
@@ -1205,9 +1224,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_nozesCupcake" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputNozesCupcake')}>+</button>
-                                <input type="number" id='input_quant_nozesCupcake' value={itensProperties.inputNozesCupcake.quant} onChange={(e) => changeValueInput(e, 'inputNozesCupcake')} />
                                 <button onClick={() => subQuantity('inputNozesCupcake')}>-</button>
+                                <input type="number" id='input_quant_nozesCupcake' value={itensProperties.inputNozesCupcake.quant} onChange={(e) => changeValueInput(e, 'inputNozesCupcake')} />
+                                <button onClick={() => addQuantity('inputNozesCupcake')}>+</button>
+                                
                             </div>
                         </div>
 
@@ -1257,9 +1277,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_amdMrcjPie" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('input_amendoaMaracujaPie')}>+</button>
+                                 <button onClick={() => subQuantity('input_amendoaMaracujaPie')}>-</button>
                                 <input type="number" id='input_quant_amdMrcjPie' value={itensProperties.input_amendoaMaracujaPie.quant} onChange={(e) => changeValueInput(e, 'input_amendoaMaracujaPie')} />
-                                <button onClick={() => subQuantity('input_amendoaMaracujaPie')}>-</button>
+                                <button onClick={() => addQuantity('input_amendoaMaracujaPie')}>+</button>
+                               
                             </div>
                         </div>
 
@@ -1291,9 +1312,11 @@ function MenuItems() {
                             <label htmlFor="input_quant_amendoimPie" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('input_amendoimPie')}>+</button>
+                                
+                                 <button onClick={() => subQuantity('input_amendoimPie')}>-</button>
                                 <input type="number" id='input_quant_amendoimPie' value={itensProperties.input_amendoimPie.quant} onChange={(e) => changeValueInput(e, 'input_amendoimPie')} />
-                                <button onClick={() => subQuantity('input_amendoimPie')}>-</button>
+                                <button onClick={() => addQuantity('input_amendoimPie')}>+</button>
+                               
                             </div>
                         </div>
 
@@ -1322,9 +1345,11 @@ function MenuItems() {
                             <label htmlFor="input_quant_macaPie" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('input_macaPie')}>+</button>
-                                <input type="number" id='input_quant_macaPie' value={itensProperties.input_macaPie.quant} onChange={(e) => changeValueInput(e, 'input_macaPie')} />
+                                
                                 <button onClick={() => subQuantity('input_macaPie')}>-</button>
+                                <input type="number" id='input_quant_macaPie' value={itensProperties.input_macaPie.quant} onChange={(e) => changeValueInput(e, 'input_macaPie')} />
+                                <button onClick={() => addQuantity('input_macaPie')}>+</button>
+                                
                             </div>
                         </div>
 
@@ -1353,9 +1378,10 @@ function MenuItems() {
                             <label htmlFor="input_quant_pessegoPie" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('input_pessegoPie')}>+</button>
+                                 <button onClick={() => subQuantity('input_pessegoPie')}>-</button>
                                 <input type="number" id='input_quant_pessegoPie' value={itensProperties.input_pessegoPie.quant} onChange={(e) => changeValueInput(e, 'input_pessegoPie')} />
-                                <button onClick={() => subQuantity('input_pessegoPie')}>-</button>
+                                <button onClick={() => addQuantity('input_pessegoPie')}>+</button>
+                               
                             </div>
                         </div>
 
