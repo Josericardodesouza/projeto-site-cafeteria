@@ -524,9 +524,9 @@ function MenuItems() {
 
                             <div className='box_quant'>
 
-                                <button onClick={() => addQuantity('inputCoado')}>+</button>
+                               <button onClick={() => subQuantity('inputCoado')}>-</button>
                                 <input type='number' id='input_add_coado' value={itensProperties.inputCoado.quant} onChange={(e) => changeValueInput(e, 'inputCoado')} />
-                                <button onClick={() => subQuantity('inputCoado')}>-</button>
+                                <button onClick={() => addQuantity('inputCoado')}>+</button>
                                 {/* <button>confirmar</button> */}
                             </div>
 
@@ -558,9 +558,11 @@ function MenuItems() {
                             <label htmlFor="input_quant_cappuccino" className='label_item_menu'>quantidade</label>
 
                             <div className='box_quant'>
-                                <button onClick={() => addQuantity('inputCappuccino')}>+</button>
-                                <input type="number" id='input_quant_cappuccino' onChange={(e) => changeValueInput(e, 'inputCappuccino')} value={itensProperties.inputCappuccino.quant} />
+                 
                                 <button onClick={() => subQuantity('inputCappuccino')}>-</button>
+                                <input type="number" id='input_quant_cappuccino' onChange={(e) => changeValueInput(e, 'inputCappuccino')} value={itensProperties.inputCappuccino.quant} />
+                                <button onClick={() => addQuantity('inputCappuccino')}>+</button>
+                             
 
                             </div>
 

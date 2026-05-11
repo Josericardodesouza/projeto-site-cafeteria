@@ -129,7 +129,6 @@ function App() {
   // }
 
 
-
   const refSectionAboutUs = useRef(null)
 
   const scrollAboutUs = () => {
