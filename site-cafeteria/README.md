@@ -7,7 +7,9 @@ __status: EM DESENVOLVIMENTO__
 
 OBS: Este site foi desenvolvido para fins de aprendizado, portanto a marca é ficticia.
 
-Link do projeto: https://site-cafeteria-jricardodev.netlify.app/
+Link do projeto: <a src="https://site-cafeteria-jricardodev.netlify.app/" />
+
+<br>
 
 
 <img src="./src/assets/images/imgs-readme/image-sitecafeteria.png" style="width: 60%">
